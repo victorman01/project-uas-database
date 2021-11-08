@@ -80,7 +80,7 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Controls.Add(this.textBoxNamaPromo);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(8, 78);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(420, 188);
             this.panel1.TabIndex = 19;
@@ -90,7 +90,7 @@ namespace OnlineMart_SubrataSquad
             this.textBoxKodePromo.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKodePromo.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxKodePromo.Location = new System.Drawing.Point(171, 10);
-            this.textBoxKodePromo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxKodePromo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxKodePromo.Name = "textBoxKodePromo";
             this.textBoxKodePromo.Size = new System.Drawing.Size(224, 24);
             this.textBoxKodePromo.TabIndex = 18;
@@ -114,7 +114,7 @@ namespace OnlineMart_SubrataSquad
             this.textBoxMinimalPembelian.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMinimalPembelian.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxMinimalPembelian.Location = new System.Drawing.Point(171, 148);
-            this.textBoxMinimalPembelian.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMinimalPembelian.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMinimalPembelian.Name = "textBoxMinimalPembelian";
             this.textBoxMinimalPembelian.Size = new System.Drawing.Size(224, 24);
             this.textBoxMinimalPembelian.TabIndex = 16;
@@ -149,7 +149,7 @@ namespace OnlineMart_SubrataSquad
             this.textBoxDiskon.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDiskon.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxDiskon.Location = new System.Drawing.Point(171, 93);
-            this.textBoxDiskon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxDiskon.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDiskon.Name = "textBoxDiskon";
             this.textBoxDiskon.Size = new System.Drawing.Size(102, 24);
             this.textBoxDiskon.TabIndex = 13;
@@ -162,7 +162,7 @@ namespace OnlineMart_SubrataSquad
             this.textBoxMaksimalDiskon.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMaksimalDiskon.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxMaksimalDiskon.Location = new System.Drawing.Point(171, 120);
-            this.textBoxMaksimalDiskon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMaksimalDiskon.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMaksimalDiskon.Name = "textBoxMaksimalDiskon";
             this.textBoxMaksimalDiskon.Size = new System.Drawing.Size(224, 24);
             this.textBoxMaksimalDiskon.TabIndex = 12;
@@ -197,7 +197,7 @@ namespace OnlineMart_SubrataSquad
             this.textBoxTipePromo.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTipePromo.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxTipePromo.Location = new System.Drawing.Point(171, 65);
-            this.textBoxTipePromo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTipePromo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTipePromo.Name = "textBoxTipePromo";
             this.textBoxTipePromo.Size = new System.Drawing.Size(224, 24);
             this.textBoxTipePromo.TabIndex = 8;
@@ -221,7 +221,7 @@ namespace OnlineMart_SubrataSquad
             this.textBoxNamaPromo.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNamaPromo.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxNamaPromo.Location = new System.Drawing.Point(171, 37);
-            this.textBoxNamaPromo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNamaPromo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNamaPromo.Name = "textBoxNamaPromo";
             this.textBoxNamaPromo.Size = new System.Drawing.Size(224, 24);
             this.textBoxNamaPromo.TabIndex = 6;
@@ -246,7 +246,7 @@ namespace OnlineMart_SubrataSquad
             this.buttonKosongi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKosongi.ForeColor = System.Drawing.Color.White;
             this.buttonKosongi.Location = new System.Drawing.Point(211, 271);
-            this.buttonKosongi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonKosongi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonKosongi.Name = "buttonKosongi";
             this.buttonKosongi.Size = new System.Drawing.Size(95, 41);
             this.buttonKosongi.TabIndex = 29;
@@ -260,7 +260,7 @@ namespace OnlineMart_SubrataSquad
             this.buttonSimpan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
             this.buttonSimpan.Location = new System.Drawing.Point(116, 271);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(90, 41);
             this.buttonSimpan.TabIndex = 28;
@@ -273,7 +273,7 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
             this.buttonKeluar.Location = new System.Drawing.Point(338, 271);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(90, 41);
             this.buttonKeluar.TabIndex = 27;
@@ -292,8 +292,9 @@ namespace OnlineMart_SubrataSquad
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPengaturanPromo";
+            this.Load += new System.EventHandler(this.FormPengaturanPromo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

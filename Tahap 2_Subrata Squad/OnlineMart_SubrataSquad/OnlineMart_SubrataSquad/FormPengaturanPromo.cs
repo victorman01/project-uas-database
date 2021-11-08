@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OnlineMart_LIB;
 
 namespace OnlineMart_SubrataSquad
 {
@@ -151,6 +152,11 @@ namespace OnlineMart_SubrataSquad
             textBoxMaksimalDiskon.Text = "";
             textBoxMinimalPembelian.Text = "";
             textBoxKodePromo.Focus();
+        }
+
+        private void FormPengaturanPromo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
