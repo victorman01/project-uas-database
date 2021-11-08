@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using OnlineMart_LIB;
+
+namespace OnlineMart_SubrataSquad
+{
+    public partial class FormProfile : Form
+    {
+        public List<Pelanggan> listPelanggan = new List<Pelanggan>();
+        public int idPelanggan;
+        public Pelanggan pelanggan;
+
+        public FormProfile()
+        {
+            InitializeComponent();
+        }
+
+        public void FormProfile_Load(object sender, EventArgs e)
+        {
+            listPelanggan = Pelanggan.BacaData("", "");
+            foreach (Pelanggan user in listPelanggan)
+            {
+                if (user.Id == idPelanggan)
+                {
+                    labelNama.Text = user.Nama;
+                    labelEmail.Text = user.Email;
+                    labelTelepon.Text = user.Telepon;
+                    labelSaldo.Text = user.Saldo.ToString();
+                    labelPoin.Text = user.Poin.ToString();
+                    pelanggan = user;
+                }
+            }
+        }
+
+        private void buttonUbahProfile_Click_1(object sender, EventArgs e)
+        {
+            FormUbahProfile form = new FormUbahProfile();
+            form.Owner = this;
+            form.ShowDialog();
+        }
+
+        private void buttonKeluar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}

@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+
+namespace OnlineMart_LIB
+{
+    public class RiwayatIsiSaldo
+    {
+        #region Fields
+        private int id;
+        private DateTime waktu;
+        private int isiSaldo;
+        private Pelanggan pelanggan;
+        #endregion
+
+        #region Constructors
+        public RiwayatIsiSaldo(int id, DateTime waktu, int isiSaldo, Pelanggan pelanggan)
+        {
+            this.Id = id;
+            this.Waktu = waktu;
+            this.IsiSaldo = isiSaldo;
+            this.Pelanggan = pelanggan;
+        }
+        #endregion
+
+        #region Properties
+        public int Id { get => id; set => id = value; }
+        public DateTime Waktu { get => waktu; set => waktu = value; }
+        public int IsiSaldo { get => isiSaldo; set => isiSaldo = value; }
+        public Pelanggan Pelanggan { get => pelanggan; set => pelanggan = value; }
+        #endregion
+
+        #region Methods
+        public static List<RiwayatIsiSaldo> BacaData(string kriteria, string nilaiKriteria)
+        {
+            string sql = "";
+            if (kriteria == "")
+            {
+                sql = "select * from riwayat_isi_saldos";
+            }
+            else
+            {
+                sql = "select ris.id, ris.waktu, ris.isi_saldo, p.id from riwayat_isi_saldos ris inner join pelanggans p on ris.pelanggans_id = p.id where " + kriteria + " like '%" + nilaiKriteria + "%'";
+            }
+            MySqlDataReader hasil = Connection.JalankanPerintahQuery(sql);
+
+            List<RiwayatIsiSaldo> listRiwayatIsiSaldo = new List<RiwayatIsiSaldo>();
+            while (hasil.Read() == true)
+            {
+                Pelanggan p = new Pelanggan(hasil.GetInt32(4), hasil.GetString(5), hasil.GetString(6), hasil.GetString(7), hasil.GetString(8), hasil.GetInt32(9), hasil.GetInt32(10));
+                RiwayatIsiSaldo k = new RiwayatIsiSaldo(hasil.GetInt32(0), hasil.GetDateTime(1), hasil.GetInt32(2), p);
+                listRiwayatIsiSaldo.Add(k);
+            }
+            return listRiwayatIsiSaldo;
+        }
+        #endregion
+    }
+}
