@@ -96,5 +96,65 @@ namespace OnlineMart_SubrataSquad
             frm.Owner = this;
             frm.ShowDialog();
         }
+        public void FormatDataGrid()
+        {
+            dataGridViewBarang.DataSource = null;
+            dataGridViewBarang.Columns.Clear();
+
+            //Atur Tabel
+            dataGridViewBarang.Columns.Add("Id", "Id");
+            dataGridViewBarang.Columns.Add("Nama", "Nama");
+            dataGridViewBarang.Columns.Add("Harga", "Harga");
+            dataGridViewBarang.Columns.Add("Kategori", "Kategori");
+
+            //Atur Ukuran Cell
+            dataGridViewBarang.Columns["id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewBarang.Columns["Nama"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewBarang.Columns["Harga"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewBarang.Columns["Kategori"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            //Buat Button Aksi
+            DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
+            bcol.HeaderText = "Aksi";
+            bcol.Text = "Tambah";
+            bcol.Name = "btnTambahGrid";
+            bcol.UseColumnTextForButtonValue = true;
+            dataGridViewBarang.Columns.Add(bcol);
+
+            //Batasi Aktivitas User
+            dataGridViewBarang.AllowUserToAddRows = false;
+            dataGridViewBarang.ReadOnly = true;
+        }
+        public void TampilDataGrid()
+        {
+            dataGridViewBarang.Rows.Clear();
+
+            if (listBarang.Count > 0)
+            {
+                foreach (Barang b in listBarang)
+                {
+                    dataGridViewBarang.Rows.Add(b.Id, b.Nama, b.Harga, b.Kategori.Nama);
+                }
+            }
+            else
+            {
+                dataGridViewBarang.DataSource = null;
+            }
+        }
+
+        private void dataGridViewBarang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id = dataGridViewBarang.CurrentRow.Cells["Id"].Value.ToString();
+            string Nama = dataGridViewBarang.CurrentRow.Cells["Nama"].Value.ToString();
+            string harga = dataGridViewBarang.CurrentRow.Cells["Harga"].Value.ToString();
+            string kategori = dataGridViewBarang.CurrentRow.Cells["Kategori"].Value.ToString();
+
+            if (e.ColumnIndex == dataGridViewBarang.Columns["btnTambahGrid"].Index && e.RowIndex >= 0)
+            {
+                FormTambahBarangKeKeranjang frm = new FormTambahBarangKeKeranjang();
+                frm.Owner = this;
+                frm.ShowDialog();
+            }
+        }
     }
 }
