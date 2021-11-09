@@ -120,5 +120,25 @@ namespace OnlineMart_SubrataSquad
             listOrder = Order.BacaData("", "");
             TampilDataGrid();
         }
+
+        private void textBoxCBListPengiriman_TextChanged(object sender, EventArgs e)
+        {
+            FormatDataGrid();
+            if (comboBoxCBListPengiriman.Text == "ID Order")
+            {
+                listOrder = Order.BacaData("o.Id", textBoxCBListPengiriman.Text);
+            }
+            TampilDataGrid();
+        }
+
+        private void dataGridViewListPengiriman_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridViewListPengiriman.Columns["btnDetailGrid"].Index && e.RowIndex >= 0)
+            {
+                FormListPengirimanDetail frm = new FormListPengirimanDetail();
+                frm.Owner = this;
+                frm.ShowDialog();
+            }
+        }
     }
 }
