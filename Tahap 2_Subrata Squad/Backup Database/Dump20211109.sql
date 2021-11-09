@@ -2,7 +2,7 @@
 --
 -- Host: 127.0.0.1    Database: online_mart
 -- ------------------------------------------------------
--- Server version	5.5.5-10.4.20-MariaDB
+-- Server version	5.5.5-10.4.21-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -28,7 +28,7 @@ CREATE TABLE `barangs` (
   `harga` varchar(45) DEFAULT NULL,
   `kategoris_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_barangs_kategoris1_idx` (`kategoris_id`),
+  KEY `fk_barangs_kategoris_idx` (`kategoris_id`),
   CONSTRAINT `fk_barangs_kategoris` FOREIGN KEY (`kategoris_id`) REFERENCES `kategoris` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -57,7 +57,9 @@ CREATE TABLE `barangs_orders` (
   `harga` float DEFAULT NULL,
   PRIMARY KEY (`barangs_id`,`orders_id`),
   KEY `fk_barangs_orders_orders1_idx` (`orders_id`),
-  KEY `fk_barangs_orders_barangs1_idx` (`barangs_id`)
+  KEY `fk_barangs_orders_barangs1_idx` (`barangs_id`),
+  CONSTRAINT `fk_barangs_orders_barangs` FOREIGN KEY (`barangs_id`) REFERENCES `barangs` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_barangs_orders_orders` FOREIGN KEY (`orders_id`) REFERENCES `orders` (`cabangs_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -161,16 +163,16 @@ DROP TABLE IF EXISTS `gift_redeems`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `gift_redeems` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `waktu` datetime DEFAULT NULL,
   `poin_redeem` int(11) DEFAULT NULL,
   `gifts_id` int(11) NOT NULL,
   `orders_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_gift_redeems_gifts1_idx` (`gifts_id`),
-  KEY `fk_gift_redeems_orders1_idx` (`orders_id`),
-  CONSTRAINT `fk_gift_redeems_gifts1` FOREIGN KEY (`gifts_id`) REFERENCES `gifts` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_gift_redeems_orders1` FOREIGN KEY (`orders_id`) REFERENCES `orders` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `fk_gift_redeems_gifts_idx` (`gifts_id`),
+  KEY `fk_gift_redeems_orders_idx` (`orders_id`),
+  CONSTRAINT `fk_gift_redeems_gifts` FOREIGN KEY (`gifts_id`) REFERENCES `gifts` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_gift_redeems_orders` FOREIGN KEY (`orders_id`) REFERENCES `orders` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -191,11 +193,11 @@ DROP TABLE IF EXISTS `gifts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `gifts` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(45) DEFAULT NULL,
   `jumlah_poin` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -204,6 +206,7 @@ CREATE TABLE `gifts` (
 
 LOCK TABLES `gifts` WRITE;
 /*!40000 ALTER TABLE `gifts` DISABLE KEYS */;
+INSERT INTO `gifts` VALUES (2,'Boneka','10');
 /*!40000 ALTER TABLE `gifts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -215,10 +218,10 @@ DROP TABLE IF EXISTS `kategoris`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `kategoris` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -227,7 +230,7 @@ CREATE TABLE `kategoris` (
 
 LOCK TABLES `kategoris` WRITE;
 /*!40000 ALTER TABLE `kategoris` DISABLE KEYS */;
-INSERT INTO `kategoris` VALUES (1,'Alat tulis'),(2,'Makanan'),(3,'Minuman'),(4,'Bumbu Masakan'),(5,'Elektronik'),(6,'Alat Makan');
+INSERT INTO `kategoris` VALUES (1,'Alat tulis'),(2,'Makanan'),(3,'Minuman'),(4,'Bumbu Masakan'),(5,'Elektronik'),(6,'Alat Makan'),(7,'Makanan keras');
 /*!40000 ALTER TABLE `kategoris` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -239,7 +242,7 @@ DROP TABLE IF EXISTS `orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `orders` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `tanggal_waktu` datetime DEFAULT NULL,
   `alamat_tujuan` varchar(45) DEFAULT NULL,
   `ongkos_kirim` float DEFAULT NULL,
@@ -252,15 +255,15 @@ CREATE TABLE `orders` (
   `status` enum('Menunggu Pembayaran','Pesanan Diproses') DEFAULT NULL,
   `metode_pembayaran` enum('Ovo','ShopeePa') DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_orders_promo1_idx` (`promo_id`),
   KEY `fk_orders_cabangs_idx` (`cabangs_id`),
   KEY `fk_orders_drivers1_idx` (`drivers_id`),
   KEY `fk_ortders_pelanggans_idx` (`pelanggans_id`),
+  KEY `fk_orders_promos_idx` (`promo_id`),
   CONSTRAINT `fk_orders_cabangs` FOREIGN KEY (`cabangs_id`) REFERENCES `cabangs` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_orders_drivers1` FOREIGN KEY (`drivers_id`) REFERENCES `drivers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_orders_pelanggans` FOREIGN KEY (`pelanggans_id`) REFERENCES `pelanggans` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_orders_promo1` FOREIGN KEY (`promo_id`) REFERENCES `promos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT `fk_orders_promos` FOREIGN KEY (`promo_id`) REFERENCES `promos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -269,6 +272,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,'2021-09-01 12:09:01','jl. Diponegoro',20000,50000,'Cash',1,1,1,1,'Menunggu Pembayaran','Ovo');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -336,7 +340,7 @@ DROP TABLE IF EXISTS `pemasukkan`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pemasukkan` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `tanggal` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -359,14 +363,14 @@ DROP TABLE IF EXISTS `promos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `promos` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `tipe` varchar(45) DEFAULT NULL,
   `nama` varchar(45) DEFAULT NULL,
   `diskon` int(11) DEFAULT NULL,
   `diskon_max` int(11) DEFAULT NULL,
   `minimal_belanja` float DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -387,7 +391,7 @@ DROP TABLE IF EXISTS `riwayat_isi_saldos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `riwayat_isi_saldos` (
-  `id` int(11) NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `waktu` datetime DEFAULT NULL,
   `isi_saldo` int(11) DEFAULT NULL,
   `pelanggans_id` int(11) unsigned NOT NULL,
@@ -415,4 +419,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-02 20:36:32
+-- Dump completed on 2021-11-09 21:41:59
