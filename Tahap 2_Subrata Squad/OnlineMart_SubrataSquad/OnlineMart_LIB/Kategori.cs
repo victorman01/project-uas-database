@@ -20,6 +20,11 @@ namespace OnlineMart_LIB
             this.Id = id;
             this.Nama = nama;
         }
+
+        public Kategori(string nama)
+        {
+            this.Nama = nama;
+        }
         #endregion
 
         #region Properties
@@ -64,8 +69,7 @@ namespace OnlineMart_LIB
 
         public static void TambahData(Kategori k)
         {
-            string sql = "insert into kategoris (id, nama) values (" + k.Id +
-                ", '" + k.Nama.Replace("'", "\\'") + "')";
+            string sql = "insert into kategoris (nama) values ('" + k.Nama.Replace("'", "\\'") + "')";
             Connection.JalankanPerintahDML(sql);
         }
 

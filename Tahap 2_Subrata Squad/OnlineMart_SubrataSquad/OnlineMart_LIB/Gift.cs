@@ -22,6 +22,12 @@ namespace OnlineMart_LIB
             this.Nama = nama;
             this.JumlahPoin = jumlahPoin;
         }
+
+        public Gift(string nama, string jumlahPoin)
+        {
+            this.Nama = nama;
+            this.JumlahPoin = jumlahPoin;
+        }
         #endregion
 
         #region Properties
@@ -51,6 +57,36 @@ namespace OnlineMart_LIB
                 listGift.Add(k);
             }
             return listGift;
+        }
+
+        public static Boolean HapusData(string id)
+        {
+            string sql = "delete from gifts where id='" + id + "'";
+            int jumlahDataBerubah = Connection.JalankanPerintahDML(sql);
+            if (jumlahDataBerubah == 0)
+                return false;
+            else
+                return true;
+        }
+
+        public static void TambahData(Gift g)
+        {
+            string sql = "insert into gifts (nama, jumlah_poin) values ('" + g.Nama.Replace("'", "\\'") + "', '"
+                + g.JumlahPoin + "')";
+            Connection.JalankanPerintahDML(sql);
+        }
+
+        public static void UbahData(Gift g)
+        {
+            string sql = "update gifts set nama = '" + g.Nama.Replace("'", "\\'")
+                + "', jumlah_poin = '" + g.JumlahPoin +
+                "' where id = " + g.Id;
+            Connection.JalankanPerintahDML(sql);
+        }
+
+        public override string ToString()
+        {
+            return Nama;
         }
         #endregion
     }

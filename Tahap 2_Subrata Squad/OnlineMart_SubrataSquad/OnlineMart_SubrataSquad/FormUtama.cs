@@ -260,7 +260,18 @@ namespace OnlineMart_SubrataSquad
 
         private void hadiahToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form frm = Application.OpenForms["FormPengaturanHadiah"];
+            if (frm == null)
+            {
+                FormPengaturanHadiah formPengaturanHadiah = new FormPengaturanHadiah();
+                formPengaturanHadiah.MdiParent = this;
+                formPengaturanHadiah.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
         }
 
         private void rekapPendapatanToolStripMenuItem_Click(object sender, EventArgs e)

@@ -67,7 +67,7 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                Kategori k = new Kategori(int.Parse(textBoxIdKategori.Text), textBoxNamaKategori.Text);
+                Kategori k = new Kategori(textBoxNamaKategori.Text);
                 Kategori.TambahData(k);
                 MessageBox.Show("Data kategori success to be added", "Info");
 
@@ -84,7 +84,6 @@ namespace OnlineMart_SubrataSquad
 
         private void buttonKosongi_Click(object sender, EventArgs e)
         {
-            textBoxIdKategori.Text = "";
             textBoxNamaKategori.Text = "";
             textBoxIdKategori.Focus();
         }
