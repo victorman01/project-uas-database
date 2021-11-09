@@ -56,6 +56,13 @@ namespace OnlineMart_LIB
             }
             return listRiwayatIsiSaldo;
         }
+        public static void TambahData(RiwayatIsiSaldo r)
+        {
+            string sql = "insert into riwayat_isi_saldos (waktu, isi_saldo, pelanggans_id)" +
+                " values ('" + r.Waktu + "', '" + r.IsiSaldo + "', '" + r.Pelanggan.Id + "')";
+
+            Connection.JalankanPerintahDML(sql);
+        }
         #endregion
     }
 }

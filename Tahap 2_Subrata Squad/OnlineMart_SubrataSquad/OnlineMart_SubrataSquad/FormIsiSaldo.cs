@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OnlineMart_LIB;
 
 namespace OnlineMart_SubrataSquad
 {
     public partial class FormIsiSaldo : Form
     {
+        public Pelanggan pelanggan;
+        float saldo;
+
         public FormIsiSaldo()
         {
             InitializeComponent();
@@ -19,19 +24,38 @@ namespace OnlineMart_SubrataSquad
 
         private void buttonIsi_Click(object sender, EventArgs e)
         {
-            DialogResult dR = MessageBox.Show("Are You Sure?", "Confirmation", MessageBoxButtons.YesNo);
-            if (dR == DialogResult.Yes)
+            try
             {
-                MessageBox.Show("Top up success.", "Information");
+                DialogResult dR = MessageBox.Show("Are You Sure?", "Confirmation", MessageBoxButtons.YesNo);
+                if (dR == DialogResult.Yes)
+                {
+                    float topUpAmount = float.Parse(textBoxJumlahPengisianSaldo.Text);
+                    Pelanggan.UpdateSaldo(topUpAmount, pelanggan.Id);
+                    saldo += topUpAmount;
+                    listBoxSaldo.Items.Clear();
+                    listBoxSaldo.Items.Add("Name: " + pelanggan.Nama);
+                    listBoxSaldo.Items.Add("Amount of Top up: " + topUpAmount.ToString("C0",new CultureInfo("id")));
+                    listBoxSaldo.Items.Add("Payment Method: " + comboBoxAlatIsiSaldo.Text);
+                    listBoxSaldo.Items.Add("Saldo: " + saldo.ToString("C0",new CultureInfo("id")));
+
+                    MessageBox.Show("Top up success.", "Information");
+                }
+                else
+                {
+                    MessageBox.Show("Top up fail.", "Information");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Top up fail.", "Information");
+
+                MessageBox.Show("Top up fail. Error message : " + ex.Message,
+                     "Error");
             }
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
+            pelanggan.Saldo = saldo;
             this.Close();
         }
         private void textBoxJumlahPengisianSaldo_Enter(object sender, EventArgs e)
@@ -54,5 +78,11 @@ namespace OnlineMart_SubrataSquad
             }
         }
 
+        private void FormIsiSaldo_Load(object sender, EventArgs e)
+        {
+            saldo = pelanggan.Saldo;
+            listBoxSaldo.Items.Add("Name: " + pelanggan.Nama);
+            listBoxSaldo.Items.Add("Saldo: " + saldo.ToString("C0", new CultureInfo("id")));
+        }
     }
 }

@@ -66,6 +66,7 @@ namespace OnlineMart_SubrataSquad
             if (frm == null)
             {
                 FormIsiSaldo formIsiSaldo = new FormIsiSaldo();
+                formIsiSaldo.pelanggan = pelanggan;
                 formIsiSaldo.MdiParent = this;
                 formIsiSaldo.Show();
             }

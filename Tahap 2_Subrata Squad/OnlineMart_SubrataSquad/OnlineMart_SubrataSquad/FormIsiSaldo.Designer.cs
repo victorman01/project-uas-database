@@ -45,10 +45,9 @@ namespace OnlineMart_SubrataSquad
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 36);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(33, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 17);
+            this.label2.Size = new System.Drawing.Size(185, 25);
             this.label2.TabIndex = 33;
             this.label2.Text = "Isi Saldo Dengan :";
             // 
@@ -60,10 +59,9 @@ namespace OnlineMart_SubrataSquad
             "Virtual Akun",
             "OVO",
             "Go-Pay"});
-            this.comboBoxAlatIsiSaldo.Location = new System.Drawing.Point(136, 36);
-            this.comboBoxAlatIsiSaldo.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxAlatIsiSaldo.Location = new System.Drawing.Point(204, 55);
             this.comboBoxAlatIsiSaldo.Name = "comboBoxAlatIsiSaldo";
-            this.comboBoxAlatIsiSaldo.Size = new System.Drawing.Size(330, 21);
+            this.comboBoxAlatIsiSaldo.Size = new System.Drawing.Size(493, 28);
             this.comboBoxAlatIsiSaldo.TabIndex = 34;
             // 
             // buttonIsi
@@ -71,10 +69,9 @@ namespace OnlineMart_SubrataSquad
             this.buttonIsi.BackColor = System.Drawing.Color.Orange;
             this.buttonIsi.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonIsi.ForeColor = System.Drawing.Color.White;
-            this.buttonIsi.Location = new System.Drawing.Point(308, 276);
-            this.buttonIsi.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonIsi.Location = new System.Drawing.Point(462, 425);
             this.buttonIsi.Name = "buttonIsi";
-            this.buttonIsi.Size = new System.Drawing.Size(86, 32);
+            this.buttonIsi.Size = new System.Drawing.Size(129, 49);
             this.buttonIsi.TabIndex = 32;
             this.buttonIsi.Text = "&ISI";
             this.buttonIsi.UseVisualStyleBackColor = false;
@@ -85,10 +82,9 @@ namespace OnlineMart_SubrataSquad
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(14, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(476, 49);
+            this.label1.Size = new System.Drawing.Size(714, 75);
             this.label1.TabIndex = 29;
             this.label1.Text = "HALAMAN ISI SALDO";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -98,10 +94,9 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(399, 276);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonKeluar.Location = new System.Drawing.Point(598, 425);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(86, 32);
+            this.buttonKeluar.Size = new System.Drawing.Size(129, 49);
             this.buttonKeluar.TabIndex = 30;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -112,21 +107,19 @@ namespace OnlineMart_SubrataSquad
             this.listBoxSaldo.BackColor = System.Drawing.Color.Tan;
             this.listBoxSaldo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxSaldo.FormattingEnabled = true;
-            this.listBoxSaldo.ItemHeight = 19;
-            this.listBoxSaldo.Location = new System.Drawing.Point(8, 58);
-            this.listBoxSaldo.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxSaldo.ItemHeight = 29;
+            this.listBoxSaldo.Location = new System.Drawing.Point(12, 89);
             this.listBoxSaldo.Name = "listBoxSaldo";
-            this.listBoxSaldo.Size = new System.Drawing.Size(478, 137);
+            this.listBoxSaldo.Size = new System.Drawing.Size(715, 207);
             this.listBoxSaldo.TabIndex = 35;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 7);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(32, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 17);
+            this.label3.Size = new System.Drawing.Size(189, 25);
             this.label3.TabIndex = 36;
             this.label3.Text = "Jumlah Pengisian :";
             // 
@@ -134,10 +127,9 @@ namespace OnlineMart_SubrataSquad
             // 
             this.textBoxJumlahPengisianSaldo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxJumlahPengisianSaldo.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxJumlahPengisianSaldo.Location = new System.Drawing.Point(136, 8);
-            this.textBoxJumlahPengisianSaldo.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxJumlahPengisianSaldo.Location = new System.Drawing.Point(204, 12);
             this.textBoxJumlahPengisianSaldo.Name = "textBoxJumlahPengisianSaldo";
-            this.textBoxJumlahPengisianSaldo.Size = new System.Drawing.Size(330, 22);
+            this.textBoxJumlahPengisianSaldo.Size = new System.Drawing.Size(493, 29);
             this.textBoxJumlahPengisianSaldo.TabIndex = 37;
             this.textBoxJumlahPengisianSaldo.Text = "Type Here...";
             this.textBoxJumlahPengisianSaldo.Enter += new System.EventHandler(this.textBoxJumlahPengisianSaldo_Enter);
@@ -150,26 +142,25 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBoxJumlahPengisianSaldo);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(9, 203);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(14, 312);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(476, 66);
+            this.panel1.Size = new System.Drawing.Size(714, 102);
             this.panel1.TabIndex = 38;
             // 
             // FormIsiSaldo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(492, 318);
+            this.ClientSize = new System.Drawing.Size(738, 489);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listBoxSaldo);
             this.Controls.Add(this.buttonIsi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormIsiSaldo";
+            this.Load += new System.EventHandler(this.FormIsiSaldo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
