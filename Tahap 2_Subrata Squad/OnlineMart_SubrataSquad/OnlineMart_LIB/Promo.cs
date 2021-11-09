@@ -28,6 +28,15 @@ namespace OnlineMart_LIB
             this.Diskon_max = diskon_max;
             this.Min_belanja = min_belanja;
         }
+
+        public Promo(string tipe, string nama, int diskon, int diskon_max, float min_belanja)
+        {
+            this.Tipe = tipe;
+            this.Nama = nama;
+            this.Diskon = diskon;
+            this.Diskon_max = diskon_max;
+            this.Min_belanja = min_belanja;
+        }
         #endregion
 
         #region Properties
@@ -68,7 +77,7 @@ namespace OnlineMart_LIB
         }
         public static void UbahData(Promo p)
         {
-            string sql = "update promo set Tipe = '" + p.Tipe + "', nama = '" + p.Nama + "', diskon = '" + p.Diskon + "', diskon_max = '" + p.Diskon_max + "', minimal_belanja = '" + p.Min_belanja + "' where id = '" + p.Id + "'";
+            string sql = "update promos set Tipe = '" + p.Tipe + "', nama = '" + p.Nama + "', diskon = '" + p.Diskon + "', diskon_max = '" + p.Diskon_max + "', minimal_belanja = '" + p.Min_belanja + "' where id = '" + p.Id + "'";
             Connection.JalankanPerintahDML(sql);
         }
 

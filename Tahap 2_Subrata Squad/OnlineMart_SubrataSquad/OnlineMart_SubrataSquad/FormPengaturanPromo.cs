@@ -13,150 +13,201 @@ namespace OnlineMart_SubrataSquad
 {
     public partial class FormPengaturanPromo : Form
     {
+        List<Promo> listPromo = new List<Promo>();
+
         public FormPengaturanPromo()
         {
             InitializeComponent();
         }
 
+        public void FormPengaturanPromo_Load(object sender, EventArgs e)
+        {
+            FormatDataGrid();
+
+            listPromo = Promo.BacaData("", "");
+
+            TampilDataGrid();
+        }
+
+        public void FormatDataGrid()
+        {
+            //kosongi semua kolom di datagridview
+            dataGridViewPengaturanPromo.Columns.Clear();
+
+            //menambah kolom di datagridview
+            dataGridViewPengaturanPromo.Columns.Add("id", "ID Promo");
+            dataGridViewPengaturanPromo.Columns.Add("tipe", "Tipe Promo");
+            dataGridViewPengaturanPromo.Columns.Add("nama", "Nama Promo");
+            dataGridViewPengaturanPromo.Columns.Add("diskon", "Diskon");
+            dataGridViewPengaturanPromo.Columns.Add("diskonMax", "Diskon Max");
+            dataGridViewPengaturanPromo.Columns.Add("minimalBelanja", "Minimal Belanja");
+
+            //agar lebar kolom dapat menyesuaikan panjang/isi data
+            dataGridViewPengaturanPromo.Columns["id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewPengaturanPromo.Columns["tipe"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewPengaturanPromo.Columns["nama"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewPengaturanPromo.Columns["diskon"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewPengaturanPromo.Columns["diskonMax"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewPengaturanPromo.Columns["minimalBelanja"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            //agar user tidak bisa menambah baris maupun mengetik langsung di datagridview
+            dataGridViewPengaturanPromo.AllowUserToAddRows = false;
+            dataGridViewPengaturanPromo.ReadOnly = true;
+        }
+
+        public void TampilDataGrid()
+        {
+            dataGridViewPengaturanPromo.Rows.Clear();
+
+            if (listPromo.Count > 0)
+            {
+                foreach (Promo p in listPromo)
+                {
+                    dataGridViewPengaturanPromo.Rows.Add(p.Id, p.Tipe, p.Nama, p.Diskon, p.Diskon_max, p.Min_belanja);
+                }
+
+                if (!dataGridViewPengaturanPromo.Columns.Contains("btnUbahGrid"))
+                {
+                    DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
+                    bcol.HeaderText = "Aksi";
+                    bcol.Text = "Ubah";
+                    bcol.Name = "btnUbahGrid";
+                    bcol.UseColumnTextForButtonValue = true;
+                    dataGridViewPengaturanPromo.Columns.Add(bcol);
+
+                    DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
+                    bcol2.HeaderText = "Aksi";
+                    bcol2.Text = "Hapus";
+                    bcol2.Name = "btnHapusGrid";
+                    bcol2.UseColumnTextForButtonValue = true;
+                    dataGridViewPengaturanPromo.Columns.Add(bcol2);
+                }
+            }
+            else
+            {
+                dataGridViewPengaturanPromo.DataSource = null;
+            }
+        }
+
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        private void textBoxMinimalPembelian_Enter(object sender, EventArgs e)
+        private void buttonTambah_Click(object sender, EventArgs e)
         {
-            if (textBoxMinimalPembelian.Text == "Type Here...")
+            FormTambahPromo formTambahPromo = new FormTambahPromo();
+            formTambahPromo.Owner = this;
+            formTambahPromo.ShowDialog();
+        }
+
+        private void textBoxPengaturanPromo_TextChanged(object sender, EventArgs e)
+        {
+            FormatDataGrid();
+
+            string kriteria = "";
+            switch (comboBoxPengaturanPromo.Text)
             {
-                textBoxMinimalPembelian.Text = "";
-                textBoxMinimalPembelian.ForeColor = Color.Black;
-                textBoxMinimalPembelian.Font = new Font("Tahoma", 10, FontStyle.Regular);
+                case "ID Promo":
+                    kriteria = "id";
+                    break;
+                case "Tipe Promo":
+                    kriteria = "tipe";
+                    break;
+                case "Nama Promo":
+                    kriteria = "nama";
+                    break;
+                case "Diskon Promo":
+                    kriteria = "diskon";
+                    break;
+                case "Diskon Max":
+                    kriteria = "diskon_max";
+                    break;
+                case "Minimal Belanja":
+                    kriteria = "minimal_belanja";
+                    break;
+            }
+
+            if (comboBoxPengaturanPromo.Text == "Type Here...")
+            {
+                listPromo = Promo.BacaData(kriteria, "");
+            }
+            else
+            {
+                listPromo = Promo.BacaData(kriteria, textBoxPengaturanPromo.Text);
+            }
+            TampilDataGrid();
+        }
+
+        private void dataGridViewPengaturanPromo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string pIdPromo = dataGridViewPengaturanPromo.CurrentRow.Cells["id"].Value.ToString();
+                string pTipePromo = dataGridViewPengaturanPromo.CurrentRow.Cells["tipe"].Value.ToString();
+                string pNamaPromo = dataGridViewPengaturanPromo.CurrentRow.Cells["nama"].Value.ToString();
+                string pDiskon = dataGridViewPengaturanPromo.CurrentRow.Cells["diskon"].Value.ToString();
+                string pDiskonMax = dataGridViewPengaturanPromo.CurrentRow.Cells["diskonMax"].Value.ToString();
+                string pMinimalBelanja = dataGridViewPengaturanPromo.CurrentRow.Cells["minimalBelanja"].Value.ToString();
+
+
+                if (e.ColumnIndex == dataGridViewPengaturanPromo.Columns["btnHapusGrid"].Index && e.RowIndex >= 0)
+                {
+                    DialogResult hasil = MessageBox.Show(this, "Are you sure? " + pIdPromo +
+                        " - " + pNamaPromo + " ?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (hasil == DialogResult.Yes)
+                    {
+                        Boolean hapus = Promo.HapusData(pIdPromo);
+                        if (hapus == true)
+                        {
+                            MessageBox.Show("Deletion success");
+
+                            FormPengaturanPromo_Load(sender, e);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Deletion failed");
+                        }
+                    }
+                }
+                else
+                {
+                    FormUbahPromo formUbahPromo = new FormUbahPromo();
+                    formUbahPromo.Owner = this;
+                    formUbahPromo.textBoxKodePromo.Text = pIdPromo;
+                    formUbahPromo.textBoxTipePromo.Text = pTipePromo;
+                    formUbahPromo.textBoxNamaPromo.Text = pNamaPromo;
+                    formUbahPromo.textBoxDiskon.Text = pDiskon;
+                    formUbahPromo.textBoxMaksimalDiskon.Text = pDiskonMax;
+                    formUbahPromo.textBoxMinimalPembelian.Text = pDiskonMax;
+                    formUbahPromo.ShowDialog();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Employee is still connect to another item");
             }
         }
 
-        private void textBoxMinimalPembelian_Leave(object sender, EventArgs e)
+        private void textBoxPengaturanPromo_Enter(object sender, EventArgs e)
         {
-            if (textBoxMinimalPembelian.Text == "")
+            if (textBoxPengaturanPromo.Text == "Type Here...")
             {
-                textBoxMinimalPembelian.Text = "Type Here...";
-                textBoxMinimalPembelian.ForeColor = Color.Silver;
-                textBoxMinimalPembelian.Font = new Font("Tahoma", 10, FontStyle.Italic);
+                textBoxPengaturanPromo.Text = "";
+                textBoxPengaturanPromo.ForeColor = Color.Black;
+                textBoxPengaturanPromo.Font = new Font("Tahoma", 10, FontStyle.Regular);
             }
         }
 
-        private void textBoxMaksimalDiskon_Enter(object sender, EventArgs e)
+        private void textBoxPengaturanPromo_Leave(object sender, EventArgs e)
         {
-            if (textBoxMaksimalDiskon.Text == "Type Here...")
+            if (textBoxPengaturanPromo.Text == "")
             {
-                textBoxMaksimalDiskon.Text = "";
-                textBoxMaksimalDiskon.ForeColor = Color.Black;
-                textBoxMaksimalDiskon.Font = new Font("Tahoma", 10, FontStyle.Regular);
+                textBoxPengaturanPromo.Text = "Type Here...";
+                textBoxPengaturanPromo.ForeColor = Color.Silver;
+                textBoxPengaturanPromo.Font = new Font("Tahoma", 10, FontStyle.Italic);
             }
-        }
-
-        private void textBoxMaksimalDiskon_Leave(object sender, EventArgs e)
-        {
-            if (textBoxMaksimalDiskon.Text == "")
-            {
-                textBoxMaksimalDiskon.Text = "Type Here...";
-                textBoxMaksimalDiskon.ForeColor = Color.Silver;
-                textBoxMaksimalDiskon.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
-        private void textBoxDiskon_Enter(object sender, EventArgs e)
-        {
-            if (textBoxDiskon.Text == "Type Here...")
-            {
-                textBoxDiskon.Text = "";
-                textBoxDiskon.ForeColor = Color.Black;
-                textBoxDiskon.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxDiskon_Leave(object sender, EventArgs e)
-        {
-            if (textBoxDiskon.Text == "")
-            {
-                textBoxDiskon.Text = "Type Here...";
-                textBoxDiskon.ForeColor = Color.Silver;
-                textBoxDiskon.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
-        private void textBoxTipePromo_Enter(object sender, EventArgs e)
-        {
-            if (textBoxTipePromo.Text == "Type Here...")
-            {
-                textBoxTipePromo.Text = "";
-                textBoxTipePromo.ForeColor = Color.Black;
-                textBoxTipePromo.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxTipePromo_Leave(object sender, EventArgs e)
-        {
-            if (textBoxTipePromo.Text == "")
-            {
-                textBoxTipePromo.Text = "Type Here...";
-                textBoxTipePromo.ForeColor = Color.Silver;
-                textBoxTipePromo.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
-        private void textBoxNamaPromo_Enter(object sender, EventArgs e)
-        {
-            if (textBoxNamaPromo.Text == "Type Here...")
-            {
-                textBoxNamaPromo.Text = "";
-                textBoxNamaPromo.ForeColor = Color.Black;
-                textBoxNamaPromo.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxNamaPromo_Leave(object sender, EventArgs e)
-        {
-            if (textBoxNamaPromo.Text == "")
-            {
-                textBoxNamaPromo.Text = "Type Here...";
-                textBoxNamaPromo.ForeColor = Color.Silver;
-                textBoxNamaPromo.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
-        private void textBoxKodePromo_Enter(object sender, EventArgs e)
-        {
-            if (textBoxKodePromo.Text == "Type Here...")
-            {
-                textBoxKodePromo.Text = "";
-                textBoxKodePromo.ForeColor = Color.Black;
-                textBoxKodePromo.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxKodePromo_Leave(object sender, EventArgs e)
-        {
-            if (textBoxKodePromo.Text == "")
-            {
-                textBoxKodePromo.Text = "Type Here...";
-                textBoxKodePromo.ForeColor = Color.Silver;
-                textBoxKodePromo.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
-        private void buttonKosongi_Click(object sender, EventArgs e)
-        {
-            textBoxKodePromo.Text = "";
-            textBoxNamaPromo.Text = "";
-            textBoxTipePromo.Text = "";
-            textBoxDiskon.Text = "";
-            textBoxMaksimalDiskon.Text = "";
-            textBoxMinimalPembelian.Text = "";
-            textBoxKodePromo.Focus();
-        }
-
-        private void FormPengaturanPromo_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

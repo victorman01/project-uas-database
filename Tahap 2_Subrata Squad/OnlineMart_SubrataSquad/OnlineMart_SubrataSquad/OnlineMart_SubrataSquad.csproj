@@ -87,6 +87,12 @@
     <Compile Include="FormPengaturanPegawai.Designer.cs">
       <DependentUpon>FormPengaturanPegawai.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPengaturanPromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPengaturanPromo.Designer.cs">
+      <DependentUpon>FormPengaturanPromo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegistrasiDriver.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,11 +201,11 @@
     <Compile Include="FormPengaturanMetodePembayaran.designer.cs">
       <DependentUpon>FormPengaturanMetodePembayaran.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPengaturanPromo.cs">
+    <Compile Include="FormTambahPromo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPengaturanPromo.designer.cs">
-      <DependentUpon>FormPengaturanPromo.cs</DependentUpon>
+    <Compile Include="FormTambahPromo.designer.cs">
+      <DependentUpon>FormTambahPromo.cs</DependentUpon>
     </Compile>
     <Compile Include="FormProfile.cs">
       <SubType>Form</SubType>
@@ -303,6 +309,12 @@
     <Compile Include="FormDashboard.designer.cs">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUbahPromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUbahPromo.Designer.cs">
+      <DependentUpon>FormUbahPromo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUbahStok.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPengaturanPegawai.resx">
       <DependentUpon>FormPengaturanPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPengaturanPromo.resx">
+      <DependentUpon>FormPengaturanPromo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistrasiDriver.resx">
       <DependentUpon>FormRegistrasiDriver.cs</DependentUpon>
@@ -384,8 +399,8 @@
     <EmbeddedResource Include="FormPengaturanMetodePembayaran.resx">
       <DependentUpon>FormPengaturanMetodePembayaran.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPengaturanPromo.resx">
-      <DependentUpon>FormPengaturanPromo.cs</DependentUpon>
+    <EmbeddedResource Include="FormTambahPromo.resx">
+      <DependentUpon>FormTambahPromo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProfile.resx">
       <DependentUpon>FormProfile.cs</DependentUpon>
@@ -443,6 +458,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUbahPromo.resx">
+      <DependentUpon>FormUbahPromo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUbahStok.resx">
       <DependentUpon>FormUbahStok.cs</DependentUpon>

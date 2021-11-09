@@ -64,10 +64,9 @@ namespace OnlineMart_SubrataSquad
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Menu;
-            this.label1.Location = new System.Drawing.Point(692, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(461, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 20);
+            this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 16;
             this.label1.Text = "Anda login sebagai:";
             // 
@@ -75,24 +74,23 @@ namespace OnlineMart_SubrataSquad
             // 
             this.labelNama.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelNama.AutoSize = true;
-            this.labelNama.Location = new System.Drawing.Point(850, 14);
-            this.labelNama.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNama.Location = new System.Drawing.Point(567, 9);
             this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(51, 20);
+            this.labelNama.Size = new System.Drawing.Size(35, 13);
             this.labelNama.TabIndex = 19;
             this.labelNama.Text = "Nama";
             // 
             // keluarToolStripMenuItem
             // 
             this.keluarToolStripMenuItem.Name = "keluarToolStripMenuItem";
-            this.keluarToolStripMenuItem.Size = new System.Drawing.Size(76, 29);
+            this.keluarToolStripMenuItem.Size = new System.Drawing.Size(52, 22);
             this.keluarToolStripMenuItem.Text = "Keluar";
             this.keluarToolStripMenuItem.Click += new System.EventHandler(this.keluarToolStripMenuItem_Click);
             // 
             // keranjangToolStripMenuItem
             // 
             this.keranjangToolStripMenuItem.Name = "keranjangToolStripMenuItem";
-            this.keranjangToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
+            this.keranjangToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.keranjangToolStripMenuItem.Text = "Keranjang";
             this.keranjangToolStripMenuItem.Visible = false;
             this.keranjangToolStripMenuItem.Click += new System.EventHandler(this.keranjangToolStripMenuItem_Click);
@@ -115,13 +113,13 @@ namespace OnlineMart_SubrataSquad
             this.hadiahToolStripMenuItem,
             this.pegawaiToolStripMenuItem});
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
-            this.masterToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
+            this.masterToolStripMenuItem.Size = new System.Drawing.Size(50, 22);
             this.masterToolStripMenuItem.Text = "Menu";
             // 
             // cariBarangToolStripMenuItem
             // 
             this.cariBarangToolStripMenuItem.Name = "cariBarangToolStripMenuItem";
-            this.cariBarangToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
+            this.cariBarangToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.cariBarangToolStripMenuItem.Text = "Cari Barang";
             this.cariBarangToolStripMenuItem.Visible = false;
             this.cariBarangToolStripMenuItem.Click += new System.EventHandler(this.barangToolStripMenuItem_Click);
@@ -129,7 +127,7 @@ namespace OnlineMart_SubrataSquad
             // saldoToolStripMenuItem
             // 
             this.saldoToolStripMenuItem.Name = "saldoToolStripMenuItem";
-            this.saldoToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
+            this.saldoToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.saldoToolStripMenuItem.Text = "Saldo";
             this.saldoToolStripMenuItem.Visible = false;
             this.saldoToolStripMenuItem.Click += new System.EventHandler(this.saldoToolStripMenuItem_Click);
@@ -137,7 +135,7 @@ namespace OnlineMart_SubrataSquad
             // pesananToolStripMenuItem
             // 
             this.pesananToolStripMenuItem.Name = "pesananToolStripMenuItem";
-            this.pesananToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
+            this.pesananToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.pesananToolStripMenuItem.Text = "Pesanan";
             this.pesananToolStripMenuItem.Visible = false;
             this.pesananToolStripMenuItem.Click += new System.EventHandler(this.pesananToolStripMenuItem_Click);
@@ -145,7 +143,7 @@ namespace OnlineMart_SubrataSquad
             // promoToolStripMenuItem
             // 
             this.promoToolStripMenuItem.Name = "promoToolStripMenuItem";
-            this.promoToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
+            this.promoToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.promoToolStripMenuItem.Text = "Promo";
             this.promoToolStripMenuItem.Visible = false;
             this.promoToolStripMenuItem.Click += new System.EventHandler(this.promoToolStripMenuItem_Click);
@@ -153,7 +151,7 @@ namespace OnlineMart_SubrataSquad
             // daftarPengirimanToolStripMenuItem
             // 
             this.daftarPengirimanToolStripMenuItem.Name = "daftarPengirimanToolStripMenuItem";
-            this.daftarPengirimanToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
+            this.daftarPengirimanToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.daftarPengirimanToolStripMenuItem.Text = "Daftar Pengiriman";
             this.daftarPengirimanToolStripMenuItem.Visible = false;
             this.daftarPengirimanToolStripMenuItem.Click += new System.EventHandler(this.daftarPengirimanToolStripMenuItem_Click);
@@ -161,7 +159,7 @@ namespace OnlineMart_SubrataSquad
             // kontakToolStripMenuItem
             // 
             this.kontakToolStripMenuItem.Name = "kontakToolStripMenuItem";
-            this.kontakToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
+            this.kontakToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.kontakToolStripMenuItem.Text = "Kontak";
             this.kontakToolStripMenuItem.Visible = false;
             this.kontakToolStripMenuItem.Click += new System.EventHandler(this.kontakToolStripMenuItem_Click);
@@ -169,7 +167,7 @@ namespace OnlineMart_SubrataSquad
             // cabangToolStripMenuItem
             // 
             this.cabangToolStripMenuItem.Name = "cabangToolStripMenuItem";
-            this.cabangToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
+            this.cabangToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.cabangToolStripMenuItem.Text = "Cabang";
             this.cabangToolStripMenuItem.Visible = false;
             this.cabangToolStripMenuItem.Click += new System.EventHandler(this.cabangToolStripMenuItem_Click);
@@ -177,7 +175,7 @@ namespace OnlineMart_SubrataSquad
             // kategoriToolStripMenuItem
             // 
             this.kategoriToolStripMenuItem.Name = "kategoriToolStripMenuItem";
-            this.kategoriToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
+            this.kategoriToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.kategoriToolStripMenuItem.Text = "Kategori";
             this.kategoriToolStripMenuItem.Visible = false;
             this.kategoriToolStripMenuItem.Click += new System.EventHandler(this.kategoriToolStripMenuItem_Click);
@@ -185,7 +183,7 @@ namespace OnlineMart_SubrataSquad
             // barangToolStripMenuItem
             // 
             this.barangToolStripMenuItem.Name = "barangToolStripMenuItem";
-            this.barangToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
+            this.barangToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.barangToolStripMenuItem.Text = "Barang";
             this.barangToolStripMenuItem.Visible = false;
             this.barangToolStripMenuItem.Click += new System.EventHandler(this.barangToolStripMenuItem_Click_2);
@@ -193,7 +191,7 @@ namespace OnlineMart_SubrataSquad
             // metodePembayaranToolStripMenuItem
             // 
             this.metodePembayaranToolStripMenuItem.Name = "metodePembayaranToolStripMenuItem";
-            this.metodePembayaranToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
+            this.metodePembayaranToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.metodePembayaranToolStripMenuItem.Text = "Metode Pembayaran";
             this.metodePembayaranToolStripMenuItem.Visible = false;
             this.metodePembayaranToolStripMenuItem.Click += new System.EventHandler(this.metodePembayaranToolStripMenuItem_Click);
@@ -201,7 +199,7 @@ namespace OnlineMart_SubrataSquad
             // promoPegawaiToolStripMenuItem
             // 
             this.promoPegawaiToolStripMenuItem.Name = "promoPegawaiToolStripMenuItem";
-            this.promoPegawaiToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
+            this.promoPegawaiToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.promoPegawaiToolStripMenuItem.Text = "Promo";
             this.promoPegawaiToolStripMenuItem.Visible = false;
             this.promoPegawaiToolStripMenuItem.Click += new System.EventHandler(this.promoPegawaiToolStripMenuItem_Click);
@@ -209,7 +207,7 @@ namespace OnlineMart_SubrataSquad
             // hadiahToolStripMenuItem
             // 
             this.hadiahToolStripMenuItem.Name = "hadiahToolStripMenuItem";
-            this.hadiahToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
+            this.hadiahToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.hadiahToolStripMenuItem.Text = "Hadiah";
             this.hadiahToolStripMenuItem.Visible = false;
             this.hadiahToolStripMenuItem.Click += new System.EventHandler(this.hadiahToolStripMenuItem_Click);
@@ -217,14 +215,13 @@ namespace OnlineMart_SubrataSquad
             // pegawaiToolStripMenuItem
             // 
             this.pegawaiToolStripMenuItem.Name = "pegawaiToolStripMenuItem";
-            this.pegawaiToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
+            this.pegawaiToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.pegawaiToolStripMenuItem.Text = "Pegawai";
             this.pegawaiToolStripMenuItem.Visible = false;
             this.pegawaiToolStripMenuItem.Click += new System.EventHandler(this.pegawaiToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.masterToolStripMenuItem,
@@ -233,8 +230,8 @@ namespace OnlineMart_SubrataSquad
             this.keluarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1200, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -246,13 +243,13 @@ namespace OnlineMart_SubrataSquad
             this.rekapPenjualanBarangToolStripMenuItem,
             this.rekapPenjualanOMASaldoToolStripMenuItem});
             this.laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
-            this.laporanToolStripMenuItem.Size = new System.Drawing.Size(92, 29);
+            this.laporanToolStripMenuItem.Size = new System.Drawing.Size(62, 22);
             this.laporanToolStripMenuItem.Text = "Laporan";
             // 
             // rekapPembelianToolStripMenuItem
             // 
             this.rekapPembelianToolStripMenuItem.Name = "rekapPembelianToolStripMenuItem";
-            this.rekapPembelianToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
+            this.rekapPembelianToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.rekapPembelianToolStripMenuItem.Text = "Rekap Pembelian";
             this.rekapPembelianToolStripMenuItem.Visible = false;
             this.rekapPembelianToolStripMenuItem.Click += new System.EventHandler(this.rekapPembelianToolStripMenuItem_Click);
@@ -260,7 +257,7 @@ namespace OnlineMart_SubrataSquad
             // rekapPendapatanToolStripMenuItem
             // 
             this.rekapPendapatanToolStripMenuItem.Name = "rekapPendapatanToolStripMenuItem";
-            this.rekapPendapatanToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
+            this.rekapPendapatanToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.rekapPendapatanToolStripMenuItem.Text = "Rekap Pendapatan";
             this.rekapPendapatanToolStripMenuItem.Visible = false;
             this.rekapPendapatanToolStripMenuItem.Click += new System.EventHandler(this.rekapPendapatanToolStripMenuItem_Click);
@@ -268,7 +265,7 @@ namespace OnlineMart_SubrataSquad
             // rekapPenjualanBarangToolStripMenuItem
             // 
             this.rekapPenjualanBarangToolStripMenuItem.Name = "rekapPenjualanBarangToolStripMenuItem";
-            this.rekapPenjualanBarangToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
+            this.rekapPenjualanBarangToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.rekapPenjualanBarangToolStripMenuItem.Text = "Rekap Penjualan Barang";
             this.rekapPenjualanBarangToolStripMenuItem.Visible = false;
             this.rekapPenjualanBarangToolStripMenuItem.Click += new System.EventHandler(this.rekapPenjualanBarangToolStripMenuItem_Click);
@@ -276,7 +273,7 @@ namespace OnlineMart_SubrataSquad
             // rekapPenjualanOMASaldoToolStripMenuItem
             // 
             this.rekapPenjualanOMASaldoToolStripMenuItem.Name = "rekapPenjualanOMASaldoToolStripMenuItem";
-            this.rekapPenjualanOMASaldoToolStripMenuItem.Size = new System.Drawing.Size(338, 34);
+            this.rekapPenjualanOMASaldoToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.rekapPenjualanOMASaldoToolStripMenuItem.Text = "Rekap Penjualan OMA Saldo";
             this.rekapPenjualanOMASaldoToolStripMenuItem.Visible = false;
             this.rekapPenjualanOMASaldoToolStripMenuItem.Click += new System.EventHandler(this.rekapPenjualanOMASaldoToolStripMenuItem_Click);
@@ -287,34 +284,33 @@ namespace OnlineMart_SubrataSquad
             this.profilToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(47, 22);
             this.accountToolStripMenuItem.Text = "Akun";
             this.accountToolStripMenuItem.Visible = false;
             // 
             // profilToolStripMenuItem
             // 
             this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            this.profilToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.profilToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.profilToolStripMenuItem.Text = "Profil";
             this.profilToolStripMenuItem.Click += new System.EventHandler(this.profilToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // FormUtama
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelNama);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormUtama";
             this.Load += new System.EventHandler(this.FormUtamaKonsumen_Load);
             this.menuStrip1.ResumeLayout(false);

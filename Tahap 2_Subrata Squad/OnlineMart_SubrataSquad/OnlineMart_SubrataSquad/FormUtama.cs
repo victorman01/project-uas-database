@@ -255,7 +255,18 @@ namespace OnlineMart_SubrataSquad
 
         private void promoPegawaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form frm = Application.OpenForms["FormPengaturanPromo"];
+            if (frm == null)
+            {
+                FormPengaturanPromo formPengaturanPromo = new FormPengaturanPromo();
+                formPengaturanPromo.MdiParent = this;
+                formPengaturanPromo.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
         }
 
         private void hadiahToolStripMenuItem_Click(object sender, EventArgs e)
