@@ -18,26 +18,6 @@ namespace OnlineMart_SubrataSquad
             InitializeComponent();
         }
 
-        private void textBoxIDHadiah_Enter(object sender, EventArgs e)
-        {
-            if (textBoxIDHadiah.Text == "Type Here...")
-            {
-                textBoxIDHadiah.Text = "";
-                textBoxIDHadiah.ForeColor = Color.Black;
-                textBoxIDHadiah.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxIDHadiah_Leave(object sender, EventArgs e)
-        {
-            if (textBoxIDHadiah.Text == "")
-            {
-                textBoxIDHadiah.Text = "Type Here...";
-                textBoxIDHadiah.ForeColor = Color.Silver;
-                textBoxIDHadiah.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
         private void textBoxNamaHadiah_Enter(object sender, EventArgs e)
         {
             if (textBoxNamaHadiah.Text == "Type Here...")

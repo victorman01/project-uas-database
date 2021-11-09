@@ -43,26 +43,6 @@ namespace OnlineMart_SubrataSquad
             }
         }
 
-        private void textBoxIdKategori_Enter(object sender, EventArgs e)
-        {
-            if (textBoxIdKategori.Text == "Type Here...")
-            {
-                textBoxIdKategori.Text = "";
-                textBoxIdKategori.ForeColor = Color.Black;
-                textBoxIdKategori.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxIdKategori_Leave(object sender, EventArgs e)
-        {
-            if (textBoxIdKategori.Text == "")
-            {
-                textBoxIdKategori.Text = "Type Here...";
-                textBoxIdKategori.ForeColor = Color.Silver;
-                textBoxIdKategori.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
             try
