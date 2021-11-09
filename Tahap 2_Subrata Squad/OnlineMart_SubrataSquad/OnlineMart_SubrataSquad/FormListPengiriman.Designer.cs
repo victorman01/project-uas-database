@@ -47,10 +47,10 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Controls.Add(this.comboBoxCBListPengiriman);
             this.panel1.Controls.Add(this.textBoxCBListPengiriman);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(12, 86);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(9, 70);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(560, 117);
+            this.panel1.Size = new System.Drawing.Size(420, 95);
             this.panel1.TabIndex = 6;
             // 
             // comboBoxCBListPengiriman
@@ -59,20 +59,20 @@ namespace OnlineMart_SubrataSquad
             this.comboBoxCBListPengiriman.FormattingEnabled = true;
             this.comboBoxCBListPengiriman.Items.AddRange(new object[] {
             "ID Order"});
-            this.comboBoxCBListPengiriman.Location = new System.Drawing.Point(206, 28);
-            this.comboBoxCBListPengiriman.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxCBListPengiriman.Location = new System.Drawing.Point(154, 23);
+            this.comboBoxCBListPengiriman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxCBListPengiriman.Name = "comboBoxCBListPengiriman";
-            this.comboBoxCBListPengiriman.Size = new System.Drawing.Size(327, 24);
+            this.comboBoxCBListPengiriman.Size = new System.Drawing.Size(246, 21);
             this.comboBoxCBListPengiriman.TabIndex = 7;
             // 
             // textBoxCBListPengiriman
             // 
             this.textBoxCBListPengiriman.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCBListPengiriman.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxCBListPengiriman.Location = new System.Drawing.Point(206, 58);
-            this.textBoxCBListPengiriman.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCBListPengiriman.Location = new System.Drawing.Point(154, 47);
+            this.textBoxCBListPengiriman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCBListPengiriman.Name = "textBoxCBListPengiriman";
-            this.textBoxCBListPengiriman.Size = new System.Drawing.Size(327, 28);
+            this.textBoxCBListPengiriman.Size = new System.Drawing.Size(246, 24);
             this.textBoxCBListPengiriman.TabIndex = 6;
             this.textBoxCBListPengiriman.Text = "Type Here...";
             this.textBoxCBListPengiriman.Enter += new System.EventHandler(this.textBoxCBListPengiriman_Enter);
@@ -82,9 +82,10 @@ namespace OnlineMart_SubrataSquad
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 28);
+            this.label6.Location = new System.Drawing.Point(17, 23);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 21);
+            this.label6.Size = new System.Drawing.Size(119, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "Cari Berdasarkan :";
             // 
@@ -93,9 +94,10 @@ namespace OnlineMart_SubrataSquad
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(560, 60);
+            this.label1.Size = new System.Drawing.Size(420, 49);
             this.label1.TabIndex = 5;
             this.label1.Text = "LIST PENGIRIMAN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -105,10 +107,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(452, 490);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonKeluar.Location = new System.Drawing.Point(339, 398);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(120, 50);
+            this.buttonKeluar.Size = new System.Drawing.Size(90, 41);
             this.buttonKeluar.TabIndex = 7;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -118,12 +120,12 @@ namespace OnlineMart_SubrataSquad
             // 
             this.dataGridViewListPengiriman.BackgroundColor = System.Drawing.Color.Tan;
             this.dataGridViewListPengiriman.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListPengiriman.Location = new System.Drawing.Point(12, 210);
-            this.dataGridViewListPengiriman.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewListPengiriman.Location = new System.Drawing.Point(9, 171);
+            this.dataGridViewListPengiriman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewListPengiriman.Name = "dataGridViewListPengiriman";
             this.dataGridViewListPengiriman.RowHeadersWidth = 51;
             this.dataGridViewListPengiriman.RowTemplate.Height = 24;
-            this.dataGridViewListPengiriman.Size = new System.Drawing.Size(560, 274);
+            this.dataGridViewListPengiriman.Size = new System.Drawing.Size(420, 223);
             this.dataGridViewListPengiriman.TabIndex = 8;
             // 
             // buttonDetail
@@ -131,10 +133,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonDetail.BackColor = System.Drawing.Color.Orange;
             this.buttonDetail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDetail.ForeColor = System.Drawing.Color.White;
-            this.buttonDetail.Location = new System.Drawing.Point(316, 490);
-            this.buttonDetail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDetail.Location = new System.Drawing.Point(237, 398);
+            this.buttonDetail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDetail.Name = "buttonDetail";
-            this.buttonDetail.Size = new System.Drawing.Size(120, 50);
+            this.buttonDetail.Size = new System.Drawing.Size(90, 41);
             this.buttonDetail.TabIndex = 9;
             this.buttonDetail.Text = "&DETAIL";
             this.buttonDetail.UseVisualStyleBackColor = false;
@@ -142,17 +144,18 @@ namespace OnlineMart_SubrataSquad
             // 
             // FormListPengiriman
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 551);
+            this.ClientSize = new System.Drawing.Size(436, 448);
             this.ControlBox = false;
             this.Controls.Add(this.buttonDetail);
             this.Controls.Add(this.dataGridViewListPengiriman);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormListPengiriman";
+            this.Load += new System.EventHandler(this.FormListPengiriman_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListPengiriman)).EndInit();

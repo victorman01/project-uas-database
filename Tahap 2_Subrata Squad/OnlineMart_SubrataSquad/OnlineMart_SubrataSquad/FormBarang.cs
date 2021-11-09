@@ -149,12 +149,12 @@ namespace OnlineMart_SubrataSquad
             string harga = dataGridViewBarang.CurrentRow.Cells["Harga"].Value.ToString();
             string kategori = dataGridViewBarang.CurrentRow.Cells["Kategori"].Value.ToString();
 
-            if (e.ColumnIndex == dataGridViewBarang.Columns["btnTambahGrid"].Index && e.RowIndex >= 0)
-            {
-                FormTambahBarangKeKeranjang frm = new FormTambahBarangKeKeranjang();
-                frm.Owner = this;
-                frm.ShowDialog();
-            }
+            //if (e.ColumnIndex == dataGridViewBarang.Columns["btnTambahGrid"].Index && e.RowIndex >= 0)
+            //{
+            //    FormTambahBarangKeKeranjang frm = new FormTambahBarangKeKeranjang();
+            //    frm.Owner = this;
+            //    frm.ShowDialog();
+            //}
         }
     }
 }

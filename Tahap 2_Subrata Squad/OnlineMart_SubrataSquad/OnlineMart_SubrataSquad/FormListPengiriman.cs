@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OnlineMart_LIB;
 
 namespace OnlineMart_SubrataSquad
 {
     public partial class FormListPengiriman : Form
     {
+        public List<Order> listOrder = new List<Order>();
         public FormListPengiriman()
         {
             InitializeComponent();
@@ -47,6 +49,76 @@ namespace OnlineMart_SubrataSquad
                 textBoxCBListPengiriman.ForeColor = Color.Silver;
                 textBoxCBListPengiriman.Font = new Font("Tahoma", 10, FontStyle.Italic);
             }
+        }
+
+        public void FormatDataGrid()
+        {
+            dataGridViewListPengiriman .DataSource = null;
+            dataGridViewListPengiriman.Columns.Clear();
+
+            //Atur Tabel
+            dataGridViewListPengiriman.Columns.Add("id", "Id Order");
+            dataGridViewListPengiriman.Columns.Add("tanggal_waktu", "Tanggal Order");
+            dataGridViewListPengiriman.Columns.Add("alamat_tujuan", "Alamat Tujuan");
+            dataGridViewListPengiriman.Columns.Add("ongkos_kirim", "Ongkos Kirim");
+            dataGridViewListPengiriman.Columns.Add("total_bayar", "Total Bayar");
+            dataGridViewListPengiriman.Columns.Add("cara_bayar", "Cara Bayar");
+            dataGridViewListPengiriman.Columns.Add("cabangs_id", "Id Cabang");
+            dataGridViewListPengiriman.Columns.Add("drivers_id", "Id Driver");
+            dataGridViewListPengiriman.Columns.Add("pelanggans_id", "Id Pelanggan");
+            dataGridViewListPengiriman.Columns.Add("promo_id", "Id Promo");
+            dataGridViewListPengiriman.Columns.Add("status", "Status");
+            dataGridViewListPengiriman.Columns.Add("metode_pembayaran", "Metode Pembayaran");
+
+
+            //Atur Ukuran Cell
+            dataGridViewListPengiriman.Columns["id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewListPengiriman.Columns["tanggal_waktu"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewListPengiriman.Columns["alamat_tujuan"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewListPengiriman.Columns["ongkos_kirim"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewListPengiriman.Columns["total_bayar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewListPengiriman.Columns["cara_bayar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewListPengiriman.Columns["cabangs_id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewListPengiriman.Columns["drivers_id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewListPengiriman.Columns["pelanggans_id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewListPengiriman.Columns["promo_id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewListPengiriman.Columns["status"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewListPengiriman.Columns["metode_pembayaran"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            //Buat Button Aksi
+            DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
+            bcol.HeaderText = "Aksi";
+            bcol.Text = "Detail";
+            bcol.Name = "btnDetailGrid";
+            bcol.UseColumnTextForButtonValue = true;
+            dataGridViewListPengiriman.Columns.Add(bcol);
+
+            //Batasi Aktivitas User
+            dataGridViewListPengiriman.AllowUserToAddRows = false;
+            dataGridViewListPengiriman.ReadOnly = true;
+        }
+        public void TampilDataGrid()
+        {
+            dataGridViewListPengiriman.Rows.Clear();
+
+            if (listOrder.Count > 0)
+            {
+                foreach (Order o in listOrder)
+                {
+                    dataGridViewListPengiriman.Rows.Add(o.Id, o.TanggalWaktu, o.AlamatTujuan, o.OngkosKirim, o.TotalBayar,o.CaraBayar,o.Cabang.Id,o.Driver.Id,o.Pelanggan.Id,o.Promo.Id,o.Status,o.MetodePembayaran);
+                }
+            }
+            else
+            {
+                dataGridViewListPengiriman.DataSource = null;
+            }
+        }
+
+        private void FormListPengiriman_Load(object sender, EventArgs e)
+        {
+            FormatDataGrid();
+            listOrder = Order.BacaData("", "");
+            TampilDataGrid();
         }
     }
 }

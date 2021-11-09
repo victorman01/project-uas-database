@@ -212,12 +212,12 @@ namespace OnlineMart_SubrataSquad
 
         private void daftarPengirimanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = Application.OpenForms["FormHistory"];
+            Form frm = Application.OpenForms["FormListPengiriman"];
             if (frm == null)
             {
-                FormHistory formHistory = new FormHistory();
-                formHistory.MdiParent = this;
-                formHistory.Show();
+                FormListPengiriman formListPengiriman = new FormListPengiriman();
+                formListPengiriman.MdiParent = this;
+                formListPengiriman.Show();
             }
             else
             {

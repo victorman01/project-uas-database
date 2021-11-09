@@ -64,11 +64,11 @@ namespace OnlineMart_LIB
 
             if (kriteria == "")
             {
-                sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan, o.ongkos_kirim, o.total_bayar, o.cara_bayar, c.id, d.id, pe.id, pr.id from orders o inner join cabangs c on o.cabangs_id = c.id inner join pegawais p on c.pegawais_id = p.id inner join driver d on o.drivers_id = d.id inner join promo pr on o.promos_id = pr.id inner join pelanggan pe on o.pelanggans_id = pe.id";
+                sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan,o.ongkos_kirim, o.total_bayar,o.cara_bayar,c.id,c.nama,c.alamat,p.id, p.nama,p.email,p.password,p.telepon, d.id,d.nama,d.email,d.password,d.telepon,pe.id,pe.nama,pe.email,pe.password,pe.telepon,pe.saldo,pe.poin,pr.id,pr.tipe,pr.nama,pr.diskon,pr.diskon_max,pr.minimal_belanja,o.status,o.metode_pembayaran from orders o inner join cabangs c on o.cabangs_id = c.id inner join pegawais p on c.pegawais_id = p.id inner join drivers d on o.drivers_id = d.id inner join promos pr on o.promo_id = pr.id inner join pelanggans pe on o.pelanggans_id = pe.id";
             }
             else
             {
-                sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan, o.ongkos_kirim, o.total_bayar, o.cara_bayar, c.id, d.id, pe.id, pr.id from orders o inner join cabangs c on o.cabangs_id = c.id inner join pegawais p on c.pegawais_id = p.id inner join driver d on o.drivers_id = d.id inner join promo pr on o.promos_id = pr.id inner join pelanggan pe on o.pelanggans_id = pe.id where " + kriteria + " like '%" + nilaiKriteria + "%'";
+                sql = "select o.id, o.tanggal_waktu, o.alamat_tujuan,o.ongkos_kirim, o.total_bayar,o.cara_bayar,c.id,c.nama,c.alamat,p.id, p.nama,p.email,p.password,p.telepon, d.id,d.nama,d.email,d.password,d.telepon,pe.id,pe.nama,pe.email,pe.password,pe.telepon,pe.saldo,pe.poin,pr.id,pr.tipe,pr.nama,pr.diskon,pr.diskon_max,pr.minimal_belanja,o.status,o.metode_pembayaran from orders o inner join cabangs c on o.cabangs_id = c.id inner join pegawais p on c.pegawais_id = p.id inner join drivers d on o.drivers_id = d.id inner join promos pr on o.promo_id = pr.id inner join pelanggans pe on o.pelanggans_id = pe.id where " + kriteria + " like '%" + nilaiKriteria + "%'";
             }
 
             MySqlDataReader hasil = Connection.JalankanPerintahQuery(sql);
@@ -81,7 +81,7 @@ namespace OnlineMart_LIB
                 Driver driver = new Driver(hasil.GetInt32(14),  hasil.GetString(15), hasil.GetString(16), hasil.GetString(17), hasil.GetString(18));
                 Pelanggan pelanggan = new Pelanggan(hasil.GetInt32(19), hasil.GetString(20), hasil.GetString(21), hasil.GetString(22), hasil.GetString(23), hasil.GetFloat(24), hasil.GetInt32(25));
                 Promo promo = new Promo(hasil.GetInt32(26), hasil.GetString(27), hasil.GetString(28), hasil.GetInt32(29), hasil.GetInt32(30), hasil.GetFloat(31));
-                Order o = new Order(hasil.GetInt32(0), hasil.GetDateTime(1), hasil.GetValue(2).ToString(), hasil.GetFloat(3), hasil.GetFloat(4), hasil.GetValue(5).ToString(), cabang, driver, pelanggan, promo, hasil.GetString(32), hasil.GetString(33));
+                Order o = new Order(hasil.GetInt32(0), DateTime.Parse(hasil.GetValue(1).ToString()), hasil.GetValue(2).ToString(), hasil.GetFloat(3), hasil.GetFloat(4), hasil.GetValue(5).ToString(), cabang, driver, pelanggan, promo, hasil.GetString(32), hasil.GetString(33));
                 listOrder.Add(o);
             }
             return listOrder;
