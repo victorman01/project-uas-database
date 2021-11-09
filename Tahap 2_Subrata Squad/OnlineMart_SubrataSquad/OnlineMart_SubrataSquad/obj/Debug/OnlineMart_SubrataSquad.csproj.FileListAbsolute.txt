@@ -1199,3 +1199,5 @@ D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_datab
 D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.csproj.CopyComplete
 D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.exe
 D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.pdb
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormTambahPromo.resources
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormUbahPromo.resources

@@ -16,6 +16,7 @@ namespace OnlineMart_SubrataSquad
     {
         public Pelanggan pelanggan;
         float saldo;
+        public List<MetodePembayaran> listMetodePembayaran = new List<MetodePembayaran>();
 
         public FormIsiSaldo()
         {
@@ -30,12 +31,13 @@ namespace OnlineMart_SubrataSquad
                 if (dR == DialogResult.Yes)
                 {
                     float topUpAmount = float.Parse(textBoxJumlahPengisianSaldo.Text);
+                    MetodePembayaran metodePembayaranDipilih = (MetodePembayaran)comboBoxAlatIsiSaldo.SelectedItem;
                     Pelanggan.UpdateSaldo(topUpAmount, pelanggan.Id);
                     saldo += topUpAmount;
                     listBoxSaldo.Items.Clear();
                     listBoxSaldo.Items.Add("Name: " + pelanggan.Nama);
                     listBoxSaldo.Items.Add("Amount of Top up: " + topUpAmount.ToString("C0",new CultureInfo("id")));
-                    listBoxSaldo.Items.Add("Payment Method: " + comboBoxAlatIsiSaldo.Text);
+                    listBoxSaldo.Items.Add("Payment Method: " + metodePembayaranDipilih);
                     listBoxSaldo.Items.Add("Saldo: " + saldo.ToString("C0",new CultureInfo("id")));
 
                     MessageBox.Show("Top up success.", "Information");
@@ -83,6 +85,10 @@ namespace OnlineMart_SubrataSquad
             saldo = pelanggan.Saldo;
             listBoxSaldo.Items.Add("Name: " + pelanggan.Nama);
             listBoxSaldo.Items.Add("Saldo: " + saldo.ToString("C0", new CultureInfo("id")));
+
+            listMetodePembayaran = MetodePembayaran.BacaData("", "");
+            comboBoxAlatIsiSaldo.DataSource = listMetodePembayaran;
+            comboBoxAlatIsiSaldo.DisplayMember = "Nama";
         }
     }
 }
