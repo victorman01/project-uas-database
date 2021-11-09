@@ -145,16 +145,21 @@ namespace OnlineMart_SubrataSquad
         private void dataGridViewBarang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string id = dataGridViewBarang.CurrentRow.Cells["Id"].Value.ToString();
-            string Nama = dataGridViewBarang.CurrentRow.Cells["Nama"].Value.ToString();
+            string nama = dataGridViewBarang.CurrentRow.Cells["Nama"].Value.ToString();
             string harga = dataGridViewBarang.CurrentRow.Cells["Harga"].Value.ToString();
             string kategori = dataGridViewBarang.CurrentRow.Cells["Kategori"].Value.ToString();
 
-            //if (e.ColumnIndex == dataGridViewBarang.Columns["btnTambahGrid"].Index && e.RowIndex >= 0)
-            //{
-            //    FormTambahBarangKeKeranjang frm = new FormTambahBarangKeKeranjang();
-            //    frm.Owner = this;
-            //    frm.ShowDialog();
-            //}
+            if (e.ColumnIndex == dataGridViewBarang.Columns["btnTambahGrid"].Index && e.RowIndex >= 0)
+            {
+                FormTambahBarangKeKeranjang frm = new FormTambahBarangKeKeranjang();
+                frm.labelIdBarang.Text = id;
+                frm.labelNamaBarang.Text = nama;
+                frm.labelHargaBarang.Text = harga;
+                frm.labelKategoriBarang.Text = kategori;
+
+                frm.Owner = this;
+                frm.ShowDialog();
+            }
         }
     }
 }

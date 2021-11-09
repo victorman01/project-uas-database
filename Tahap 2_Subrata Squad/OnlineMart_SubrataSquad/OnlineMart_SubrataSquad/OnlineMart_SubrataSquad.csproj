@@ -147,6 +147,12 @@
     <Compile Include="FormLogin.designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahBarangKeKeranjang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahBarangKeKeranjang.Designer.cs">
+      <DependentUpon>FormTambahBarangKeKeranjang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahHadiah.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,6 +315,7 @@
     <Compile Include="FormUtama.designer.cs">
       <DependentUpon>FormUtama.cs</DependentUpon>
     </Compile>
+    <Compile Include="Keranjang.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormBarang.resx">
@@ -397,6 +404,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRekapPenjualanOMASaldo.resx">
       <DependentUpon>FormRekapPenjualanOMASaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahBarangKeKeranjang.resx">
+      <DependentUpon>FormTambahBarangKeKeranjang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahCabang.resx">
       <DependentUpon>FormTambahCabang.cs</DependentUpon>

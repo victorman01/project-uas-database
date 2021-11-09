@@ -2,7 +2,7 @@
 --
 -- Host: 127.0.0.1    Database: online_mart
 -- ------------------------------------------------------
--- Server version	5.5.5-10.4.21-MariaDB
+-- Server version	5.5.5-10.4.20-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -52,14 +52,14 @@ DROP TABLE IF EXISTS `barangs_orders`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `barangs_orders` (
   `barangs_id` int(11) unsigned NOT NULL,
-  `orders_id` int(11) unsigned NOT NULL,
+  `orders_id` int(11) NOT NULL,
   `jumlah` int(11) DEFAULT NULL,
   `harga` float DEFAULT NULL,
   PRIMARY KEY (`barangs_id`,`orders_id`),
   KEY `fk_barangs_orders_orders1_idx` (`orders_id`),
   KEY `fk_barangs_orders_barangs1_idx` (`barangs_id`),
   CONSTRAINT `fk_barangs_orders_barangs` FOREIGN KEY (`barangs_id`) REFERENCES `barangs` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_barangs_orders_orders` FOREIGN KEY (`orders_id`) REFERENCES `orders` (`cabangs_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_barangs_orders_orders` FOREIGN KEY (`orders_id`) REFERENCES `orders` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -235,6 +235,60 @@ INSERT INTO `kategoris` VALUES (1,'Alat tulis'),(2,'Makanan'),(3,'Minuman'),(4,'
 UNLOCK TABLES;
 
 --
+-- Table structure for table `keranjangs`
+--
+
+DROP TABLE IF EXISTS `keranjangs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `keranjangs` (
+  `pelanggans_id` int(10) unsigned NOT NULL,
+  `cabangs_id` int(10) unsigned NOT NULL,
+  `barangs_id` int(10) unsigned NOT NULL,
+  `jumlah` int(11) NOT NULL,
+  PRIMARY KEY (`pelanggans_id`,`cabangs_id`,`barangs_id`),
+  KEY `fk_keranjangs_barangs_idx` (`barangs_id`),
+  KEY `fk_keranjangs_cabangs_idx` (`cabangs_id`),
+  KEY `fk_keranjangs_pelanggans_idx` (`pelanggans_id`),
+  CONSTRAINT `fk_keranjangs_barangs` FOREIGN KEY (`barangs_id`) REFERENCES `cabangs_barangs` (`barangs_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_keranjangs_cabangs` FOREIGN KEY (`cabangs_id`) REFERENCES `cabangs_barangs` (`cabangs_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_keranjangs_pelanggans` FOREIGN KEY (`pelanggans_id`) REFERENCES `pelanggans` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `keranjangs`
+--
+
+LOCK TABLES `keranjangs` WRITE;
+/*!40000 ALTER TABLE `keranjangs` DISABLE KEYS */;
+/*!40000 ALTER TABLE `keranjangs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `metode_pembayarans`
+--
+
+DROP TABLE IF EXISTS `metode_pembayarans`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `metode_pembayarans` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nama` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `metode_pembayarans`
+--
+
+LOCK TABLES `metode_pembayarans` WRITE;
+/*!40000 ALTER TABLE `metode_pembayarans` DISABLE KEYS */;
+/*!40000 ALTER TABLE `metode_pembayarans` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `orders`
 --
 
@@ -242,7 +296,7 @@ DROP TABLE IF EXISTS `orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `orders` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `tanggal_waktu` datetime DEFAULT NULL,
   `alamat_tujuan` varchar(45) DEFAULT NULL,
   `ongkos_kirim` float DEFAULT NULL,
@@ -253,17 +307,19 @@ CREATE TABLE `orders` (
   `pelanggans_id` int(11) unsigned NOT NULL,
   `promo_id` int(11) NOT NULL,
   `status` enum('Menunggu Pembayaran','Pesanan Diproses') DEFAULT NULL,
-  `metode_pembayaran` enum('Ovo','ShopeePa') DEFAULT NULL,
+  `metode_pembayaran_id` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_orders_cabangs_idx` (`cabangs_id`),
   KEY `fk_orders_drivers1_idx` (`drivers_id`),
   KEY `fk_ortders_pelanggans_idx` (`pelanggans_id`),
   KEY `fk_orders_promos_idx` (`promo_id`),
+  KEY `fk_orders_metode_pembayarans_idx` (`metode_pembayaran_id`),
   CONSTRAINT `fk_orders_cabangs` FOREIGN KEY (`cabangs_id`) REFERENCES `cabangs` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_orders_drivers1` FOREIGN KEY (`drivers_id`) REFERENCES `drivers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_orders_metode_pembayarans` FOREIGN KEY (`metode_pembayaran_id`) REFERENCES `metode_pembayarans` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_orders_pelanggans` FOREIGN KEY (`pelanggans_id`) REFERENCES `pelanggans` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_orders_promos` FOREIGN KEY (`promo_id`) REFERENCES `promos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -272,7 +328,6 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (1,'2021-09-01 12:09:01','jl. Diponegoro',20000,50000,'Cash',1,1,1,1,'Menunggu Pembayaran','Ovo');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -330,29 +385,6 @@ LOCK TABLES `pelanggans` WRITE;
 /*!40000 ALTER TABLE `pelanggans` DISABLE KEYS */;
 INSERT INTO `pelanggans` VALUES (1,'Cella','cel@gmail.com','52b8532a44b6e26049e12fa7ca6ab5fcfc36715d6d53f6cf8333858c41727496df3563488dbcc88353348f269aa918aa0b5fefc07b13ab25b318d46910ce54dd','081289098765',0,0),(2,'Velicia','vels@gmail.com','62f4fc2f98ef358e7515dad7c0557ab10311ab608739f11d42363ba40c54b0e5e6a3f63bf8fc3e6c807737132b7973d595bf4e1239ae930cd7543ccd0ed22411','081234567890',0,0),(3,'Junita','jun@gmail.com','f2b823e4a0ad2b06ba841de2dd27a5fd4fd226dd07cf9cf6189071c3c45af9ddf013523f9e79f6d21c5ce0cde3010dc4603c22c44d2d4aef451583360f7bc5be','089180676564',0,0),(4,'Kevin','kev@gmail.com','73cba74c46bfb8e5bfb6b4b53e1ebbadcccba18e3ece04af8f80bfccb94e42666bd1217a3ec4955d3c78c24dfb7dbea3d2933f3dacaccfd2cb892c1f10bad3d6','081235276565',0,0),(5,'Alicia','alc@gmail.com','7a178967cad357711590fff07c308799e2ed57df7d5eb79b37624f9b0d82bafa16f883384d06b126980609d9960c49c91cf41e5260224ff7e0014e6d789f9bd5','08573345456768',0,0),(6,'albertus f','albertusf@gmail.com','d08928f1b08cc10152363550de3472690dcf47815c84422e719a762e6466bdb91f244aaa30006c6b16abddb43280874b9f345f45d559cb1601bcd51abdbc0352','098765432112',0,0),(7,'jericho j','jerichoj@gmail.com','04821f35016cc36e4c94fdc257c04d4e98f7a1694148869b46577de26c6c55eb7ddf49d0918b789ab56c11bc8f601612b9f497f7394e638a4583d22b8e9166c2','09876556789',0,0),(8,'kelvin f','kelvinf@gmail.com','78eb8e0a991a98eeae12dd96d5c674769045794e5347e06c05a94f603786914f64a9d29e430c1118ccf1b6a998e5c67237b6fc101ff23f1c8b829b8ad3d810e3','0989890976',0,0),(9,'cella j','cellaj@gmail.com','270df2dc1df40bc22786ef9898dad1270a07314e9c5ef91a630536fe8a5632daa875d3b178b4a43aac84926ef542232c38fa8b65e1636805cf588ed3027eb114','099090889',0,0);
 /*!40000 ALTER TABLE `pelanggans` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `pemasukkan`
---
-
-DROP TABLE IF EXISTS `pemasukkan`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `pemasukkan` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `tanggal` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `pemasukkan`
---
-
-LOCK TABLES `pemasukkan` WRITE;
-/*!40000 ALTER TABLE `pemasukkan` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pemasukkan` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -419,4 +451,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-09 21:41:59
+-- Dump completed on 2021-11-09 23:57:57
