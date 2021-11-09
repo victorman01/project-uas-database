@@ -144,6 +144,11 @@ namespace OnlineMart_LIB
                 return true;
             }
         }
+        public static void UpdateSaldo(Pelanggan p, float nominal)
+        {
+            string sql = "update pelanggans set saldo = " + p.Saldo + " + " + nominal + " where id = '" + p.Id + "'";
+            Connection.JalankanPerintahDML(sql);
+        }
         #endregion
     }
 }
