@@ -72,7 +72,7 @@ namespace OnlineMart_SubrataSquad
             }
             catch (Exception ex)
             {
-                MessageBox.Show("There's error added data kategori. Error Message : " + ex.Message,
+                MessageBox.Show("There's error added data gift. Error Message : " + ex.Message,
                     "Failure");
             }
         }

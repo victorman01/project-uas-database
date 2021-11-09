@@ -250,7 +250,18 @@ namespace OnlineMart_SubrataSquad
 
         private void metodePembayaranToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form frm = Application.OpenForms["FormPengaturanMetodePembayaran"];
+            if (frm == null)
+            {
+                FormPengaturanMetodePembayaran formPengaturanMetodePembayaran = new FormPengaturanMetodePembayaran();
+                formPengaturanMetodePembayaran.MdiParent = this;
+                formPengaturanMetodePembayaran.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
         }
 
         private void promoPegawaiToolStripMenuItem_Click(object sender, EventArgs e)

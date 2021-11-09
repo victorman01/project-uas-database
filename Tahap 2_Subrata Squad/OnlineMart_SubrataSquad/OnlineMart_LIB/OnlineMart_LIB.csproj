@@ -54,6 +54,7 @@
     <Compile Include="Gift.cs" />
     <Compile Include="GiftRedeem.cs" />
     <Compile Include="Kategori.cs" />
+    <Compile Include="MetodePembayaran.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Pegawai.cs" />
     <Compile Include="Pelanggan.cs" />

@@ -236,3 +236,23 @@ D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\Onlin
 D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.csproj.CopyComplete
 D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.dll
 D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.pdb
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\OnlineMart_LIB.dll
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\OnlineMart_LIB.pdb
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\MySql.Data.dll
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\Google.Protobuf.dll
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\Zstandard.Net.dll
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\BouncyCastle.Crypto.dll
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\Ubiety.Dns.Core.dll
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\System.Memory.dll
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\System.Buffers.dll
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\K4os.Compression.LZ4.dll
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\K4os.Hash.xxHash.dll
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\System.Numerics.Vectors.dll
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\MySql.Data.xml
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.csprojAssemblyReference.cache
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.csproj.CoreCompileInputs.cache
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.csproj.CopyComplete
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.dll
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.pdb

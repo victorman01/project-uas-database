@@ -37,7 +37,6 @@ namespace OnlineMart_SubrataSquad
             this.textBoxCBPengaturanMP = new System.Windows.Forms.TextBox();
             this.comboBoxCBPengaturanMP = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonUBAH = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPengaturanMP)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +52,7 @@ namespace OnlineMart_SubrataSquad
             this.dataGridViewPengaturanMP.RowTemplate.Height = 24;
             this.dataGridViewPengaturanMP.Size = new System.Drawing.Size(560, 256);
             this.dataGridViewPengaturanMP.TabIndex = 24;
+            this.dataGridViewPengaturanMP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPengaturanMP_CellContentClick);
             // 
             // label1
             // 
@@ -114,6 +114,7 @@ namespace OnlineMart_SubrataSquad
             this.textBoxCBPengaturanMP.Size = new System.Drawing.Size(327, 28);
             this.textBoxCBPengaturanMP.TabIndex = 6;
             this.textBoxCBPengaturanMP.Text = "Type Here...";
+            this.textBoxCBPengaturanMP.TextChanged += new System.EventHandler(this.textBoxCBPengaturanMP_TextChanged);
             this.textBoxCBPengaturanMP.Enter += new System.EventHandler(this.textBoxCBPengaturanMP_Enter);
             this.textBoxCBPengaturanMP.Leave += new System.EventHandler(this.textBoxCBPengaturanMP_Leave);
             // 
@@ -122,8 +123,8 @@ namespace OnlineMart_SubrataSquad
             this.comboBoxCBPengaturanMP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCBPengaturanMP.FormattingEnabled = true;
             this.comboBoxCBPengaturanMP.Items.AddRange(new object[] {
-            "Kode Kategori",
-            "Nama Kategori"});
+            "ID Metode Pembayaran",
+            "Nama Metode Pembayaran"});
             this.comboBoxCBPengaturanMP.Location = new System.Drawing.Point(205, 18);
             this.comboBoxCBPengaturanMP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxCBPengaturanMP.Name = "comboBoxCBPengaturanMP";
@@ -142,27 +143,12 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Size = new System.Drawing.Size(560, 98);
             this.panel1.TabIndex = 22;
             // 
-            // buttonUBAH
-            // 
-            this.buttonUBAH.BackColor = System.Drawing.Color.Orange;
-            this.buttonUBAH.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUBAH.ForeColor = System.Drawing.Color.White;
-            this.buttonUBAH.Location = new System.Drawing.Point(11, 489);
-            this.buttonUBAH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonUBAH.Name = "buttonUBAH";
-            this.buttonUBAH.Size = new System.Drawing.Size(120, 50);
-            this.buttonUBAH.TabIndex = 26;
-            this.buttonUBAH.Text = "&UBAH";
-            this.buttonUBAH.UseVisualStyleBackColor = false;
-            this.buttonUBAH.Click += new System.EventHandler(this.buttonUBAH_Click);
-            // 
             // FormPengaturanMetodePembayaran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 546);
             this.ControlBox = false;
-            this.Controls.Add(this.buttonUBAH);
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.dataGridViewPengaturanMP);
             this.Controls.Add(this.panel1);
@@ -170,6 +156,7 @@ namespace OnlineMart_SubrataSquad
             this.Controls.Add(this.buttonKeluar);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormPengaturanMetodePembayaran";
+            this.Load += new System.EventHandler(this.FormPengaturanMetodePembayaran_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPengaturanMP)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -187,6 +174,5 @@ namespace OnlineMart_SubrataSquad
         private System.Windows.Forms.TextBox textBoxCBPengaturanMP;
         private System.Windows.Forms.ComboBox comboBoxCBPengaturanMP;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonUBAH;
     }
 }

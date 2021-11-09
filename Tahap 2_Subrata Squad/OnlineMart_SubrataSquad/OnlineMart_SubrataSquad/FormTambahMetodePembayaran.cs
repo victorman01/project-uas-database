@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OnlineMart_LIB;
 
 namespace OnlineMart_SubrataSquad
 {
     public partial class FormTambahMetodePembayaran : Form
     {
+        public List<MetodePembayaran> listMetodePembayaran = new List<MetodePembayaran>();
         public FormTambahMetodePembayaran()
         {
             InitializeComponent();
@@ -24,34 +26,20 @@ namespace OnlineMart_SubrataSquad
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            DialogResult dR = MessageBox.Show("Are you sure?","Confirmation",MessageBoxButtons.YesNo);
-            if (dR == DialogResult.Yes)
+            try
             {
-                MessageBox.Show("Adding payment method success.","Information");
-            }
-            else
-            {
-                MessageBox.Show("Adding payment method fail.", "Information");
-            }
-        }
+                MetodePembayaran mp = new MetodePembayaran(textBoxNamaMP.Text);
+                MetodePembayaran.TambahData(mp);
+                MessageBox.Show("Data metode pembayaran success to be added", "Info");
 
-        private void textBoxKodeMP_Enter(object sender, EventArgs e)
-        {
-            if (textBoxKodeMP.Text == "Type Here...")
-            {
-                textBoxKodeMP.Text = "";
-                textBoxKodeMP.ForeColor = Color.Black;
-                textBoxKodeMP.Font = new Font("Tahoma", 10, FontStyle.Regular);
+                FormPengaturanMetodePembayaran form = (FormPengaturanMetodePembayaran)this.Owner;
+                form.FormPengaturanMetodePembayaran_Load(sender, e);
+                this.Close();
             }
-        }
-
-        private void textBoxKodeMP_Leave(object sender, EventArgs e)
-        {
-            if (textBoxKodeMP.Text == "")
+            catch (Exception ex)
             {
-                textBoxKodeMP.Text = "Type Here...";
-                textBoxKodeMP.ForeColor = Color.Silver;
-                textBoxKodeMP.Font = new Font("Tahoma", 10, FontStyle.Italic);
+                MessageBox.Show("There's error added data metode pembayaran. Error Message : " + ex.Message,
+                    "Failure");
             }
         }
 
@@ -78,8 +66,7 @@ namespace OnlineMart_SubrataSquad
         private void buttonKosongi_Click(object sender, EventArgs e)
         {
             textBoxNamaMP.Text = "";
-            textBoxKodeMP.Text = "";
-            textBoxKodeMP.Focus();
+            textBoxNamaMP.Focus();
         }
     }
 }
