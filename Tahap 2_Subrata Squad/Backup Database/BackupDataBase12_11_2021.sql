@@ -2,7 +2,7 @@
 --
 -- Host: 127.0.0.1    Database: online_mart
 -- ------------------------------------------------------
--- Server version	5.5.5-10.4.20-MariaDB
+-- Server version	5.5.5-10.4.21-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -276,7 +276,7 @@ CREATE TABLE `metode_pembayarans` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nama` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -285,6 +285,7 @@ CREATE TABLE `metode_pembayarans` (
 
 LOCK TABLES `metode_pembayarans` WRITE;
 /*!40000 ALTER TABLE `metode_pembayarans` DISABLE KEYS */;
+INSERT INTO `metode_pembayarans` VALUES (1,'Ovo');
 /*!40000 ALTER TABLE `metode_pembayarans` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -307,7 +308,8 @@ CREATE TABLE `orders` (
   `pelanggans_id` int(11) unsigned NOT NULL,
   `promo_id` int(11) NOT NULL,
   `status` enum('Menunggu Pembayaran','Pesanan Diproses') DEFAULT NULL,
-  `metode_pembayaran_id` int(10) unsigned DEFAULT NULL,
+  `metode_pembayaran_id` int(10) unsigned NOT NULL,
+  `status_kirim` enum('Waiting','Accepted','Declined') DEFAULT 'Waiting',
   PRIMARY KEY (`id`),
   KEY `fk_orders_cabangs_idx` (`cabangs_id`),
   KEY `fk_orders_drivers1_idx` (`drivers_id`),
@@ -328,6 +330,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,'2021-11-10 00:00:00','Jl.Diponegoro',20000,50000,'Cash',1,1,1,1,'Menunggu Pembayaran',1,'Waiting');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -451,4 +454,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-09 23:57:57
+-- Dump completed on 2021-11-12  0:57:50
