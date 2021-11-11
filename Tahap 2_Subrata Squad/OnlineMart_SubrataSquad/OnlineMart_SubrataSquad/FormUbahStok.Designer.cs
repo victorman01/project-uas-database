@@ -48,9 +48,10 @@ namespace OnlineMart_SubrataSquad
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(560, 60);
+            this.label1.Size = new System.Drawing.Size(420, 49);
             this.label1.TabIndex = 27;
             this.label1.Text = "UBAH STOK";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,10 +61,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(452, 219);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonKeluar.Location = new System.Drawing.Point(339, 178);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(120, 50);
+            this.buttonKeluar.Size = new System.Drawing.Size(90, 41);
             this.buttonKeluar.TabIndex = 29;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -73,9 +74,10 @@ namespace OnlineMart_SubrataSquad
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(70, 17);
+            this.label6.Location = new System.Drawing.Point(44, 14);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 21);
+            this.label6.Size = new System.Drawing.Size(60, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "Barang :";
             // 
@@ -88,54 +90,46 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(12, 79);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(9, 64);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(560, 129);
+            this.panel1.Size = new System.Drawing.Size(420, 105);
             this.panel1.TabIndex = 28;
             // 
             // textBoxBarang
             // 
             this.textBoxBarang.Enabled = false;
-            this.textBoxBarang.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBarang.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxBarang.Location = new System.Drawing.Point(144, 14);
-            this.textBoxBarang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxBarang.Location = new System.Drawing.Point(108, 14);
+            this.textBoxBarang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxBarang.Name = "textBoxBarang";
-            this.textBoxBarang.Size = new System.Drawing.Size(391, 28);
+            this.textBoxBarang.Size = new System.Drawing.Size(294, 20);
             this.textBoxBarang.TabIndex = 17;
-            this.textBoxBarang.Text = "Type Here...";
             // 
             // textBoxCabang
             // 
             this.textBoxCabang.Enabled = false;
-            this.textBoxCabang.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCabang.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxCabang.Location = new System.Drawing.Point(144, 50);
-            this.textBoxCabang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCabang.Location = new System.Drawing.Point(108, 44);
+            this.textBoxCabang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCabang.Name = "textBoxCabang";
-            this.textBoxCabang.Size = new System.Drawing.Size(391, 28);
+            this.textBoxCabang.Size = new System.Drawing.Size(294, 20);
             this.textBoxCabang.TabIndex = 16;
-            this.textBoxCabang.Text = "Type Here...";
             // 
             // textBoxStok
             // 
-            this.textBoxStok.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxStok.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxStok.Location = new System.Drawing.Point(146, 84);
-            this.textBoxStok.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxStok.Location = new System.Drawing.Point(110, 71);
+            this.textBoxStok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxStok.Name = "textBoxStok";
-            this.textBoxStok.Size = new System.Drawing.Size(389, 28);
+            this.textBoxStok.Size = new System.Drawing.Size(293, 20);
             this.textBoxStok.TabIndex = 15;
-            this.textBoxStok.Text = "Type Here...";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 54);
+            this.label2.Location = new System.Drawing.Point(42, 44);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 21);
+            this.label2.Size = new System.Drawing.Size(64, 17);
             this.label2.TabIndex = 13;
             this.label2.Text = "Cabang :";
             // 
@@ -143,9 +137,10 @@ namespace OnlineMart_SubrataSquad
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(89, 88);
+            this.label4.Location = new System.Drawing.Point(59, 72);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 21);
+            this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 11;
             this.label4.Text = "Stok :";
             // 
@@ -154,10 +149,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonKosongi.BackColor = System.Drawing.Color.Orange;
             this.buttonKosongi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKosongi.ForeColor = System.Drawing.Color.White;
-            this.buttonKosongi.Location = new System.Drawing.Point(282, 219);
-            this.buttonKosongi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonKosongi.Location = new System.Drawing.Point(212, 178);
+            this.buttonKosongi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonKosongi.Name = "buttonKosongi";
-            this.buttonKosongi.Size = new System.Drawing.Size(140, 50);
+            this.buttonKosongi.Size = new System.Drawing.Size(105, 41);
             this.buttonKosongi.TabIndex = 31;
             this.buttonKosongi.Text = "&KOSONGI";
             this.buttonKosongi.UseVisualStyleBackColor = false;
@@ -167,10 +162,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonSimpan.BackColor = System.Drawing.Color.Orange;
             this.buttonSimpan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(156, 219);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSimpan.Location = new System.Drawing.Point(117, 178);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSimpan.Name = "buttonSimpan";
-            this.buttonSimpan.Size = new System.Drawing.Size(120, 50);
+            this.buttonSimpan.Size = new System.Drawing.Size(90, 41);
             this.buttonSimpan.TabIndex = 30;
             this.buttonSimpan.Text = "&SIMPAN";
             this.buttonSimpan.UseVisualStyleBackColor = false;
@@ -178,14 +173,15 @@ namespace OnlineMart_SubrataSquad
             // 
             // FormUbahStok
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 282);
+            this.ClientSize = new System.Drawing.Size(440, 229);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonKosongi);
             this.Controls.Add(this.buttonSimpan);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormUbahStok";
             this.Text = "FormUbahStok";
             this.Load += new System.EventHandler(this.FormUbahStok_Load);

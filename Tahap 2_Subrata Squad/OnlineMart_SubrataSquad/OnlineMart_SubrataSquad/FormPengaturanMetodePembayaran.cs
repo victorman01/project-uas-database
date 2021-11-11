@@ -58,13 +58,33 @@ namespace OnlineMart_SubrataSquad
             }
         }
 
-        public void FormPengaturanMetodePembayaran_Load(object sender, EventArgs e)
+        public void FormatDataGrid()
         {
-            listMetodePembayaran = MetodePembayaran.BacaData("", "");
+            //kosongi semua kolom di datagridview
+            dataGridViewPengaturanMP.Columns.Clear();
 
+            //menambah kolom di datagridview
+            dataGridViewPengaturanMP.Columns.Add("id", "ID Metode Pembayaran");
+            dataGridViewPengaturanMP.Columns.Add("nama", "Nama Metode Pembayaran");
+
+
+            //agar lebar kolom dapat menyesuaikan panjang/isi data
+            dataGridViewPengaturanMP.Columns["id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewPengaturanMP.Columns["nama"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            //agar user tidak bisa menambah baris maupun mengetik langsung di datagridview
+            dataGridViewPengaturanMP.AllowUserToAddRows = false;
+            dataGridViewPengaturanMP.ReadOnly = true;
+        }
+
+        public void TampilDataGrid()
+        {
             if (listMetodePembayaran.Count > 0)
             {
-                dataGridViewPengaturanMP.DataSource = listMetodePembayaran;
+                foreach (MetodePembayaran mP in listMetodePembayaran)
+                {
+                    dataGridViewPengaturanMP.Rows.Add(mP.Id, mP.Nama);
+                }
 
                 if (!dataGridViewPengaturanMP.Columns.Contains("btnUbahGrid"))
                 {
@@ -89,6 +109,13 @@ namespace OnlineMart_SubrataSquad
             }
         }
 
+        public void FormPengaturanMetodePembayaran_Load(object sender, EventArgs e)
+        {
+            FormatDataGrid();
+            listMetodePembayaran = MetodePembayaran.BacaData("", "");
+            TampilDataGrid(); 
+        }
+
         private void dataGridViewPengaturanMP_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string pKodeKategori = dataGridViewPengaturanMP.CurrentRow.Cells["id"].Value.ToString();
@@ -101,7 +128,7 @@ namespace OnlineMart_SubrataSquad
 
                 if (hasil == DialogResult.Yes)
                 {
-                    Boolean hapus = Gift.HapusData(pKodeKategori);
+                    Boolean hapus = MetodePembayaran.HapusData(int.Parse(pKodeKategori));
                     if (hapus == true)
                     {
                         MessageBox.Show("Delete success");
@@ -126,6 +153,8 @@ namespace OnlineMart_SubrataSquad
 
         private void textBoxCBPengaturanMP_TextChanged(object sender, EventArgs e)
         {
+            FormatDataGrid();
+
             string kriteria = "";
             switch (comboBoxCBPengaturanMP.Text)
             {
@@ -144,7 +173,8 @@ namespace OnlineMart_SubrataSquad
             {
                 listMetodePembayaran = MetodePembayaran.BacaData(kriteria, textBoxCBPengaturanMP.Text);
             }
-            dataGridViewPengaturanMP.DataSource = listMetodePembayaran;
+
+            TampilDataGrid();
         }
     }
 }

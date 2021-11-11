@@ -39,11 +39,11 @@ namespace OnlineMart_SubrataSquad
             this.textBoxTelepon = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
             this.textBoxUlangPassword = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,29 +101,19 @@ namespace OnlineMart_SubrataSquad
             // 
             // textBoxNama
             // 
-            this.textBoxNama.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNama.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxNama.Location = new System.Drawing.Point(123, 11);
             this.textBoxNama.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBoxNama.Name = "textBoxNama";
-            this.textBoxNama.Size = new System.Drawing.Size(332, 24);
+            this.textBoxNama.Size = new System.Drawing.Size(332, 20);
             this.textBoxNama.TabIndex = 38;
-            this.textBoxNama.Text = "Type Here...";
-            this.textBoxNama.Enter += new System.EventHandler(this.textBoxNama_Enter);
-            this.textBoxNama.Leave += new System.EventHandler(this.textBoxNama_Leave);
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxEmail.Location = new System.Drawing.Point(123, 35);
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(332, 24);
+            this.textBoxEmail.Size = new System.Drawing.Size(332, 20);
             this.textBoxEmail.TabIndex = 40;
-            this.textBoxEmail.Text = "Type Here...";
-            this.textBoxEmail.Enter += new System.EventHandler(this.textBoxEmail_Enter);
-            this.textBoxEmail.Leave += new System.EventHandler(this.textBoxEmail_Leave);
             // 
             // label3
             // 
@@ -138,16 +128,11 @@ namespace OnlineMart_SubrataSquad
             // 
             // textBoxTelepon
             // 
-            this.textBoxTelepon.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTelepon.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxTelepon.Location = new System.Drawing.Point(123, 61);
             this.textBoxTelepon.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBoxTelepon.Name = "textBoxTelepon";
-            this.textBoxTelepon.Size = new System.Drawing.Size(332, 24);
+            this.textBoxTelepon.Size = new System.Drawing.Size(332, 20);
             this.textBoxTelepon.TabIndex = 42;
-            this.textBoxTelepon.Text = "Type Here...";
-            this.textBoxTelepon.Enter += new System.EventHandler(this.textBoxTelepon_Enter);
-            this.textBoxTelepon.Leave += new System.EventHandler(this.textBoxTelepon_Leave);
             // 
             // label4
             // 
@@ -180,19 +165,25 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Size = new System.Drawing.Size(476, 171);
             this.panel1.TabIndex = 47;
             // 
+            // checkBoxShowPassword
+            // 
+            this.checkBoxShowPassword.AutoSize = true;
+            this.checkBoxShowPassword.Location = new System.Drawing.Point(123, 141);
+            this.checkBoxShowPassword.Name = "checkBoxShowPassword";
+            this.checkBoxShowPassword.Size = new System.Drawing.Size(102, 17);
+            this.checkBoxShowPassword.TabIndex = 47;
+            this.checkBoxShowPassword.Text = "Show Password";
+            this.checkBoxShowPassword.UseVisualStyleBackColor = true;
+            this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
+            // 
             // textBoxUlangPassword
             // 
-            this.textBoxUlangPassword.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUlangPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxUlangPassword.Location = new System.Drawing.Point(123, 113);
             this.textBoxUlangPassword.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBoxUlangPassword.Name = "textBoxUlangPassword";
             this.textBoxUlangPassword.PasswordChar = '*';
-            this.textBoxUlangPassword.Size = new System.Drawing.Size(332, 24);
+            this.textBoxUlangPassword.Size = new System.Drawing.Size(332, 20);
             this.textBoxUlangPassword.TabIndex = 46;
-            this.textBoxUlangPassword.Text = "Type Here...";
-            this.textBoxUlangPassword.Enter += new System.EventHandler(this.textBoxUlangPassword_Enter);
-            this.textBoxUlangPassword.Leave += new System.EventHandler(this.textBoxUlangPassword_Leave);
             // 
             // label8
             // 
@@ -207,17 +198,12 @@ namespace OnlineMart_SubrataSquad
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxPassword.Location = new System.Drawing.Point(123, 87);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(332, 24);
+            this.textBoxPassword.Size = new System.Drawing.Size(332, 20);
             this.textBoxPassword.TabIndex = 44;
-            this.textBoxPassword.Text = "Type Here...";
-            this.textBoxPassword.Enter += new System.EventHandler(this.textBoxPassword_Enter);
-            this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
             // 
             // label5
             // 
@@ -229,17 +215,6 @@ namespace OnlineMart_SubrataSquad
             this.label5.Size = new System.Drawing.Size(75, 17);
             this.label5.TabIndex = 43;
             this.label5.Text = "Password :";
-            // 
-            // checkBoxShowPassword
-            // 
-            this.checkBoxShowPassword.AutoSize = true;
-            this.checkBoxShowPassword.Location = new System.Drawing.Point(123, 141);
-            this.checkBoxShowPassword.Name = "checkBoxShowPassword";
-            this.checkBoxShowPassword.Size = new System.Drawing.Size(102, 17);
-            this.checkBoxShowPassword.TabIndex = 47;
-            this.checkBoxShowPassword.Text = "Show Password";
-            this.checkBoxShowPassword.UseVisualStyleBackColor = true;
-            this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
             // 
             // FormUbahProfile
             // 

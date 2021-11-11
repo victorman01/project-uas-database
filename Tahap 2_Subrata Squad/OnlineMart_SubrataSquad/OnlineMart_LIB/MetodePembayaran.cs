@@ -59,7 +59,7 @@ namespace OnlineMart_LIB
 
         public static Boolean HapusData(int id)
         {
-            string sql = "delete from metode_pembayarans where id= " + id;
+            string sql = "delete from metode_pembayarans where id = " + id;
             int jumlahDataBerubah = Connection.JalankanPerintahDML(sql);
             if (jumlahDataBerubah == 0)
                 return false;

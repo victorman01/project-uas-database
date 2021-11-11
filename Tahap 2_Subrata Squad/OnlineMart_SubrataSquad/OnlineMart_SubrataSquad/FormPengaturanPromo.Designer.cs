@@ -154,13 +154,13 @@ namespace OnlineMart_SubrataSquad
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(441, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.dataGridViewPengaturanPromo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
             this.Name = "FormPengaturanPromo";
-            this.Text = "FormPengaturanPromo";
             this.Load += new System.EventHandler(this.FormPengaturanPromo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPengaturanPromo)).EndInit();
             this.panel1.ResumeLayout(false);

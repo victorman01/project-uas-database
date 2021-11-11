@@ -57,20 +57,18 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Controls.Add(this.textBoxIdPegawai);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(9, 111);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(420, 138);
             this.panel1.TabIndex = 43;
             // 
             // textBoxNoTeleponPegawai
             // 
-            this.textBoxNoTeleponPegawai.Location = new System.Drawing.Point(142, 93);
-            this.textBoxNoTeleponPegawai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNoTeleponPegawai.Location = new System.Drawing.Point(142, 96);
+            this.textBoxNoTeleponPegawai.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNoTeleponPegawai.Name = "textBoxNoTeleponPegawai";
             this.textBoxNoTeleponPegawai.Size = new System.Drawing.Size(259, 20);
             this.textBoxNoTeleponPegawai.TabIndex = 12;
-            this.textBoxNoTeleponPegawai.Enter += new System.EventHandler(this.textBoxNoTeleponPegawai_Enter);
-            this.textBoxNoTeleponPegawai.Leave += new System.EventHandler(this.textBoxNoTeleponPegawai_Leave);
             // 
             // label3
             // 
@@ -85,13 +83,11 @@ namespace OnlineMart_SubrataSquad
             // 
             // textBoxEmailPegawai
             // 
-            this.textBoxEmailPegawai.Location = new System.Drawing.Point(142, 65);
-            this.textBoxEmailPegawai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEmailPegawai.Location = new System.Drawing.Point(142, 68);
+            this.textBoxEmailPegawai.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmailPegawai.Name = "textBoxEmailPegawai";
             this.textBoxEmailPegawai.Size = new System.Drawing.Size(259, 20);
             this.textBoxEmailPegawai.TabIndex = 10;
-            this.textBoxEmailPegawai.Enter += new System.EventHandler(this.textBoxEmailPegawai_Enter);
-            this.textBoxEmailPegawai.Leave += new System.EventHandler(this.textBoxEmailPegawai_Leave);
             // 
             // label4
             // 
@@ -106,13 +102,11 @@ namespace OnlineMart_SubrataSquad
             // 
             // textBoxNamaPegawai
             // 
-            this.textBoxNamaPegawai.Location = new System.Drawing.Point(142, 39);
-            this.textBoxNamaPegawai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNamaPegawai.Location = new System.Drawing.Point(142, 42);
+            this.textBoxNamaPegawai.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNamaPegawai.Name = "textBoxNamaPegawai";
             this.textBoxNamaPegawai.Size = new System.Drawing.Size(259, 20);
             this.textBoxNamaPegawai.TabIndex = 8;
-            this.textBoxNamaPegawai.Enter += new System.EventHandler(this.textBoxNamaPegawai_Enter);
-            this.textBoxNamaPegawai.Leave += new System.EventHandler(this.textBoxNamaPegawai_Leave);
             // 
             // label2
             // 
@@ -128,11 +122,10 @@ namespace OnlineMart_SubrataSquad
             // textBoxIdPegawai
             // 
             this.textBoxIdPegawai.Enabled = false;
-            this.textBoxIdPegawai.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIdPegawai.Location = new System.Drawing.Point(142, 11);
-            this.textBoxIdPegawai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxIdPegawai.Location = new System.Drawing.Point(142, 14);
+            this.textBoxIdPegawai.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIdPegawai.Name = "textBoxIdPegawai";
-            this.textBoxIdPegawai.Size = new System.Drawing.Size(259, 24);
+            this.textBoxIdPegawai.Size = new System.Drawing.Size(259, 20);
             this.textBoxIdPegawai.TabIndex = 6;
             // 
             // label6
@@ -165,7 +158,7 @@ namespace OnlineMart_SubrataSquad
             this.buttonKosongi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKosongi.ForeColor = System.Drawing.Color.White;
             this.buttonKosongi.Location = new System.Drawing.Point(217, 253);
-            this.buttonKosongi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonKosongi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonKosongi.Name = "buttonKosongi";
             this.buttonKosongi.Size = new System.Drawing.Size(94, 41);
             this.buttonKosongi.TabIndex = 46;
@@ -179,7 +172,7 @@ namespace OnlineMart_SubrataSquad
             this.buttonSimpan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
             this.buttonSimpan.Location = new System.Drawing.Point(123, 254);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(90, 41);
             this.buttonSimpan.TabIndex = 45;
@@ -193,7 +186,7 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
             this.buttonKeluar.Location = new System.Drawing.Point(339, 253);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(90, 41);
             this.buttonKeluar.TabIndex = 44;
@@ -211,7 +204,7 @@ namespace OnlineMart_SubrataSquad
             this.Controls.Add(this.buttonKosongi);
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.buttonKeluar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormUbahPegawai";
             this.Text = "FormUbahPegawai";
             this.panel1.ResumeLayout(false);
