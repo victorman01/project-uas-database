@@ -105,7 +105,7 @@ namespace OnlineMart_SubrataSquad
             {
                 foreach (Order o in listOrder)
                 {
-                    dataGridViewListPengiriman.Rows.Add(o.Id, o.TanggalWaktu, o.AlamatTujuan, o.OngkosKirim, o.TotalBayar,o.CaraBayar,o.Cabang.Id,o.Driver.Id,o.Pelanggan.Id,o.Promo.Id,o.Status,o.MetodePembayaran);
+                    dataGridViewListPengiriman.Rows.Add(o.Id, o.TanggalWaktu, o.AlamatTujuan, o.OngkosKirim, o.TotalBayar,o.CaraBayar,o.Cabang.Id,o.Driver.Id,o.Pelanggan.Id,o.Promo.Id,o.Status,o.MetodePembayaran.Nama);
                 }
             }
             else

@@ -1272,3 +1272,7 @@ D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_Subra
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.csproj.CopyComplete
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.exe
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.pdb
+D:\GitHub\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormTambahPromo.resources
+D:\GitHub\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormTambahBarangKeKeranjang.resources
+D:\GitHub\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormUbahPromo.resources
+D:\GitHub\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.csproj.CopyComplete
