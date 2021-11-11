@@ -78,7 +78,7 @@ namespace OnlineMart_LIB
             {
                 Pegawai pegawai = new Pegawai(hasil.GetInt32(9), hasil.GetString(10), hasil.GetString(11), hasil.GetString(12), hasil.GetString(13));
                 Cabang cabang = new Cabang(hasil.GetInt32(6), hasil.GetString(7), hasil.GetString(8), pegawai);
-                Driver driver = new Driver(hasil.GetInt32(14),  hasil.GetString(15), hasil.GetString(16), hasil.GetString(17), hasil.GetString(18));
+                Driver driver = new Driver(hasil.GetInt32(14), hasil.GetString(15), hasil.GetString(16), hasil.GetString(17), hasil.GetString(18));
                 Pelanggan pelanggan = new Pelanggan(hasil.GetInt32(19), hasil.GetString(20), hasil.GetString(21), hasil.GetString(22), hasil.GetString(23), hasil.GetFloat(24), hasil.GetInt32(25));
                 Promo promo = new Promo(hasil.GetInt32(26), hasil.GetString(27), hasil.GetString(28), hasil.GetInt32(29), hasil.GetInt32(30), hasil.GetFloat(31));
                 MetodePembayaran mp = new MetodePembayaran(hasil.GetString(33));
@@ -86,6 +86,11 @@ namespace OnlineMart_LIB
                 listOrder.Add(o);
             }
             return listOrder;
+        }
+        public static float KomisiDriver(float ongkoskirim)
+        {
+            float hasil = ongkoskirim * 80 / 100;
+            return hasil;
         }
         #endregion
     }

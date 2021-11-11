@@ -105,7 +105,7 @@ namespace OnlineMart_SubrataSquad
             {
                 foreach (Order o in listOrder)
                 {
-                    dataGridViewListPengiriman.Rows.Add(o.Id, o.TanggalWaktu, o.AlamatTujuan, o.OngkosKirim, o.TotalBayar,o.CaraBayar,o.Cabang.Id,o.Driver.Id,o.Pelanggan.Id,o.Promo.Id,o.Status,o.MetodePembayaran.Nama);
+                    dataGridViewListPengiriman.Rows.Add(o.Id, o.TanggalWaktu, o.AlamatTujuan, o.OngkosKirim, o.TotalBayar,o.CaraBayar,o.Cabang.Nama,o.Driver.Nama,o.Pelanggan.Nama,o.Promo.Id,o.Status,o.MetodePembayaran.Nama);
                 }
             }
             else
@@ -133,10 +133,18 @@ namespace OnlineMart_SubrataSquad
 
         private void dataGridViewListPengiriman_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            string idOrder = dataGridViewListPengiriman.CurrentRow.Cells["id"].Value.ToString();
+            string namaKonsumen = dataGridViewListPengiriman.CurrentRow.Cells["pelanggans_id"].Value.ToString();
+            string alamatKonsumen = dataGridViewListPengiriman.CurrentRow.Cells["alamat_tujuan"].Value.ToString();
+            float ongkoskirim = float.Parse(dataGridViewListPengiriman.CurrentRow.Cells["ongkos_kirim"].Value.ToString());
             if (e.ColumnIndex == dataGridViewListPengiriman.Columns["btnDetailGrid"].Index && e.RowIndex >= 0)
             {
                 FormListPengirimanDetail frm = new FormListPengirimanDetail();
                 frm.Owner = this;
+                frm.textBoxIDOrder.Text = idOrder;
+                frm.textBoxNamaKonsumen.Text = namaKonsumen;
+                frm.textBoxAlamatTujuan.Text = alamatKonsumen;
+                frm.textBoxKomisi.Text = Order.KomisiDriver(ongkoskirim).ToString();
                 frm.ShowDialog();
             }
         }
