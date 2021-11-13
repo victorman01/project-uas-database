@@ -44,14 +44,9 @@ namespace OnlineMart_LIB
         //Masih Double Hasilnya
         public static List<Keranjang> BacaData(int penggunaId)
         {
-            string sql = "select p.id,p.nama,p.email,p.password,p.telepon,p.saldo,p.poin, " +
-                "cb.stok, " +
-                "b.id,b.nama,b.harga, " +
-                "ka.id,ka.nama, " +
-                "c.id,c.nama,c.alamat, " +
-                "pe.id,pe.nama,pe.email,pe.password,pe.telepon,k.jumlah" +
+            string sql = "select p.id,p.nama,p.email,p.password,p.telepon,p.saldo,p.poin, " + "cb.stok, " + "b.id,b.nama,b.harga, " + "ka.id,ka.nama, " + "c.id,c.nama,c.alamat, " + "pe.id,pe.nama,pe.email,pe.password,pe.telepon,k.jumlah" +
                 " from keranjangs k inner join pelanggans p on k.pelanggans_id = p.id " +
-                " inner join cabangs_barangs cb on k.cabangs_id = cb.cabangs_id" +
+                " inner join cabangs_barangs cb on k.cabangs_id = cb.cabangs_id AND k.barangs_id = cb.barangs_id" +
                 " inner join cabangs c on c.id = cb.cabangs_id" +
                 " inner join pegawais pe on pe.id = c.pegawais_id" +
                 " inner join barangs b on b.id = cb.barangs_id" +
@@ -80,7 +75,7 @@ namespace OnlineMart_LIB
         {
             string sql = "insert into keranjangs values (" +
                 k.Pelanggan.Id + ", " + k.Cabang.Id + ", " + k.Barang.Id + ", " + k.Jumlah + ")";
-
+                
             Connection.JalankanPerintahDML(sql);
         }
 
@@ -94,6 +89,10 @@ namespace OnlineMart_LIB
                 return false;
             }
             return true;
+        }
+        public static void UpdateJumlahBeli(int jumlah, int barangId, int cabangId)
+        {
+            string peritah = "update keranjangs set jumlah = '"+jumlah+"' where barangs_id = '"+barangId+"' AND cabangs_id = '"+cabangId;
         }
         #endregion
     }

@@ -14,9 +14,11 @@ namespace OnlineMart_SubrataSquad
     public partial class FormKeranjang : Form
     {
         public Pelanggan pelanggan;
+        Keranjang ker;
         public List<Keranjang> listKeranjang = new List<Keranjang>();
         public List<Barang> listBarang = new List<Barang>();
         public List<Cabang> listCabang = new List<Cabang>();
+
         public FormKeranjang()
         {
             InitializeComponent();
@@ -37,8 +39,10 @@ namespace OnlineMart_SubrataSquad
         private void FormKeranjang_Load(object sender, EventArgs e)
         {
             FormatDataGrid();
-            
-            listKeranjang =  Keranjang.BacaData(pelanggan.Id);
+            listKeranjang = Keranjang.BacaData(pelanggan.Id);
+
+            listBarang = Barang.BacaData("", "");
+            listCabang = Cabang.BacaData("", "");
 
             TampilDataGrid();
         }
@@ -65,6 +69,13 @@ namespace OnlineMart_SubrataSquad
             bcol.Name = "btnHapus";
             bcol.UseColumnTextForButtonValue = true;
             dataGridViewKeranjang.Columns.Add(bcol);
+
+            DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
+            bcol2.HeaderText = "Aksi";
+            bcol2.Text = "Ubah";
+            bcol2.Name = "btnUbah";
+            bcol2.UseColumnTextForButtonValue = true;
+            dataGridViewKeranjang.Columns.Add(bcol2);
 
             //Batasi Aktivitas User
             dataGridViewKeranjang.AllowUserToAddRows = false;
@@ -93,28 +104,18 @@ namespace OnlineMart_SubrataSquad
             string namaCabang = dataGridViewKeranjang.CurrentRow.Cells["Cabang"].Value.ToString();
             string jumlah = dataGridViewKeranjang.CurrentRow.Cells["Jumlah"].Value.ToString();
 
-            Keranjang ker = new Keranjang();
-            foreach (Barang b in listBarang)
-            {
-                foreach (Cabang c in listCabang)
-                {
-                    if (b.Nama == namaBarang && c.Nama == namaBarang)
-                    {
-                        ker = new Keranjang(pelanggan, b, c, int.Parse(jumlah));
-                    }
-                }
-            }
-            if (e.ColumnIndex == dataGridViewKeranjang.Columns["btnHapusGrid"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dataGridViewKeranjang.Columns["btnHapus"].Index && e.RowIndex >= 0)
             {
                 DialogResult hasil = MessageBox.Show(this, "Are you sure? ", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (hasil == DialogResult.Yes)
                 {
+
                     foreach (Barang b in listBarang)
                     {
                         foreach (Cabang c in listCabang)
                         {
-                            if (b.Nama == namaBarang && c.Nama == namaBarang)
+                            if (b.Nama == namaBarang && c.Nama == namaCabang)
                             {
                                 ker = new Keranjang(pelanggan, b, c, int.Parse(jumlah));
                             }
@@ -133,7 +134,7 @@ namespace OnlineMart_SubrataSquad
                     }
                 }
             }
-            else if (e.ColumnIndex == dataGridViewKeranjang.Columns["btnUbahGrid"].Index && e.RowIndex >= 0)
+            else if (e.ColumnIndex == dataGridViewKeranjang.Columns["btnUbah"].Index && e.RowIndex >= 0)
             {
                 FormUbahStok formUbahStok = new FormUbahStok();
                 formUbahStok.Owner = this;
