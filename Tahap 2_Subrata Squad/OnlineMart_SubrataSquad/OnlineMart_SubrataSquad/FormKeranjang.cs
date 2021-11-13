@@ -14,10 +14,9 @@ namespace OnlineMart_SubrataSquad
     public partial class FormKeranjang : Form
     {
         public Pelanggan pelanggan;
-        Keranjang ker;
-        public List<Keranjang> listKeranjang = new List<Keranjang>();
         public List<Barang> listBarang = new List<Barang>();
         public List<Cabang> listCabang = new List<Cabang>();
+        public List<Keranjang> listKeranjang = new List<Keranjang>();
 
         public FormKeranjang()
         {
@@ -36,7 +35,7 @@ namespace OnlineMart_SubrataSquad
             form.ShowDialog();
         }
 
-        private void FormKeranjang_Load(object sender, EventArgs e)
+        public void FormKeranjang_Load(object sender, EventArgs e)
         {
             FormatDataGrid();
             listKeranjang = Keranjang.BacaData(pelanggan.Id);
@@ -103,6 +102,7 @@ namespace OnlineMart_SubrataSquad
             string namaBarang = dataGridViewKeranjang.CurrentRow.Cells["Barang"].Value.ToString();
             string namaCabang = dataGridViewKeranjang.CurrentRow.Cells["Cabang"].Value.ToString();
             string jumlah = dataGridViewKeranjang.CurrentRow.Cells["Jumlah"].Value.ToString();
+            Keranjang ker = new Keranjang();
 
             if (e.ColumnIndex == dataGridViewKeranjang.Columns["btnHapus"].Index && e.RowIndex >= 0)
             {
@@ -136,12 +136,12 @@ namespace OnlineMart_SubrataSquad
             }
             else if (e.ColumnIndex == dataGridViewKeranjang.Columns["btnUbah"].Index && e.RowIndex >= 0)
             {
-                FormUbahStok formUbahStok = new FormUbahStok();
-                formUbahStok.Owner = this;
-                formUbahStok.textBoxBarang.Text = namaBarang;
-                formUbahStok.textBoxCabang.Text = namaCabang;
-                formUbahStok.textBoxStok.Text = jumlah;
-                formUbahStok.ShowDialog();
+                FormUbahJumlahBarang formUbahJumlahBarang = new FormUbahJumlahBarang();
+                formUbahJumlahBarang.Owner = this;
+                formUbahJumlahBarang.textBoxBarang.Text = namaBarang;
+                formUbahJumlahBarang.textBoxCabang.Text = namaCabang;
+                formUbahJumlahBarang.textBoxJumlah.Text = jumlah;
+                formUbahJumlahBarang.ShowDialog();
             }
         }
     }

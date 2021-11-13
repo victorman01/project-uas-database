@@ -41,7 +41,6 @@ namespace OnlineMart_LIB
         #endregion
 
         #region Methods
-        //Masih Double Hasilnya
         public static List<Keranjang> BacaData(int penggunaId)
         {
             string sql = "select p.id,p.nama,p.email,p.password,p.telepon,p.saldo,p.poin, " + "cb.stok, " + "b.id,b.nama,b.harga, " + "ka.id,ka.nama, " + "c.id,c.nama,c.alamat, " + "pe.id,pe.nama,pe.email,pe.password,pe.telepon,k.jumlah" +
@@ -92,7 +91,9 @@ namespace OnlineMart_LIB
         }
         public static void UpdateJumlahBeli(int jumlah, int barangId, int cabangId)
         {
-            string peritah = "update keranjangs set jumlah = '"+jumlah+"' where barangs_id = '"+barangId+"' AND cabangs_id = '"+cabangId;
+            string peritah = "update keranjangs set jumlah = '" + jumlah + "' where barangs_id = '" + barangId + "' AND cabangs_id = '" + cabangId + "'";
+
+            Connection.JalankanPerintahDML(peritah);
         }
         #endregion
     }
