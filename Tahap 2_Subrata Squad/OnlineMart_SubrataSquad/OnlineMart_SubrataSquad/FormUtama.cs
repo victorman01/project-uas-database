@@ -35,6 +35,7 @@ namespace OnlineMart_SubrataSquad
             {
                 FormBarang formBarang = new FormBarang();
                 formBarang.MdiParent = this;
+                formBarang.pelanggan = pelanggan;
                 formBarang.Show();
             }
             else
@@ -50,6 +51,7 @@ namespace OnlineMart_SubrataSquad
             if (frm == null)
             {
                 FormKeranjang formKeranjang = new FormKeranjang();
+                formKeranjang.pelanggan = pelanggan;
                 formKeranjang.MdiParent = this;
                 formKeranjang.Show();
             }

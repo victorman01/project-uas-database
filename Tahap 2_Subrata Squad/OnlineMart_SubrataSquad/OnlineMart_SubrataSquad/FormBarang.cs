@@ -14,6 +14,7 @@ namespace OnlineMart_SubrataSquad
     public partial class FormBarang : Form
     {
         public List<Barang> listBarang = new List<Barang>();
+        public Pelanggan pelanggan;
 
         public FormBarang()
         {
@@ -156,6 +157,7 @@ namespace OnlineMart_SubrataSquad
                 frm.labelNamaBarang.Text = nama;
                 frm.labelHargaBarang.Text = harga;
                 frm.labelKategoriBarang.Text = kategori;
+                frm.pelanggan = pelanggan;
 
                 frm.Owner = this;
                 frm.ShowDialog();

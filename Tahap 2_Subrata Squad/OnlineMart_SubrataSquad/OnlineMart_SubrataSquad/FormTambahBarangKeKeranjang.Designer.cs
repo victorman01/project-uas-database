@@ -33,6 +33,8 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelIdBarang = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.numericUpDownJumlahBarang = new System.Windows.Forms.NumericUpDown();
             this.comboBoxCabang = new System.Windows.Forms.ComboBox();
             this.labelKategoriBarang = new System.Windows.Forms.Label();
@@ -43,8 +45,6 @@ namespace OnlineMart_SubrataSquad
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonTambah = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.labelIdBarang = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownJumlahBarang)).BeginInit();
             this.SuspendLayout();
@@ -105,6 +105,27 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(560, 209);
             this.panel1.TabIndex = 29;
+            // 
+            // labelIdBarang
+            // 
+            this.labelIdBarang.AutoSize = true;
+            this.labelIdBarang.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIdBarang.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelIdBarang.Location = new System.Drawing.Point(166, 15);
+            this.labelIdBarang.Name = "labelIdBarang";
+            this.labelIdBarang.Size = new System.Drawing.Size(106, 18);
+            this.labelIdBarang.TabIndex = 19;
+            this.labelIdBarang.Text = "label Id Barang";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(64, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 21);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Id Barang :";
             // 
             // numericUpDownJumlahBarang
             // 
@@ -206,27 +227,7 @@ namespace OnlineMart_SubrataSquad
             this.buttonTambah.TabIndex = 31;
             this.buttonTambah.Text = "&SIMPAN";
             this.buttonTambah.UseVisualStyleBackColor = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(64, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 21);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Id Barang :";
-            // 
-            // labelIdBarang
-            // 
-            this.labelIdBarang.AutoSize = true;
-            this.labelIdBarang.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdBarang.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelIdBarang.Location = new System.Drawing.Point(166, 15);
-            this.labelIdBarang.Name = "labelIdBarang";
-            this.labelIdBarang.Size = new System.Drawing.Size(106, 18);
-            this.labelIdBarang.TabIndex = 19;
-            this.labelIdBarang.Text = "label Id Barang";
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // FormTambahBarangKeKeranjang
             // 

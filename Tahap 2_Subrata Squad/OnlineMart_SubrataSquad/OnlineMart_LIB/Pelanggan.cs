@@ -149,6 +149,29 @@ namespace OnlineMart_LIB
             string sql = "update pelanggans set saldo = saldo + " + nominal + " where id = " + id;
             Connection.JalankanPerintahDML(sql);
         }
+
+        //public void TambahKeranjang(Pelanggan pelanggan, Barang barang, Cabang cabang, int jumlah)
+        //{
+        //    Keranjang keranjang = new Keranjang(pelanggan, barang, cabang, jumlah);
+
+        //    listKeranjang.Add(keranjang);
+        //}
+
+        //public List<Keranjang> BacaDataKeranjang()
+        //{
+        //    return listKeranjang;
+        //}
+
+        //public static void MasukkanKeranjangKeDatabase(Pelanggan pel)
+        //{
+        //    //Tambah Barang ke Keranjang
+        //    foreach (Keranjang keranjang in pel.listKeranjang)
+        //    {
+        //        string sql = "insert into Keranjangs(Pelanggans_id, Cabangs_id, Barangs_id, Jumlah)" +
+        //            "values ('" + keranjang.Pelanggan.id + "', '" + keranjang.Barang.Id + "', '" + keranjang.Cabang.Id + "', '" + keranjang.Jumlah + "')";
+        //        Connection.JalankanPerintahDML(sql);
+        //    }
+        //}
         #endregion
     }
 }
