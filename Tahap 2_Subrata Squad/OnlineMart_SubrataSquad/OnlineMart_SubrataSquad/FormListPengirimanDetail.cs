@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OnlineMart_LIB;
 
 namespace OnlineMart_SubrataSquad
 {
@@ -23,6 +24,11 @@ namespace OnlineMart_SubrataSquad
             if (dR == DialogResult.Yes)
             {
                 MessageBox.Show("Request accepted.", "Information");
+
+                Order.UbahStatusKirim("Accepted", int.Parse(textBoxIDOrder.Text));
+
+                FormListPengiriman frmLP = (FormListPengiriman)this.Owner;
+                frmLP.FormListPengiriman_Load(sender, e);
                 this.Close();
             }
         }
@@ -33,6 +39,11 @@ namespace OnlineMart_SubrataSquad
             if (dR == DialogResult.Yes)
             {
                 MessageBox.Show("Request declined.", "Information");
+
+                Order.UbahStatusKirim("Declined", int.Parse(textBoxIDOrder.Text));
+
+                FormListPengiriman frmLP = (FormListPengiriman)this.Owner;
+                frmLP.FormListPengiriman_Load(sender, e);
                 this.Close();
             }
         }

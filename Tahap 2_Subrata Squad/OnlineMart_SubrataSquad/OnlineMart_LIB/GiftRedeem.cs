@@ -60,7 +60,7 @@ namespace OnlineMart_LIB
                 Promo promo = new Promo(hasil.GetInt32(32), hasil.GetString(33), hasil.GetString(34), hasil.GetInt32(35), hasil.GetInt32(36), hasil.GetFloat(37));
                 Gift g = new Gift(hasil.GetInt32(3), hasil.GetString(4), hasil.GetString(5));
                 MetodePembayaran mp = new MetodePembayaran(hasil.GetString(39));
-                Order order = new Order(hasil.GetInt32(6), hasil.GetDateTime(7), hasil.GetString(8), hasil.GetFloat(9), hasil.GetFloat(10), hasil.GetString(11), cabang, driver, pelanggan, promo, hasil.GetString(38), mp);
+                Order order = new Order(hasil.GetInt32(6), hasil.GetDateTime(7), hasil.GetString(8), hasil.GetFloat(9), hasil.GetFloat(10), hasil.GetString(11), cabang, driver, pelanggan, promo, hasil.GetString(38), mp, hasil.GetString(40));
                 GiftRedeem gr = new GiftRedeem(hasil.GetInt32(0), hasil.GetDateTime(1), hasil.GetInt32(2), g, order);
                 listGiftRedeem.Add(gr);
             }

@@ -57,33 +57,25 @@ namespace OnlineMart_SubrataSquad
             dataGridViewListPengiriman.Columns.Clear();
 
             //Atur Tabel
-            dataGridViewListPengiriman.Columns.Add("id", "Id Order");
-            dataGridViewListPengiriman.Columns.Add("tanggal_waktu", "Tanggal Order");
+            dataGridViewListPengiriman.Columns.Add("id", "Order ID");
+            dataGridViewListPengiriman.Columns.Add("pelanggans_id", "Nama Pelanggan");
             dataGridViewListPengiriman.Columns.Add("alamat_tujuan", "Alamat Tujuan");
-            dataGridViewListPengiriman.Columns.Add("ongkos_kirim", "Ongkos Kirim");
-            dataGridViewListPengiriman.Columns.Add("total_bayar", "Total Bayar");
-            dataGridViewListPengiriman.Columns.Add("cara_bayar", "Cara Bayar");
-            dataGridViewListPengiriman.Columns.Add("cabangs_id", "Id Cabang");
-            dataGridViewListPengiriman.Columns.Add("drivers_id", "Id Driver");
-            dataGridViewListPengiriman.Columns.Add("pelanggans_id", "Id Pelanggan");
-            dataGridViewListPengiriman.Columns.Add("promo_id", "Id Promo");
-            dataGridViewListPengiriman.Columns.Add("status", "Status");
-            dataGridViewListPengiriman.Columns.Add("metode_pembayaran", "Metode Pembayaran");
+            dataGridViewListPengiriman.Columns.Add("ongkos_kirim", "Komisi");
+            dataGridViewListPengiriman.Columns.Add("status_kirim", "Status Kirim");
 
 
             //Atur Ukuran Cell
             dataGridViewListPengiriman.Columns["id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewListPengiriman.Columns["tanggal_waktu"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewListPengiriman.Columns["pelanggans_id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewListPengiriman.Columns["alamat_tujuan"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewListPengiriman.Columns["ongkos_kirim"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewListPengiriman.Columns["total_bayar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewListPengiriman.Columns["cara_bayar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewListPengiriman.Columns["cabangs_id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewListPengiriman.Columns["drivers_id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewListPengiriman.Columns["pelanggans_id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewListPengiriman.Columns["promo_id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewListPengiriman.Columns["status"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewListPengiriman.Columns["metode_pembayaran"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewListPengiriman.Columns["status_kirim"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            //Agar rata kanan
+            dataGridViewListPengiriman.Columns["ongkos_kirim"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
+            //Agar komisi ditampilkan dengan format pemisah ribuan (1000 delimiter)
+            dataGridViewListPengiriman.Columns["ongkos_kirim"].DefaultCellStyle.Format = "#,###";
 
             //Buat Button Aksi
             DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
@@ -105,7 +97,7 @@ namespace OnlineMart_SubrataSquad
             {
                 foreach (Order o in listOrder)
                 {
-                    dataGridViewListPengiriman.Rows.Add(o.Id, o.TanggalWaktu, o.AlamatTujuan, o.OngkosKirim, o.TotalBayar,o.CaraBayar,o.Cabang.Nama,o.Driver.Nama,o.Pelanggan.Nama,o.Promo.Id,o.Status,o.MetodePembayaran.Nama);
+                    dataGridViewListPengiriman.Rows.Add(o.Id, o.Pelanggan.Nama, o.AlamatTujuan, o.OngkosKirim, o.StatusKirim);
                 }
             }
             else
@@ -114,7 +106,7 @@ namespace OnlineMart_SubrataSquad
             }
         }
 
-        private void FormListPengiriman_Load(object sender, EventArgs e)
+        public void FormListPengiriman_Load(object sender, EventArgs e)
         {
             FormatDataGrid();
             listOrder = Order.BacaData("", "");
@@ -137,15 +129,24 @@ namespace OnlineMart_SubrataSquad
             string namaKonsumen = dataGridViewListPengiriman.CurrentRow.Cells["pelanggans_id"].Value.ToString();
             string alamatKonsumen = dataGridViewListPengiriman.CurrentRow.Cells["alamat_tujuan"].Value.ToString();
             float ongkoskirim = float.Parse(dataGridViewListPengiriman.CurrentRow.Cells["ongkos_kirim"].Value.ToString());
+            string statusKirim = dataGridViewListPengiriman.CurrentRow.Cells["status_kirim"].Value.ToString();
             if (e.ColumnIndex == dataGridViewListPengiriman.Columns["btnDetailGrid"].Index && e.RowIndex >= 0)
             {
-                FormListPengirimanDetail frm = new FormListPengirimanDetail();
-                frm.Owner = this;
-                frm.textBoxIDOrder.Text = idOrder;
-                frm.textBoxNamaKonsumen.Text = namaKonsumen;
-                frm.textBoxAlamatTujuan.Text = alamatKonsumen;
-                frm.textBoxKomisi.Text = Order.KomisiDriver(ongkoskirim).ToString();
-                frm.ShowDialog();
+                if(statusKirim == "Accepted" || statusKirim == "Declined")
+                {
+                    MessageBox.Show("You've been chosen this section");
+                }
+                else if(statusKirim == "Waiting")
+                {
+                    FormListPengirimanDetail frm = new FormListPengirimanDetail();
+                    frm.Owner = this;
+                    frm.textBoxIDOrder.Text = idOrder;
+                    frm.textBoxNamaKonsumen.Text = namaKonsumen;
+                    frm.textBoxAlamatTujuan.Text = alamatKonsumen;
+                    frm.textBoxKomisi.Text = Order.KomisiDriver(ongkoskirim).ToString();
+                    frm.ShowDialog();
+                }
+                
             }
         }
     }
