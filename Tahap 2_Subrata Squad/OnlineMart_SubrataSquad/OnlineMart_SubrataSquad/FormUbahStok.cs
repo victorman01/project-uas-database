@@ -44,7 +44,7 @@ namespace OnlineMart_SubrataSquad
                     }
                 }
 
-                CabangBarang cb = new CabangBarang(barangs, int.Parse(barangs.Harga), barangs.Kategori, cabangs, int.Parse(textBoxStok.Text));
+                CabangBarang cb = new CabangBarang(barangs, cabangs, int.Parse(textBoxStok.Text));
 
                 CabangBarang.UbahStok(cb);
 

@@ -11,18 +11,14 @@ namespace OnlineMart_LIB
     {
         #region Fields
         private Barang barang;
-        private int harga;
-        private Kategori kategori;
         private Cabang cabang;
         private int stok;
         #endregion
 
         #region Constructors
-        public CabangBarang(Barang barang, int harga, Kategori kategori, Cabang cabang, int stok)
+        public CabangBarang(Barang barang, Cabang cabang, int stok)
         {
             this.Barang = barang;
-            this.Harga = harga;
-            this.Kategori = kategori;
             this.Cabang = cabang;
             this.Stok = stok;
         }
@@ -30,8 +26,6 @@ namespace OnlineMart_LIB
         public CabangBarang()
         {
             this.Barang = null;
-            this.Harga = 0;
-            this.Kategori = null;
             this.Cabang = null;
             this.Stok = 0;
         }
@@ -39,8 +33,6 @@ namespace OnlineMart_LIB
 
         #region Properties
         public Barang Barang { get => barang; set => barang = value; }
-        public int Harga { get => harga; set => harga = value; }
-        public Kategori Kategori { get => kategori; set => kategori = value; }
         public Cabang Cabang { get => cabang; set => cabang = value; }
         public int Stok { get => stok; set => stok = value; }
         #endregion
@@ -77,7 +69,7 @@ namespace OnlineMart_LIB
                 Kategori k = new Kategori(hasil.GetInt32(11), hasil.GetString(12));
                 Barang b = new Barang(hasil.GetInt32(8), hasil.GetValue(9).ToString(), hasil.GetValue(10).ToString(), k);
 
-                CabangBarang cb = new CabangBarang(b, int.Parse(b.Harga), k, c, hasil.GetInt32(13));
+                CabangBarang cb = new CabangBarang(b, c, hasil.GetInt32(13));
 
                 listCabangBarang.Add(cb);
             }
@@ -103,6 +95,13 @@ namespace OnlineMart_LIB
         public static void UbahStok(CabangBarang cb)
         {
             string sql = "update cabangs_barangs set Stok = " + cb.Stok +" where barangs_id = " + 
+                cb.Barang.Id + " and cabangs_id = " + cb.Cabang.Id;
+            Connection.JalankanPerintahDML(sql);
+        }
+        public void KurangiStok(CabangBarang cb, int jumlah)
+        {
+            int hasil = cb.Stok - jumlah;
+            string sql = "update cabangs_barangs set Stok = " + hasil + " where barangs_id = " +
                 cb.Barang.Id + " and cabangs_id = " + cb.Cabang.Id;
             Connection.JalankanPerintahDML(sql);
         }

@@ -28,8 +28,7 @@ namespace OnlineMart_SubrataSquad
                 Cabang cabangDipilih = (Cabang)comboBoxCabang.SelectedItem;
                 Barang barangDipilih = (Barang)comboBoxBarang.SelectedItem;
 
-                CabangBarang cb = new CabangBarang(barangDipilih, int.Parse(barangDipilih.Harga),
-                    barangDipilih.Kategori, cabangDipilih, int.Parse(textBoxStok.Text));
+                CabangBarang cb = new CabangBarang(barangDipilih, cabangDipilih, int.Parse(textBoxStok.Text));
 
                 CabangBarang.TambahStok(cb);
 
