@@ -32,26 +32,33 @@ namespace OnlineMart_SubrataSquad
             this.buttonBayar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonBatal = new System.Windows.Forms.Button();
-            this.dataGridViewDeals = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxPromo = new System.Windows.Forms.ComboBox();
+            this.textBoxAlamat = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.labelTotalHarga = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelDiskon = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelOngkir = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.comboBoxPembayaran = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBoxPengantaran = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelTotalHarga = new System.Windows.Forms.Label();
+            this.comboBoxPromo = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridViewDeals = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBoxCaraPembayaran = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBoxKurir = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeals)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonBayar
             // 
             this.buttonBayar.BackColor = System.Drawing.Color.Orange;
+            this.buttonBayar.Enabled = false;
             this.buttonBayar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBayar.ForeColor = System.Drawing.Color.White;
-            this.buttonBayar.Location = new System.Drawing.Point(327, 534);
+            this.buttonBayar.Location = new System.Drawing.Point(323, 579);
             this.buttonBayar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBayar.Name = "buttonBayar";
             this.buttonBayar.Size = new System.Drawing.Size(91, 32);
@@ -78,7 +85,7 @@ namespace OnlineMart_SubrataSquad
             this.buttonBatal.BackColor = System.Drawing.Color.Orange;
             this.buttonBatal.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBatal.ForeColor = System.Drawing.Color.White;
-            this.buttonBatal.Location = new System.Drawing.Point(422, 534);
+            this.buttonBatal.Location = new System.Drawing.Point(418, 579);
             this.buttonBatal.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBatal.Name = "buttonBatal";
             this.buttonBatal.Size = new System.Drawing.Size(86, 32);
@@ -87,132 +94,218 @@ namespace OnlineMart_SubrataSquad
             this.buttonBatal.UseVisualStyleBackColor = false;
             this.buttonBatal.Click += new System.EventHandler(this.buttonBatal_Click);
             // 
-            // dataGridViewDeals
+            // textBoxAlamat
             // 
-            this.dataGridViewDeals.BackgroundColor = System.Drawing.Color.Tan;
-            this.dataGridViewDeals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDeals.Location = new System.Drawing.Point(2, 2);
-            this.dataGridViewDeals.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridViewDeals.Name = "dataGridViewDeals";
-            this.dataGridViewDeals.RowHeadersWidth = 51;
-            this.dataGridViewDeals.RowTemplate.Height = 24;
-            this.dataGridViewDeals.Size = new System.Drawing.Size(476, 453);
-            this.dataGridViewDeals.TabIndex = 22;
+            this.textBoxAlamat.Location = new System.Drawing.Point(149, 441);
+            this.textBoxAlamat.Multiline = true;
+            this.textBoxAlamat.Name = "textBoxAlamat";
+            this.textBoxAlamat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxAlamat.Size = new System.Drawing.Size(344, 46);
+            this.textBoxAlamat.TabIndex = 37;
             // 
-            // label2
+            // label7
             // 
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 457);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 22);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Kode Promo :";
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(15, 441);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(130, 22);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Alamat :";
             // 
-            // comboBoxPromo
+            // labelTotalHarga
             // 
-            this.comboBoxPromo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxPromo.FormattingEnabled = true;
-            this.comboBoxPromo.Location = new System.Drawing.Point(136, 459);
-            this.comboBoxPromo.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxPromo.Name = "comboBoxPromo";
-            this.comboBoxPromo.Size = new System.Drawing.Size(344, 21);
-            this.comboBoxPromo.TabIndex = 26;
+            this.labelTotalHarga.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalHarga.Location = new System.Drawing.Point(149, 559);
+            this.labelTotalHarga.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTotalHarga.Name = "labelTotalHarga";
+            this.labelTotalHarga.Size = new System.Drawing.Size(344, 22);
+            this.labelTotalHarga.TabIndex = 36;
+            this.labelTotalHarga.Text = "xxxxxxxxxxxxxxxxxxx";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(15, 559);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 22);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Total Harga :";
+            // 
+            // labelDiskon
+            // 
+            this.labelDiskon.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDiskon.Location = new System.Drawing.Point(149, 537);
+            this.labelDiskon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelDiskon.Name = "labelDiskon";
+            this.labelDiskon.Size = new System.Drawing.Size(344, 22);
+            this.labelDiskon.TabIndex = 34;
+            this.labelDiskon.Text = "xxxxxxxxxxxxxxxxxxx";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(15, 537);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 22);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Diskon  :";
+            // 
+            // labelOngkir
+            // 
+            this.labelOngkir.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOngkir.Location = new System.Drawing.Point(149, 515);
+            this.labelOngkir.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelOngkir.Name = "labelOngkir";
+            this.labelOngkir.Size = new System.Drawing.Size(344, 22);
+            this.labelOngkir.TabIndex = 32;
+            this.labelOngkir.Text = "xxxxxxxxxxxxxxxxxxx";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 515);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(130, 22);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Ongkos Kirim :";
             // 
             // comboBoxPembayaran
             // 
             this.comboBoxPembayaran.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPembayaran.FormattingEnabled = true;
-            this.comboBoxPembayaran.Location = new System.Drawing.Point(136, 484);
+            this.comboBoxPembayaran.Location = new System.Drawing.Point(149, 390);
             this.comboBoxPembayaran.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPembayaran.Name = "comboBoxPembayaran";
             this.comboBoxPembayaran.Size = new System.Drawing.Size(344, 21);
             this.comboBoxPembayaran.TabIndex = 28;
+            this.comboBoxPembayaran.SelectedIndexChanged += new System.EventHandler(this.comboBoxPembayaran_SelectedIndexChanged);
+            this.comboBoxPembayaran.Enter += new System.EventHandler(this.comboBoxPembayaran_Enter);
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 482);
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label4.Location = new System.Drawing.Point(15, 392);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 24);
             this.label4.TabIndex = 27;
             this.label4.Text = "Metode Pembayaran :";
             // 
-            // comboBoxPengantaran
+            // comboBoxPromo
             // 
-            this.comboBoxPengantaran.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxPengantaran.FormattingEnabled = true;
-            this.comboBoxPengantaran.Location = new System.Drawing.Point(136, 509);
-            this.comboBoxPengantaran.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxPengantaran.Name = "comboBoxPengantaran";
-            this.comboBoxPengantaran.Size = new System.Drawing.Size(344, 21);
-            this.comboBoxPengantaran.TabIndex = 30;
+            this.comboBoxPromo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPromo.FormattingEnabled = true;
+            this.comboBoxPromo.Location = new System.Drawing.Point(149, 365);
+            this.comboBoxPromo.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxPromo.Name = "comboBoxPromo";
+            this.comboBoxPromo.Size = new System.Drawing.Size(344, 21);
+            this.comboBoxPromo.TabIndex = 26;
+            this.comboBoxPromo.SelectedIndexChanged += new System.EventHandler(this.comboBoxPromo_SelectedIndexChanged);
+            this.comboBoxPromo.Enter += new System.EventHandler(this.comboBoxPromo_Enter);
             // 
-            // label3
+            // label2
             // 
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 507);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 24);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Kurir Pengantaran :";
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 363);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 22);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Kode Promo :";
             // 
-            // flowLayoutPanel1
+            // dataGridViewDeals
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.dataGridViewDeals);
-            this.flowLayoutPanel1.Controls.Add(this.label2);
-            this.flowLayoutPanel1.Controls.Add(this.comboBoxPromo);
-            this.flowLayoutPanel1.Controls.Add(this.label4);
-            this.flowLayoutPanel1.Controls.Add(this.comboBoxPembayaran);
-            this.flowLayoutPanel1.Controls.Add(this.label3);
-            this.flowLayoutPanel1.Controls.Add(this.comboBoxPengantaran);
-            this.flowLayoutPanel1.Controls.Add(this.label5);
-            this.flowLayoutPanel1.Controls.Add(this.labelTotalHarga);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 58);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(501, 470);
-            this.flowLayoutPanel1.TabIndex = 31;
+            this.dataGridViewDeals.BackgroundColor = System.Drawing.Color.Tan;
+            this.dataGridViewDeals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDeals.Location = new System.Drawing.Point(15, 68);
+            this.dataGridViewDeals.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewDeals.Name = "dataGridViewDeals";
+            this.dataGridViewDeals.RowHeadersWidth = 51;
+            this.dataGridViewDeals.RowTemplate.Height = 24;
+            this.dataGridViewDeals.Size = new System.Drawing.Size(476, 293);
+            this.dataGridViewDeals.TabIndex = 22;
             // 
-            // label5
+            // label8
             // 
-            this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 532);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 22);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Total Harga :";
+            this.label8.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.label8.Location = new System.Drawing.Point(15, 417);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(130, 24);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Cara Pembayaran :";
             // 
-            // labelTotalHarga
+            // comboBoxCaraPembayaran
             // 
-            this.labelTotalHarga.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalHarga.Location = new System.Drawing.Point(136, 532);
-            this.labelTotalHarga.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelTotalHarga.Name = "labelTotalHarga";
-            this.labelTotalHarga.Size = new System.Drawing.Size(130, 22);
-            this.labelTotalHarga.TabIndex = 32;
-            this.labelTotalHarga.Text = "xxxxxxxxxxxxxxxxxxx";
+            this.comboBoxCaraPembayaran.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCaraPembayaran.FormattingEnabled = true;
+            this.comboBoxCaraPembayaran.Items.AddRange(new object[] {
+            "Cash",
+            "Transfer"});
+            this.comboBoxCaraPembayaran.Location = new System.Drawing.Point(149, 415);
+            this.comboBoxCaraPembayaran.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxCaraPembayaran.Name = "comboBoxCaraPembayaran";
+            this.comboBoxCaraPembayaran.Size = new System.Drawing.Size(344, 21);
+            this.comboBoxCaraPembayaran.TabIndex = 39;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.label9.Location = new System.Drawing.Point(15, 494);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(130, 24);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "Kurir:";
+            // 
+            // comboBoxKurir
+            // 
+            this.comboBoxKurir.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxKurir.FormattingEnabled = true;
+            this.comboBoxKurir.Location = new System.Drawing.Point(149, 492);
+            this.comboBoxKurir.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxKurir.Name = "comboBoxKurir";
+            this.comboBoxKurir.Size = new System.Drawing.Size(344, 21);
+            this.comboBoxKurir.TabIndex = 41;
+            this.comboBoxKurir.SelectedIndexChanged += new System.EventHandler(this.comboBoxKurir_SelectedIndexChanged);
+            this.comboBoxKurir.Enter += new System.EventHandler(this.comboBoxKurir_Enter);
             // 
             // FormCheckout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 578);
+            this.ClientSize = new System.Drawing.Size(515, 616);
             this.ControlBox = false;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.comboBoxKurir);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.comboBoxCaraPembayaran);
+            this.Controls.Add(this.dataGridViewDeals);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonBayar);
+            this.Controls.Add(this.comboBoxPromo);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonBatal);
+            this.Controls.Add(this.comboBoxPembayaran);
+            this.Controls.Add(this.textBoxAlamat);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.labelOngkir);
+            this.Controls.Add(this.labelTotalHarga);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelDiskon);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormCheckout";
             this.Load += new System.EventHandler(this.FormCheckout_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeals)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -220,15 +313,22 @@ namespace OnlineMart_SubrataSquad
         private System.Windows.Forms.Button buttonBayar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonBatal;
-        private System.Windows.Forms.DataGridView dataGridViewDeals;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBoxPromo;
+        private System.Windows.Forms.TextBox textBoxAlamat;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelTotalHarga;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelDiskon;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelOngkir;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxPembayaran;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBoxPengantaran;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelTotalHarga;
+        private System.Windows.Forms.ComboBox comboBoxPromo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridViewDeals;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBoxCaraPembayaran;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBoxKurir;
     }
 }

@@ -166,7 +166,7 @@ namespace OnlineMart_SubrataSquad
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Branch is still connect to another items.");
+                MessageBox.Show("Branch is still connect to another items. Error Message : " + ex.Message);
             }
 
         }

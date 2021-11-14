@@ -95,6 +95,13 @@ namespace OnlineMart_LIB
 
             Connection.JalankanPerintahDML(peritah);
         }
+
+        public static void KurangiStok(Keranjang k)
+        {
+            string sql = "update cabangs_barangs set Stok = Stok - " + k.Jumlah + " where barangs_id = " +
+                k.Barang.Id + " and cabangs_id = " + k.Cabang.Id;
+            Connection.JalankanPerintahDML(sql);
+        }
         #endregion
     }
 }

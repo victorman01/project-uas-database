@@ -26,6 +26,14 @@ namespace OnlineMart_LIB
             this.Gift = gift;
             this.Order = order;
         }
+
+        public GiftRedeem(DateTime waktu, int poinRedeem, Gift gift, Order order)
+        {
+            this.Waktu = waktu;
+            this.PoinRedeem = poinRedeem;
+            this.Gift = gift;
+            this.Order = order;
+        }
         #endregion
 
         #region Properties
@@ -42,11 +50,18 @@ namespace OnlineMart_LIB
             string sql = "";
             if (kriteria == "")
             {
-                sql = "select * from gift_redeems";
+                sql = "select gr.id, gr.waktu, gr.poin_redeem, g.id, g.nama, g.jumlah_poin, o.id, o.tanggal_waktu, o.alamat_tujuan, +" +
+                    "o.ongkos_kirim, o.total_bayar, o.cara_bayar, o.cabangs_id, o.drivers_id, o.pelanggans_id, o.promo_id, " +
+                    "o.status, o.metode_pembayaran, o.status_kirims from gift_redeems as gr inner join gifts as g on " +
+                    "gr.orders_id = g.id inner join orders as o on gr.orders_id = o.id";
             }
             else
             {
-                sql = "select * from gift_redeems where " + kriteria + " like '%" + nilaiKriteria + "%'";
+                sql = "select gr.id, gr.waktu, gr.poin_redeem, g.id, g.nama, g.jumlah_poin, o.id, o.tanggal_waktu, o.alamat_tujuan, +" +
+                    "o.ongkos_kirim, o.total_bayar, o.cara_bayar, o.cabangs_id, o.drivers_id, o.pelanggans_id, o.promo_id, " +
+                    "o.status, o.metode_pembayaran, o.status_kirims from gift_redeems as gr inner join gifts as g on " +
+                    "gr.orders_id = g.id inner join orders as o on gr.orders_id = o.id " +
+                    "where " + kriteria + " like '%" + nilaiKriteria + "%'";
             }
             MySqlDataReader hasil = Connection.JalankanPerintahQuery(sql);
 
@@ -65,6 +80,13 @@ namespace OnlineMart_LIB
                 listGiftRedeem.Add(gr);
             }
             return listGiftRedeem;
+        }
+
+        public static void TambahData(GiftRedeem gr)
+        {
+            string sql = "insert into gift_redeems (waktu, poin_redeem, gifts_id, orders_id) " +
+                "values (now(), " + gr.PoinRedeem + ", '" + gr.Gift.Id + "', '" + gr.Order.Id + "')";
+            Connection.JalankanPerintahDML(sql);
         }
         #endregion
     }

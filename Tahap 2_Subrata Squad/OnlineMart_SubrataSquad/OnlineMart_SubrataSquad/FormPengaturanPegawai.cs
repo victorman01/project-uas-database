@@ -139,7 +139,7 @@ namespace OnlineMart_SubrataSquad
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Employee is still connect to another item");
+                MessageBox.Show("Employee is still connect to another item. Error Message : " + ex.Message);
             }
         }
 

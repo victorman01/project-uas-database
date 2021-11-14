@@ -95,6 +95,39 @@ namespace OnlineMart_LIB
                 return true;
             }
         }
+        public static int HitungDiskon(Promo promo, int totalHarga, List<Keranjang> listKeranjang)
+        {
+            int diskon = 0;
+
+            if (totalHarga >= promo.Min_belanja)
+            {
+                if (promo.Tipe == "Ongkir")
+                {
+                    diskon = totalHarga * promo.Diskon / 100;
+                    if (diskon > promo.Diskon_max)
+                    {
+                        diskon = promo.Diskon_max;
+                    }
+                }
+                else
+                {
+                    int subtotal = 0;
+                    foreach (Keranjang keranjang in listKeranjang)
+                    {
+                        if (promo.Tipe == keranjang.Barang.Kategori.Nama)
+                        {
+                            subtotal += int.Parse(keranjang.Barang.Harga) * keranjang.Jumlah;
+                        }
+                    }
+                    diskon = subtotal * promo.Diskon / 100;
+                    if (diskon > promo.Diskon_max)
+                    {
+                        diskon = promo.Diskon_max;
+                    }
+                }
+            }
+            return diskon;
+        }
         #endregion
     }
 }

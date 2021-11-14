@@ -31,6 +31,7 @@ namespace OnlineMart_SubrataSquad
                     comboBoxCabang.Items.Add(cb.Cabang.ToString());
                 }
             }
+            numericUpDownJumlahBarang.Minimum = 0;
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
@@ -62,6 +63,18 @@ namespace OnlineMart_SubrataSquad
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void comboBoxCabang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listCabangBarang = CabangBarang.BacaData("", "");
+            foreach (CabangBarang cb in listCabangBarang)
+            {
+                if (cb.Barang.Id == int.Parse(labelIdBarang.Text) && cb.Cabang.Nama == comboBoxCabang.Text)
+                {
+                    numericUpDownJumlahBarang.Maximum = cb.Stok;
+                }
             }
         }
     }

@@ -42,6 +42,21 @@ namespace OnlineMart_LIB
             this.MetodePembayaran = metodePembayaran;
             this.StatusKirim = statusKirim;
         }
+
+        public Order(string alamatTujuan, float ongkosKirim, float totalBayar, string caraBayar, Cabang cabang, Driver driver, Pelanggan pelanggan, Promo promo, string status, MetodePembayaran metodePembayaran, string statusKirim)
+        {
+            this.AlamatTujuan = alamatTujuan;
+            this.OngkosKirim = ongkosKirim;
+            this.TotalBayar = totalBayar;
+            this.CaraBayar = caraBayar;
+            this.Cabang = cabang;
+            this.Driver = driver;
+            this.Pelanggan = pelanggan;
+            this.Promo = promo;
+            this.Status = status;
+            this.MetodePembayaran = metodePembayaran;
+            this.StatusKirim = statusKirim;
+        }
         #endregion
 
         #region Properties
@@ -90,6 +105,7 @@ namespace OnlineMart_LIB
             }
             return listOrder;
         }
+
         public static float KomisiDriver(float ongkoskirim)
         {
             float hasil = ongkoskirim * 80 / 100;
@@ -110,6 +126,20 @@ namespace OnlineMart_LIB
             {
                 return true;
             }
+        }
+
+        public static int HitungTotalHarga(int totalHarga, int ongkir, int diskon)
+        {
+            totalHarga += ongkir - diskon;
+            return totalHarga;
+        }
+
+        public static void TambahData(Order o)
+        {
+            string sql = "insert into orders (tanggal_waktu, alamat_tujuan, ongkos_kirim, total_bayar, cara_bayar, cabangs_id, drivers_id, pelanggans_id, promo_id, status, metode_pembayaran_id) " +
+                "values ( Now(), '" + o.AlamatTujuan + "', '" + o.OngkosKirim + "', '" + o.TotalBayar + "', '" + o.CaraBayar + "', '" + o.Cabang.Id + "', '" + o.Driver.Id + "', '" +
+                o.Pelanggan.Id + "', '" + o.Promo.Id + "', '" + o.Status + "', '" + o.MetodePembayaran.Id + "')";
+            Connection.JalankanPerintahDML(sql);
         }
         #endregion
     }
