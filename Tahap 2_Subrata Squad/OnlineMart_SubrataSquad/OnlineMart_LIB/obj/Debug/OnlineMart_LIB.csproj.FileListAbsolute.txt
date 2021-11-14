@@ -296,3 +296,4 @@ D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_Subra
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.csproj.CopyComplete
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.dll
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.pdb
+D:\GitHub\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.csproj.CopyComplete

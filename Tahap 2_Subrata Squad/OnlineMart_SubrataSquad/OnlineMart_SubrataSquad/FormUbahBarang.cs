@@ -55,5 +55,10 @@ namespace OnlineMart_SubrataSquad
 
             comboBoxKategori.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+
+        private void buttonKosongi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

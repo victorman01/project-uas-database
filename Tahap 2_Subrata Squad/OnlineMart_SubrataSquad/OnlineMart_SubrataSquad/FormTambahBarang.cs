@@ -156,7 +156,8 @@ namespace OnlineMart_SubrataSquad
                     if (hapus == true)
                     {
                         MessageBox.Show("Delete success");
-                        FormTambahBarang_Load(sender, e);                    }
+                        FormTambahBarang_Load(sender, e);
+                    }
                     else
                     {
                         MessageBox.Show("Delete failed");
