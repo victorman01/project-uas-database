@@ -65,7 +65,7 @@ namespace OnlineMart_LIB
             get => password;
             set
             {
-                if (value.Length >= 8)
+                if (value.Length >= 8 && value != null && value != "")
                 {
                     password = value;
                 }

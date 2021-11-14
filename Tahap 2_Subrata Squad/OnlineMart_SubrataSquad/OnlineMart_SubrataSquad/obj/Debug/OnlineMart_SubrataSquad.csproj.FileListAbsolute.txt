@@ -1419,3 +1419,4 @@ D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\Onlin
 D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\bin\Debug\OnlineMart_LIB.pdb
 D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\bin\Debug\MySql.Data.xml
 D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.csproj.CopyComplete
+D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormUbahJumlahBarang.resources

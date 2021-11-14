@@ -36,16 +36,16 @@ namespace OnlineMart_SubrataSquad
 
             //menambah kolom di datagridview
             dataGridViewPengaturanPromo.Columns.Add("id", "ID Promo");
-            dataGridViewPengaturanPromo.Columns.Add("tipe", "Tipe Promo");
             dataGridViewPengaturanPromo.Columns.Add("nama", "Nama Promo");
+            dataGridViewPengaturanPromo.Columns.Add("tipe", "Tipe Promo");
             dataGridViewPengaturanPromo.Columns.Add("diskon", "Diskon");
             dataGridViewPengaturanPromo.Columns.Add("diskonMax", "Diskon Max");
             dataGridViewPengaturanPromo.Columns.Add("minimalBelanja", "Minimal Belanja");
 
             //agar lebar kolom dapat menyesuaikan panjang/isi data
             dataGridViewPengaturanPromo.Columns["id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewPengaturanPromo.Columns["tipe"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewPengaturanPromo.Columns["nama"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewPengaturanPromo.Columns["tipe"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewPengaturanPromo.Columns["diskon"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewPengaturanPromo.Columns["diskonMax"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewPengaturanPromo.Columns["minimalBelanja"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -111,11 +111,11 @@ namespace OnlineMart_SubrataSquad
                 case "ID Promo":
                     kriteria = "id";
                     break;
-                case "Tipe Promo":
-                    kriteria = "tipe";
-                    break;
                 case "Nama Promo":
                     kriteria = "nama";
+                    break;
+                case "Tipe Promo":
+                    kriteria = "tipe";
                     break;
                 case "Diskon Promo":
                     kriteria = "diskon";
@@ -144,8 +144,8 @@ namespace OnlineMart_SubrataSquad
             try
             {
                 string pIdPromo = dataGridViewPengaturanPromo.CurrentRow.Cells["id"].Value.ToString();
-                string pTipePromo = dataGridViewPengaturanPromo.CurrentRow.Cells["tipe"].Value.ToString();
                 string pNamaPromo = dataGridViewPengaturanPromo.CurrentRow.Cells["nama"].Value.ToString();
+                string pTipePromo = dataGridViewPengaturanPromo.CurrentRow.Cells["tipe"].Value.ToString();
                 string pDiskon = dataGridViewPengaturanPromo.CurrentRow.Cells["diskon"].Value.ToString();
                 string pDiskonMax = dataGridViewPengaturanPromo.CurrentRow.Cells["diskonMax"].Value.ToString();
                 string pMinimalBelanja = dataGridViewPengaturanPromo.CurrentRow.Cells["minimalBelanja"].Value.ToString();
@@ -176,8 +176,8 @@ namespace OnlineMart_SubrataSquad
                     FormUbahPromo formUbahPromo = new FormUbahPromo();
                     formUbahPromo.Owner = this;
                     formUbahPromo.textBoxKodePromo.Text = pIdPromo;
-                    formUbahPromo.textBoxTipePromo.Text = pTipePromo;
                     formUbahPromo.textBoxNamaPromo.Text = pNamaPromo;
+                    formUbahPromo.textBoxTipePromo.Text = pTipePromo;
                     formUbahPromo.textBoxDiskon.Text = pDiskon;
                     formUbahPromo.textBoxMaksimalDiskon.Text = pDiskonMax;
                     formUbahPromo.textBoxMinimalPembelian.Text = pDiskonMax;

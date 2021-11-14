@@ -49,10 +49,9 @@ namespace OnlineMart_SubrataSquad
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(7, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(10, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(420, 49);
+            this.label1.Size = new System.Drawing.Size(630, 75);
             this.label1.TabIndex = 0;
             this.label1.Text = "REGISTRASI PELANGGAN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -68,72 +67,55 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(6, 68);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(9, 105);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(421, 146);
+            this.panel1.Size = new System.Drawing.Size(632, 225);
             this.panel1.TabIndex = 1;
             // 
             // textBoxTelepon
             // 
-            this.textBoxTelepon.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTelepon.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxTelepon.Location = new System.Drawing.Point(123, 107);
-            this.textBoxTelepon.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxTelepon.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.textBoxTelepon.ForeColor = System.Drawing.Color.Black;
+            this.textBoxTelepon.Location = new System.Drawing.Point(184, 165);
             this.textBoxTelepon.Name = "textBoxTelepon";
-            this.textBoxTelepon.Size = new System.Drawing.Size(270, 24);
+            this.textBoxTelepon.Size = new System.Drawing.Size(403, 32);
             this.textBoxTelepon.TabIndex = 9;
-            this.textBoxTelepon.Text = "Type Here...";
-            this.textBoxTelepon.Enter += new System.EventHandler(this.textBoxTelepon_Enter);
-            this.textBoxTelepon.Leave += new System.EventHandler(this.textBoxTelepon_Leave);
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxPassword.Location = new System.Drawing.Point(123, 76);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxPassword.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.textBoxPassword.ForeColor = System.Drawing.Color.Black;
+            this.textBoxPassword.Location = new System.Drawing.Point(184, 117);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(270, 24);
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(403, 32);
             this.textBoxPassword.TabIndex = 8;
-            this.textBoxPassword.Text = "Type Here...";
-            this.textBoxPassword.Enter += new System.EventHandler(this.textBoxPassword_Enter);
-            this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxEmail.Location = new System.Drawing.Point(123, 42);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEmail.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.textBoxEmail.ForeColor = System.Drawing.Color.Black;
+            this.textBoxEmail.Location = new System.Drawing.Point(184, 65);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(270, 24);
+            this.textBoxEmail.Size = new System.Drawing.Size(403, 32);
             this.textBoxEmail.TabIndex = 7;
-            this.textBoxEmail.Text = "Type Here...";
-            this.textBoxEmail.Enter += new System.EventHandler(this.textBoxEmail_Enter);
-            this.textBoxEmail.Leave += new System.EventHandler(this.textBoxEmail_Leave);
             // 
             // textBoxNama
             // 
-            this.textBoxNama.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNama.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxNama.Location = new System.Drawing.Point(123, 10);
-            this.textBoxNama.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxNama.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.textBoxNama.ForeColor = System.Drawing.Color.Black;
+            this.textBoxNama.Location = new System.Drawing.Point(184, 15);
             this.textBoxNama.Name = "textBoxNama";
-            this.textBoxNama.Size = new System.Drawing.Size(270, 24);
+            this.textBoxNama.Size = new System.Drawing.Size(403, 32);
             this.textBoxNama.TabIndex = 6;
-            this.textBoxNama.Text = "Type Here...";
-            this.textBoxNama.Enter += new System.EventHandler(this.textBoxNama_Enter);
-            this.textBoxNama.Leave += new System.EventHandler(this.textBoxNama_Leave);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(58, 110);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(87, 169);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 17);
+            this.label6.Size = new System.Drawing.Size(100, 25);
             this.label6.TabIndex = 4;
             this.label6.Text = "Telepon :";
             // 
@@ -141,10 +123,9 @@ namespace OnlineMart_SubrataSquad
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(50, 77);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(75, 118);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 17);
+            this.label5.Size = new System.Drawing.Size(114, 25);
             this.label5.TabIndex = 3;
             this.label5.Text = "Password :";
             // 
@@ -152,10 +133,9 @@ namespace OnlineMart_SubrataSquad
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(72, 42);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(108, 65);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 17);
+            this.label4.Size = new System.Drawing.Size(77, 25);
             this.label4.TabIndex = 2;
             this.label4.Text = "Email :";
             // 
@@ -163,10 +143,9 @@ namespace OnlineMart_SubrataSquad
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(70, 12);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(105, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.Size = new System.Drawing.Size(80, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "Nama :";
             // 
@@ -175,10 +154,9 @@ namespace OnlineMart_SubrataSquad
             this.buttonDaftar.BackColor = System.Drawing.Color.Orange;
             this.buttonDaftar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDaftar.ForeColor = System.Drawing.Color.White;
-            this.buttonDaftar.Location = new System.Drawing.Point(268, 218);
-            this.buttonDaftar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonDaftar.Location = new System.Drawing.Point(402, 335);
             this.buttonDaftar.Name = "buttonDaftar";
-            this.buttonDaftar.Size = new System.Drawing.Size(75, 32);
+            this.buttonDaftar.Size = new System.Drawing.Size(112, 49);
             this.buttonDaftar.TabIndex = 2;
             this.buttonDaftar.Text = "&DAFTAR";
             this.buttonDaftar.UseVisualStyleBackColor = false;
@@ -189,10 +167,9 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(352, 218);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonKeluar.Location = new System.Drawing.Point(528, 335);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(75, 32);
+            this.buttonKeluar.Size = new System.Drawing.Size(112, 49);
             this.buttonKeluar.TabIndex = 3;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -200,16 +177,15 @@ namespace OnlineMart_SubrataSquad
             // 
             // FormRegistrasiPelanggan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(436, 253);
+            this.ClientSize = new System.Drawing.Size(654, 389);
             this.ControlBox = false;
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonDaftar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRegistrasiPelanggan";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
