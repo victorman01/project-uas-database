@@ -28,21 +28,28 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                Kategori kategoriDipilih = (Kategori)comboBoxKategori.SelectedItem;
+                if(textBoxNamaBarang.Text != "" && textBoxNamaBarang.Text != null && textBoxHargaBarang.Text != "" && textBoxHargaBarang.Text != null)
+                {
+                    Kategori kategoriDipilih = (Kategori)comboBoxKategori.SelectedItem;
 
-                Barang b = new Barang(int.Parse(textBoxIDBarang.Text), textBoxNamaBarang.Text, textBoxHargaBarang.Text, kategoriDipilih);
+                    Barang b = new Barang(int.Parse(textBoxIDBarang.Text), textBoxNamaBarang.Text, textBoxHargaBarang.Text, kategoriDipilih);
 
-                Barang.UbahData(b);
+                    Barang.UbahData(b);
 
-                MessageBox.Show("Data barang berhasil diubah", "Informasi");
+                    MessageBox.Show("Item data has been successfully changed.", "Information");
 
-                FormTambahBarang frm = (FormTambahBarang)this.Owner;
-                frm.FormTambahBarang_Load(sender, e);
+                    FormTambahBarang frm = (FormTambahBarang)this.Owner;
+                    frm.FormTambahBarang_Load(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Item data can't be empty.");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Data barang gagal diubah. Pesan kesalahan : " + ex.Message,
-                    "Kesalahan");
+                MessageBox.Show("Item data failed to change. Error Message : " + ex.Message,
+                    "Failure");
             }
         }
 

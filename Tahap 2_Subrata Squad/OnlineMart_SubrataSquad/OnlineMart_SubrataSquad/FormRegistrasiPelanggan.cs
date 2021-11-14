@@ -27,11 +27,17 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                Pelanggan pel = new Pelanggan(0, textBoxNama.Text, textBoxEmail.Text,
-                    textBoxPassword.Text, textBoxTelepon.Text, 0, 0);
-                Pelanggan.TambahData(pel);
-                MessageBox.Show("Registration success.", "Information");
-                this.Close();
+                if (textBoxNama.Text != "" && textBoxNama.Text != null && textBoxEmail.Text != "" && textBoxEmail.Text != null && textBoxTelepon.Text != "" && textBoxTelepon.Text != null && textBoxPassword.Text != "" && textBoxPassword.Text != null)
+                {
+                    Pelanggan pel = new Pelanggan(0, textBoxNama.Text, textBoxEmail.Text, textBoxPassword.Text, textBoxTelepon.Text, 0, 0);
+                    Pelanggan.TambahData(pel);
+                    MessageBox.Show("Registration success.", "Information");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Data can't empty.");
+                }
             }
             catch (Exception ex)
             {
