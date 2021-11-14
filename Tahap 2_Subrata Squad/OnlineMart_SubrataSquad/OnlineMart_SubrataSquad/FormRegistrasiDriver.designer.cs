@@ -41,6 +41,7 @@ namespace OnlineMart_SubrataSquad
             this.label2 = new System.Windows.Forms.Label();
             this.buttonDaftar = new System.Windows.Forms.Button();
             this.buttonKeluar = new System.Windows.Forms.Button();
+            this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,9 +50,10 @@ namespace OnlineMart_SubrataSquad
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(14, 11);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(630, 75);
+            this.label1.Size = new System.Drawing.Size(420, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "DAFTAR DRIVER";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -59,6 +61,7 @@ namespace OnlineMart_SubrataSquad
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
+            this.panel1.Controls.Add(this.checkBoxShowPassword);
             this.panel1.Controls.Add(this.textBoxNoTelepon);
             this.panel1.Controls.Add(this.textBoxPassword);
             this.panel1.Controls.Add(this.textBoxEmail);
@@ -67,55 +70,61 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(14, 103);
+            this.panel1.Location = new System.Drawing.Point(9, 67);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(630, 271);
+            this.panel1.Size = new System.Drawing.Size(420, 176);
             this.panel1.TabIndex = 1;
             // 
             // textBoxNoTelepon
             // 
             this.textBoxNoTelepon.Font = new System.Drawing.Font("Tahoma", 11.25F);
             this.textBoxNoTelepon.ForeColor = System.Drawing.Color.Black;
-            this.textBoxNoTelepon.Location = new System.Drawing.Point(198, 180);
+            this.textBoxNoTelepon.Location = new System.Drawing.Point(132, 134);
+            this.textBoxNoTelepon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxNoTelepon.Name = "textBoxNoTelepon";
-            this.textBoxNoTelepon.Size = new System.Drawing.Size(403, 35);
+            this.textBoxNoTelepon.Size = new System.Drawing.Size(270, 26);
             this.textBoxNoTelepon.TabIndex = 9;
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Tahoma", 11.25F);
             this.textBoxPassword.ForeColor = System.Drawing.Color.Black;
-            this.textBoxPassword.Location = new System.Drawing.Point(198, 131);
+            this.textBoxPassword.Location = new System.Drawing.Point(132, 85);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(403, 35);
+            this.textBoxPassword.Size = new System.Drawing.Size(270, 26);
             this.textBoxPassword.TabIndex = 8;
             // 
             // textBoxEmail
             // 
             this.textBoxEmail.Font = new System.Drawing.Font("Tahoma", 11.25F);
             this.textBoxEmail.ForeColor = System.Drawing.Color.Black;
-            this.textBoxEmail.Location = new System.Drawing.Point(198, 77);
+            this.textBoxEmail.Location = new System.Drawing.Point(132, 50);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(403, 35);
+            this.textBoxEmail.Size = new System.Drawing.Size(270, 26);
             this.textBoxEmail.TabIndex = 7;
             // 
             // textBoxNama
             // 
             this.textBoxNama.Font = new System.Drawing.Font("Tahoma", 11.25F);
             this.textBoxNama.ForeColor = System.Drawing.Color.Black;
-            this.textBoxNama.Location = new System.Drawing.Point(198, 28);
+            this.textBoxNama.Location = new System.Drawing.Point(132, 18);
+            this.textBoxNama.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxNama.Name = "textBoxNama";
-            this.textBoxNama.Size = new System.Drawing.Size(403, 35);
+            this.textBoxNama.Size = new System.Drawing.Size(270, 26);
             this.textBoxNama.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(38, 189);
+            this.label5.Location = new System.Drawing.Point(25, 140);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 25);
+            this.label5.Size = new System.Drawing.Size(90, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "No. Telepon :";
             // 
@@ -123,9 +132,10 @@ namespace OnlineMart_SubrataSquad
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(58, 138);
+            this.label4.Location = new System.Drawing.Point(39, 90);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 25);
+            this.label4.Size = new System.Drawing.Size(75, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Password :";
             // 
@@ -133,9 +143,10 @@ namespace OnlineMart_SubrataSquad
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(92, 86);
+            this.label3.Location = new System.Drawing.Point(61, 56);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 25);
+            this.label3.Size = new System.Drawing.Size(48, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Email :";
             // 
@@ -143,9 +154,10 @@ namespace OnlineMart_SubrataSquad
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(88, 37);
+            this.label2.Location = new System.Drawing.Point(59, 24);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 25);
+            this.label2.Size = new System.Drawing.Size(52, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nama :";
             // 
@@ -154,9 +166,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonDaftar.BackColor = System.Drawing.Color.Orange;
             this.buttonDaftar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDaftar.ForeColor = System.Drawing.Color.White;
-            this.buttonDaftar.Location = new System.Drawing.Point(366, 380);
+            this.buttonDaftar.Location = new System.Drawing.Point(244, 247);
+            this.buttonDaftar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDaftar.Name = "buttonDaftar";
-            this.buttonDaftar.Size = new System.Drawing.Size(135, 63);
+            this.buttonDaftar.Size = new System.Drawing.Size(90, 30);
             this.buttonDaftar.TabIndex = 3;
             this.buttonDaftar.Text = "&DAFTAR";
             this.buttonDaftar.UseVisualStyleBackColor = false;
@@ -167,25 +180,38 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(508, 380);
+            this.buttonKeluar.Location = new System.Drawing.Point(339, 247);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(135, 63);
+            this.buttonKeluar.Size = new System.Drawing.Size(90, 30);
             this.buttonKeluar.TabIndex = 3;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
+            // checkBoxShowPassword
+            // 
+            this.checkBoxShowPassword.AutoSize = true;
+            this.checkBoxShowPassword.Location = new System.Drawing.Point(134, 116);
+            this.checkBoxShowPassword.Name = "checkBoxShowPassword";
+            this.checkBoxShowPassword.Size = new System.Drawing.Size(102, 17);
+            this.checkBoxShowPassword.TabIndex = 12;
+            this.checkBoxShowPassword.Text = "Show Password";
+            this.checkBoxShowPassword.UseVisualStyleBackColor = true;
+            this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
+            // 
             // FormRegistrasiDriver
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(654, 462);
+            this.ClientSize = new System.Drawing.Size(436, 282);
             this.ControlBox = false;
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonDaftar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormRegistrasiDriver";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -207,5 +233,6 @@ namespace OnlineMart_SubrataSquad
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonDaftar;
         private System.Windows.Forms.Button buttonKeluar;
+        private System.Windows.Forms.CheckBox checkBoxShowPassword;
     }
 }

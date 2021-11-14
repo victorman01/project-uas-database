@@ -39,5 +39,17 @@ namespace OnlineMart_SubrataSquad
             }
 
         }
+
+        private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxShowPassword.Checked)
+            {
+                textBoxPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                textBoxPassword.PasswordChar = '*';
+            }
+        }
     }
 }

@@ -23,126 +23,21 @@ namespace OnlineMart_SubrataSquad
             this.Close();
         }
 
-        private void textBoxMinimalPembelian_Enter(object sender, EventArgs e)
-        {
-            if (textBoxMinimalPembelian.Text == "Type Here...")
-            {
-                textBoxMinimalPembelian.Text = "";
-                textBoxMinimalPembelian.ForeColor = Color.Black;
-                textBoxMinimalPembelian.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxMinimalPembelian_Leave(object sender, EventArgs e)
-        {
-            if (textBoxMinimalPembelian.Text == "")
-            {
-                textBoxMinimalPembelian.Text = "Type Here...";
-                textBoxMinimalPembelian.ForeColor = Color.Silver;
-                textBoxMinimalPembelian.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
-        private void textBoxMaksimalDiskon_Enter(object sender, EventArgs e)
-        {
-            if (textBoxMaksimalDiskon.Text == "Type Here...")
-            {
-                textBoxMaksimalDiskon.Text = "";
-                textBoxMaksimalDiskon.ForeColor = Color.Black;
-                textBoxMaksimalDiskon.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxMaksimalDiskon_Leave(object sender, EventArgs e)
-        {
-            if (textBoxMaksimalDiskon.Text == "")
-            {
-                textBoxMaksimalDiskon.Text = "Type Here...";
-                textBoxMaksimalDiskon.ForeColor = Color.Silver;
-                textBoxMaksimalDiskon.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
-        private void textBoxDiskon_Enter(object sender, EventArgs e)
-        {
-            if (textBoxDiskon.Text == "Type Here...")
-            {
-                textBoxDiskon.Text = "";
-                textBoxDiskon.ForeColor = Color.Black;
-                textBoxDiskon.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxDiskon_Leave(object sender, EventArgs e)
-        {
-            if (textBoxDiskon.Text == "")
-            {
-                textBoxDiskon.Text = "Type Here...";
-                textBoxDiskon.ForeColor = Color.Silver;
-                textBoxDiskon.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
-        private void textBoxTipePromo_Enter(object sender, EventArgs e)
-        {
-            if (textBoxTipePromo.Text == "Type Here...")
-            {
-                textBoxTipePromo.Text = "";
-                textBoxTipePromo.ForeColor = Color.Black;
-                textBoxTipePromo.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxTipePromo_Leave(object sender, EventArgs e)
-        {
-            if (textBoxTipePromo.Text == "")
-            {
-                textBoxTipePromo.Text = "Type Here...";
-                textBoxTipePromo.ForeColor = Color.Silver;
-                textBoxTipePromo.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
-        private void textBoxNamaPromo_Enter(object sender, EventArgs e)
-        {
-            if (textBoxNamaPromo.Text == "Type Here...")
-            {
-                textBoxNamaPromo.Text = "";
-                textBoxNamaPromo.ForeColor = Color.Black;
-                textBoxNamaPromo.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxNamaPromo_Leave(object sender, EventArgs e)
-        {
-            if (textBoxNamaPromo.Text == "")
-            {
-                textBoxNamaPromo.Text = "Type Here...";
-                textBoxNamaPromo.ForeColor = Color.Silver;
-                textBoxNamaPromo.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
         private void buttonKosongi_Click(object sender, EventArgs e)
         {
             textBoxNamaPromo.Text = "";
-            textBoxTipePromo.Text = "";
+            comboBoxTipePromo.Text = "";
             textBoxDiskon.Text = "";
             textBoxMaksimalDiskon.Text = "";
             textBoxMinimalPembelian.Text = "";
             textBoxNamaPromo.Focus();
         }
 
-        private void FormPengaturanPromo_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
             try
             {
-                Promo promo = new Promo(textBoxTipePromo.Text, textBoxNamaPromo.Text, 
+                Promo promo = new Promo(comboBoxTipePromo.Text, textBoxNamaPromo.Text, 
                     int.Parse(textBoxDiskon.Text), int.Parse(textBoxMaksimalDiskon.Text), float.Parse(textBoxMinimalPembelian.Text));
                 Promo.TambahData(promo);
                 MessageBox.Show("Data added.", "Information");

@@ -63,7 +63,7 @@ namespace OnlineMart_SubrataSquad
             this.buttonSimpan.BackColor = System.Drawing.Color.Orange;
             this.buttonSimpan.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(309, 248);
+            this.buttonSimpan.Location = new System.Drawing.Point(309, 234);
             this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(86, 32);
@@ -90,7 +90,7 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(399, 248);
+            this.buttonKeluar.Location = new System.Drawing.Point(399, 234);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(86, 32);
@@ -221,7 +221,7 @@ namespace OnlineMart_SubrataSquad
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(494, 291);
+            this.ClientSize = new System.Drawing.Size(494, 272);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonSimpan);
@@ -241,10 +241,7 @@ namespace OnlineMart_SubrataSquad
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonKeluar;
-        private System.Windows.Forms.TextBox textBoxNama;
-        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxTelepon;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxUlangPassword;
@@ -252,5 +249,8 @@ namespace OnlineMart_SubrataSquad
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBoxShowPassword;
+        public System.Windows.Forms.TextBox textBoxNama;
+        public System.Windows.Forms.TextBox textBoxEmail;
+        public System.Windows.Forms.TextBox textBoxTelepon;
     }
 }

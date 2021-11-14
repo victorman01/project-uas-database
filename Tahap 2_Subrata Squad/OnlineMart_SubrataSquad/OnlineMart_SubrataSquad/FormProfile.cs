@@ -43,6 +43,9 @@ namespace OnlineMart_SubrataSquad
         {
             FormUbahProfile form = new FormUbahProfile();
             form.Owner = this;
+            form.textBoxNama.Text = labelNama.Text;
+            form.textBoxEmail.Text = labelEmail.Text;
+            form.textBoxTelepon.Text = labelTelepon.Text;
             form.ShowDialog();
         }
 

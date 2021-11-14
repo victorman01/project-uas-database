@@ -33,19 +33,19 @@ namespace OnlineMart_SubrataSquad
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxMinimalPembelian = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxDiskon = new System.Windows.Forms.TextBox();
             this.textBoxMaksimalDiskon = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxTipePromo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxNamaPromo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.buttonKosongi = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.buttonKeluar = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
+            this.comboBoxTipePromo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,7 @@ namespace OnlineMart_SubrataSquad
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
+            this.panel1.Controls.Add(this.comboBoxTipePromo);
             this.panel1.Controls.Add(this.textBoxMinimalPembelian);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
@@ -73,7 +74,6 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Controls.Add(this.textBoxMaksimalDiskon);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBoxTipePromo);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBoxNamaPromo);
             this.panel1.Controls.Add(this.label6);
@@ -85,16 +85,13 @@ namespace OnlineMart_SubrataSquad
             // 
             // textBoxMinimalPembelian
             // 
-            this.textBoxMinimalPembelian.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMinimalPembelian.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBoxMinimalPembelian.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.textBoxMinimalPembelian.ForeColor = System.Drawing.Color.Black;
             this.textBoxMinimalPembelian.Location = new System.Drawing.Point(176, 128);
             this.textBoxMinimalPembelian.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMinimalPembelian.Name = "textBoxMinimalPembelian";
             this.textBoxMinimalPembelian.Size = new System.Drawing.Size(224, 24);
             this.textBoxMinimalPembelian.TabIndex = 16;
-            this.textBoxMinimalPembelian.Text = "Type Here...";
-            this.textBoxMinimalPembelian.Enter += new System.EventHandler(this.textBoxMinimalPembelian_Enter);
-            this.textBoxMinimalPembelian.Leave += new System.EventHandler(this.textBoxMinimalPembelian_Leave);
             // 
             // label7
             // 
@@ -106,6 +103,17 @@ namespace OnlineMart_SubrataSquad
             this.label7.Size = new System.Drawing.Size(125, 17);
             this.label7.TabIndex = 15;
             this.label7.Text = "Minimal Pembelian :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(281, 103);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(22, 17);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "%";
             // 
             // label5
             // 
@@ -120,29 +128,23 @@ namespace OnlineMart_SubrataSquad
             // 
             // textBoxDiskon
             // 
-            this.textBoxDiskon.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDiskon.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBoxDiskon.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.textBoxDiskon.ForeColor = System.Drawing.Color.Black;
             this.textBoxDiskon.Location = new System.Drawing.Point(176, 73);
             this.textBoxDiskon.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDiskon.Name = "textBoxDiskon";
             this.textBoxDiskon.Size = new System.Drawing.Size(102, 24);
             this.textBoxDiskon.TabIndex = 13;
-            this.textBoxDiskon.Text = "Type Here...";
-            this.textBoxDiskon.Enter += new System.EventHandler(this.textBoxDiskon_Enter);
-            this.textBoxDiskon.Leave += new System.EventHandler(this.textBoxDiskon_Leave);
             // 
             // textBoxMaksimalDiskon
             // 
-            this.textBoxMaksimalDiskon.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMaksimalDiskon.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBoxMaksimalDiskon.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.textBoxMaksimalDiskon.ForeColor = System.Drawing.Color.Black;
             this.textBoxMaksimalDiskon.Location = new System.Drawing.Point(176, 100);
             this.textBoxMaksimalDiskon.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMaksimalDiskon.Name = "textBoxMaksimalDiskon";
             this.textBoxMaksimalDiskon.Size = new System.Drawing.Size(102, 24);
             this.textBoxMaksimalDiskon.TabIndex = 12;
-            this.textBoxMaksimalDiskon.Text = "Type Here...";
-            this.textBoxMaksimalDiskon.Enter += new System.EventHandler(this.textBoxMaksimalDiskon_Enter);
-            this.textBoxMaksimalDiskon.Leave += new System.EventHandler(this.textBoxMaksimalDiskon_Leave);
             // 
             // label4
             // 
@@ -166,19 +168,6 @@ namespace OnlineMart_SubrataSquad
             this.label3.TabIndex = 9;
             this.label3.Text = "Diskon :";
             // 
-            // textBoxTipePromo
-            // 
-            this.textBoxTipePromo.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTipePromo.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxTipePromo.Location = new System.Drawing.Point(176, 45);
-            this.textBoxTipePromo.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxTipePromo.Name = "textBoxTipePromo";
-            this.textBoxTipePromo.Size = new System.Drawing.Size(224, 24);
-            this.textBoxTipePromo.TabIndex = 8;
-            this.textBoxTipePromo.Text = "Type Here...";
-            this.textBoxTipePromo.Enter += new System.EventHandler(this.textBoxTipePromo_Enter);
-            this.textBoxTipePromo.Leave += new System.EventHandler(this.textBoxTipePromo_Leave);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -192,16 +181,13 @@ namespace OnlineMart_SubrataSquad
             // 
             // textBoxNamaPromo
             // 
-            this.textBoxNamaPromo.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNamaPromo.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBoxNamaPromo.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.textBoxNamaPromo.ForeColor = System.Drawing.Color.Black;
             this.textBoxNamaPromo.Location = new System.Drawing.Point(176, 17);
             this.textBoxNamaPromo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNamaPromo.Name = "textBoxNamaPromo";
             this.textBoxNamaPromo.Size = new System.Drawing.Size(224, 24);
             this.textBoxNamaPromo.TabIndex = 6;
-            this.textBoxNamaPromo.Text = "Type Here...";
-            this.textBoxNamaPromo.Enter += new System.EventHandler(this.textBoxNamaPromo_Enter);
-            this.textBoxNamaPromo.Leave += new System.EventHandler(this.textBoxNamaPromo_Leave);
             // 
             // label6
             // 
@@ -256,16 +242,17 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
-            // label8
+            // comboBoxTipePromo
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(281, 103);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(22, 17);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "%";
+            this.comboBoxTipePromo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipePromo.FormattingEnabled = true;
+            this.comboBoxTipePromo.Items.AddRange(new object[] {
+            "Ongkir",
+            "Barang"});
+            this.comboBoxTipePromo.Location = new System.Drawing.Point(176, 47);
+            this.comboBoxTipePromo.Name = "comboBoxTipePromo";
+            this.comboBoxTipePromo.Size = new System.Drawing.Size(224, 21);
+            this.comboBoxTipePromo.TabIndex = 17;
             // 
             // FormTambahPromo
             // 
@@ -297,7 +284,6 @@ namespace OnlineMart_SubrataSquad
         private System.Windows.Forms.TextBox textBoxMaksimalDiskon;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxTipePromo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxNamaPromo;
         private System.Windows.Forms.Label label6;
@@ -305,5 +291,6 @@ namespace OnlineMart_SubrataSquad
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBoxTipePromo;
     }
 }

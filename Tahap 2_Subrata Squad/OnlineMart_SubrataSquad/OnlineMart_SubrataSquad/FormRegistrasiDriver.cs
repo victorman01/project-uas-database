@@ -38,5 +38,17 @@ namespace OnlineMart_SubrataSquad
                 MessageBox.Show("Registraion failed. Error Message : " + ex.Message, "Failure");
             }            
         }
+
+        private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxShowPassword.Checked)
+            {
+                textBoxPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                textBoxPassword.PasswordChar = '*';
+            }
+        }
     }
 }

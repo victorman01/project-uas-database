@@ -1346,7 +1346,6 @@ D:\Github Repository\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSq
 D:\Github Repository\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.csproj.CopyComplete
 D:\Github Repository\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.exe
 D:\Github Repository\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.pdb
-D:\GitHub\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.csproj.CopyComplete
 D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.csproj.AssemblyReference.cache
 D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormBarang.resources
 D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormCekPesanan.resources
@@ -1420,3 +1419,4 @@ D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\Onlin
 D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\bin\Debug\MySql.Data.xml
 D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.csproj.CopyComplete
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormUbahJumlahBarang.resources
+D:\GitHub\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormUbahJumlahBarang.resources

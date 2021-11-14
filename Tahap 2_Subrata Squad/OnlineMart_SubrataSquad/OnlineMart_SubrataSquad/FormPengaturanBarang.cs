@@ -80,38 +80,9 @@ namespace OnlineMart_SubrataSquad
 
         public void FormPengaturanBarang_Load(object sender, EventArgs e)
         {
+            FormatDataGrid();
             listCabangBarang = CabangBarang.BacaData("", "");
-
-            if (listCabangBarang.Count > 0)
-            {
-                dataGridViewPengaturanBarang.DataSource = listCabangBarang;
-
-                if (!dataGridViewPengaturanBarang.Columns.Contains("btnHapusGrid"))
-                {
-                    DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-                    bcol.HeaderText = "Aksi";
-                    bcol.Text = "Hapus";
-                    bcol.Name = "btnHapusGrid";
-                    bcol.UseColumnTextForButtonValue = true;
-                    dataGridViewPengaturanBarang.Columns.Add(bcol);
-
-                    DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
-                    bcol2.HeaderText = "Aksi";
-                    bcol2.Text = "Ubah";
-                    bcol2.Name = "btnUbahGrid";
-                    bcol2.UseColumnTextForButtonValue = true;
-                    dataGridViewPengaturanBarang.Columns.Add(bcol2);
-                }
-            }
-            else
-            {
-                dataGridViewPengaturanBarang.DataSource = null;
-            }
-
-            //FormatDataGrid();
-            //listCabangBarang = CabangBarang.BacaData("", "");
-            //TampilDataGrid();
-
+            TampilDataGrid();
         }
 
         private void textBoxCBPengaturanBarang_TextChanged(object sender, EventArgs e)
@@ -147,10 +118,12 @@ namespace OnlineMart_SubrataSquad
             dataGridViewPengaturanBarang.Columns.Clear();
 
             dataGridViewPengaturanBarang.Columns.Add("Barang", "Nama Barang");
+            dataGridViewPengaturanBarang.Columns.Add("Kategori", "Kategori");
             dataGridViewPengaturanBarang.Columns.Add("Cabang", "Nama Cabang");
             dataGridViewPengaturanBarang.Columns.Add("Stok", "Jumlah Stok");
 
             dataGridViewPengaturanBarang.Columns["Barang"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewPengaturanBarang.Columns["Kategori"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewPengaturanBarang.Columns["Cabang"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewPengaturanBarang.Columns["Stok"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
@@ -165,7 +138,7 @@ namespace OnlineMart_SubrataSquad
             {
                 foreach (CabangBarang c in listCabangBarang)
                 {
-                    dataGridViewPengaturanBarang.Rows.Add(c.Barang.Nama, c.Cabang.Nama, c.Stok);
+                    dataGridViewPengaturanBarang.Rows.Add(c.Barang.Nama, c.Barang.Kategori.Nama, c.Cabang.Nama, c.Stok);
                 }
                 
                 if (!dataGridViewPengaturanBarang.Columns.Contains("btnUbahGrid"))
