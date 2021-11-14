@@ -25,22 +25,29 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                Cabang cabangDipilih = (Cabang)comboBoxCabang.SelectedItem;
-                Barang barangDipilih = (Barang)comboBoxBarang.SelectedItem;
+                if(textBoxStok.Text != "" && textBoxStok.Text != null)
+                {
+                    Cabang cabangDipilih = (Cabang)comboBoxCabang.SelectedItem;
+                    Barang barangDipilih = (Barang)comboBoxBarang.SelectedItem;
 
-                CabangBarang cb = new CabangBarang(barangDipilih, cabangDipilih, int.Parse(textBoxStok.Text));
+                    CabangBarang cb = new CabangBarang(barangDipilih, cabangDipilih, int.Parse(textBoxStok.Text));
 
-                CabangBarang.TambahStok(cb);
+                    CabangBarang.TambahStok(cb);
 
-                MessageBox.Show("Data stok berhasil ditambahkan", "Informasi");
+                    MessageBox.Show("Stock data added successfully.", "Information");
 
-                FormPengaturanBarang frm = (FormPengaturanBarang)this.Owner;
-                frm.FormPengaturanBarang_Load(sender, e);
+                    FormPengaturanBarang frm = (FormPengaturanBarang)this.Owner;
+                    frm.FormPengaturanBarang_Load(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Stock data can't be empty.");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Data stok gagal ditambahkan. Pesan kesalahan : " + ex.Message,
-                    "Kesalahan");
+                MessageBox.Show("Stock data failed to add. Error Message : " + ex.Message,
+                    "Failure");
             }
         }
 
@@ -65,22 +72,12 @@ namespace OnlineMart_SubrataSquad
 
         private void textBoxStok_Enter(object sender, EventArgs e)
         {
-            if (textBoxStok.Text == "Type Here...")
-            {
-                textBoxStok.Text = "";
-                textBoxStok.ForeColor = Color.Black;
-                textBoxStok.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
+
         }
 
         private void textBoxStok_Leave(object sender, EventArgs e)
         {
-            if (textBoxStok.Text == "")
-            {
-                textBoxStok.Text = "Type Here...";
-                textBoxStok.ForeColor = Color.Silver;
-                textBoxStok.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
+
         }
     }
 }

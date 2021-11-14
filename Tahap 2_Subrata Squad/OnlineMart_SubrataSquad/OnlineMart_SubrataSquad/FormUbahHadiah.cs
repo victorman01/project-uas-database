@@ -23,17 +23,24 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                Gift g = new Gift(int.Parse(textBoxIDHadiah.Text), textBoxNamaHadiah.Text, textBoxJumlahPoin.Text);
-                Gift.UbahData(g);
-                MessageBox.Show("Data Changed.");
+                if (textBoxNamaHadiah.Text != "" && textBoxNamaHadiah.Text != null && textBoxJumlahPoin.Text != "" && textBoxJumlahPoin.Text != null)
+                {
+                    Gift g = new Gift(int.Parse(textBoxIDHadiah.Text), textBoxNamaHadiah.Text, textBoxJumlahPoin.Text);
+                    Gift.UbahData(g);
+                    MessageBox.Show("Gift data has been successfully changed.", "Information");
 
-                FormPengaturanHadiah form = (FormPengaturanHadiah)this.Owner;
-                form.FormPengaturanHadiah_Load(sender, e);
-                this.Close();
+                    FormPengaturanHadiah form = (FormPengaturanHadiah)this.Owner;
+                    form.FormPengaturanHadiah_Load(sender, e);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Gift data can't be empty.");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("There's error when changing data. Error message : " + ex.Message,
+                MessageBox.Show("Gift data failed to change. Error Message : " + ex.Message,
                     "Failure");
             }
         }
@@ -48,66 +55,6 @@ namespace OnlineMart_SubrataSquad
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void textBoxIDHadiah_Enter(object sender, EventArgs e)
-        {
-            if (textBoxIDHadiah.Text == "Type Here...")
-            {
-                textBoxIDHadiah.Text = "";
-                textBoxIDHadiah.ForeColor = Color.Black;
-                textBoxIDHadiah.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxIDHadiah_Leave(object sender, EventArgs e)
-        {
-            if (textBoxIDHadiah.Text == "")
-            {
-                textBoxIDHadiah.Text = "Type Here...";
-                textBoxIDHadiah.ForeColor = Color.Silver;
-                textBoxIDHadiah.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
-        private void textBoxNamaHadiah_Enter(object sender, EventArgs e)
-        {
-            if (textBoxNamaHadiah.Text == "Type Here...")
-            {
-                textBoxNamaHadiah.Text = "";
-                textBoxNamaHadiah.ForeColor = Color.Black;
-                textBoxNamaHadiah.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxNamaHadiah_Leave(object sender, EventArgs e)
-        {
-            if (textBoxNamaHadiah.Text == "")
-            {
-                textBoxNamaHadiah.Text = "Type Here...";
-                textBoxNamaHadiah.ForeColor = Color.Silver;
-                textBoxNamaHadiah.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
-        private void textBoxJumlahPoin_Enter(object sender, EventArgs e)
-        {
-            if (textBoxJumlahPoin.Text == "Type Here...")
-            {
-                textBoxJumlahPoin.Text = "";
-                textBoxJumlahPoin.ForeColor = Color.Black;
-                textBoxJumlahPoin.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxJumlahPoin_Leave(object sender, EventArgs e)
-        {
-            if (textBoxJumlahPoin.Text == "")
-            {
-                textBoxJumlahPoin.Text = "Type Here...";
-                textBoxJumlahPoin.ForeColor = Color.Silver;
-                textBoxJumlahPoin.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
         }
     }
 }

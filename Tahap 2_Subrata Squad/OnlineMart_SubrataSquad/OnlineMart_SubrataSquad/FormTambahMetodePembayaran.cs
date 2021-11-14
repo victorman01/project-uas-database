@@ -28,38 +28,25 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                MetodePembayaran mp = new MetodePembayaran(textBoxNamaMP.Text);
-                MetodePembayaran.TambahData(mp);
-                MessageBox.Show("Data metode pembayaran success to be added", "Info");
+                if(textBoxNamaMP.Text != "" && textBoxNamaMP.Text != null)
+                {
+                    MetodePembayaran mp = new MetodePembayaran(textBoxNamaMP.Text);
+                    MetodePembayaran.TambahData(mp);
+                    MessageBox.Show("Data payment method success to be added.", "Information");
 
-                FormPengaturanMetodePembayaran form = (FormPengaturanMetodePembayaran)this.Owner;
-                form.FormPengaturanMetodePembayaran_Load(sender, e);
-                this.Close();
+                    FormPengaturanMetodePembayaran form = (FormPengaturanMetodePembayaran)this.Owner;
+                    form.FormPengaturanMetodePembayaran_Load(sender, e);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Payment method data can't be empty.");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("There's error added data metode pembayaran. Error Message : " + ex.Message,
+                MessageBox.Show("There's error added data payment method. Error Message : " + ex.Message,
                     "Failure");
-            }
-        }
-
-        private void textBoxNamaMP_Enter(object sender, EventArgs e)
-        {
-            if (textBoxNamaMP.Text == "Type Here...")
-            {
-                textBoxNamaMP.Text = "";
-                textBoxNamaMP.ForeColor = Color.Black;
-                textBoxNamaMP.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxNamaMP_Leave(object sender, EventArgs e)
-        {
-            if (textBoxNamaMP.Text == "")
-            {
-                textBoxNamaMP.Text = "Type Here...";
-                textBoxNamaMP.ForeColor = Color.Silver;
-                textBoxNamaMP.Font = new Font("Tahoma", 10, FontStyle.Italic);
             }
         }
 
