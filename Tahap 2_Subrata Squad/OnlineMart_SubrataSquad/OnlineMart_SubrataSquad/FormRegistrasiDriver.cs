@@ -27,17 +27,11 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                if (textBoxNama.Text != "" && textBoxNama.Text != null && textBoxEmail.Text != "" && textBoxEmail.Text != null && textBoxPassword.Text != "" && textBoxPassword.Text != null && textBoxNoTelepon.Text != "" && textBoxNoTelepon.Text != null)
-                {
-                    Driver driv = new Driver(0, textBoxNama.Text, textBoxEmail.Text, textBoxPassword.Text, textBoxNoTelepon.Text);
-                    Driver.TambahData(driv);
-                    MessageBox.Show("Registration success.", "Information");
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Data can't empty.");
-                }
+                Driver driv = new Driver(0, textBoxNama.Text, textBoxEmail.Text,
+                    textBoxPassword.Text, textBoxNoTelepon.Text);
+                Driver.TambahData(driv);
+                MessageBox.Show("Registration success.", "Information");
+                this.Close();
             }
             catch (Exception ex)
             {

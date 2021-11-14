@@ -23,28 +23,41 @@ namespace OnlineMart_SubrataSquad
             this.Close();
         }
 
+        private void textBoxNamaKategori_Enter(object sender, EventArgs e)
+        {
+            if (textBoxNamaKategori.Text == "Type Here...")
+            {
+                textBoxNamaKategori.Text = "";
+                textBoxNamaKategori.ForeColor = Color.Black;
+                textBoxNamaKategori.Font = new Font("Tahoma", 10, FontStyle.Regular);
+            }
+        }
+
+        private void textBoxNamaKategori_Leave(object sender, EventArgs e)
+        {
+            if (textBoxNamaKategori.Text == "")
+            {
+                textBoxNamaKategori.Text = "Type Here...";
+                textBoxNamaKategori.ForeColor = Color.Silver;
+                textBoxNamaKategori.Font = new Font("Tahoma", 10, FontStyle.Italic);
+            }
+        }
+
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
             try
             {
-                if(textBoxNamaKategori.Text != "" && textBoxNamaKategori.Text != null)
-                {
-                    Kategori k = new Kategori(textBoxNamaKategori.Text);
-                    Kategori.TambahData(k);
-                    MessageBox.Show("Data category success to be added.", "Information");
+                Kategori k = new Kategori(textBoxNamaKategori.Text);
+                Kategori.TambahData(k);
+                MessageBox.Show("Data kategori success to be added", "Info");
 
-                    FormPengaturanKategori form = (FormPengaturanKategori)this.Owner;
-                    form.FormPengaturanKategori_Load(sender, e);
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Category data can't be empty.");
-                }
+                FormPengaturanKategori form = (FormPengaturanKategori)this.Owner;
+                form.FormPengaturanKategori_Load(sender, e);
+                this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("There's error added data category. Error Message : " + ex.Message,
+                MessageBox.Show("There's error added data kategori. Error Message : " + ex.Message,
                     "Failure");
             }
         }
@@ -52,7 +65,7 @@ namespace OnlineMart_SubrataSquad
         private void buttonKosongi_Click(object sender, EventArgs e)
         {
             textBoxNamaKategori.Text = "";
-            textBoxNamaKategori.Focus();
+            textBoxIdKategori.Focus();
         }
     }
 }

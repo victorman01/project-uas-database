@@ -24,37 +24,30 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                if(textBoxJumlah.Text != "" && textBoxJumlah.Text != null)
+                int cabangId = 0;
+                int barangId = 0;
+                foreach (Cabang c in listCabang)
                 {
-                    int cabangId = 0;
-                    int barangId = 0;
-                    foreach (Cabang c in listCabang)
+                    if (c.Nama == textBoxCabang.Text)
                     {
-                        if (c.Nama == textBoxCabang.Text)
-                        {
-                            cabangId = c.Id;
-                            break;
-                        }
+                        cabangId = c.Id;
+                        break;
                     }
-
-                    foreach (Barang b in listBarang)
-                    {
-                        if (b.Nama == textBoxBarang.Text)
-                        {
-                            barangId = b.Id;
-                            break;
-                        }
-                    }
-                    Keranjang.UpdateJumlahBeli(int.Parse(textBoxJumlah.Text), barangId, cabangId);
-                    MessageBox.Show("The item is updated");
-
-                    FormKeranjang frm = (FormKeranjang)this.Owner;
-                    frm.FormKeranjang_Load(sender, e);
                 }
-                else
+
+                foreach (Barang b in listBarang)
                 {
-                    MessageBox.Show("Stock can't be empty");
+                    if (b.Nama == textBoxBarang.Text)
+                    {
+                        barangId = b.Id;
+                        break;
+                    }
                 }
+                Keranjang.UpdateJumlahBeli(int.Parse(textBoxJumlah.Text), barangId, cabangId);
+                MessageBox.Show("The item is updated");
+
+                FormKeranjang frm = (FormKeranjang)this.Owner;
+                frm.FormKeranjang_Load(sender, e);
             }
             catch
             {

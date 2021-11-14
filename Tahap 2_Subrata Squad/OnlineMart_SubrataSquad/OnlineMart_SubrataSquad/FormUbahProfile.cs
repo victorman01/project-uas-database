@@ -22,23 +22,16 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                if (textBoxNama.Text != "" && textBoxNama.Text != null && textBoxEmail.Text != "" && textBoxEmail.Text != null && textBoxTelepon.Text != "" && textBoxTelepon.Text != null && textBoxPassword.Text != "" && textBoxPassword.Text != null && textBoxUlangPassword.Text != "" && textBoxUlangPassword.Text != null)
-                {
-                    FormProfile formProfile = (FormProfile)Owner;
-                    Pelanggan pel = new Pelanggan(formProfile.pelanggan.Id, textBoxNama.Text, textBoxEmail.Text, textBoxUlangPassword.Text, textBoxTelepon.Text, formProfile.pelanggan.Saldo, formProfile.pelanggan.Poin);
-                    Pelanggan.UbahData(pel);
-                    MessageBox.Show("Profile data has been successfully changed.", "Information");
-                    formProfile.FormProfile_Load(sender, e);
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Profile data can't be empty.");
-                }
+                FormProfile formProfile = (FormProfile)Owner;
+                Pelanggan pel = new Pelanggan(formProfile.pelanggan.Id, textBoxNama.Text, textBoxEmail.Text, textBoxUlangPassword.Text, textBoxTelepon.Text,  formProfile.pelanggan.Saldo, formProfile.pelanggan.Poin) ;
+                Pelanggan.UbahData(pel);
+                MessageBox.Show("Data Changed.");
+                formProfile.FormProfile_Load(sender, e);
+                this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Profile data failed to change. Error Message : " + ex.Message,
+                MessageBox.Show("There's error when changing data. Error message : " + ex.Message,
                     "Failure");
             }
         }
