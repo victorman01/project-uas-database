@@ -37,7 +37,6 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-<<<<<<< Updated upstream
                 Promo promo = new Promo(comboBoxTipePromo.Text, textBoxNamaPromo.Text, 
                     int.Parse(textBoxDiskon.Text), int.Parse(textBoxMaksimalDiskon.Text), float.Parse(textBoxMinimalPembelian.Text));
                 Promo.TambahData(promo);
@@ -45,21 +44,6 @@ namespace OnlineMart_SubrataSquad
                 FormPengaturanPromo formPengaturanPromo = (FormPengaturanPromo)Owner;
                 formPengaturanPromo.FormPengaturanPromo_Load(sender, e);
                 this.Close();
-=======
-                if (textBoxNamaPromo.Text != "" && textBoxNamaPromo.Text != null && textBoxTipePromo.Text != "" && textBoxTipePromo.Text != null && textBoxDiskon.Text != "" && textBoxDiskon.Text != null && textBoxMaksimalDiskon.Text != "" && textBoxMaksimalDiskon.Text != null && textBoxMinimalPembelian.Text != "" && textBoxMinimalPembelian.Text != null)
-                {
-                    Promo promo = new Promo(textBoxTipePromo.Text, textBoxNamaPromo.Text, int.Parse(textBoxDiskon.Text), int.Parse(textBoxMaksimalDiskon.Text), float.Parse(textBoxMinimalPembelian.Text));
-                    Promo.TambahData(promo);
-                    MessageBox.Show("Data added.", "Information");
-                    FormPengaturanPromo formPengaturanPromo = (FormPengaturanPromo)Owner;
-                    formPengaturanPromo.FormPengaturanPromo_Load(sender, e);
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Promo data can't be empty.");
-                }
->>>>>>> Stashed changes
             }
             catch (Exception ex)
             {

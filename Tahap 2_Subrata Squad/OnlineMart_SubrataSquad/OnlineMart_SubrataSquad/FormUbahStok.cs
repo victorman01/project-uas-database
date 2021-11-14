@@ -25,47 +25,40 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                if (textBoxStok.Text != "" && textBoxStok.Text != null)
+                Barang barangs = new Barang();
+                Cabang cabangs = new Cabang();
+
+                foreach (Barang barang in listBarang)
                 {
-                    Barang barangs = new Barang();
-                    Cabang cabangs = new Cabang();
-
-                    foreach (Barang barang in listBarang)
+                    if (barang.Nama == textBoxBarang.Text)
                     {
-                        if (barang.Nama == textBoxBarang.Text)
-                        {
-                            barangs = barang;
-                        }
+                        barangs = barang;
                     }
-
-                    foreach (Cabang cabang in listCabang)
-                    {
-                        if (cabang.Nama == textBoxCabang.Text)
-                        {
-                            cabangs = cabang;
-                        }
-                    }
-
-                    CabangBarang cb = new CabangBarang(barangs, cabangs, int.Parse(textBoxStok.Text));
-
-                    CabangBarang.UbahStok(cb);
-
-                    MessageBox.Show("Stock data has been successfully changed.", "Information");
-
-                    FormPengaturanBarang frm = (FormPengaturanBarang)this.Owner;
-                    frm.FormPengaturanBarang_Load(sender, e);
-
-                    this.Close();
                 }
-                else
+
+                foreach (Cabang cabang in listCabang)
                 {
-                    MessageBox.Show("Stock can't be empty.");
+                    if (cabang.Nama == textBoxCabang.Text)
+                    {
+                        cabangs = cabang;
+                    }
                 }
+
+                CabangBarang cb = new CabangBarang(barangs, cabangs, int.Parse(textBoxStok.Text));
+
+                CabangBarang.UbahStok(cb);
+
+                MessageBox.Show("Data barang berhasil diubah", "Informasi");
+
+                FormPengaturanBarang frm = (FormPengaturanBarang)this.Owner;
+                frm.FormPengaturanBarang_Load(sender, e);
+
+                this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Stock data failed to change. Error Message : " + ex.Message,
-                        "Failure");
+                MessageBox.Show("Data barang gagal diubah. Pesan kesalahan : " + ex.Message,
+                    "Kesalahan");
             }
         }
 

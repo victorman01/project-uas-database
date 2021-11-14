@@ -34,24 +34,17 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                if (textBoxNamaMP.Text != "" && textBoxNamaMP.Text != null)
-                {
-                    MetodePembayaran mp = new MetodePembayaran(int.Parse(textBoxKodeMP.Text), textBoxNamaMP.Text);
-                    MetodePembayaran.UbahData(mp);
-                    MessageBox.Show("Payment method data has been successfully changed.", "Information");
+                MetodePembayaran mp = new MetodePembayaran(int.Parse(textBoxKodeMP.Text), textBoxNamaMP.Text);
+                MetodePembayaran.UbahData(mp);
+                MessageBox.Show("Data Changed.");
 
-                    FormPengaturanMetodePembayaran form = (FormPengaturanMetodePembayaran)this.Owner;
-                    form.FormPengaturanMetodePembayaran_Load(sender, e);
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Payment method data can't be empty.");
-                }
+                FormPengaturanMetodePembayaran form = (FormPengaturanMetodePembayaran)this.Owner;
+                form.FormPengaturanMetodePembayaran_Load(sender, e);
+                this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Payment method data failed to change. Error Message : " + ex.Message,
+                MessageBox.Show("There's error when changing data. Error message : " + ex.Message,
                     "Failure");
             }
         }

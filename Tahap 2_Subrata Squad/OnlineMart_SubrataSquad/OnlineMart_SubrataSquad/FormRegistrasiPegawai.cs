@@ -22,19 +22,13 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                if (textBoxNama.Text != "" && textBoxNama.Text != null && textBoxEmail.Text != "" && textBoxEmail.Text != null && textBoxTelepon.Text != "" && textBoxTelepon.Text != null && textBoxPassword.Text != "" && textBoxPassword.Text != null)
-                {
-                    Pegawai p = new Pegawai(textBoxNama.Text, textBoxEmail.Text, textBoxPassword.Text, textBoxTelepon.Text);
-                    Pegawai.TambahData(p);
-                    MessageBox.Show("Registration success.", "Information");
-                    FormPengaturanPegawai frm = new FormPengaturanPegawai();
-                    frm.FormPengaturan_Pegawai_Load(sender, e);
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Data can't empty.");
-                }
+                Pegawai p = new Pegawai(textBoxNama.Text, textBoxEmail.Text,
+                    textBoxPassword.Text, textBoxTelepon.Text);
+                Pegawai.TambahData(p);
+                MessageBox.Show("Registration success.", "Information");
+                FormPengaturanPegawai frm = new FormPengaturanPegawai();
+                frm.FormPengaturan_Pegawai_Load(sender, e);
+                this.Close();
             }
             catch (Exception ex)
             {

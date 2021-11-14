@@ -44,9 +44,10 @@ namespace OnlineMart_SubrataSquad
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 11);
+            this.label1.Location = new System.Drawing.Point(8, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(630, 132);
+            this.label1.Size = new System.Drawing.Size(420, 86);
             this.label1.TabIndex = 22;
             this.label1.Text = "TAMBAH METODE PEMBAYARAN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -56,27 +57,33 @@ namespace OnlineMart_SubrataSquad
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel1.Controls.Add(this.textBoxNamaMP);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 171);
+            this.panel1.Location = new System.Drawing.Point(8, 111);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(630, 78);
+            this.panel1.Size = new System.Drawing.Size(420, 51);
             this.panel1.TabIndex = 23;
             // 
             // textBoxNamaMP
             // 
-            this.textBoxNamaMP.Font = new System.Drawing.Font("Tahoma", 10.2F);
-            this.textBoxNamaMP.ForeColor = System.Drawing.Color.Black;
-            this.textBoxNamaMP.Location = new System.Drawing.Point(314, 23);
+            this.textBoxNamaMP.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNamaMP.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBoxNamaMP.Location = new System.Drawing.Point(209, 15);
+            this.textBoxNamaMP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxNamaMP.Name = "textBoxNamaMP";
-            this.textBoxNamaMP.Size = new System.Drawing.Size(302, 32);
+            this.textBoxNamaMP.Size = new System.Drawing.Size(203, 24);
             this.textBoxNamaMP.TabIndex = 8;
+            this.textBoxNamaMP.Text = "Type Here...";
+            this.textBoxNamaMP.Enter += new System.EventHandler(this.textBoxNamaMP_Enter);
+            this.textBoxNamaMP.Leave += new System.EventHandler(this.textBoxNamaMP_Leave);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 26);
+            this.label2.Location = new System.Drawing.Point(22, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(278, 25);
+            this.label2.Size = new System.Drawing.Size(182, 17);
             this.label2.TabIndex = 7;
             this.label2.Text = "Nama Metode Pembayaran :";
             // 
@@ -85,9 +92,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonKosongi.BackColor = System.Drawing.Color.Orange;
             this.buttonKosongi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKosongi.ForeColor = System.Drawing.Color.White;
-            this.buttonKosongi.Location = new System.Drawing.Point(324, 255);
+            this.buttonKosongi.Location = new System.Drawing.Point(216, 166);
+            this.buttonKosongi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonKosongi.Name = "buttonKosongi";
-            this.buttonKosongi.Size = new System.Drawing.Size(142, 63);
+            this.buttonKosongi.Size = new System.Drawing.Size(95, 41);
             this.buttonKosongi.TabIndex = 26;
             this.buttonKosongi.Text = "&KOSONGI";
             this.buttonKosongi.UseVisualStyleBackColor = false;
@@ -98,9 +106,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonSimpan.BackColor = System.Drawing.Color.Orange;
             this.buttonSimpan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(183, 255);
+            this.buttonSimpan.Location = new System.Drawing.Point(122, 166);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSimpan.Name = "buttonSimpan";
-            this.buttonSimpan.Size = new System.Drawing.Size(135, 63);
+            this.buttonSimpan.Size = new System.Drawing.Size(90, 41);
             this.buttonSimpan.TabIndex = 25;
             this.buttonSimpan.Text = "&SIMPAN";
             this.buttonSimpan.UseVisualStyleBackColor = false;
@@ -111,9 +120,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(507, 255);
+            this.buttonKeluar.Location = new System.Drawing.Point(338, 166);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(135, 63);
+            this.buttonKeluar.Size = new System.Drawing.Size(90, 41);
             this.buttonKeluar.TabIndex = 24;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -121,15 +131,16 @@ namespace OnlineMart_SubrataSquad
             // 
             // FormTambahMetodePembayaran
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 329);
+            this.ClientSize = new System.Drawing.Size(436, 214);
             this.ControlBox = false;
             this.Controls.Add(this.buttonKosongi);
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormTambahMetodePembayaran";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

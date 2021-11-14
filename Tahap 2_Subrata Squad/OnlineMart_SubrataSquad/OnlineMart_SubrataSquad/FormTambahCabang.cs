@@ -25,6 +25,66 @@ namespace OnlineMart_SubrataSquad
             this.Close();
         }
 
+        private void textBoxAlamatCabang_Enter(object sender, EventArgs e)
+        {
+            if (textBoxAlamatCabang.Text == "Type Here...")
+            {
+                textBoxAlamatCabang.Text = "";
+                textBoxAlamatCabang.ForeColor = Color.Black;
+                textBoxAlamatCabang.Font = new Font("Tahoma", 10, FontStyle.Regular);
+            }
+        }
+
+        private void textBoxAlamatCabang_Leave(object sender, EventArgs e)
+        {
+            if (textBoxAlamatCabang.Text == "")
+            {
+                textBoxAlamatCabang.Text = "Type Here...";
+                textBoxAlamatCabang.ForeColor = Color.Silver;
+                textBoxAlamatCabang.Font = new Font("Tahoma", 10, FontStyle.Italic);
+            }
+        }
+
+        private void textBoxNamaCabang_Enter(object sender, EventArgs e)
+        {
+            if (textBoxNamaCabang.Text == "Type Here...")
+            {
+                textBoxNamaCabang.Text = "";
+                textBoxNamaCabang.ForeColor = Color.Black;
+                textBoxNamaCabang.Font = new Font("Tahoma", 10, FontStyle.Regular);
+            }
+        }
+
+        private void textBoxNamaCabang_Leave(object sender, EventArgs e)
+        {
+            if (textBoxNamaCabang.Text == "")
+            {
+                textBoxNamaCabang.Text = "Type Here...";
+                textBoxNamaCabang.ForeColor = Color.Silver;
+                textBoxNamaCabang.Font = new Font("Tahoma", 10, FontStyle.Italic);
+            }
+        }
+
+        private void textBoxIDCabang_Enter(object sender, EventArgs e)
+        {
+            if (textBoxIDCabang.Text == "Type Here...")
+            {
+                textBoxIDCabang.Text = "";
+                textBoxIDCabang.ForeColor = Color.Black;
+                textBoxIDCabang.Font = new Font("Tahoma", 10, FontStyle.Regular);
+            }
+        }
+
+        private void textBoxIDCabang_Leave(object sender, EventArgs e)
+        {
+            if (textBoxIDCabang.Text == "")
+            {
+                textBoxIDCabang.Text = "Type Here...";
+                textBoxIDCabang.ForeColor = Color.Silver;
+                textBoxIDCabang.Font = new Font("Tahoma", 10, FontStyle.Italic);
+            }
+        }
+
         private void buttonKosongi_Click(object sender, EventArgs e)
         {
             textBoxAlamatCabang.Text = "";
@@ -36,28 +96,22 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                if (textBoxNamaCabang.Text != "" && textBoxNamaCabang.Text != null && textBoxAlamatCabang.Text != "" && textBoxAlamatCabang.Text != null)
-                {
-                    Pegawai pegawaiDipilih = (Pegawai)comboBoxPegawai.SelectedItem;
+                Pegawai pegawaiDipilih = (Pegawai)comboBoxPegawai.SelectedItem;
 
-                    Cabang c = new Cabang(textBoxNamaCabang.Text, textBoxAlamatCabang.Text,
-                        pegawaiDipilih);
+                Cabang c = new Cabang(textBoxNamaCabang.Text, textBoxAlamatCabang.Text,
+                    pegawaiDipilih);
 
-                    Cabang.TambahData(c);
+                Cabang.TambahData(c);
 
-                    MessageBox.Show("Branch data added successfully.", "Information");
-                    FormPengaturanCabang frm = (FormPengaturanCabang)this.Owner;
-                    frm.FormPengaturanCabang_Load(sender, e);
-                }
-                else
-                {
-                    MessageBox.Show("Branch data can't be empty.");
-                }
+                MessageBox.Show("Data cabang berhasil ditambahkan", "Informasi");
+
+                FormPengaturanCabang frm = (FormPengaturanCabang)this.Owner;
+                frm.FormPengaturanCabang_Load(sender, e);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Branch data failed to add. Error Message : " + ex.Message,
-                    "Failure");
+                MessageBox.Show("Data cabang gagal ditambahkan. Pesan kesalahan : " + ex.Message,
+                    "Kesalahan");
             }
         }
 
