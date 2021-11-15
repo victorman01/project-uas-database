@@ -41,5 +41,10 @@ namespace OnlineMart_SubrataSquad
                 textBoxDeals.Font = new Font("Tahoma", 10, FontStyle.Italic);
             }
         }
+
+        private void dataGridViewDeals_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

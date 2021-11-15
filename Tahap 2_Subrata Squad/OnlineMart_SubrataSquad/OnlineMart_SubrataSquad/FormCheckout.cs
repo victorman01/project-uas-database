@@ -18,6 +18,8 @@ namespace OnlineMart_SubrataSquad
         List<Promo> listPromo = new List<Promo>();
         List<MetodePembayaran> listMetodePemabayaran = new List<MetodePembayaran>();
         List<Driver> listDriver = new List<Driver>();
+        List<Barang> listBarang = new List<Barang>();
+        List<Order> listOrder = new List<Order>();
         Cabang cabang;
         int ongkir = 15000;
         int totalHarga = 0;
@@ -36,6 +38,7 @@ namespace OnlineMart_SubrataSquad
             listPromo = Promo.BacaData("", "");
             listMetodePemabayaran = MetodePembayaran.BacaData("", "");
             listDriver = Driver.BacaData("", "");
+            listBarang = Barang.BacaData("", "");
 
             TampilDataGrid();
             totalHarga = Order.HitungTotalHarga(totalHarga, ongkir, diskon);
@@ -99,20 +102,46 @@ namespace OnlineMart_SubrataSquad
             {
                 FormKeranjang formKeranjang = (FormKeranjang)Owner;
                 Pelanggan pelanggan = formKeranjang.pelanggan;
+                Barang b = new Barang();
+                Order ord = new Order();
+                int counter = 0;
+
                 foreach (Keranjang keranjang in listKeranjang)
                 {
                     if (keranjang.Pelanggan.Id == pelanggan.Id)
                     {
                         Keranjang.KurangiStok(keranjang);
                         cabang = keranjang.Cabang;
+                        b = new Barang(keranjang.Barang.Id, keranjang.Barang.Nama, keranjang.Barang.Harga, keranjang.Barang.Kategori);
                     }
                 }
-
                 Promo promo = (Promo)comboBoxPromo.SelectedItem;
                 MetodePembayaran metodePembayaran = (MetodePembayaran)comboBoxPembayaran.SelectedItem;
                 Driver driver = (Driver)comboBoxKurir.SelectedItem;
                 Order order = new Order(textBoxAlamat.Text, ongkir, totalHarga, comboBoxCaraPembayaran.Text, cabang, driver, pelanggan, promo, "Pesanan diproses", metodePembayaran, "Waiting");
                 Order.TambahData(order);
+                listOrder = Order.BacaData("", "");
+
+                foreach (Order o in listOrder)
+                {
+                    counter++;
+                    if (counter == listOrder.Count)
+                    {
+                        ord = new Order(o.Id, o.TanggalWaktu, textBoxAlamat.Text, ongkir, totalHarga, comboBoxCaraPembayaran.Text, cabang, driver, pelanggan, promo, "Pesanan diproses", metodePembayaran, "Waiting");
+                        break;
+                    }
+                }
+                foreach (Keranjang keranjang in listKeranjang)
+                {
+                    if (keranjang.Pelanggan.Id == pelanggan.Id)
+                    {
+                        BarangOrder bo = new BarangOrder(b, ord, keranjang.Jumlah, keranjang.Barang.Harga);
+                        BarangOrder.TambahData(bo);
+                        MessageBox.Show("All Items Succesfully Paid.");
+                        Keranjang.HapusKeranjang(keranjang);
+                    }
+                }
+                formKeranjang.FormKeranjang_Load(sender, e);
             }
             catch (Exception ex)
             {

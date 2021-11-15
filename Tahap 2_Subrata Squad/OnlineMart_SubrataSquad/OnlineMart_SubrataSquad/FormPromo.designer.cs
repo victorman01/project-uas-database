@@ -131,6 +131,7 @@ namespace OnlineMart_SubrataSquad
             this.dataGridViewDeals.RowTemplate.Height = 24;
             this.dataGridViewDeals.Size = new System.Drawing.Size(636, 276);
             this.dataGridViewDeals.TabIndex = 13;
+            this.dataGridViewDeals.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDeals_CellContentClick);
             // 
             // FormPromo
             // 

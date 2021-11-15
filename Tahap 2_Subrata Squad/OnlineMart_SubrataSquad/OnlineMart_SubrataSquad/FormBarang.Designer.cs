@@ -30,7 +30,7 @@ namespace OnlineMart_SubrataSquad
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBoxBarang = new System.Windows.Forms.ComboBox();
+            this.comboBoxCabang = new System.Windows.Forms.ComboBox();
             this.textBoxBarang = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,39 +44,40 @@ namespace OnlineMart_SubrataSquad
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.panel1.Controls.Add(this.comboBoxBarang);
+            this.panel1.Controls.Add(this.comboBoxCabang);
             this.panel1.Controls.Add(this.textBoxBarang);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(8, 67);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(11, 82);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(477, 89);
+            this.panel1.Size = new System.Drawing.Size(636, 110);
             this.panel1.TabIndex = 1;
             // 
-            // comboBoxBarang
+            // comboBoxCabang
             // 
-            this.comboBoxBarang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxBarang.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxBarang.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.comboBoxBarang.FormattingEnabled = true;
-            this.comboBoxBarang.Items.AddRange(new object[] {
+            this.comboBoxCabang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCabang.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCabang.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.comboBoxCabang.FormattingEnabled = true;
+            this.comboBoxCabang.Items.AddRange(new object[] {
             "Nama Barang",
             "Harga Barang",
             "Kategori Barang"});
-            this.comboBoxBarang.Location = new System.Drawing.Point(124, 17);
-            this.comboBoxBarang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxBarang.Name = "comboBoxBarang";
-            this.comboBoxBarang.Size = new System.Drawing.Size(270, 25);
-            this.comboBoxBarang.TabIndex = 1;
+            this.comboBoxCabang.Location = new System.Drawing.Point(165, 21);
+            this.comboBoxCabang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxCabang.Name = "comboBoxCabang";
+            this.comboBoxCabang.Size = new System.Drawing.Size(359, 29);
+            this.comboBoxCabang.TabIndex = 1;
+            this.comboBoxCabang.SelectedIndexChanged += new System.EventHandler(this.comboBoxBarang_SelectedIndexChanged);
             // 
             // textBoxBarang
             // 
             this.textBoxBarang.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBarang.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxBarang.Location = new System.Drawing.Point(124, 50);
-            this.textBoxBarang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBarang.Location = new System.Drawing.Point(165, 62);
+            this.textBoxBarang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBarang.Name = "textBoxBarang";
-            this.textBoxBarang.Size = new System.Drawing.Size(270, 26);
+            this.textBoxBarang.Size = new System.Drawing.Size(359, 30);
             this.textBoxBarang.TabIndex = 2;
             this.textBoxBarang.Text = "Search Here...";
             this.textBoxBarang.TextChanged += new System.EventHandler(this.textBoxBarang_TextChanged);
@@ -87,10 +88,9 @@ namespace OnlineMart_SubrataSquad
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 20);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(8, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 17);
+            this.label2.Size = new System.Drawing.Size(147, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cari Berdasarkan :";
             // 
@@ -99,10 +99,9 @@ namespace OnlineMart_SubrataSquad
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(476, 49);
+            this.label1.Size = new System.Drawing.Size(635, 60);
             this.label1.TabIndex = 0;
             this.label1.Text = "HALAMAN BARANG";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -112,10 +111,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(410, 392);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonKeluar.Location = new System.Drawing.Point(547, 482);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(75, 32);
+            this.buttonKeluar.Size = new System.Drawing.Size(100, 39);
             this.buttonKeluar.TabIndex = 6;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -125,12 +124,12 @@ namespace OnlineMart_SubrataSquad
             // 
             this.dataGridViewBarang.BackgroundColor = System.Drawing.Color.Tan;
             this.dataGridViewBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBarang.Location = new System.Drawing.Point(8, 162);
-            this.dataGridViewBarang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewBarang.Location = new System.Drawing.Point(11, 199);
+            this.dataGridViewBarang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewBarang.Name = "dataGridViewBarang";
             this.dataGridViewBarang.RowHeadersWidth = 51;
             this.dataGridViewBarang.RowTemplate.Height = 24;
-            this.dataGridViewBarang.Size = new System.Drawing.Size(477, 226);
+            this.dataGridViewBarang.Size = new System.Drawing.Size(636, 278);
             this.dataGridViewBarang.TabIndex = 2;
             this.dataGridViewBarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBarang_CellContentClick);
             // 
@@ -139,10 +138,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeranjang.BackColor = System.Drawing.Color.Orange;
             this.buttonKeranjang.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeranjang.ForeColor = System.Drawing.Color.White;
-            this.buttonKeranjang.Location = new System.Drawing.Point(295, 392);
-            this.buttonKeranjang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonKeranjang.Location = new System.Drawing.Point(393, 482);
+            this.buttonKeranjang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonKeranjang.Name = "buttonKeranjang";
-            this.buttonKeranjang.Size = new System.Drawing.Size(111, 32);
+            this.buttonKeranjang.Size = new System.Drawing.Size(148, 39);
             this.buttonKeranjang.TabIndex = 5;
             this.buttonKeranjang.Text = "&KERANJANG";
             this.buttonKeranjang.UseVisualStyleBackColor = false;
@@ -150,17 +149,17 @@ namespace OnlineMart_SubrataSquad
             // 
             // FormBarang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(494, 436);
+            this.ClientSize = new System.Drawing.Size(659, 537);
             this.ControlBox = false;
             this.Controls.Add(this.buttonKeranjang);
             this.Controls.Add(this.dataGridViewBarang);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormBarang";
             this.Load += new System.EventHandler(this.FormBarang_Load);
             this.panel1.ResumeLayout(false);
@@ -173,12 +172,12 @@ namespace OnlineMart_SubrataSquad
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBoxBarang;
         private System.Windows.Forms.TextBox textBoxBarang;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.DataGridView dataGridViewBarang;
         private System.Windows.Forms.Button buttonKeranjang;
+        public System.Windows.Forms.ComboBox comboBoxCabang;
     }
 }

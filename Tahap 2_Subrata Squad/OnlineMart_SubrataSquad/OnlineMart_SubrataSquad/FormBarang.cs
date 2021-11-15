@@ -13,7 +13,8 @@ namespace OnlineMart_SubrataSquad
 {
     public partial class FormBarang : Form
     {
-        public List<Barang> listBarang = new List<Barang>();
+        List<CabangBarang> listCabangBarang = new List<CabangBarang>();
+        List<Cabang> listCabang = new List<Cabang>();
         public Pelanggan pelanggan;
 
         public FormBarang()
@@ -48,12 +49,14 @@ namespace OnlineMart_SubrataSquad
 
         private void FormBarang_Load(object sender, EventArgs e)
         {
-            listBarang = Barang.BacaData("", "");
+            listCabangBarang = CabangBarang.BacaData("", "");
+            listCabang = Cabang.BacaData("", "");
 
-            if (listBarang.Count > 0)
+            comboBoxCabang.DataSource = listCabang;
+            comboBoxCabang.DisplayMember = "Nama";
+
+            if (listCabangBarang.Count > 0)
             {
-                dataGridViewBarang.DataSource = listBarang;
-
                 if (!dataGridViewBarang.Columns.Contains("btnTambahGrid"))
                 {
                     DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
@@ -72,23 +75,7 @@ namespace OnlineMart_SubrataSquad
 
         private void textBoxBarang_TextChanged(object sender, EventArgs e)
         {
-            if (comboBoxBarang.Text == "Nama Barang")
-            {
-                listBarang = Barang.BacaData("B.nama", textBoxBarang.Text);
-            }
-            else if (comboBoxBarang.Text == "Harga Barang")
-            {
-                listBarang = Barang.BacaData("B.harga", textBoxBarang.Text);
-            }
-            else if (comboBoxBarang.Text == "Kategori Barang")
-            {
-                listBarang = Barang.BacaData("K.nama", textBoxBarang.Text);
-            }
 
-            if (listBarang.Count > 0)
-            {
-                dataGridViewBarang.DataSource = listBarang;
-            }
         }
 
         private void buttonKeranjang_Click(object sender, EventArgs e)
@@ -130,11 +117,14 @@ namespace OnlineMart_SubrataSquad
         {
             dataGridViewBarang.Rows.Clear();
 
-            if (listBarang.Count > 0)
+            if (listCabangBarang.Count > 0)
             {
-                foreach (Barang b in listBarang)
+                foreach (CabangBarang cb in listCabangBarang)
                 {
-                    dataGridViewBarang.Rows.Add(b.Id, b.Nama, b.Harga, b.Kategori.Nama);
+                    if(cb.Cabang.Nama == comboBoxCabang.SelectedValue.ToString())
+                    {
+                        dataGridViewBarang.Rows.Add(cb.Barang.Id, cb.Barang.Nama, cb.Barang.Harga, cb.Barang.Kategori.Nama);
+                    }
                 }
             }
             else
@@ -162,6 +152,19 @@ namespace OnlineMart_SubrataSquad
                 frm.Owner = this;
                 frm.ShowDialog();
             }
+        }
+
+        private void comboBoxBarang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FormatDataGrid();
+            foreach(Cabang c in listCabang)
+            {
+                if (comboBoxCabang.SelectedValue.ToString() == c.Nama)
+                {
+                    CabangBarang.BacaData("C.Id", c.Id.ToString());
+                }
+            }
+            TampilDataGrid();
         }
     }
 }

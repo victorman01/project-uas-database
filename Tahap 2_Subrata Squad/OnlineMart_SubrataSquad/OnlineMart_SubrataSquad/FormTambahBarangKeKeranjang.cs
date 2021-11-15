@@ -23,12 +23,13 @@ namespace OnlineMart_SubrataSquad
         private void FormTambahBarangKeKeranjang_Load(object sender, EventArgs e)
         {
             listCabangBarang = CabangBarang.BacaData("", "");
-
+            FormBarang frm = (FormBarang)this.Owner;
             foreach (CabangBarang cb in listCabangBarang)
             {
-                if (cb.Barang.Id == int.Parse(labelIdBarang.Text))
+                if (cb.Barang.Id == int.Parse(labelIdBarang.Text) && cb.Cabang.Nama == frm.comboBoxCabang.SelectedValue.ToString())
                 {
-                    comboBoxCabang.Items.Add(cb.Cabang.ToString());
+                    labelCabang.Text = cb.Cabang.Nama;
+                    numericUpDownJumlahBarang.Maximum = cb.Stok;
                 }
             }
             numericUpDownJumlahBarang.Minimum = 0;
@@ -49,7 +50,7 @@ namespace OnlineMart_SubrataSquad
             {
                 foreach (CabangBarang cb in listCabangBarang)
                 {
-                    if (cb.Cabang.Nama == comboBoxCabang.Text && cb.Barang.Id == int.Parse(labelIdBarang.Text))
+                    if (cb.Cabang.Nama == labelCabang.Text && cb.Barang.Id == int.Parse(labelIdBarang.Text))
                     {
                         c = new Cabang(cb.Cabang.Id, cb.Cabang.Nama, cb.Cabang.Alamat, cb.Cabang.Pegawai);
                         b = new Barang(cb.Barang.Id, cb.Barang.Nama, cb.Barang.Harga, cb.Barang.Kategori);
@@ -63,18 +64,6 @@ namespace OnlineMart_SubrataSquad
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void comboBoxCabang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            listCabangBarang = CabangBarang.BacaData("", "");
-            foreach (CabangBarang cb in listCabangBarang)
-            {
-                if (cb.Barang.Id == int.Parse(labelIdBarang.Text) && cb.Cabang.Nama == comboBoxCabang.Text)
-                {
-                    numericUpDownJumlahBarang.Maximum = cb.Stok;
-                }
             }
         }
     }
