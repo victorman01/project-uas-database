@@ -106,7 +106,6 @@ namespace OnlineMart_SubrataSquad
                 Pelanggan pelanggan = formKeranjang.pelanggan;
                 Barang b = new Barang();
                 Order ord = new Order();
-                int counter = 0;
 
                 foreach (Keranjang keranjang in listKeranjang)
                 {
@@ -134,20 +133,16 @@ namespace OnlineMart_SubrataSquad
 
                 foreach (Order o in listOrder)
                 {
-                    counter++;
-                    if (counter == listOrder.Count)
-                    {
-                        ord = new Order(o.Id, o.TanggalWaktu, textBoxAlamat.Text, ongkir, totalHarga, comboBoxCaraPembayaran.Text, cabang, driver, pelanggan, promo, "Pesanan diproses", metodePembayaran, "Waiting");
-                        break;
-                    }
+                    ord = new Order(o.Id, o.TanggalWaktu, textBoxAlamat.Text, ongkir, totalHarga, comboBoxCaraPembayaran.Text, cabang, driver, pelanggan, promo, "Pesanan diproses", metodePembayaran, "Waiting");
+                    break;
                 }
+
                 foreach (Keranjang keranjang in listKeranjang)
                 {
                     if (keranjang.Pelanggan.Id == pelanggan.Id)
                     {
-                        BarangOrder bo = new BarangOrder(b, ord, keranjang.Jumlah, keranjang.Barang.Harga);
+                        BarangOrder bo = new BarangOrder(keranjang.Barang, ord, keranjang.Jumlah, keranjang.Barang.Harga);
                         BarangOrder.TambahData(bo);
-                        MessageBox.Show("All Items Succesfully Paid.");
                         Keranjang.HapusKeranjang(keranjang);
                         Pelanggan.TambahPoin(totalHarga, pelanggan);
                     }
@@ -163,6 +158,7 @@ namespace OnlineMart_SubrataSquad
                         GiftRedeem.KurangiPoin(int.Parse(g.JumlahPoin), pelanggan);
                     }   
                 }
+                MessageBox.Show("All Items Succesfully Paid.");
                 formKeranjang.FormKeranjang_Load(sender, e);
                 this.Close();
             }
