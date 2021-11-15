@@ -141,7 +141,31 @@ namespace OnlineMart_SubrataSquad
         }
         private void textBoxNilaiKriteria_TextChanged(object sender, EventArgs e)
         {
+            FormatDataGrid();
 
+            string kriteria = "";
+            switch (comboBoxKriteria.Text)
+            {
+                case "Nama Barang":
+                    kriteria = "B.Nama";
+                    break;
+                case "Harga Barang":
+                    kriteria = "B.Harga";
+                    break;
+                case "Kategori Barang":
+                    kriteria = "K.Nama";
+                    break;
+            }
+            if (textBoxNilaiKriteria.Text == "Type Here...")
+            {
+                listCabangBarang = CabangBarang.BacaData(kriteria, "");
+            }
+            else
+            {
+                listCabangBarang = CabangBarang.BacaData(kriteria, textBoxNilaiKriteria.Text);
+            }
+
+            TampilDataGrid();
         }
     }
 }
