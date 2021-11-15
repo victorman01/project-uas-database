@@ -29,60 +29,33 @@ namespace OnlineMart_SubrataSquad
 
         private void textBoxBarang_Enter(object sender, EventArgs e)
         {
-            if (textBoxBarang.Text == "Type Here...")
+            if (textBoxNilaiKriteria.Text == "Type Here...")
             {
-                textBoxBarang.Text = "";
-                textBoxBarang.ForeColor = Color.Black;
-                textBoxBarang.Font = new Font("Tahoma", 11, FontStyle.Regular);
+                textBoxNilaiKriteria.Text = "";
+                textBoxNilaiKriteria.ForeColor = Color.Black;
+                textBoxNilaiKriteria.Font = new Font("Tahoma", 11, FontStyle.Regular);
             }
         }
 
         private void textBoxBarang_Leave(object sender, EventArgs e)
         {
-            if (textBoxBarang.Text == "")
+            if (textBoxNilaiKriteria.Text == "")
             {
-                textBoxBarang.Text = "Type Here...";
-                textBoxBarang.ForeColor = Color.Silver;
-                textBoxBarang.Font = new Font("Tahoma", 11, FontStyle.Italic);
+                textBoxNilaiKriteria.Text = "Type Here...";
+                textBoxNilaiKriteria.ForeColor = Color.Silver;
+                textBoxNilaiKriteria.Font = new Font("Tahoma", 11, FontStyle.Italic);
             }
         }
 
         private void FormBarang_Load(object sender, EventArgs e)
         {
+            FormatDataGrid();
             listCabangBarang = CabangBarang.BacaData("", "");
             listCabang = Cabang.BacaData("", "");
 
             comboBoxCabang.DataSource = listCabang;
             comboBoxCabang.DisplayMember = "Nama";
-
-            if (listCabangBarang.Count > 0)
-            {
-                if (!dataGridViewBarang.Columns.Contains("btnTambahGrid"))
-                {
-                    DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-                    bcol.HeaderText = "Aksi";
-                    bcol.Text = "Tambah";
-                    bcol.Name = "btnTambahGrid";
-                    bcol.UseColumnTextForButtonValue = true;
-                    dataGridViewBarang.Columns.Add(bcol);
-                }
-            }
-            else
-            {
-                dataGridViewBarang.DataSource = null;
-            }
-        }
-
-        private void textBoxBarang_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonKeranjang_Click(object sender, EventArgs e)
-        {
-            FormKeranjang frm = new FormKeranjang();
-            frm.Owner = this;
-            frm.ShowDialog();
+            TampilDataGrid();
         }
         public void FormatDataGrid()
         {
@@ -104,8 +77,8 @@ namespace OnlineMart_SubrataSquad
             //Buat Button Aksi
             DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
             bcol.HeaderText = "Aksi";
-            bcol.Text = "Tambah";
-            bcol.Name = "btnTambahGrid";
+            bcol.Text = "Beli";
+            bcol.Name = "btnBeliGrid";
             bcol.UseColumnTextForButtonValue = true;
             dataGridViewBarang.Columns.Add(bcol);
 
@@ -140,7 +113,7 @@ namespace OnlineMart_SubrataSquad
             string harga = dataGridViewBarang.CurrentRow.Cells["Harga"].Value.ToString();
             string kategori = dataGridViewBarang.CurrentRow.Cells["Kategori"].Value.ToString();
 
-            if (e.ColumnIndex == dataGridViewBarang.Columns["btnTambahGrid"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dataGridViewBarang.Columns["btnBeliGrid"].Index && e.RowIndex >= 0)
             {
                 FormTambahBarangKeKeranjang frm = new FormTambahBarangKeKeranjang();
                 frm.labelIdBarang.Text = id;
@@ -154,10 +127,10 @@ namespace OnlineMart_SubrataSquad
             }
         }
 
-        private void comboBoxBarang_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxCabang_SelectedIndexChanged(object sender, EventArgs e)
         {
             FormatDataGrid();
-            foreach(Cabang c in listCabang)
+            foreach (Cabang c in listCabang)
             {
                 if (comboBoxCabang.SelectedValue.ToString() == c.Nama)
                 {
@@ -165,6 +138,10 @@ namespace OnlineMart_SubrataSquad
                 }
             }
             TampilDataGrid();
+        }
+        private void textBoxNilaiKriteria_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
