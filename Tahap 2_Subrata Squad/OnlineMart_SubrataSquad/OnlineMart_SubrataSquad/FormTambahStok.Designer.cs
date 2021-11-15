@@ -38,7 +38,6 @@ namespace OnlineMart_SubrataSquad
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxStok = new System.Windows.Forms.TextBox();
-            this.buttonKosongi = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,10 +47,9 @@ namespace OnlineMart_SubrataSquad
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(14, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(420, 49);
+            this.label1.Size = new System.Drawing.Size(630, 75);
             this.label1.TabIndex = 26;
             this.label1.Text = "TAMBAH STOK";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,10 +59,9 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(339, 177);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonKeluar.Location = new System.Drawing.Point(508, 272);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(90, 41);
+            this.buttonKeluar.Size = new System.Drawing.Size(135, 63);
             this.buttonKeluar.TabIndex = 28;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -76,20 +73,18 @@ namespace OnlineMart_SubrataSquad
             this.comboBoxCabang.FormattingEnabled = true;
             this.comboBoxCabang.Items.AddRange(new object[] {
             "Kode Kategori"});
-            this.comboBoxCabang.Location = new System.Drawing.Point(121, 41);
-            this.comboBoxCabang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCabang.Location = new System.Drawing.Point(182, 63);
             this.comboBoxCabang.Name = "comboBoxCabang";
-            this.comboBoxCabang.Size = new System.Drawing.Size(279, 21);
+            this.comboBoxCabang.Size = new System.Drawing.Size(416, 28);
             this.comboBoxCabang.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(55, 44);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(82, 68);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 17);
+            this.label6.Size = new System.Drawing.Size(97, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Cabang :";
             // 
@@ -102,10 +97,9 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Controls.Add(this.comboBoxCabang);
             this.panel1.Controls.Add(this.textBoxStok);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(9, 71);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(14, 109);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(420, 103);
+            this.panel1.Size = new System.Drawing.Size(630, 158);
             this.panel1.TabIndex = 27;
             // 
             // comboBoxBarang
@@ -114,20 +108,18 @@ namespace OnlineMart_SubrataSquad
             this.comboBoxBarang.FormattingEnabled = true;
             this.comboBoxBarang.Items.AddRange(new object[] {
             "Kode Kategori"});
-            this.comboBoxBarang.Location = new System.Drawing.Point(121, 14);
-            this.comboBoxBarang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxBarang.Location = new System.Drawing.Point(182, 22);
             this.comboBoxBarang.Name = "comboBoxBarang";
-            this.comboBoxBarang.Size = new System.Drawing.Size(279, 21);
+            this.comboBoxBarang.Size = new System.Drawing.Size(416, 28);
             this.comboBoxBarang.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 70);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(44, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 17);
+            this.label3.Size = new System.Drawing.Size(140, 25);
             this.label3.TabIndex = 10;
             this.label3.Text = "Stok Barang :";
             // 
@@ -135,48 +127,29 @@ namespace OnlineMart_SubrataSquad
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 16);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(32, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 17);
+            this.label2.Size = new System.Drawing.Size(154, 25);
             this.label2.TabIndex = 8;
             this.label2.Text = "Nama Barang :";
             // 
             // textBoxStok
             // 
-            this.textBoxStok.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxStok.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxStok.Location = new System.Drawing.Point(121, 67);
-            this.textBoxStok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxStok.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.textBoxStok.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxStok.Location = new System.Drawing.Point(182, 103);
             this.textBoxStok.Name = "textBoxStok";
-            this.textBoxStok.Size = new System.Drawing.Size(279, 24);
+            this.textBoxStok.Size = new System.Drawing.Size(416, 32);
             this.textBoxStok.TabIndex = 9;
-            this.textBoxStok.Text = "Type Here...";
-            this.textBoxStok.Enter += new System.EventHandler(this.textBoxStok_Enter);
-            this.textBoxStok.Leave += new System.EventHandler(this.textBoxStok_Leave);
-            // 
-            // buttonKosongi
-            // 
-            this.buttonKosongi.BackColor = System.Drawing.Color.Orange;
-            this.buttonKosongi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKosongi.ForeColor = System.Drawing.Color.White;
-            this.buttonKosongi.Location = new System.Drawing.Point(238, 177);
-            this.buttonKosongi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonKosongi.Name = "buttonKosongi";
-            this.buttonKosongi.Size = new System.Drawing.Size(96, 41);
-            this.buttonKosongi.TabIndex = 30;
-            this.buttonKosongi.Text = "&KOSONGI";
-            this.buttonKosongi.UseVisualStyleBackColor = false;
             // 
             // buttonSimpan
             // 
             this.buttonSimpan.BackColor = System.Drawing.Color.Orange;
             this.buttonSimpan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(144, 177);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSimpan.Location = new System.Drawing.Point(358, 273);
             this.buttonSimpan.Name = "buttonSimpan";
-            this.buttonSimpan.Size = new System.Drawing.Size(90, 41);
+            this.buttonSimpan.Size = new System.Drawing.Size(135, 63);
             this.buttonSimpan.TabIndex = 29;
             this.buttonSimpan.Text = "&SIMPAN";
             this.buttonSimpan.UseVisualStyleBackColor = false;
@@ -184,15 +157,13 @@ namespace OnlineMart_SubrataSquad
             // 
             // FormTambahStok
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 226);
+            this.ClientSize = new System.Drawing.Size(663, 348);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.buttonKosongi);
             this.Controls.Add(this.buttonSimpan);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormTambahStok";
             this.Text = "FormTambahStok";
             this.Load += new System.EventHandler(this.FormTambahStok_Load);
@@ -212,7 +183,6 @@ namespace OnlineMart_SubrataSquad
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxStok;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button buttonKosongi;
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.ComboBox comboBoxBarang;
     }

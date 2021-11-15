@@ -26,51 +26,6 @@ namespace OnlineMart_SubrataSquad
             this.Close();
         }
 
-        private void textBoxHargaBarang_Enter(object sender, EventArgs e)
-        {
-            if (textBoxHargaBarang.Text == "Type Here...")
-            {
-                textBoxHargaBarang.Text = "";
-                textBoxHargaBarang.ForeColor = Color.Black;
-                textBoxHargaBarang.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxHargaBarang_Leave(object sender, EventArgs e)
-        {
-            if (textBoxHargaBarang.Text == "")
-            {
-                textBoxHargaBarang.Text = "Type Here...";
-                textBoxHargaBarang.ForeColor = Color.Silver;
-                textBoxHargaBarang.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
-        private void textBoxNamaBarang_Enter(object sender, EventArgs e)
-        {
-            if (textBoxNamaBarang.Text == "Type Here...")
-            {
-                textBoxNamaBarang.Text = "";
-                textBoxNamaBarang.ForeColor = Color.Black;
-                textBoxNamaBarang.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxNamaBarang_Leave(object sender, EventArgs e)
-        {
-            if (textBoxNamaBarang.Text == "")
-            {
-                textBoxNamaBarang.Text = "Type Here...";
-                textBoxNamaBarang.ForeColor = Color.Silver;
-                textBoxNamaBarang.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
-        private void FormPengaturanBarang_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonKosongi_Click(object sender, EventArgs e)
         {
             textBoxNamaBarang.Text = "";
@@ -82,21 +37,28 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                Kategori kategoriDipilih = (Kategori)comboBoxKategoriBarang.SelectedItem;
+                if (textBoxNamaBarang.Text != "" && textBoxNamaBarang.Text != null && textBoxHargaBarang.Text != "" && textBoxHargaBarang.Text != null)
+                {
+                    Kategori kategoriDipilih = (Kategori)comboBoxKategoriBarang.SelectedItem;
 
-                Barang b = new Barang(textBoxNamaBarang.Text, textBoxHargaBarang.Text, kategoriDipilih);
+                    Barang b = new Barang(textBoxNamaBarang.Text, textBoxHargaBarang.Text, kategoriDipilih);
 
-                Barang.TambahData(b);
+                    Barang.TambahData(b);
 
-                MessageBox.Show("Data Barang berhasil ditambahkan", "Informasi");
+                    MessageBox.Show("Item data added successfully.", "Information");
 
-                //FormPengaturanBarang frm = (FormPengaturanBarang)this.Owner;
-                FormTambahBarang_Load(sender, e);
+                    //FormPengaturanBarang frm = (FormPengaturanBarang)this.Owner;
+                    FormTambahBarang_Load(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Item data can't be empty.");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Data barang gagal ditambahkan. Pesan kesalahan : " + ex.Message,
-                    "Kesalahan");
+                MessageBox.Show("Item data failed to add. Error Message : " + ex.Message,
+                    "Failure");
             }
         }
 

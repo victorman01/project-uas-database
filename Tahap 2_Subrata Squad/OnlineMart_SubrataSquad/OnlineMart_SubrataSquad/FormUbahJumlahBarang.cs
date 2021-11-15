@@ -24,30 +24,38 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                int cabangId = 0;
-                int barangId = 0;
-                foreach (Cabang c in listCabang)
+                if (textBoxJumlah.Text != "" && textBoxJumlah.Text != null)
                 {
-                    if (c.Nama == textBoxCabang.Text)
+                    int cabangId = 0;
+                    int barangId = 0;
+                    foreach (Cabang c in listCabang)
                     {
-                        cabangId = c.Id;
-                        break;
+                        if (c.Nama == textBoxCabang.Text)
+                        {
+                            cabangId = c.Id;
+                            break;
+                        }
                     }
+
+                    foreach (Barang b in listBarang)
+                    {
+                        if (b.Nama == textBoxBarang.Text)
+                        {
+                            barangId = b.Id;
+                            break;
+                        }
+                    }
+                    Keranjang.UpdateJumlahBeli(int.Parse(textBoxJumlah.Text), barangId, cabangId);
+                    MessageBox.Show("The item is updated");
+
+                    FormKeranjang frm = (FormKeranjang)this.Owner;
+                    frm.FormKeranjang_Load(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Stock can't be empty");
                 }
 
-                foreach (Barang b in listBarang)
-                {
-                    if (b.Nama == textBoxBarang.Text)
-                    {
-                        barangId = b.Id;
-                        break;
-                    }
-                }
-                Keranjang.UpdateJumlahBeli(int.Parse(textBoxJumlah.Text), barangId, cabangId);
-                MessageBox.Show("The item is updated");
-
-                FormKeranjang frm = (FormKeranjang)this.Owner;
-                frm.FormKeranjang_Load(sender, e);
             }
             catch
             {

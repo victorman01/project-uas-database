@@ -29,7 +29,7 @@ namespace OnlineMart_SubrataSquad
 
         private void textBoxBarang_Enter(object sender, EventArgs e)
         {
-            if (textBoxBarang.Text == "Search Here...")
+            if (textBoxBarang.Text == "Type Here...")
             {
                 textBoxBarang.Text = "";
                 textBoxBarang.ForeColor = Color.Black;
@@ -41,7 +41,7 @@ namespace OnlineMart_SubrataSquad
         {
             if (textBoxBarang.Text == "")
             {
-                textBoxBarang.Text = "Search Here...";
+                textBoxBarang.Text = "Type Here...";
                 textBoxBarang.ForeColor = Color.Silver;
                 textBoxBarang.Font = new Font("Tahoma", 11, FontStyle.Italic);
             }

@@ -82,7 +82,7 @@ namespace OnlineMart_SubrataSquad
             this.textBoxIDBarang.Name = "textBoxIDBarang";
             this.textBoxIDBarang.Size = new System.Drawing.Size(246, 24);
             this.textBoxIDBarang.TabIndex = 6;
-            this.textBoxIDBarang.Text = "Type Here...";
+            this.textBoxIDBarang.Text = "-";
             // 
             // label6
             // 
@@ -156,7 +156,6 @@ namespace OnlineMart_SubrataSquad
             this.textBoxHargaBarang.Name = "textBoxHargaBarang";
             this.textBoxHargaBarang.Size = new System.Drawing.Size(246, 24);
             this.textBoxHargaBarang.TabIndex = 8;
-            this.textBoxHargaBarang.Text = "Type Here...";
             // 
             // textBoxNamaBarang
             // 
@@ -167,7 +166,6 @@ namespace OnlineMart_SubrataSquad
             this.textBoxNamaBarang.Name = "textBoxNamaBarang";
             this.textBoxNamaBarang.Size = new System.Drawing.Size(246, 24);
             this.textBoxNamaBarang.TabIndex = 8;
-            this.textBoxNamaBarang.Text = "Type Here...";
             // 
             // label2
             // 

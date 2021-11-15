@@ -52,55 +52,49 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBoxIDHadiah);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(10, 95);
+            this.panel1.Location = new System.Drawing.Point(11, 119);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(560, 126);
+            this.panel1.Size = new System.Drawing.Size(630, 158);
             this.panel1.TabIndex = 46;
             // 
             // textBoxJumlahPoin
             // 
-            this.textBoxJumlahPoin.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxJumlahPoin.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxJumlahPoin.Location = new System.Drawing.Point(167, 82);
+            this.textBoxJumlahPoin.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.textBoxJumlahPoin.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxJumlahPoin.Location = new System.Drawing.Point(188, 102);
             this.textBoxJumlahPoin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxJumlahPoin.Name = "textBoxJumlahPoin";
-            this.textBoxJumlahPoin.Size = new System.Drawing.Size(368, 28);
+            this.textBoxJumlahPoin.Size = new System.Drawing.Size(414, 32);
             this.textBoxJumlahPoin.TabIndex = 13;
-            this.textBoxJumlahPoin.Text = "Type Here...";
-            this.textBoxJumlahPoin.Enter += new System.EventHandler(this.textBoxJumlahPoin_Enter);
-            this.textBoxJumlahPoin.Leave += new System.EventHandler(this.textBoxJumlahPoin_Leave);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 85);
+            this.label3.Location = new System.Drawing.Point(40, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 21);
+            this.label3.Size = new System.Drawing.Size(140, 25);
             this.label3.TabIndex = 9;
             this.label3.Text = "Jumlah Poin :";
             // 
             // textBoxNamaHadiah
             // 
-            this.textBoxNamaHadiah.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNamaHadiah.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxNamaHadiah.Location = new System.Drawing.Point(167, 48);
+            this.textBoxNamaHadiah.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.textBoxNamaHadiah.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxNamaHadiah.Location = new System.Drawing.Point(188, 60);
             this.textBoxNamaHadiah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNamaHadiah.Name = "textBoxNamaHadiah";
-            this.textBoxNamaHadiah.Size = new System.Drawing.Size(368, 28);
+            this.textBoxNamaHadiah.Size = new System.Drawing.Size(414, 32);
             this.textBoxNamaHadiah.TabIndex = 8;
-            this.textBoxNamaHadiah.Text = "Type Here...";
-            this.textBoxNamaHadiah.Enter += new System.EventHandler(this.textBoxNamaHadiah_Enter);
-            this.textBoxNamaHadiah.Leave += new System.EventHandler(this.textBoxNamaHadiah_Leave);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 50);
+            this.label2.Location = new System.Drawing.Point(33, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 21);
+            this.label2.Size = new System.Drawing.Size(152, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Nama Hadiah :";
             // 
@@ -109,22 +103,19 @@ namespace OnlineMart_SubrataSquad
             this.textBoxIDHadiah.Enabled = false;
             this.textBoxIDHadiah.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxIDHadiah.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxIDHadiah.Location = new System.Drawing.Point(167, 14);
+            this.textBoxIDHadiah.Location = new System.Drawing.Point(188, 18);
             this.textBoxIDHadiah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxIDHadiah.Name = "textBoxIDHadiah";
-            this.textBoxIDHadiah.Size = new System.Drawing.Size(368, 28);
+            this.textBoxIDHadiah.Size = new System.Drawing.Size(414, 32);
             this.textBoxIDHadiah.TabIndex = 6;
-            this.textBoxIDHadiah.Text = "Type Here...";
-            this.textBoxIDHadiah.Enter += new System.EventHandler(this.textBoxIDHadiah_Enter);
-            this.textBoxIDHadiah.Leave += new System.EventHandler(this.textBoxIDHadiah_Leave);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 18);
+            this.label6.Location = new System.Drawing.Point(40, 22);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 21);
+            this.label6.Size = new System.Drawing.Size(144, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Kode Hadiah :";
             // 
@@ -133,9 +124,9 @@ namespace OnlineMart_SubrataSquad
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 8);
+            this.label1.Location = new System.Drawing.Point(11, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(560, 60);
+            this.label1.Size = new System.Drawing.Size(630, 75);
             this.label1.TabIndex = 45;
             this.label1.Text = "UBAH HADIAH";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -145,10 +136,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonKosongi.BackColor = System.Drawing.Color.Orange;
             this.buttonKosongi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKosongi.ForeColor = System.Drawing.Color.White;
-            this.buttonKosongi.Location = new System.Drawing.Point(279, 225);
+            this.buttonKosongi.Location = new System.Drawing.Point(314, 281);
             this.buttonKosongi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonKosongi.Name = "buttonKosongi";
-            this.buttonKosongi.Size = new System.Drawing.Size(133, 50);
+            this.buttonKosongi.Size = new System.Drawing.Size(150, 62);
             this.buttonKosongi.TabIndex = 49;
             this.buttonKosongi.Text = "&KOSONGI";
             this.buttonKosongi.UseVisualStyleBackColor = false;
@@ -159,10 +150,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonSimpan.BackColor = System.Drawing.Color.Orange;
             this.buttonSimpan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(153, 225);
+            this.buttonSimpan.Location = new System.Drawing.Point(172, 281);
             this.buttonSimpan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSimpan.Name = "buttonSimpan";
-            this.buttonSimpan.Size = new System.Drawing.Size(120, 50);
+            this.buttonSimpan.Size = new System.Drawing.Size(135, 62);
             this.buttonSimpan.TabIndex = 48;
             this.buttonSimpan.Text = "&SIMPAN";
             this.buttonSimpan.UseVisualStyleBackColor = false;
@@ -173,10 +164,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(449, 225);
+            this.buttonKeluar.Location = new System.Drawing.Point(505, 281);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(120, 50);
+            this.buttonKeluar.Size = new System.Drawing.Size(135, 62);
             this.buttonKeluar.TabIndex = 47;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -184,15 +175,16 @@ namespace OnlineMart_SubrataSquad
             // 
             // FormUbahHadiah
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 282);
+            this.ClientSize = new System.Drawing.Size(654, 352);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKosongi);
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.buttonKeluar);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormUbahHadiah";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

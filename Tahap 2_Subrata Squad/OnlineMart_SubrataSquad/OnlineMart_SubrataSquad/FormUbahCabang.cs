@@ -34,64 +34,32 @@ namespace OnlineMart_SubrataSquad
         {
             try
             {
-                Pegawai pegawaiDipilih = (Pegawai)comboBoxPegawai.SelectedItem;
+                if (textBoxNamaCabang.Text != "" && textBoxNamaCabang.Text != null && textBoxAlamatCabang.Text != "" && textBoxAlamatCabang.Text != null)
+                {
+                    Pegawai pegawaiDipilih = (Pegawai)comboBoxPegawai.SelectedItem;
 
-                Cabang c = new Cabang(int.Parse(textBoxIDCabang.Text), textBoxNamaCabang.Text, textBoxAlamatCabang.Text,
-                    pegawaiDipilih);
+                    Cabang c = new Cabang(int.Parse(textBoxIDCabang.Text), textBoxNamaCabang.Text, textBoxAlamatCabang.Text,
+                        pegawaiDipilih);
 
-                Cabang.UbahData(c);
+                    Cabang.UbahData(c);
 
-                MessageBox.Show("Data cabang berhasil diubah", "Informasi");
+                    MessageBox.Show("Branch data has been successfully changed.", "Information");
 
-                FormPengaturanCabang frm = (FormPengaturanCabang)this.Owner;
-                frm.FormPengaturanCabang_Load(sender, e);
+                    FormPengaturanCabang frm = (FormPengaturanCabang)this.Owner;
+                    frm.FormPengaturanCabang_Load(sender, e);
 
-                this.Close();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Branch data can't be empty.");
+                }
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Data cabang gagal diubah. Pesan kesalahan : " + ex.Message,
-                    "Kesalahan");
-            }
-        }
-
-        private void textBoxNamaCabang_Enter(object sender, EventArgs e)
-        {
-            if (textBoxNamaCabang.Text == "Type Here...")
-            {
-                textBoxNamaCabang.Text = "";
-                textBoxNamaCabang.ForeColor = Color.Black;
-                textBoxNamaCabang.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxNamaCabang_Leave(object sender, EventArgs e)
-        {
-            if (textBoxNamaCabang.Text == "")
-            {
-                textBoxNamaCabang.Text = "Type Here...";
-                textBoxNamaCabang.ForeColor = Color.Silver;
-                textBoxNamaCabang.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
-        private void textBoxAlamatCabang_Enter(object sender, EventArgs e)
-        {
-            if (textBoxAlamatCabang.Text == "Type Here...")
-            {
-                textBoxAlamatCabang.Text = "";
-                textBoxAlamatCabang.ForeColor = Color.Black;
-                textBoxAlamatCabang.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxAlamatCabang_Leave(object sender, EventArgs e)
-        {
-            if (textBoxAlamatCabang.Text == "")
-            {
-                textBoxAlamatCabang.Text = "Type Here...";
-                textBoxAlamatCabang.ForeColor = Color.Silver;
-                textBoxAlamatCabang.Font = new Font("Tahoma", 10, FontStyle.Italic);
+                MessageBox.Show("Branch data failed to change. Error Message : " + ex.Message,
+                    "Failure");
             }
         }
 
@@ -99,7 +67,7 @@ namespace OnlineMart_SubrataSquad
         {
             textBoxAlamatCabang.Text = "";
             textBoxNamaCabang.Text = "";
-            textBoxIDCabang.Focus();
+            textBoxNamaCabang.Focus();
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)

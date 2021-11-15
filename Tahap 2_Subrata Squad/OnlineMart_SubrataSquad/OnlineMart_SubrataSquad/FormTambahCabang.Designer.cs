@@ -50,10 +50,9 @@ namespace OnlineMart_SubrataSquad
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(8, 6);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(420, 49);
+            this.label1.Size = new System.Drawing.Size(630, 75);
             this.label1.TabIndex = 22;
             this.label1.Text = "TAMBAH CABANG";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -63,10 +62,9 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(338, 228);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonKeluar.Location = new System.Drawing.Point(507, 351);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(90, 41);
+            this.buttonKeluar.Size = new System.Drawing.Size(135, 63);
             this.buttonKeluar.TabIndex = 24;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -77,23 +75,19 @@ namespace OnlineMart_SubrataSquad
             this.textBoxIDCabang.Enabled = false;
             this.textBoxIDCabang.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxIDCabang.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxIDCabang.Location = new System.Drawing.Point(154, 11);
-            this.textBoxIDCabang.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxIDCabang.Location = new System.Drawing.Point(231, 17);
             this.textBoxIDCabang.Name = "textBoxIDCabang";
-            this.textBoxIDCabang.Size = new System.Drawing.Size(246, 24);
+            this.textBoxIDCabang.Size = new System.Drawing.Size(367, 32);
             this.textBoxIDCabang.TabIndex = 6;
             this.textBoxIDCabang.Text = "-";
-            this.textBoxIDCabang.Enter += new System.EventHandler(this.textBoxIDCabang_Enter);
-            this.textBoxIDCabang.Leave += new System.EventHandler(this.textBoxIDCabang_Leave);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(50, 15);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(75, 23);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 17);
+            this.label6.Size = new System.Drawing.Size(126, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "ID Cabang :";
             // 
@@ -108,79 +102,68 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBoxIDCabang);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(8, 69);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(12, 106);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(420, 154);
+            this.panel1.Size = new System.Drawing.Size(630, 237);
             this.panel1.TabIndex = 23;
             // 
             // comboBoxPegawai
             // 
             this.comboBoxPegawai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPegawai.FormattingEnabled = true;
-            this.comboBoxPegawai.Location = new System.Drawing.Point(154, 120);
+            this.comboBoxPegawai.Location = new System.Drawing.Point(231, 185);
+            this.comboBoxPegawai.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxPegawai.Name = "comboBoxPegawai";
-            this.comboBoxPegawai.Size = new System.Drawing.Size(246, 21);
+            this.comboBoxPegawai.Size = new System.Drawing.Size(367, 28);
             this.comboBoxPegawai.TabIndex = 12;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(62, 120);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(93, 185);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 17);
+            this.label4.Size = new System.Drawing.Size(104, 25);
             this.label4.TabIndex = 11;
             this.label4.Text = "Pegawai :";
             // 
             // textBoxAlamatCabang
             // 
-            this.textBoxAlamatCabang.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAlamatCabang.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxAlamatCabang.Location = new System.Drawing.Point(154, 67);
-            this.textBoxAlamatCabang.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAlamatCabang.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.textBoxAlamatCabang.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxAlamatCabang.Location = new System.Drawing.Point(231, 103);
             this.textBoxAlamatCabang.Multiline = true;
             this.textBoxAlamatCabang.Name = "textBoxAlamatCabang";
             this.textBoxAlamatCabang.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxAlamatCabang.Size = new System.Drawing.Size(246, 47);
+            this.textBoxAlamatCabang.Size = new System.Drawing.Size(367, 70);
             this.textBoxAlamatCabang.TabIndex = 10;
-            this.textBoxAlamatCabang.Text = "Type Here...";
-            this.textBoxAlamatCabang.Enter += new System.EventHandler(this.textBoxAlamatCabang_Enter);
-            this.textBoxAlamatCabang.Leave += new System.EventHandler(this.textBoxAlamatCabang_Leave);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 69);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(36, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 17);
+            this.label3.Size = new System.Drawing.Size(169, 25);
             this.label3.TabIndex = 9;
             this.label3.Text = "Alamat Cabang :";
             // 
             // textBoxNamaCabang
             // 
-            this.textBoxNamaCabang.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNamaCabang.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxNamaCabang.Location = new System.Drawing.Point(154, 39);
-            this.textBoxNamaCabang.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxNamaCabang.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.textBoxNamaCabang.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxNamaCabang.Location = new System.Drawing.Point(231, 60);
             this.textBoxNamaCabang.Name = "textBoxNamaCabang";
-            this.textBoxNamaCabang.Size = new System.Drawing.Size(246, 24);
+            this.textBoxNamaCabang.Size = new System.Drawing.Size(367, 32);
             this.textBoxNamaCabang.TabIndex = 8;
-            this.textBoxNamaCabang.Text = "Type Here...";
-            this.textBoxNamaCabang.Enter += new System.EventHandler(this.textBoxNamaCabang_Enter);
-            this.textBoxNamaCabang.Leave += new System.EventHandler(this.textBoxNamaCabang_Leave);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 41);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(48, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 17);
+            this.label2.Size = new System.Drawing.Size(158, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Nama Cabang :";
             // 
@@ -189,10 +172,9 @@ namespace OnlineMart_SubrataSquad
             this.buttonKosongi.BackColor = System.Drawing.Color.Orange;
             this.buttonKosongi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKosongi.ForeColor = System.Drawing.Color.White;
-            this.buttonKosongi.Location = new System.Drawing.Point(211, 228);
-            this.buttonKosongi.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonKosongi.Location = new System.Drawing.Point(316, 351);
             this.buttonKosongi.Name = "buttonKosongi";
-            this.buttonKosongi.Size = new System.Drawing.Size(105, 41);
+            this.buttonKosongi.Size = new System.Drawing.Size(158, 63);
             this.buttonKosongi.TabIndex = 26;
             this.buttonKosongi.Text = "&KOSONGI";
             this.buttonKosongi.UseVisualStyleBackColor = false;
@@ -203,10 +185,9 @@ namespace OnlineMart_SubrataSquad
             this.buttonSimpan.BackColor = System.Drawing.Color.Orange;
             this.buttonSimpan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(116, 228);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSimpan.Location = new System.Drawing.Point(174, 351);
             this.buttonSimpan.Name = "buttonSimpan";
-            this.buttonSimpan.Size = new System.Drawing.Size(90, 41);
+            this.buttonSimpan.Size = new System.Drawing.Size(135, 63);
             this.buttonSimpan.TabIndex = 25;
             this.buttonSimpan.Text = "&SIMPAN";
             this.buttonSimpan.UseVisualStyleBackColor = false;
@@ -214,16 +195,15 @@ namespace OnlineMart_SubrataSquad
             // 
             // FormTambahCabang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 275);
+            this.ClientSize = new System.Drawing.Size(652, 423);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonKosongi);
             this.Controls.Add(this.buttonSimpan);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormTambahCabang";
             this.Load += new System.EventHandler(this.FormTambahCabang_Load);
             this.panel1.ResumeLayout(false);
