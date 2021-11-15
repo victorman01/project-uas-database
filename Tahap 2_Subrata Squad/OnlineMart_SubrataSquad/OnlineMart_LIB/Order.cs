@@ -129,7 +129,7 @@ namespace OnlineMart_LIB
 
         public static Boolean UbahStatusKirim(string status, int id)
         {
-            string sql = "update orders set status_kirims = '" + status + "'" +
+            string sql = "update orders set status_kirim = '" + status + "'" +
                 " where id = " + id;
 
             int berubah = Connection.JalankanPerintahDML(sql);

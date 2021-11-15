@@ -152,7 +152,6 @@ namespace OnlineMart_SubrataSquad
                         Pelanggan.TambahPoin(totalHarga, pelanggan);
                     }
                 }
-                formKeranjang.FormKeranjang_Load(sender, e);
 
                 if (comboBoxGift.SelectedValue != null && checkBoxGift.Checked == true)
                 {
@@ -164,6 +163,7 @@ namespace OnlineMart_SubrataSquad
                         GiftRedeem.KurangiPoin(int.Parse(g.JumlahPoin), pelanggan);
                     }   
                 }
+                formKeranjang.FormKeranjang_Load(sender, e);
                 this.Close();
             }
             catch (Exception ex)
