@@ -150,6 +150,12 @@ namespace OnlineMart_LIB
             Connection.JalankanPerintahDML(sql);
         }
 
+        public static void TambahPoin(int subTotal, Pelanggan p)
+        {
+            p.Poin += subTotal / 10000;
+            string sql = "update pelanggans set poin = " + p.Poin + " where id = " + p.Id;
+            Connection.JalankanPerintahDML(sql);
+        }
         //public void TambahKeranjang(Pelanggan pelanggan, Barang barang, Cabang cabang, int jumlah)
         //{
         //    Keranjang keranjang = new Keranjang(pelanggan, barang, cabang, jumlah);

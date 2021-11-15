@@ -28,6 +28,11 @@ namespace OnlineMart_LIB
             this.Nama = nama;
             this.JumlahPoin = jumlahPoin;
         }
+        public Gift()
+        {
+            this.Nama = "";
+            this.JumlahPoin = "";
+        }
         #endregion
 
         #region Properties

@@ -27,7 +27,7 @@ namespace OnlineMart_LIB
             this.Order = order;
         }
 
-        public GiftRedeem(DateTime waktu, int poinRedeem, Gift gift, Order order)
+        public GiftRedeem(int poinRedeem, Gift gift, Order order)
         {
             this.Waktu = waktu;
             this.PoinRedeem = poinRedeem;
@@ -86,6 +86,12 @@ namespace OnlineMart_LIB
         {
             string sql = "insert into gift_redeems (waktu, poin_redeem, gifts_id, orders_id) " +
                 "values (now(), " + gr.PoinRedeem + ", '" + gr.Gift.Id + "', '" + gr.Order.Id + "')";
+            Connection.JalankanPerintahDML(sql);
+        }
+        public static void KurangiPoin(int poin, Pelanggan p)
+        {
+            int poinSekarang = p.Poin - poin;
+            string sql = "update pelanggans set poin = " + poinSekarang + " where id = " + p.Id;
             Connection.JalankanPerintahDML(sql);
         }
         #endregion

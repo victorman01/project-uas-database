@@ -17,6 +17,7 @@ namespace OnlineMart_SubrataSquad
         List<Keranjang> listKeranjang = new List<Keranjang>();
         List<Promo> listPromo = new List<Promo>();
         List<MetodePembayaran> listMetodePemabayaran = new List<MetodePembayaran>();
+        List<Gift> listGift = new List<Gift>();
         List<Driver> listDriver = new List<Driver>();
         List<Barang> listBarang = new List<Barang>();
         List<Order> listOrder = new List<Order>();
@@ -37,6 +38,7 @@ namespace OnlineMart_SubrataSquad
             listKeranjang = formKeranjang.listKeranjang;
             listPromo = Promo.BacaData("", "");
             listMetodePemabayaran = MetodePembayaran.BacaData("", "");
+            listGift = Gift.BacaData("", "");
             listDriver = Driver.BacaData("", "");
             listBarang = Barang.BacaData("", "");
 
@@ -115,6 +117,14 @@ namespace OnlineMart_SubrataSquad
                         b = new Barang(keranjang.Barang.Id, keranjang.Barang.Nama, keranjang.Barang.Harga, keranjang.Barang.Kategori);
                     }
                 }
+                if (comboBoxGift.SelectedValue != null && checkBoxGift.Checked == true)
+                {
+                    Gift g = (Gift)comboBoxGift.SelectedItem;
+                    if (pelanggan.Poin < int.Parse(g.JumlahPoin))
+                    {
+                        throw new Exception("Your poin isn't enough. Try to redeem another time");
+                    }
+                }
                 Promo promo = (Promo)comboBoxPromo.SelectedItem;
                 MetodePembayaran metodePembayaran = (MetodePembayaran)comboBoxPembayaran.SelectedItem;
                 Driver driver = (Driver)comboBoxKurir.SelectedItem;
@@ -139,9 +149,22 @@ namespace OnlineMart_SubrataSquad
                         BarangOrder.TambahData(bo);
                         MessageBox.Show("All Items Succesfully Paid.");
                         Keranjang.HapusKeranjang(keranjang);
+                        Pelanggan.TambahPoin(totalHarga, pelanggan);
                     }
                 }
                 formKeranjang.FormKeranjang_Load(sender, e);
+
+                if (comboBoxGift.SelectedValue != null && checkBoxGift.Checked == true)
+                {
+                    Gift g = (Gift)comboBoxGift.SelectedItem;
+                    GiftRedeem gr = new GiftRedeem(int.Parse(g.JumlahPoin), g, ord);
+                    if (pelanggan.Poin >= int.Parse(g.JumlahPoin))
+                    {
+                        GiftRedeem.TambahData(gr);
+                        GiftRedeem.KurangiPoin(int.Parse(g.JumlahPoin), pelanggan);
+                    }   
+                }
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -202,5 +225,22 @@ namespace OnlineMart_SubrataSquad
             CheckBayar();
         }
 
+        private void comboBoxGift_Enter(object sender, EventArgs e)
+        {
+            comboBoxGift.DataSource = listGift;
+            comboBoxGift.DisplayMember = "Nama";
+        }
+
+        private void checkBoxGift_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBoxGift.Checked == true)
+            {
+                comboBoxGift.Enabled = true;
+            }
+            else
+            {
+                comboBoxGift.Enabled = false;
+            }
+        }
     }
 }
