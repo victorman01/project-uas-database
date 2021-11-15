@@ -52,14 +52,14 @@ namespace OnlineMart_LIB
             {
                 sql = "select gr.id, gr.waktu, gr.poin_redeem, g.id, g.nama, g.jumlah_poin, o.id, o.tanggal_waktu, o.alamat_tujuan, +" +
                     "o.ongkos_kirim, o.total_bayar, o.cara_bayar, o.cabangs_id, o.drivers_id, o.pelanggans_id, o.promo_id, " +
-                    "o.status, o.metode_pembayaran, o.status_kirims from gift_redeems as gr inner join gifts as g on " +
+                    "o.status, o.metode_pembayaran_id, o.status_kirims from gift_redeems as gr inner join gifts as g on " +
                     "gr.orders_id = g.id inner join orders as o on gr.orders_id = o.id";
             }
             else
             {
                 sql = "select gr.id, gr.waktu, gr.poin_redeem, g.id, g.nama, g.jumlah_poin, o.id, o.tanggal_waktu, o.alamat_tujuan, +" +
                     "o.ongkos_kirim, o.total_bayar, o.cara_bayar, o.cabangs_id, o.drivers_id, o.pelanggans_id, o.promo_id, " +
-                    "o.status, o.metode_pembayaran, o.status_kirims from gift_redeems as gr inner join gifts as g on " +
+                    "o.status, o.metode_pembayaran_id, o.status_kirims from gift_redeems as gr inner join gifts as g on " +
                     "gr.orders_id = g.id inner join orders as o on gr.orders_id = o.id " +
                     "where " + kriteria + " like '%" + nilaiKriteria + "%'";
             }
