@@ -98,7 +98,7 @@ namespace OnlineMart_SubrataSquad
             // 
             // textBoxAlamat
             // 
-            this.textBoxAlamat.Location = new System.Drawing.Point(199, 543);
+            this.textBoxAlamat.Location = new System.Drawing.Point(223, 679);
             this.textBoxAlamat.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxAlamat.Multiline = true;
             this.textBoxAlamat.Name = "textBoxAlamat";

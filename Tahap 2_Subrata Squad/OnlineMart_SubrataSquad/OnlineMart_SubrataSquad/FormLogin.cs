@@ -73,7 +73,6 @@ namespace OnlineMart_SubrataSquad
                         frm.keranjangToolStripMenuItem.Visible = true;
                         frm.saldoToolStripMenuItem.Visible = true;
                         frm.pesananToolStripMenuItem.Visible = true;
-                        frm.promoPegawaiToolStripMenuItem.Visible = true;
                         frm.rekapPembelianToolStripMenuItem.Visible = true;
                         frm.accountToolStripMenuItem.Visible = true;
                         frm.ShowDialog();
