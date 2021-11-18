@@ -1423,3 +1423,4 @@ D:\GitHub\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineM
 D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormHistoryGiftRedeem.resources
 D:\GitHub\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormHistoryGiftRedeem.resources
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormHistoryGiftRedeem.resources
+D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormDetailBarangOrder.resources

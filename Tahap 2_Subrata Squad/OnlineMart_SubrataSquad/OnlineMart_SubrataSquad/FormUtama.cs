@@ -121,6 +121,7 @@ namespace OnlineMart_SubrataSquad
             {
                 FormHistory formHistory = new FormHistory();
                 formHistory.MdiParent = this;
+                formHistory.pelanggan = pelanggan;
                 formHistory.Show();
             }
             else

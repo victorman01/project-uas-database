@@ -1,7 +1,7 @@
 ﻿
 namespace OnlineMart_SubrataSquad
 {
-    partial class FormHistory
+    partial class FormDetailBarangOrder
     {
         /// <summary>
         /// Required designer variable.
@@ -39,24 +39,23 @@ namespace OnlineMart_SubrataSquad
             // 
             this.dataGridViewHistory.BackgroundColor = System.Drawing.Color.Tan;
             this.dataGridViewHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHistory.Location = new System.Drawing.Point(11, 82);
+            this.dataGridViewHistory.Location = new System.Drawing.Point(12, 81);
             this.dataGridViewHistory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewHistory.Name = "dataGridViewHistory";
             this.dataGridViewHistory.RowHeadersWidth = 51;
             this.dataGridViewHistory.RowTemplate.Height = 24;
             this.dataGridViewHistory.Size = new System.Drawing.Size(636, 395);
-            this.dataGridViewHistory.TabIndex = 22;
-            this.dataGridViewHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHistory_CellContentClick);
+            this.dataGridViewHistory.TabIndex = 25;
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(13, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(635, 60);
-            this.label1.TabIndex = 19;
+            this.label1.TabIndex = 23;
             this.label1.Text = "HALAMAN HISTORY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -65,34 +64,33 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(532, 482);
+            this.buttonKeluar.Location = new System.Drawing.Point(533, 481);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(115, 39);
-            this.buttonKeluar.TabIndex = 21;
+            this.buttonKeluar.TabIndex = 24;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
-            // FormHistory
+            // FormDetailBarangOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(657, 533);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(659, 529);
             this.Controls.Add(this.dataGridViewHistory);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FormHistory";
-            this.Load += new System.EventHandler(this.FormHistory_Load);
+            this.Name = "FormDetailBarangOrder";
+            this.Text = "FormDetailBarangOrder";
+            this.Load += new System.EventHandler(this.FormDetailBarangOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHistory)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private System.Windows.Forms.DataGridView dataGridViewHistory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonKeluar;
