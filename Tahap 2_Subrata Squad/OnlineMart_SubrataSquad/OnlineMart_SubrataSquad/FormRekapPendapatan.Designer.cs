@@ -105,6 +105,7 @@ namespace OnlineMart_SubrataSquad
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Bulan";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // comboBoxCBListPendapatan
             // 
@@ -129,6 +130,7 @@ namespace OnlineMart_SubrataSquad
             this.textBoxCBListPendapatan.Size = new System.Drawing.Size(327, 28);
             this.textBoxCBListPendapatan.TabIndex = 6;
             this.textBoxCBListPendapatan.Text = "Type Here...";
+            this.textBoxCBListPendapatan.TextChanged += new System.EventHandler(this.textBoxCBListPendapatan_TextChanged);
             this.textBoxCBListPendapatan.Enter += new System.EventHandler(this.textBoxCBListPendapatan_Enter);
             this.textBoxCBListPendapatan.Leave += new System.EventHandler(this.textBoxCBListPendapatan_Leave);
             // 
@@ -180,6 +182,7 @@ namespace OnlineMart_SubrataSquad
             this.Controls.Add(this.buttonKeluar);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormRekapPendapatan";
+            this.Load += new System.EventHandler(this.FormRekapPendapatan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRekapPendapatan)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

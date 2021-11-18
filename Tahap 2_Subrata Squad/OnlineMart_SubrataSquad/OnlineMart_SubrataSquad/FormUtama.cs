@@ -302,7 +302,18 @@ namespace OnlineMart_SubrataSquad
 
         private void rekapPendapatanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form frm = Application.OpenForms["FormRekapPendapatan"];
+            if (frm == null)
+            {
+                FormRekapPendapatan formRekapPendapatan = new FormRekapPendapatan();
+                formRekapPendapatan.MdiParent = this;
+                formRekapPendapatan.Show();
+            }
+            else
+            {
+                frm.Show();
+                frm.BringToFront();
+            }
         }
 
         private void rekapPenjualanBarangToolStripMenuItem_Click(object sender, EventArgs e)

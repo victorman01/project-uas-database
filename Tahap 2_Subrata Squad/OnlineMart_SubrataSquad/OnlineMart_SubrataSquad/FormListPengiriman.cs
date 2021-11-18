@@ -58,14 +58,16 @@ namespace OnlineMart_SubrataSquad
 
             //Atur Tabel
             dataGridViewListPengiriman.Columns.Add("id", "Order ID");
+            dataGridViewListPengiriman.Columns.Add("tanggal_waktu", "Tanggal");
             dataGridViewListPengiriman.Columns.Add("pelanggans_id", "Nama Pelanggan");
             dataGridViewListPengiriman.Columns.Add("alamat_tujuan", "Alamat Tujuan");
-            dataGridViewListPengiriman.Columns.Add("ongkos_kirim", "Komisi");
+            dataGridViewListPengiriman.Columns.Add("ongkos_kirim", "Ongkos Kirim");
             dataGridViewListPengiriman.Columns.Add("status_kirim", "Status Kirim");
 
 
             //Atur Ukuran Cell
             dataGridViewListPengiriman.Columns["id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewListPengiriman.Columns["tanggal_waktu"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewListPengiriman.Columns["pelanggans_id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewListPengiriman.Columns["alamat_tujuan"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewListPengiriman.Columns["ongkos_kirim"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -97,7 +99,8 @@ namespace OnlineMart_SubrataSquad
             {
                 foreach (Order o in listOrder)
                 {
-                    dataGridViewListPengiriman.Rows.Add(o.Id, o.Pelanggan.Nama, o.AlamatTujuan, o.OngkosKirim, o.StatusKirim);
+                    dataGridViewListPengiriman.Rows.Add(o.Id, o.TanggalWaktu.ToString("yyyy-MM-dd"), 
+                        o.Pelanggan.Nama, o.AlamatTujuan, o.OngkosKirim, o.StatusKirim);
                 }
             }
             else
@@ -126,6 +129,7 @@ namespace OnlineMart_SubrataSquad
         private void dataGridViewListPengiriman_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string idOrder = dataGridViewListPengiriman.CurrentRow.Cells["id"].Value.ToString();
+            string tanggal = dataGridViewListPengiriman.CurrentRow.Cells["tanggal_waktu"].Value.ToString();
             string namaKonsumen = dataGridViewListPengiriman.CurrentRow.Cells["pelanggans_id"].Value.ToString();
             string alamatKonsumen = dataGridViewListPengiriman.CurrentRow.Cells["alamat_tujuan"].Value.ToString();
             float ongkoskirim = float.Parse(dataGridViewListPengiriman.CurrentRow.Cells["ongkos_kirim"].Value.ToString());
