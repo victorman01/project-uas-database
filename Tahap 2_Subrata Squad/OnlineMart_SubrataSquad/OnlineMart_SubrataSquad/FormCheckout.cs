@@ -22,6 +22,7 @@ namespace OnlineMart_SubrataSquad
         List<Barang> listBarang = new List<Barang>();
         List<Order> listOrder = new List<Order>();
         Cabang cabang;
+        MetodePembayaran metodePembayaran;
         int ongkir = 15000;
         int totalHarga = 0;
         int diskon = 0;
@@ -125,7 +126,10 @@ namespace OnlineMart_SubrataSquad
                     }
                 }
                 Promo promo = (Promo)comboBoxPromo.SelectedItem;
-                MetodePembayaran metodePembayaran = (MetodePembayaran)comboBoxPembayaran.SelectedItem;
+                if(comboBoxCaraPembayaran.Text == "Other...")
+                {
+                    metodePembayaran = (MetodePembayaran)comboBoxPembayaran.SelectedItem;
+                }
                 Driver driver = (Driver)comboBoxKurir.SelectedItem;
                 Order order = new Order(textBoxAlamat.Text, ongkir, totalHarga, comboBoxCaraPembayaran.Text, cabang, driver, pelanggan, promo, "Pesanan diproses", metodePembayaran, "Waiting");
                 Order.TambahData(order);
@@ -201,7 +205,7 @@ namespace OnlineMart_SubrataSquad
 
         private void CheckBayar()
         {
-            if(comboBoxKurir.SelectedValue != null && comboBoxPembayaran.SelectedValue != null)
+            if(comboBoxKurir.SelectedValue != null && metodePembayaran != null)
             {
                 buttonBayar.Enabled = true;
             }
@@ -236,6 +240,35 @@ namespace OnlineMart_SubrataSquad
             else
             {
                 comboBoxGift.Enabled = false;
+            }
+        }
+
+        private void comboBoxCaraPembayaran_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxCaraPembayaran.Text == "Other...")
+            {
+                comboBoxPembayaran.Enabled = true;
+            }
+            else
+            {
+                foreach (MetodePembayaran mp in listMetodePemabayaran)
+                {
+                    if(comboBoxCaraPembayaran.Text == "OMA Saldo")
+                    {
+                        if (mp.Nama == "OMA Saldo")
+                        {
+                            metodePembayaran = mp;
+                            comboBoxPembayaran.Text = mp.Nama;
+                        }
+                    }
+                    else if (comboBoxCaraPembayaran.Text == "Cash On Delivery (COD)")
+                    {
+                        if (mp.Nama == "Cash")
+                        {
+                            metodePembayaran = mp;
+                        }
+                    }
+                }
             }
         }
     }
