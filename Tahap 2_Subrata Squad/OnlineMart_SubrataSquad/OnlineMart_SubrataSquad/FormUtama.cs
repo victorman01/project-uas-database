@@ -18,6 +18,8 @@ namespace OnlineMart_SubrataSquad
         public Driver driver;
         public string loginAs;
 
+        public List<Chat> listChat = new List<Chat>();
+
         public FormUtama()
         {
             InitializeComponent();
@@ -155,6 +157,7 @@ namespace OnlineMart_SubrataSquad
             if (frm == null)
             {
                 FormCekPesanan form = new FormCekPesanan();
+                form.pelanggan = pelanggan;
                 form.MdiParent = this;
                 form.Show();
             }
@@ -220,6 +223,7 @@ namespace OnlineMart_SubrataSquad
             if (frm == null)
             {
                 FormListPengiriman formListPengiriman = new FormListPengiriman();
+                formListPengiriman.driver = driver;
                 formListPengiriman.MdiParent = this;
                 formListPengiriman.Show();
             }

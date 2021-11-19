@@ -13,6 +13,7 @@ namespace OnlineMart_SubrataSquad
 {
     public partial class FormListPengiriman : Form
     {
+        public Driver driver;
         public List<Order> listOrder = new List<Order>();
         public FormListPengiriman()
         {
@@ -87,6 +88,13 @@ namespace OnlineMart_SubrataSquad
             bcol.UseColumnTextForButtonValue = true;
             dataGridViewListPengiriman.Columns.Add(bcol);
 
+            DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
+            bcol2.HeaderText = "Aksi";
+            bcol2.Text = "Chat";
+            bcol2.Name = "btnChat";
+            bcol2.UseColumnTextForButtonValue = true;
+            dataGridViewListPengiriman.Columns.Add(bcol2);
+
             //Batasi Aktivitas User
             dataGridViewListPengiriman.AllowUserToAddRows = false;
             dataGridViewListPengiriman.ReadOnly = true;
@@ -151,6 +159,20 @@ namespace OnlineMart_SubrataSquad
                     frm.ShowDialog();
                 }
                 
+            }
+            else if (e.ColumnIndex == dataGridViewListPengiriman.Columns["btnChat"].Index && e.RowIndex >= 0)
+            {
+                FormChat frm = new FormChat();
+                foreach (Order o in listOrder)
+                {
+                    if (o.Id == int.Parse(idOrder))
+                    {
+                        frm.order = o;
+                        frm.driver = driver;
+                        frm.pelanggan = null;
+                    }
+                }
+                frm.Show();
             }
         }
     }

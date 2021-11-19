@@ -156,6 +156,21 @@ namespace OnlineMart_LIB
                 o.Pelanggan.Id + "', '" + o.Promo.Id + "', '" + o.Status + "', '" + o.MetodePembayaran.Id + "')";
             Connection.JalankanPerintahDML(sql);
         }
+        public static Boolean UbahStatus(string status, int id)
+        {
+            string sql = "update orders set status = '" + status + "'" +
+                " where id = " + id;
+
+            int berubah = Connection.JalankanPerintahDML(sql);
+            if (berubah == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         #endregion
     }
 }

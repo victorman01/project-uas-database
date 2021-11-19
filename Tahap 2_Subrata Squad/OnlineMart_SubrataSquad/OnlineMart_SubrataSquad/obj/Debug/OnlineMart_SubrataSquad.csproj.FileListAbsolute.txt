@@ -1430,3 +1430,5 @@ D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_datab
 D:\GitHub\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormDetailBarangOrder.resources
 D:\GitHub\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormRekapPenjualanOMASaldoDetail.resources
 D:\GitHub\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.csproj.CopyComplete
+D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormChat.resources
+D:\Kuliah\Semester 3\Database\Clone\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormRekapPenjualanOMASaldoDetail.resources

@@ -69,6 +69,12 @@
     <Compile Include="FormCetakNota.designer.cs">
       <DependentUpon>FormCetakNota.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChat.Designer.cs">
+      <DependentUpon>FormChat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCheckout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCetakNota.resx">
       <DependentUpon>FormCetakNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChat.resx">
+      <DependentUpon>FormChat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCheckout.resx">
       <DependentUpon>FormCheckout.cs</DependentUpon>

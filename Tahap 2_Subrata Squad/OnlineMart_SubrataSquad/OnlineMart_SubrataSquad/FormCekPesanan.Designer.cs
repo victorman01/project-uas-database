@@ -39,23 +39,23 @@ namespace OnlineMart_SubrataSquad
             // 
             this.dataGridViewCekPesanan.BackgroundColor = System.Drawing.Color.Tan;
             this.dataGridViewCekPesanan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCekPesanan.Location = new System.Drawing.Point(8, 67);
-            this.dataGridViewCekPesanan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewCekPesanan.Location = new System.Drawing.Point(11, 82);
+            this.dataGridViewCekPesanan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewCekPesanan.Name = "dataGridViewCekPesanan";
             this.dataGridViewCekPesanan.RowHeadersWidth = 51;
             this.dataGridViewCekPesanan.RowTemplate.Height = 24;
-            this.dataGridViewCekPesanan.Size = new System.Drawing.Size(477, 288);
+            this.dataGridViewCekPesanan.Size = new System.Drawing.Size(636, 354);
             this.dataGridViewCekPesanan.TabIndex = 35;
+            this.dataGridViewCekPesanan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCekPesanan_CellContentClick);
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(476, 49);
+            this.label1.Size = new System.Drawing.Size(635, 60);
             this.label1.TabIndex = 33;
             this.label1.Text = "HALAMAN CEK PESANAN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -65,10 +65,10 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(400, 359);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonKeluar.Location = new System.Drawing.Point(533, 442);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(86, 32);
+            this.buttonKeluar.Size = new System.Drawing.Size(115, 39);
             this.buttonKeluar.TabIndex = 34;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -76,16 +76,17 @@ namespace OnlineMart_SubrataSquad
             // 
             // FormCekPesanan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(493, 400);
+            this.ClientSize = new System.Drawing.Size(657, 492);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridViewCekPesanan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormCekPesanan";
+            this.Load += new System.EventHandler(this.FormCekPesanan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCekPesanan)).EndInit();
             this.ResumeLayout(false);
 

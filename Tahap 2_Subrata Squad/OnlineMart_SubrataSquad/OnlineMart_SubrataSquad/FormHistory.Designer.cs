@@ -32,6 +32,7 @@ namespace OnlineMart_SubrataSquad
             this.dataGridViewHistory = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
+            this.buttonPesanan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHistory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +75,20 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
+            // buttonPesanan
+            // 
+            this.buttonPesanan.BackColor = System.Drawing.Color.Orange;
+            this.buttonPesanan.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPesanan.ForeColor = System.Drawing.Color.White;
+            this.buttonPesanan.Location = new System.Drawing.Point(411, 481);
+            this.buttonPesanan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonPesanan.Name = "buttonPesanan";
+            this.buttonPesanan.Size = new System.Drawing.Size(115, 39);
+            this.buttonPesanan.TabIndex = 23;
+            this.buttonPesanan.Text = "&PESANAN";
+            this.buttonPesanan.UseVisualStyleBackColor = false;
+            this.buttonPesanan.Click += new System.EventHandler(this.buttonPesanan_Click);
+            // 
             // FormHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -81,6 +96,7 @@ namespace OnlineMart_SubrataSquad
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(657, 533);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonPesanan);
             this.Controls.Add(this.dataGridViewHistory);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
@@ -96,5 +112,6 @@ namespace OnlineMart_SubrataSquad
         private System.Windows.Forms.DataGridView dataGridViewHistory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonKeluar;
+        private System.Windows.Forms.Button buttonPesanan;
     }
 }

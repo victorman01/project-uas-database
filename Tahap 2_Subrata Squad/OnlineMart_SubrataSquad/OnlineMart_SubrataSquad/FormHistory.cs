@@ -85,5 +85,13 @@ namespace OnlineMart_SubrataSquad
             frm.id = idOrder;
             frm.Show();
         }
+
+        private void buttonPesanan_Click(object sender, EventArgs e)
+        {
+            FormCekPesanan frm = new FormCekPesanan();
+            frm.Owner = this;
+            frm.pelanggan = pelanggan;
+            frm.Show();
+        }
     }
 }
