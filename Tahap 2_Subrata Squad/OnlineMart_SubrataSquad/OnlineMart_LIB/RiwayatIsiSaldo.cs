@@ -24,6 +24,12 @@ namespace OnlineMart_LIB
             this.IsiSaldo = isiSaldo;
             this.Pelanggan = pelanggan;
         }
+        public RiwayatIsiSaldo(DateTime waktu, int isiSaldo, Pelanggan pelanggan)
+        {
+            this.Waktu = waktu;
+            this.IsiSaldo = isiSaldo;
+            this.Pelanggan = pelanggan;
+        }
         #endregion
 
         #region Properties
@@ -39,18 +45,18 @@ namespace OnlineMart_LIB
             string sql = "";
             if (kriteria == "")
             {
-                sql = "select * from riwayat_isi_saldos";
+                sql = "select ris.id, ris.waktu, ris.isi_saldo, p.id, p.nama, p.email, p.password, p.telepon, p.saldo,p.poin from riwayat_isi_saldos ris inner join pelanggans p on ris.pelanggans_id = p.id";
             }
             else
             {
-                sql = "select ris.id, ris.waktu, ris.isi_saldo, p.id from riwayat_isi_saldos ris inner join pelanggans p on ris.pelanggans_id = p.id where " + kriteria + " like '%" + nilaiKriteria + "%'";
+                sql = "select ris.id, ris.waktu, ris.isi_saldo, p.id, p.nama, p.email, p.password, p.telepon, p.saldo,p.poin from riwayat_isi_saldos ris inner join pelanggans p on ris.pelanggans_id = p.id where " + kriteria + " like '%" + nilaiKriteria + "%'";
             }
             MySqlDataReader hasil = Connection.JalankanPerintahQuery(sql);
 
             List<RiwayatIsiSaldo> listRiwayatIsiSaldo = new List<RiwayatIsiSaldo>();
             while (hasil.Read() == true)
             {
-                Pelanggan p = new Pelanggan(hasil.GetInt32(4), hasil.GetString(5), hasil.GetString(6), hasil.GetString(7), hasil.GetString(8), hasil.GetInt32(9), hasil.GetInt32(10));
+                Pelanggan p = new Pelanggan(hasil.GetInt32(3), hasil.GetString(4), hasil.GetString(5), hasil.GetString(6), hasil.GetString(7), hasil.GetInt32(8), hasil.GetInt32(9));
                 RiwayatIsiSaldo k = new RiwayatIsiSaldo(hasil.GetInt32(0), hasil.GetDateTime(1), hasil.GetInt32(2), p);
                 listRiwayatIsiSaldo.Add(k);
             }
@@ -59,7 +65,7 @@ namespace OnlineMart_LIB
         public static void TambahData(RiwayatIsiSaldo r)
         {
             string sql = "insert into riwayat_isi_saldos (waktu, isi_saldo, pelanggans_id)" +
-                " values ('" + r.Waktu + "', '" + r.IsiSaldo + "', '" + r.Pelanggan.Id + "')";
+                " values ('" + r.Waktu.ToString("yyyy-MM-dd HH-mm-ss") + "', '" + r.IsiSaldo + "', '" + r.Pelanggan.Id + "')";
 
             Connection.JalankanPerintahDML(sql);
         }

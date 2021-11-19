@@ -165,6 +165,12 @@
     <Compile Include="FormLogin.designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRekapPenjualanOMASaldoDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRekapPenjualanOMASaldoDetail.Designer.cs">
+      <DependentUpon>FormRekapPenjualanOMASaldoDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahBarangKeKeranjang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -403,6 +409,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRekapPenjualanOMASaldoDetail.resx">
+      <DependentUpon>FormRekapPenjualanOMASaldoDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSetCabangBarang.resx">
       <DependentUpon>FormTambahStok.cs</DependentUpon>

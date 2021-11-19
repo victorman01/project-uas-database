@@ -34,15 +34,15 @@ namespace OnlineMart_SubrataSquad
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.labelPoin = new System.Windows.Forms.Label();
+            this.labelSaldo = new System.Windows.Forms.Label();
+            this.labelTelepon = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelNama = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonUbahProfile = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
-            this.labelNama = new System.Windows.Forms.Label();
-            this.labelEmail = new System.Windows.Forms.Label();
-            this.labelTelepon = new System.Windows.Forms.Label();
-            this.labelSaldo = new System.Windows.Forms.Label();
-            this.labelPoin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +109,61 @@ namespace OnlineMart_SubrataSquad
             this.label4.TabIndex = 2;
             this.label4.Text = "Email :";
             // 
+            // labelPoin
+            // 
+            this.labelPoin.AutoSize = true;
+            this.labelPoin.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPoin.Location = new System.Drawing.Point(126, 141);
+            this.labelPoin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPoin.Name = "labelPoin";
+            this.labelPoin.Size = new System.Drawing.Size(60, 17);
+            this.labelPoin.TabIndex = 1;
+            this.labelPoin.Text = "labelPoin";
+            // 
+            // labelSaldo
+            // 
+            this.labelSaldo.AutoSize = true;
+            this.labelSaldo.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSaldo.Location = new System.Drawing.Point(126, 109);
+            this.labelSaldo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSaldo.Name = "labelSaldo";
+            this.labelSaldo.Size = new System.Drawing.Size(67, 17);
+            this.labelSaldo.TabIndex = 1;
+            this.labelSaldo.Text = "labelSaldo";
+            // 
+            // labelTelepon
+            // 
+            this.labelTelepon.AutoSize = true;
+            this.labelTelepon.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTelepon.Location = new System.Drawing.Point(126, 77);
+            this.labelTelepon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTelepon.Name = "labelTelepon";
+            this.labelTelepon.Size = new System.Drawing.Size(82, 17);
+            this.labelTelepon.TabIndex = 1;
+            this.labelTelepon.Text = "labelTelepon";
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.Location = new System.Drawing.Point(126, 42);
+            this.labelEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(65, 17);
+            this.labelEmail.TabIndex = 1;
+            this.labelEmail.Text = "labelEmail";
+            // 
+            // labelNama
+            // 
+            this.labelNama.AutoSize = true;
+            this.labelNama.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNama.Location = new System.Drawing.Point(126, 12);
+            this.labelNama.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelNama.Name = "labelNama";
+            this.labelNama.Size = new System.Drawing.Size(69, 17);
+            this.labelNama.TabIndex = 1;
+            this.labelNama.Text = "labelNama";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -161,61 +216,6 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click_1);
             // 
-            // labelNama
-            // 
-            this.labelNama.AutoSize = true;
-            this.labelNama.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNama.Location = new System.Drawing.Point(126, 12);
-            this.labelNama.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(69, 17);
-            this.labelNama.TabIndex = 1;
-            this.labelNama.Text = "labelNama";
-            // 
-            // labelEmail
-            // 
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(126, 42);
-            this.labelEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(65, 17);
-            this.labelEmail.TabIndex = 1;
-            this.labelEmail.Text = "labelEmail";
-            // 
-            // labelTelepon
-            // 
-            this.labelTelepon.AutoSize = true;
-            this.labelTelepon.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTelepon.Location = new System.Drawing.Point(126, 77);
-            this.labelTelepon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelTelepon.Name = "labelTelepon";
-            this.labelTelepon.Size = new System.Drawing.Size(82, 17);
-            this.labelTelepon.TabIndex = 1;
-            this.labelTelepon.Text = "labelTelepon";
-            // 
-            // labelSaldo
-            // 
-            this.labelSaldo.AutoSize = true;
-            this.labelSaldo.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSaldo.Location = new System.Drawing.Point(126, 109);
-            this.labelSaldo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelSaldo.Name = "labelSaldo";
-            this.labelSaldo.Size = new System.Drawing.Size(67, 17);
-            this.labelSaldo.TabIndex = 1;
-            this.labelSaldo.Text = "labelSaldo";
-            // 
-            // labelPoin
-            // 
-            this.labelPoin.AutoSize = true;
-            this.labelPoin.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPoin.Location = new System.Drawing.Point(126, 141);
-            this.labelPoin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelPoin.Name = "labelPoin";
-            this.labelPoin.Size = new System.Drawing.Size(60, 17);
-            this.labelPoin.TabIndex = 1;
-            this.labelPoin.Text = "labelPoin";
-            // 
             // FormProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,7 +227,7 @@ namespace OnlineMart_SubrataSquad
             this.Controls.Add(this.buttonUbahProfile);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormProfile";
             this.Load += new System.EventHandler(this.FormProfile_Load);
             this.panel1.ResumeLayout(false);

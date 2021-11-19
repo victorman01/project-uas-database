@@ -39,7 +39,8 @@ namespace OnlineMart_SubrataSquad
                     listBoxSaldo.Items.Add("Amount of Top up: " + topUpAmount.ToString("C0",new CultureInfo("id")));
                     listBoxSaldo.Items.Add("Payment Method: " + metodePembayaranDipilih);
                     listBoxSaldo.Items.Add("Saldo: " + saldo.ToString("C0",new CultureInfo("id")));
-
+                    RiwayatIsiSaldo ris = new RiwayatIsiSaldo(DateTime.Now, (int)topUpAmount, pelanggan);
+                    RiwayatIsiSaldo.TambahData(ris);
                     MessageBox.Show("Top up success.", "Information");
                 }
                 else

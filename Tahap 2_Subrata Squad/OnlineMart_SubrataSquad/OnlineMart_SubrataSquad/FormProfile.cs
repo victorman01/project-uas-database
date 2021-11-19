@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,7 @@ namespace OnlineMart_SubrataSquad
                     labelNama.Text = user.Nama;
                     labelEmail.Text = user.Email;
                     labelTelepon.Text = user.Telepon;
-                    labelSaldo.Text = user.Saldo.ToString();
+                    labelSaldo.Text = user.Saldo.ToString("C0",new CultureInfo("id"));
                     labelPoin.Text = user.Poin.ToString();
                     pelanggan = user;
                 }
