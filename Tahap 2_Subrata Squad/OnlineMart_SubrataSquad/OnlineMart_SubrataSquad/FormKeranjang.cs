@@ -24,15 +24,28 @@ namespace OnlineMart_SubrataSquad
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
-            {
+        {
             this.Close();
         }
 
         private void buttonCheckout_Click(object sender, EventArgs e)
         {
-            FormCheckout form = new FormCheckout();
-            form.Owner = this;
-            form.ShowDialog();
+            try
+            {
+                if (listKeranjang.Count <= 0)
+                {
+                    throw new Exception("The basket cannot be empty");
+                }
+                FormCheckout form = new FormCheckout();
+                form.Owner = this;
+                form.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Checkout fail, Failure " + ex.Message);
+            }
+
         }
 
         public void FormKeranjang_Load(object sender, EventArgs e)

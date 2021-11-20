@@ -156,28 +156,22 @@ namespace OnlineMart_LIB
             string sql = "update pelanggans set poin = " + p.Poin + " where id = " + p.Id;
             Connection.JalankanPerintahDML(sql);
         }
-        //public void TambahKeranjang(Pelanggan pelanggan, Barang barang, Cabang cabang, int jumlah)
-        //{
-        //    Keranjang keranjang = new Keranjang(pelanggan, barang, cabang, jumlah);
-
-        //    listKeranjang.Add(keranjang);
-        //}
-
-        //public List<Keranjang> BacaDataKeranjang()
-        //{
-        //    return listKeranjang;
-        //}
-
-        //public static void MasukkanKeranjangKeDatabase(Pelanggan pel)
-        //{
-        //    //Tambah Barang ke Keranjang
-        //    foreach (Keranjang keranjang in pel.listKeranjang)
-        //    {
-        //        string sql = "insert into Keranjangs(Pelanggans_id, Cabangs_id, Barangs_id, Jumlah)" +
-        //            "values ('" + keranjang.Pelanggan.id + "', '" + keranjang.Barang.Id + "', '" + keranjang.Cabang.Id + "', '" + keranjang.Jumlah + "')";
-        //        Connection.JalankanPerintahDML(sql);
-        //    }
-        //}
+        public static void kurangiSaldo(float nominal, int id)
+        {
+            string sql = "update pelanggans set saldo = saldo - " + nominal + " where id = " + id;
+            Connection.JalankanPerintahDML(sql);
+        }
+        public static Pelanggan AmbilPelangganById(int id)
+        {
+            string sql = "select * from pelanggans where id  like " + id;
+            MySqlDataReader hasil = Connection.JalankanPerintahQuery(sql);
+            if (hasil.Read() == true)
+            {
+                Pelanggan pelanggan = new Pelanggan(hasil.GetInt32(0), hasil.GetValue(1).ToString(), hasil.GetValue(2).ToString(), hasil.GetValue(3).ToString(), hasil.GetValue(4).ToString(), hasil.GetFloat(5), hasil.GetInt32(6));
+                return pelanggan;
+            }
+            return null;
+        }
         #endregion
     }
 }

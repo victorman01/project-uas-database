@@ -15,7 +15,6 @@ namespace OnlineMart_SubrataSquad
     public partial class FormIsiSaldo : Form
     {
         public Pelanggan pelanggan;
-        float saldo;
         public List<MetodePembayaran> listMetodePembayaran = new List<MetodePembayaran>();
 
         public FormIsiSaldo()
@@ -33,12 +32,13 @@ namespace OnlineMart_SubrataSquad
                     float topUpAmount = float.Parse(textBoxJumlahPengisianSaldo.Text);
                     MetodePembayaran metodePembayaranDipilih = (MetodePembayaran)comboBoxAlatIsiSaldo.SelectedItem;
                     Pelanggan.UpdateSaldo(topUpAmount, pelanggan.Id);
-                    saldo += topUpAmount;
+                    pelanggan = Pelanggan.AmbilPelangganById(pelanggan.Id);
+
                     listBoxSaldo.Items.Clear();
                     listBoxSaldo.Items.Add("Name: " + pelanggan.Nama);
                     listBoxSaldo.Items.Add("Amount of Top up: " + topUpAmount.ToString("C0",new CultureInfo("id")));
                     listBoxSaldo.Items.Add("Payment Method: " + metodePembayaranDipilih);
-                    listBoxSaldo.Items.Add("Saldo: " + saldo.ToString("C0",new CultureInfo("id")));
+                    listBoxSaldo.Items.Add("Saldo: " + pelanggan.Saldo.ToString("C0",new CultureInfo("id")));
                     RiwayatIsiSaldo ris = new RiwayatIsiSaldo(DateTime.Now, (int)topUpAmount, pelanggan);
                     RiwayatIsiSaldo.TambahData(ris);
                     MessageBox.Show("Top up success.", "Information");
@@ -58,7 +58,6 @@ namespace OnlineMart_SubrataSquad
 
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
-            pelanggan.Saldo = saldo;
             this.Close();
         }
         private void textBoxJumlahPengisianSaldo_Enter(object sender, EventArgs e)
@@ -83,9 +82,9 @@ namespace OnlineMart_SubrataSquad
 
         private void FormIsiSaldo_Load(object sender, EventArgs e)
         {
-            saldo = pelanggan.Saldo;
+            pelanggan = Pelanggan.AmbilPelangganById(pelanggan.Id);
             listBoxSaldo.Items.Add("Name: " + pelanggan.Nama);
-            listBoxSaldo.Items.Add("Saldo: " + saldo.ToString("C0", new CultureInfo("id")));
+            listBoxSaldo.Items.Add("Saldo: " + pelanggan.Saldo.ToString("C0", new CultureInfo("id")));
 
             listMetodePembayaran = MetodePembayaran.BacaData("", "");
             comboBoxAlatIsiSaldo.DataSource = listMetodePembayaran;

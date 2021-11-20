@@ -19,7 +19,6 @@ namespace OnlineMart_SubrataSquad
         List<MetodePembayaran> listMetodePembayaran = new List<MetodePembayaran>();
         List<Gift> listGift = new List<Gift>();
         List<Driver> listDriver = new List<Driver>();
-        List<Barang> listBarang = new List<Barang>();
         List<Order> listOrder = new List<Order>();
         Cabang cabang;
         MetodePembayaran metodePembayaran;
@@ -41,7 +40,6 @@ namespace OnlineMart_SubrataSquad
             listMetodePembayaran = MetodePembayaran.BacaData("", "");
             listGift = Gift.BacaData("", "");
             listDriver = Driver.BacaData("", "");
-            listBarang = Barang.BacaData("", "");
 
             TampilDataGrid();
             totalHarga = Order.HitungTotalHarga(totalHarga, ongkir, diskon);
@@ -107,6 +105,20 @@ namespace OnlineMart_SubrataSquad
                 Pelanggan pelanggan = formKeranjang.pelanggan;
                 Barang b = new Barang();
                 Order ord = new Order();
+
+                if (comboBoxCaraPembayaran.Text == "OMA Saldo")
+                {
+                    if (pelanggan.Saldo > totalHarga)
+                    {
+                        Pelanggan.kurangiSaldo(totalHarga, pelanggan.Id);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Your balance is not enough");
+                        return;
+                    }
+                }
+
                 if (textBoxAlamat.Text == null || textBoxAlamat.Text == "") 
                 {
                     throw new Exception("Please input the address.");
