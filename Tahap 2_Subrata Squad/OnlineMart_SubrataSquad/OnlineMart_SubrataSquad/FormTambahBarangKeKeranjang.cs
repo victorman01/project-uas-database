@@ -62,7 +62,8 @@ namespace OnlineMart_SubrataSquad
                 Keranjang k = new Keranjang(pelanggan, b, c, jumlah);
                 Keranjang.TambahData(k);
 
-                MessageBox.Show("The Items is added to The basket");               
+                MessageBox.Show("The Items is added to The basket");
+                this.Close();
             }
             catch (Exception ex)
             {
