@@ -150,9 +150,9 @@ namespace OnlineMart_LIB
             Connection.JalankanPerintahDML(sql);
         }
 
-        public static void TambahPoin(int subTotal, Pelanggan p)
+        public static void TambahPoin(float totalHarga, Pelanggan p)
         {
-            p.Poin += subTotal / 10000;
+            p.Poin += (int)totalHarga / 10000;
             string sql = "update pelanggans set poin = " + p.Poin + " where id = " + p.Id;
             Connection.JalankanPerintahDML(sql);
         }

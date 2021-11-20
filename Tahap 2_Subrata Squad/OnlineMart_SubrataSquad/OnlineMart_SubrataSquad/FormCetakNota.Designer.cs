@@ -43,10 +43,9 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(400, 382);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonKeluar.Location = new System.Drawing.Point(600, 588);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(86, 32);
+            this.buttonKeluar.Size = new System.Drawing.Size(129, 49);
             this.buttonKeluar.TabIndex = 24;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -57,10 +56,9 @@ namespace OnlineMart_SubrataSquad
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(14, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(476, 49);
+            this.label1.Size = new System.Drawing.Size(714, 75);
             this.label1.TabIndex = 23;
             this.label1.Text = "HALAMAN CETAK NOTA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -69,23 +67,22 @@ namespace OnlineMart_SubrataSquad
             // 
             this.dataGridViewCetakNota.BackgroundColor = System.Drawing.Color.Tan;
             this.dataGridViewCetakNota.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCetakNota.Location = new System.Drawing.Point(8, 67);
-            this.dataGridViewCetakNota.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewCetakNota.Location = new System.Drawing.Point(12, 103);
             this.dataGridViewCetakNota.Name = "dataGridViewCetakNota";
             this.dataGridViewCetakNota.RowHeadersWidth = 51;
             this.dataGridViewCetakNota.RowTemplate.Height = 24;
-            this.dataGridViewCetakNota.Size = new System.Drawing.Size(477, 288);
+            this.dataGridViewCetakNota.Size = new System.Drawing.Size(716, 443);
             this.dataGridViewCetakNota.TabIndex = 25;
+            this.dataGridViewCetakNota.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCetakNota_CellContentClick);
             // 
             // buttonCetak
             // 
             this.buttonCetak.BackColor = System.Drawing.Color.Orange;
             this.buttonCetak.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCetak.ForeColor = System.Drawing.Color.White;
-            this.buttonCetak.Location = new System.Drawing.Point(309, 382);
-            this.buttonCetak.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCetak.Location = new System.Drawing.Point(464, 588);
             this.buttonCetak.Name = "buttonCetak";
-            this.buttonCetak.Size = new System.Drawing.Size(86, 32);
+            this.buttonCetak.Size = new System.Drawing.Size(129, 49);
             this.buttonCetak.TabIndex = 26;
             this.buttonCetak.Text = "&CETAK";
             this.buttonCetak.UseVisualStyleBackColor = false;
@@ -98,28 +95,26 @@ namespace OnlineMart_SubrataSquad
             this.comboBoxCetak.Items.AddRange(new object[] {
             "PDF",
             "PRINT HARDCOPY"});
-            this.comboBoxCetak.Location = new System.Drawing.Point(118, 358);
-            this.comboBoxCetak.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxCetak.Location = new System.Drawing.Point(177, 551);
             this.comboBoxCetak.Name = "comboBoxCetak";
-            this.comboBoxCetak.Size = new System.Drawing.Size(367, 21);
+            this.comboBoxCetak.Size = new System.Drawing.Size(548, 28);
             this.comboBoxCetak.TabIndex = 28;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 358);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(14, 551);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 22);
+            this.label2.Size = new System.Drawing.Size(158, 34);
             this.label2.TabIndex = 27;
             this.label2.Text = "Cetak Dalam Bentuk :";
             // 
             // FormCetakNota
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(492, 418);
+            this.ClientSize = new System.Drawing.Size(738, 643);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxCetak);
@@ -127,8 +122,8 @@ namespace OnlineMart_SubrataSquad
             this.Controls.Add(this.dataGridViewCetakNota);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormCetakNota";
+            this.Load += new System.EventHandler(this.FormCetakNota_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCetakNota)).EndInit();
             this.ResumeLayout(false);
 

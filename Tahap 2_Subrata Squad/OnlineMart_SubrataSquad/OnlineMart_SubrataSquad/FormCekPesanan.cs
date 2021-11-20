@@ -28,7 +28,7 @@ namespace OnlineMart_SubrataSquad
 
         private void FormCekPesanan_Load(object sender, EventArgs e)
         {
-            listOrder = Order.BacaData("pe.Id", pelanggan.Id.ToString());
+            listOrder = Order.BacaData("pe.Nama", pelanggan.Nama);
             FormatDataGrid();
         }
 
@@ -94,7 +94,7 @@ namespace OnlineMart_SubrataSquad
 
             if (e.ColumnIndex == dataGridViewCekPesanan.Columns["btnTerimaBarang"].Index && e.RowIndex >= 0)
             {
-                DialogResult hasil = MessageBox.Show(this, "Are you sure? ", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult hasil = MessageBox.Show(this, "Are you sure? ", "TERIMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if(hasil == DialogResult.Yes)
                 {
@@ -126,6 +126,13 @@ namespace OnlineMart_SubrataSquad
                 }
                 frm.Show();
             }
+        }
+
+        private void buttonCetakNota_Click(object sender, EventArgs e)
+        {
+            FormCetakNota form = new FormCetakNota();
+            form.Owner = this;
+            form.ShowDialog();
         }
     }
 }

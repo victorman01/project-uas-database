@@ -95,7 +95,7 @@ namespace OnlineMart_LIB
                 return true;
             }
         }
-        public static int HitungDiskon(Promo promo, int totalHarga, List<Keranjang> listKeranjang)
+        public static int HitungDiskon(Promo promo, float totalHarga, List<Keranjang> listKeranjang)
         {
             int diskon = 0;
 
@@ -103,7 +103,7 @@ namespace OnlineMart_LIB
             {
                 if (promo.Tipe == "Ongkir")
                 {
-                    diskon = totalHarga * promo.Diskon / 100;
+                    diskon = (int)totalHarga * promo.Diskon / 100;
                     if (diskon > promo.Diskon_max)
                     {
                         diskon = promo.Diskon_max;

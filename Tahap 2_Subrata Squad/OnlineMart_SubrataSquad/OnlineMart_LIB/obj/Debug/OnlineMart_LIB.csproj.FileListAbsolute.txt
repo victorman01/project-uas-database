@@ -290,7 +290,6 @@ D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_Subra
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\K4os.Hash.xxHash.dll
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\System.Numerics.Vectors.dll
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\bin\Debug\MySql.Data.xml
-D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.csprojAssemblyReference.cache
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.csproj.CoreCompileInputs.cache
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.csproj.CopyComplete
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_LIB\obj\Debug\OnlineMart_LIB.dll

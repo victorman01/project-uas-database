@@ -32,6 +32,7 @@ namespace OnlineMart_SubrataSquad
             this.dataGridViewCekPesanan = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
+            this.buttonCetakNota = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCekPesanan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,12 +40,12 @@ namespace OnlineMart_SubrataSquad
             // 
             this.dataGridViewCekPesanan.BackgroundColor = System.Drawing.Color.Tan;
             this.dataGridViewCekPesanan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCekPesanan.Location = new System.Drawing.Point(11, 82);
+            this.dataGridViewCekPesanan.Location = new System.Drawing.Point(12, 102);
             this.dataGridViewCekPesanan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewCekPesanan.Name = "dataGridViewCekPesanan";
             this.dataGridViewCekPesanan.RowHeadersWidth = 51;
             this.dataGridViewCekPesanan.RowTemplate.Height = 24;
-            this.dataGridViewCekPesanan.Size = new System.Drawing.Size(636, 354);
+            this.dataGridViewCekPesanan.Size = new System.Drawing.Size(716, 442);
             this.dataGridViewCekPesanan.TabIndex = 35;
             this.dataGridViewCekPesanan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCekPesanan_CellContentClick);
             // 
@@ -53,9 +54,9 @@ namespace OnlineMart_SubrataSquad
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(14, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(635, 60);
+            this.label1.Size = new System.Drawing.Size(714, 75);
             this.label1.TabIndex = 33;
             this.label1.Text = "HALAMAN CEK PESANAN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -65,22 +66,37 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(533, 442);
+            this.buttonKeluar.Location = new System.Drawing.Point(600, 552);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(115, 39);
+            this.buttonKeluar.Size = new System.Drawing.Size(129, 49);
             this.buttonKeluar.TabIndex = 34;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
+            // buttonCetakNota
+            // 
+            this.buttonCetakNota.BackColor = System.Drawing.Color.Orange;
+            this.buttonCetakNota.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCetakNota.ForeColor = System.Drawing.Color.White;
+            this.buttonCetakNota.Location = new System.Drawing.Point(398, 552);
+            this.buttonCetakNota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCetakNota.Name = "buttonCetakNota";
+            this.buttonCetakNota.Size = new System.Drawing.Size(185, 49);
+            this.buttonCetakNota.TabIndex = 36;
+            this.buttonCetakNota.Text = "&CETAK NOTA";
+            this.buttonCetakNota.UseVisualStyleBackColor = false;
+            this.buttonCetakNota.Click += new System.EventHandler(this.buttonCetakNota_Click);
+            // 
             // FormCekPesanan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(657, 492);
+            this.ClientSize = new System.Drawing.Size(739, 615);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonCetakNota);
             this.Controls.Add(this.dataGridViewCekPesanan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
@@ -96,5 +112,6 @@ namespace OnlineMart_SubrataSquad
         private System.Windows.Forms.DataGridView dataGridViewCekPesanan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonKeluar;
+        private System.Windows.Forms.Button buttonCetakNota;
     }
 }

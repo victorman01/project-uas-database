@@ -44,10 +44,13 @@ namespace OnlineMart_SubrataSquad
         {
             Cabang c = new Cabang();
             Barang b = new Barang();
-            int pelangganId = pelanggan.Id;
             int jumlah = int.Parse(numericUpDownJumlahBarang.Value.ToString());
             try
             {
+                if (jumlah <=0)
+                {
+                    throw new Exception("Minimum value item is 1.");
+                }
                 foreach (CabangBarang cb in listCabangBarang)
                 {
                     if (cb.Cabang.Nama == labelCabang.Text && cb.Barang.Id == int.Parse(labelIdBarang.Text))
@@ -56,7 +59,7 @@ namespace OnlineMart_SubrataSquad
                         b = new Barang(cb.Barang.Id, cb.Barang.Nama, cb.Barang.Harga, cb.Barang.Kategori);
                     }
                 }
-                Keranjang k = new Keranjang(pelanggan, b, c, int.Parse(numericUpDownJumlahBarang.Value.ToString()));
+                Keranjang k = new Keranjang(pelanggan, b, c, jumlah);
                 Keranjang.TambahData(k);
 
                 MessageBox.Show("The Items is added to The basket");               

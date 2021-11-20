@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.IO;
+using System.Drawing;
+using System.Globalization;
 
 namespace OnlineMart_LIB
 {
@@ -143,7 +146,7 @@ namespace OnlineMart_LIB
             }
         }
 
-        public static int HitungTotalHarga(int totalHarga, int ongkir, int diskon)
+        public static float HitungTotalHarga(float totalHarga, int ongkir, int diskon)
         {
             totalHarga += ongkir - diskon;
             return totalHarga;
@@ -170,6 +173,62 @@ namespace OnlineMart_LIB
             {
                 return true;
             }
+        }
+        public static void CetakNota(string nilai, string id, string namaFile, Font font)
+        {
+            List<Order> listOrder = Order.BacaData(nilai, id);
+            List<BarangOrder> listBarang = BarangOrder.BacaData(nilai, id);
+            StreamWriter file = new StreamWriter(namaFile);
+            double total = 0;
+            double totalBayar = 0;
+            double ongkir = 0;
+            double itungan = 0;
+            char pemisah = '-';
+            file.WriteLine(" ");
+            file.WriteLine("OnlineMart");
+            file.WriteLine("Jl. Raya Kalirungkut Surabaya");
+            file.WriteLine("-".PadRight(60, pemisah));
+
+            file.Write("Nama Barang".PadRight(25, ' ') + " ");
+            file.Write("JUM ");
+            file.Write("HARGA".PadLeft(7, ' ') + " ");
+            file.Write("SUBTOTAL".PadLeft(16, ' ') + " ");
+            file.WriteLine(" ");
+
+            foreach (Order o in listOrder)
+            {
+                totalBayar += o.TotalBayar;
+                ongkir += o.OngkosKirim;
+            }
+            foreach (BarangOrder bo in listBarang)
+            {
+                double harga = double.Parse(bo.Harga);
+                double subtotal = harga * bo.Jumlah;
+                total += subtotal;
+                string namaBarang = bo.Barang.Nama;
+                if (namaBarang.Length > 25)
+                {
+                    namaBarang = namaBarang.Substring(0, 25);
+                }
+                file.Write(namaBarang.PadRight(25, ' ') + " ");
+                file.Write(bo.Jumlah.ToString().PadLeft(3, ' ') + "   ");
+                file.Write(harga.ToString("C0", new CultureInfo("id")).PadRight(14, ' '));
+                file.Write(subtotal.ToString("C0", new CultureInfo("id")).PadRight(17, ' ') + " ");
+                file.WriteLine(" ");
+            }
+            itungan = total + ongkir;
+            double diskon = itungan - totalBayar;
+            file.WriteLine("-".PadRight(60, pemisah));
+            file.WriteLine("TOTAL = " + total.ToString("C0", new CultureInfo("id")).PadRight(10, ' '));
+            file.WriteLine("DISKON = " + diskon.ToString("C0", new CultureInfo("id")).PadRight(10, ' '));
+            file.WriteLine("ONGKOS KIRIM = " + ongkir.ToString("C0", new CultureInfo("id")).PadRight(10, ' '));
+            file.WriteLine("TOTAL BAYAR = " + totalBayar.ToString("C0", new CultureInfo("id")).PadRight(10, ' '));
+            file.WriteLine("-".PadRight(60, pemisah));
+            file.WriteLine("Terima Kasih!");
+            file.WriteLine("-".PadRight(60, '-'));
+            file.Close();
+            Cetak c = new Cetak(namaFile, font, 10, 9, 9, 9);
+            c.CetakKePrinter();
         }
         #endregion
     }
