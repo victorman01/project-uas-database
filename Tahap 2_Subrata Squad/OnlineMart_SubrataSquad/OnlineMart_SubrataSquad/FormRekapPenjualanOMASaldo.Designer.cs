@@ -32,15 +32,14 @@ namespace OnlineMart_SubrataSquad
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewRekapPenjualanOMA = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButtonTahun = new System.Windows.Forms.RadioButton();
+            this.numericUpDownTahun = new System.Windows.Forms.NumericUpDown();
+            this.comboBoxBulan = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButtonBulan = new System.Windows.Forms.RadioButton();
-            this.comboBoxCBRekapPenjualanOMA = new System.Windows.Forms.ComboBox();
-            this.textBoxCBRekapPenjualanOMA = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRekapPenjualanOMA)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTahun)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -60,112 +59,104 @@ namespace OnlineMart_SubrataSquad
             // 
             this.dataGridViewRekapPenjualanOMA.BackgroundColor = System.Drawing.Color.Tan;
             this.dataGridViewRekapPenjualanOMA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRekapPenjualanOMA.Location = new System.Drawing.Point(9, 220);
+            this.dataGridViewRekapPenjualanOMA.Location = new System.Drawing.Point(9, 174);
             this.dataGridViewRekapPenjualanOMA.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewRekapPenjualanOMA.Name = "dataGridViewRekapPenjualanOMA";
             this.dataGridViewRekapPenjualanOMA.RowHeadersWidth = 51;
             this.dataGridViewRekapPenjualanOMA.RowTemplate.Height = 24;
-            this.dataGridViewRekapPenjualanOMA.Size = new System.Drawing.Size(420, 204);
+            this.dataGridViewRekapPenjualanOMA.Size = new System.Drawing.Size(420, 238);
             this.dataGridViewRekapPenjualanOMA.TabIndex = 19;
             this.dataGridViewRekapPenjualanOMA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRekapPenjualanOMA_CellContentClick);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.panel1.Controls.Add(this.radioButtonTahun);
+            this.panel1.Controls.Add(this.numericUpDownTahun);
+            this.panel1.Controls.Add(this.comboBoxBulan);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.radioButtonBulan);
-            this.panel1.Controls.Add(this.comboBoxCBRekapPenjualanOMA);
-            this.panel1.Controls.Add(this.textBoxCBRekapPenjualanOMA);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(9, 101);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(9, 89);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(420, 115);
+            this.panel1.Size = new System.Drawing.Size(420, 81);
             this.panel1.TabIndex = 17;
             // 
-            // radioButtonTahun
+            // numericUpDownTahun
             // 
-            this.radioButtonTahun.AutoSize = true;
-            this.radioButtonTahun.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTahun.Location = new System.Drawing.Point(232, 74);
-            this.radioButtonTahun.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButtonTahun.Name = "radioButtonTahun";
-            this.radioButtonTahun.Size = new System.Drawing.Size(65, 21);
-            this.radioButtonTahun.TabIndex = 15;
-            this.radioButtonTahun.TabStop = true;
-            this.radioButtonTahun.Text = "Tahun";
-            this.radioButtonTahun.UseVisualStyleBackColor = true;
+            this.numericUpDownTahun.Location = new System.Drawing.Point(114, 14);
+            this.numericUpDownTahun.Maximum = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            this.numericUpDownTahun.Minimum = new decimal(new int[] {
+            1999,
+            0,
+            0,
+            0});
+            this.numericUpDownTahun.Name = "numericUpDownTahun";
+            this.numericUpDownTahun.Size = new System.Drawing.Size(244, 20);
+            this.numericUpDownTahun.TabIndex = 23;
+            this.numericUpDownTahun.Value = new decimal(new int[] {
+            2021,
+            0,
+            0,
+            0});
+            this.numericUpDownTahun.ValueChanged += new System.EventHandler(this.numericUpDownTahun_ValueChanged);
+            // 
+            // comboBoxBulan
+            // 
+            this.comboBoxBulan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBulan.FormattingEnabled = true;
+            this.comboBoxBulan.Items.AddRange(new object[] {
+            "Semua Bulan",
+            "Januari",
+            "Februari",
+            "Maret",
+            "April",
+            "Mei",
+            "Juni",
+            "Juli",
+            "Agustus",
+            "September",
+            "Oktober",
+            "November",
+            "Desember"});
+            this.comboBoxBulan.Location = new System.Drawing.Point(114, 39);
+            this.comboBoxBulan.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxBulan.Name = "comboBoxBulan";
+            this.comboBoxBulan.Size = new System.Drawing.Size(244, 21);
+            this.comboBoxBulan.TabIndex = 22;
+            this.comboBoxBulan.SelectedIndexChanged += new System.EventHandler(this.comboBoxBulan_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(82, 76);
+            this.label2.Location = new System.Drawing.Point(52, 14);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Filter :";
+            this.label2.Size = new System.Drawing.Size(56, 17);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Tahun :";
             // 
-            // radioButtonBulan
+            // label3
             // 
-            this.radioButtonBulan.AutoSize = true;
-            this.radioButtonBulan.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonBulan.Location = new System.Drawing.Point(154, 74);
-            this.radioButtonBulan.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButtonBulan.Name = "radioButtonBulan";
-            this.radioButtonBulan.Size = new System.Drawing.Size(59, 21);
-            this.radioButtonBulan.TabIndex = 13;
-            this.radioButtonBulan.TabStop = true;
-            this.radioButtonBulan.Text = "Bulan";
-            this.radioButtonBulan.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxCBRekapPenjualanOMA
-            // 
-            this.comboBoxCBRekapPenjualanOMA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCBRekapPenjualanOMA.FormattingEnabled = true;
-            this.comboBoxCBRekapPenjualanOMA.Items.AddRange(new object[] {
-            "Tanggal",
-            "Jumlah Isi",
-            "Pelanggan"});
-            this.comboBoxCBRekapPenjualanOMA.Location = new System.Drawing.Point(154, 14);
-            this.comboBoxCBRekapPenjualanOMA.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxCBRekapPenjualanOMA.Name = "comboBoxCBRekapPenjualanOMA";
-            this.comboBoxCBRekapPenjualanOMA.Size = new System.Drawing.Size(246, 21);
-            this.comboBoxCBRekapPenjualanOMA.TabIndex = 7;
-            // 
-            // textBoxCBRekapPenjualanOMA
-            // 
-            this.textBoxCBRekapPenjualanOMA.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCBRekapPenjualanOMA.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxCBRekapPenjualanOMA.Location = new System.Drawing.Point(154, 38);
-            this.textBoxCBRekapPenjualanOMA.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxCBRekapPenjualanOMA.Name = "textBoxCBRekapPenjualanOMA";
-            this.textBoxCBRekapPenjualanOMA.Size = new System.Drawing.Size(246, 24);
-            this.textBoxCBRekapPenjualanOMA.TabIndex = 6;
-            this.textBoxCBRekapPenjualanOMA.Text = "Type Here...";
-            this.textBoxCBRekapPenjualanOMA.TextChanged += new System.EventHandler(this.textBoxCBRekapPenjualanOMA_TextChanged);
-            this.textBoxCBRekapPenjualanOMA.Enter += new System.EventHandler(this.textBoxCBRekapPenjualanOMA_Enter);
-            this.textBoxCBRekapPenjualanOMA.Leave += new System.EventHandler(this.textBoxCBRekapPenjualanOMA_Leave);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 14);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 17);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Cari Berdasarkan :";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(58, 39);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 17);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Bulan :";
             // 
             // buttonKeluar
             // 
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(339, 429);
+            this.buttonKeluar.Location = new System.Drawing.Point(339, 416);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(90, 41);
@@ -178,7 +169,7 @@ namespace OnlineMart_SubrataSquad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 473);
+            this.ClientSize = new System.Drawing.Size(436, 461);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridViewRekapPenjualanOMA);
             this.Controls.Add(this.panel1);
@@ -190,6 +181,7 @@ namespace OnlineMart_SubrataSquad
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRekapPenjualanOMA)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTahun)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,12 +191,10 @@ namespace OnlineMart_SubrataSquad
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewRekapPenjualanOMA;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton radioButtonTahun;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButtonBulan;
-        private System.Windows.Forms.ComboBox comboBoxCBRekapPenjualanOMA;
-        private System.Windows.Forms.TextBox textBoxCBRekapPenjualanOMA;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonKeluar;
+        private System.Windows.Forms.NumericUpDown numericUpDownTahun;
+        private System.Windows.Forms.ComboBox comboBoxBulan;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

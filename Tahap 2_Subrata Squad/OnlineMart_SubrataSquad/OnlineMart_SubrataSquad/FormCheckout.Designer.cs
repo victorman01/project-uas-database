@@ -1,4 +1,4 @@
-﻿
+
 namespace OnlineMart_SubrataSquad
 {
     partial class FormCheckout
@@ -330,7 +330,7 @@ namespace OnlineMart_SubrataSquad
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelDiskon);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormCheckout";
             this.Load += new System.EventHandler(this.FormCheckout_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeals)).EndInit();

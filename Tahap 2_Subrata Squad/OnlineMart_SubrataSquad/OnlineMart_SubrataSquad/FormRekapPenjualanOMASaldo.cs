@@ -25,25 +25,6 @@ namespace OnlineMart_SubrataSquad
             this.Close();
         }
 
-        private void textBoxCBRekapPenjualanOMA_Enter(object sender, EventArgs e)
-        {
-            if (textBoxCBRekapPenjualanOMA.Text == "Type Here...")
-            {
-                textBoxCBRekapPenjualanOMA.Text = "";
-                textBoxCBRekapPenjualanOMA.ForeColor = Color.Black;
-                textBoxCBRekapPenjualanOMA.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxCBRekapPenjualanOMA_Leave(object sender, EventArgs e)
-        {
-            if (textBoxCBRekapPenjualanOMA.Text == "")
-            {
-                textBoxCBRekapPenjualanOMA.Text = "Type Here...";
-                textBoxCBRekapPenjualanOMA.ForeColor = Color.Silver;
-                textBoxCBRekapPenjualanOMA.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
         public void FormatDataGrid()
         {
             dataGridViewRekapPenjualanOMA.DataSource = null;
@@ -111,40 +92,63 @@ namespace OnlineMart_SubrataSquad
             }
         }
 
-        private void textBoxCBRekapPenjualanOMA_TextChanged(object sender, EventArgs e)
+        private void Filter()
         {
-            FormatDataGrid();
-            string kriteria = "";
-            switch (comboBoxCBRekapPenjualanOMA.Text)
+            int bulan = 0;
+            switch (comboBoxBulan.Text)
             {
-                case "Tanggal":
-                    kriteria = "ris.waktu";
+                case "Semua Bulan":
+                    bulan = 0;
                     break;
-                case "Jumlah Isi":
-                    kriteria = "ris.isi_saldo";
+                case "Januari":
+                    bulan = 1;
                     break;
-                case "Pelanggan":
-                    kriteria = "p.nama";
+                case "Februari":
+                    bulan = 2;
+                    break;
+                case "Maret":
+                    bulan = 3;
+                    break;
+                case "April":
+                    bulan = 4;
+                    break;
+                case "Mei":
+                    bulan = 5;
+                    break;
+                case "Juni":
+                    bulan = 6;
+                    break;
+                case "Juli":
+                    bulan = 7;
+                    break;
+                case "Agustus":
+                    bulan = 8;
+                    break;
+                case "September":
+                    bulan = 9;
+                    break;
+                case "Oktober":
+                    bulan = 10;
+                    break;
+                case "November":
+                    bulan = 11;
+                    break;
+                case "Desember":
+                    bulan = 12;
                     break;
             }
-            if (textBoxCBRekapPenjualanOMA.Text == "Type Here...")
-            {
-                listPenjualanOMASaldo = RiwayatIsiSaldo.BacaData(kriteria, "");
-            }
-            else
-            {
-                listPenjualanOMASaldo = RiwayatIsiSaldo.BacaData(kriteria, textBoxCBRekapPenjualanOMA.Text);
-            }
-
-            if (radioButtonBulan.Checked)
-            {
-                listPenjualanOMASaldo = RiwayatIsiSaldo.BacaData("month(ris.waktu)", "");
-            }
-            else if(radioButtonTahun.Checked)
-            {
-                listPenjualanOMASaldo = RiwayatIsiSaldo.BacaData("year(ris.waktu)", "");
-            }
+            listPenjualanOMASaldo = RiwayatIsiSaldo.BacaData(numericUpDownTahun.Value.ToString(), bulan);
             TampilDataGrid();
+        }
+
+        private void comboBoxBulan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Filter();
+        }
+
+        private void numericUpDownTahun_ValueChanged(object sender, EventArgs e)
+        {
+            Filter();
         }
     }
 }

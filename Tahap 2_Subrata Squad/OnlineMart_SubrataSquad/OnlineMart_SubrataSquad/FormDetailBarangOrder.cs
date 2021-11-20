@@ -15,6 +15,7 @@ namespace OnlineMart_SubrataSquad
     {
         public string id;
         List<BarangOrder> listBarangOrder = new List<BarangOrder>();
+
         public FormDetailBarangOrder()
         {
             InitializeComponent();

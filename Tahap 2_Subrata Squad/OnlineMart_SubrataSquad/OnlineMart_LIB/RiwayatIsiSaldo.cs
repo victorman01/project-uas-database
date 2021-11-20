@@ -62,6 +62,28 @@ namespace OnlineMart_LIB
             }
             return listRiwayatIsiSaldo;
         }
+
+        public static List<RiwayatIsiSaldo> BacaData(string tahun, int bulan)
+        {
+            string sql = "select ris.id, ris.waktu, ris.isi_saldo, p.id, p.nama, p.email, p.password, p.telepon, p.saldo,p.poin from riwayat_isi_saldos ris inner join pelanggans p on ris.pelanggans_id = p.id where year(ris.waktu) like '%" + tahun + "%' ";
+
+            if (bulan != 0)
+            {
+                sql += " AND month(ris.waktu) like " + bulan;
+            }
+
+            MySqlDataReader hasil = Connection.JalankanPerintahQuery(sql);
+
+            List<RiwayatIsiSaldo> listRiwayatIsiSaldo = new List<RiwayatIsiSaldo>();
+            while (hasil.Read() == true)
+            {
+                Pelanggan p = new Pelanggan(hasil.GetInt32(3), hasil.GetString(4), hasil.GetString(5), hasil.GetString(6), hasil.GetString(7), hasil.GetInt32(8), hasil.GetInt32(9));
+                RiwayatIsiSaldo k = new RiwayatIsiSaldo(hasil.GetInt32(0), hasil.GetDateTime(1), hasil.GetInt32(2), p);
+                listRiwayatIsiSaldo.Add(k);
+            }
+            return listRiwayatIsiSaldo;
+        }
+
         public static void TambahData(RiwayatIsiSaldo r)
         {
             string sql = "insert into riwayat_isi_saldos (waktu, isi_saldo, pelanggans_id)" +

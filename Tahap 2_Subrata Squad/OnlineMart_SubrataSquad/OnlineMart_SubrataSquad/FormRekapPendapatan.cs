@@ -24,26 +24,6 @@ namespace OnlineMart_SubrataSquad
             this.Close();
         }
 
-        private void textBoxCBListPendapatan_Enter(object sender, EventArgs e)
-        {
-            if (textBoxCBListPendapatan.Text == "Type Here...")
-            {
-                textBoxCBListPendapatan.Text = "";
-                textBoxCBListPendapatan.ForeColor = Color.Black;
-                textBoxCBListPendapatan.Font = new Font("Tahoma", 10, FontStyle.Regular);
-            }
-        }
-
-        private void textBoxCBListPendapatan_Leave(object sender, EventArgs e)
-        {
-            if (textBoxCBListPendapatan.Text == "")
-            {
-                textBoxCBListPendapatan.Text = "Type Here...";
-                textBoxCBListPendapatan.ForeColor = Color.Silver;
-                textBoxCBListPendapatan.Font = new Font("Tahoma", 10, FontStyle.Italic);
-            }
-        }
-
         private void FormRekapPendapatan_Load(object sender, EventArgs e)
         {
             FormatDataGrid();
@@ -100,19 +80,63 @@ namespace OnlineMart_SubrataSquad
             dataGridViewRekapPendapatan.ReadOnly = true;
         }
 
-        private void textBoxCBListPendapatan_TextChanged(object sender, EventArgs e)
+        private void Filter()
         {
-            FormatDataGrid();
-            if (comboBoxCBListPendapatan.Text == "ID Order")
+            int bulan = 0;
+            switch (comboBoxBulan.Text)
             {
-                listOrder = Order.BacaData("o.Id", textBoxCBListPendapatan.Text);
+                case "Semua Bulan":
+                    bulan = 0;
+                    break;
+                case "Januari":
+                    bulan = 1;
+                    break;
+                case "Februari":
+                    bulan = 2;
+                    break;
+                case "Maret":
+                    bulan = 3;
+                    break;
+                case "April":
+                    bulan = 4;
+                    break;
+                case "Mei":
+                    bulan = 5;
+                    break;
+                case "Juni":
+                    bulan = 6;
+                    break;
+                case "Juli":
+                    bulan = 7;
+                    break;
+                case "Agustus":
+                    bulan = 8;
+                    break;
+                case "September":
+                    bulan = 9;
+                    break;
+                case "Oktober":
+                    bulan = 10;
+                    break;
+                case "November":
+                    bulan = 11;
+                    break;
+                case "Desember":
+                    bulan = 12;
+                    break;
             }
+            listOrder = Order.BacaData("", bulan, numericUpDownTahun.Value.ToString());
             TampilDataGrid();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void numericUpDownTahun_ValueChanged(object sender, EventArgs e)
         {
-            listOrder = Order.BacaData("o.Id", textBoxCBListPendapatan.Text);
+            Filter();
+        }
+
+        private void comboBoxBulan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Filter();
         }
     }
 }
