@@ -50,7 +50,6 @@
     <Compile Include="Cabang.cs" />
     <Compile Include="CabangBarang.cs" />
     <Compile Include="Cetak.cs" />
-    <Compile Include="Chat.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="Driver.cs" />
     <Compile Include="Gift.cs" />
