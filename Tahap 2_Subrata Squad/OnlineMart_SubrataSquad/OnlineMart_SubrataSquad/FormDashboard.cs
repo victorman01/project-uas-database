@@ -20,10 +20,12 @@ namespace OnlineMart_SubrataSquad
 
         private void FormUtama_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
             try
             {
                 Connection conDB = new Connection();
+                this.WindowState = FormWindowState.Maximized;
+                FormChat frm = new FormChat();
+                frm.Owner = this;
                 MessageBox.Show("Connection success", "Information");
             }
             catch(Exception ex)

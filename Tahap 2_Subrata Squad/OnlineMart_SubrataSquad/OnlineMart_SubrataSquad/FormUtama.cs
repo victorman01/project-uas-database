@@ -18,8 +18,6 @@ namespace OnlineMart_SubrataSquad
         public Driver driver;
         public string loginAs;
 
-        public List<Chat> listChat = new List<Chat>();
-
         public FormUtama()
         {
             InitializeComponent();

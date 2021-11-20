@@ -48,7 +48,6 @@ namespace OnlineMart_SubrataSquad
             this.buttonKirim.TabIndex = 27;
             this.buttonKirim.Text = "&KIRIM";
             this.buttonKirim.UseVisualStyleBackColor = false;
-            this.buttonKirim.Click += new System.EventHandler(this.buttonKirim_Click);
             // 
             // label1
             // 
@@ -109,7 +108,6 @@ namespace OnlineMart_SubrataSquad
             this.Controls.Add(this.buttonKeluar);
             this.Name = "FormChat";
             this.Text = "FormChat";
-            this.Load += new System.EventHandler(this.FormChat_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
