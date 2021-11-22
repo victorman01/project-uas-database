@@ -162,17 +162,17 @@ namespace OnlineMart_SubrataSquad
             }
             else if (e.ColumnIndex == dataGridViewListPengiriman.Columns["btnChat"].Index && e.RowIndex >= 0)
             {
+                string pelanggan = dataGridViewListPengiriman.CurrentRow.Cells["pelanggans_id"].Value.ToString();
                 FormChat frm = new FormChat();
                 foreach (Order o in listOrder)
                 {
-                    if (o.Id == int.Parse(idOrder))
+                    if (o.Pelanggan.Nama == pelanggan)
                     {
-                        frm.order = o;
-                        frm.driver = driver;
-                        frm.pelanggan = null;
+                        frm.pelanggan = o.Pelanggan;
                     }
                 }
-                frm.Show();
+                frm.Owner = this;
+                frm.ShowDialog();
             }
         }
     }

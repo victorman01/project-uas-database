@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace OnlineMart_SubrataSquad
         public Pelanggan pelanggan;
         public Driver driver;
         public string loginAs;
+
 
         public FormUtama()
         {
@@ -141,7 +143,7 @@ namespace OnlineMart_SubrataSquad
                     labelNama.Text = "Pegawai - " + pegawai.Nama;
                     break;
                 case "Pelanggan":
-                    labelNama.Text = "Pelanggan - " + pelanggan.Nama;
+                    labelNama.Text = "Pelanggan - " + pelanggan.Nama + "- Saldo : " +pelanggan.Saldo.ToString("C0",new CultureInfo("id"));
                     break;
                 case "Driver":
                     labelNama.Text = "Driver - " + driver.Nama;

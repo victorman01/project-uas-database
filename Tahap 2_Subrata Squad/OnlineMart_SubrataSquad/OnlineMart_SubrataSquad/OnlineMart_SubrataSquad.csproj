@@ -69,12 +69,6 @@
     <Compile Include="FormCetakNota.designer.cs">
       <DependentUpon>FormCetakNota.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormChat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormChat.Designer.cs">
-      <DependentUpon>FormChat.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormCheckout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,12 +111,6 @@
     <Compile Include="FormRegistrasiDriver.designer.cs">
       <DependentUpon>FormRegistrasiDriver.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormKontak.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormKontak.Designer.cs">
-      <DependentUpon>FormKontak.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormPromo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,11 +123,11 @@
     <Compile Include="FormHistory.designer.cs">
       <DependentUpon>FormHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormHubungi.cs">
+    <Compile Include="FormChat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormHubungi.designer.cs">
-      <DependentUpon>FormHubungi.cs</DependentUpon>
+    <Compile Include="FormChat.designer.cs">
+      <DependentUpon>FormChat.cs</DependentUpon>
     </Compile>
     <Compile Include="FormIsiSaldo.cs">
       <SubType>Form</SubType>
@@ -368,9 +356,6 @@
     <EmbeddedResource Include="FormCetakNota.resx">
       <DependentUpon>FormCetakNota.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormChat.resx">
-      <DependentUpon>FormChat.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormCheckout.resx">
       <DependentUpon>FormCheckout.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,17 +377,14 @@
     <EmbeddedResource Include="FormRegistrasiDriver.resx">
       <DependentUpon>FormRegistrasiDriver.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormKontak.resx">
-      <DependentUpon>FormKontak.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormPromo.resx">
       <DependentUpon>FormPromo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHistory.resx">
       <DependentUpon>FormHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormHubungi.resx">
-      <DependentUpon>FormHubungi.cs</DependentUpon>
+    <EmbeddedResource Include="FormChat.resx">
+      <DependentUpon>FormChat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormIsiSaldo.resx">
       <DependentUpon>FormIsiSaldo.cs</DependentUpon>

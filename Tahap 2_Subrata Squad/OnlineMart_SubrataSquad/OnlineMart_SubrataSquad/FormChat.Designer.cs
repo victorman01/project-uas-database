@@ -29,36 +29,40 @@ namespace OnlineMart_SubrataSquad
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonKirim = new System.Windows.Forms.Button();
+            this.buttonKirimChat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.listBoxChat = new System.Windows.Forms.ListBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxChat = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonKirim
+            // buttonKirimChat
             // 
-            this.buttonKirim.BackColor = System.Drawing.Color.Orange;
-            this.buttonKirim.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKirim.ForeColor = System.Drawing.Color.White;
-            this.buttonKirim.Location = new System.Drawing.Point(412, 486);
-            this.buttonKirim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonKirim.Name = "buttonKirim";
-            this.buttonKirim.Size = new System.Drawing.Size(115, 39);
-            this.buttonKirim.TabIndex = 27;
-            this.buttonKirim.Text = "&KIRIM";
-            this.buttonKirim.UseVisualStyleBackColor = false;
+            this.buttonKirimChat.BackColor = System.Drawing.Color.Orange;
+            this.buttonKirimChat.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonKirimChat.ForeColor = System.Drawing.Color.White;
+            this.buttonKirimChat.Location = new System.Drawing.Point(404, 5);
+            this.buttonKirimChat.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonKirimChat.Name = "buttonKirimChat";
+            this.buttonKirimChat.Size = new System.Drawing.Size(70, 27);
+            this.buttonKirimChat.TabIndex = 36;
+            this.buttonKirimChat.Text = "Kirim";
+            this.buttonKirimChat.UseVisualStyleBackColor = false;
+            this.buttonKirimChat.Click += new System.EventHandler(this.buttonKirimChat_Click);
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Orange;
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(635, 60);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "HALAMAN CHAT";
+            this.label1.Size = new System.Drawing.Size(476, 49);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "CHAT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonKeluar
@@ -66,59 +70,77 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(533, 487);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonKeluar.Location = new System.Drawing.Point(399, 246);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(115, 39);
-            this.buttonKeluar.TabIndex = 25;
+            this.buttonKeluar.Size = new System.Drawing.Size(86, 32);
+            this.buttonKeluar.TabIndex = 34;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // listBoxChat
             // 
-            this.listBoxChat.BackColor = System.Drawing.Color.Tan;
+            this.listBoxChat.BackColor = System.Drawing.Color.White;
+            this.listBoxChat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxChat.FormattingEnabled = true;
-            this.listBoxChat.ItemHeight = 16;
-            this.listBoxChat.Location = new System.Drawing.Point(13, 73);
+            this.listBoxChat.ItemHeight = 19;
+            this.listBoxChat.Location = new System.Drawing.Point(7, 63);
+            this.listBoxChat.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxChat.Name = "listBoxChat";
-            this.listBoxChat.Size = new System.Drawing.Size(635, 372);
-            this.listBoxChat.TabIndex = 28;
+            this.listBoxChat.Size = new System.Drawing.Size(478, 137);
+            this.listBoxChat.TabIndex = 37;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel1.Controls.Add(this.textBoxChat);
+            this.panel1.Controls.Add(this.buttonKirimChat);
+            this.panel1.Location = new System.Drawing.Point(8, 206);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(477, 35);
+            this.panel1.TabIndex = 38;
             // 
             // textBoxChat
             // 
-            this.textBoxChat.BackColor = System.Drawing.Color.Bisque;
-            this.textBoxChat.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxChat.Location = new System.Drawing.Point(12, 451);
-            this.textBoxChat.Multiline = true;
+            this.textBoxChat.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxChat.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBoxChat.Location = new System.Drawing.Point(5, 8);
+            this.textBoxChat.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxChat.Name = "textBoxChat";
-            this.textBoxChat.Size = new System.Drawing.Size(632, 27);
-            this.textBoxChat.TabIndex = 29;
+            this.textBoxChat.Size = new System.Drawing.Size(396, 21);
+            this.textBoxChat.TabIndex = 0;
+            this.textBoxChat.Text = "Type Here...";
+            this.textBoxChat.Enter += new System.EventHandler(this.textBoxChat_Enter);
+            this.textBoxChat.Leave += new System.EventHandler(this.textBoxChat_Leave);
             // 
             // FormChat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(657, 532);
-            this.Controls.Add(this.textBoxChat);
+            this.ClientSize = new System.Drawing.Size(494, 284);
+            this.ControlBox = false;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.listBoxChat);
-            this.Controls.Add(this.buttonKirim);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormChat";
-            this.Text = "FormChat";
+            this.Load += new System.EventHandler(this.FormChat_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button buttonKirim;
+        private System.Windows.Forms.Button buttonKirimChat;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.ListBox listBoxChat;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxChat;
     }
 }

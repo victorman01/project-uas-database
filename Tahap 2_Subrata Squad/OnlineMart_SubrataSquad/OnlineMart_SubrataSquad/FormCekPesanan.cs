@@ -91,6 +91,7 @@ namespace OnlineMart_SubrataSquad
             bool statusUbah;
             string idOrder = dataGridViewCekPesanan.CurrentRow.Cells["Id"].Value.ToString();
             string statusKirim = dataGridViewCekPesanan.CurrentRow.Cells["Status"].Value.ToString();
+            string drivers = dataGridViewCekPesanan.CurrentRow.Cells["Driver"].Value.ToString();
 
             if (e.ColumnIndex == dataGridViewCekPesanan.Columns["btnTerimaBarang"].Index && e.RowIndex >= 0)
             {
@@ -117,14 +118,13 @@ namespace OnlineMart_SubrataSquad
                 FormChat frm = new FormChat();
                 foreach (Order o in listOrder)
                 {
-                    if (o.Id == int.Parse(idOrder))
+                    if (o.Driver.Nama == drivers)
                     {
-                        frm.order = o;
-                        frm.driver = null;
-                        frm.pelanggan = pelanggan;
+                        frm.driver = o.Driver;
                     }
                 }
-                frm.Show();
+                frm.Owner = this;
+                frm.ShowDialog();
             }
         }
 
