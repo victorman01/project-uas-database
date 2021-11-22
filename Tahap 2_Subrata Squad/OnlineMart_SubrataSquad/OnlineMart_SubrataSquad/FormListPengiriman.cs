@@ -167,17 +167,24 @@ namespace OnlineMart_SubrataSquad
             }
             else if (e.ColumnIndex == dataGridViewListPengiriman.Columns["btnChat"].Index && e.RowIndex >= 0)
             {
-                string pelanggan = dataGridViewListPengiriman.CurrentRow.Cells["pelanggans_id"].Value.ToString();
-                FormChat frm = new FormChat();
-                foreach (Order o in listOrder)
+                if(statusKirim == "Accepted")
                 {
-                    if (o.Pelanggan.Nama == pelanggan)
+                    string pelanggan = dataGridViewListPengiriman.CurrentRow.Cells["pelanggans_id"].Value.ToString();
+                    FormChat frm = new FormChat();
+                    foreach (Order o in listOrder)
                     {
-                        frm.pelanggan = o.Pelanggan;
+                        if (o.Pelanggan.Nama == pelanggan)
+                        {
+                            frm.pelanggan = o.Pelanggan;
+                        }
                     }
+                    frm.Owner = this;
+                    frm.ShowDialog();
                 }
-                frm.Owner = this;
-                frm.ShowDialog();
+                else if(statusKirim == "Declined" || statusKirim == "Waiting")
+                {
+                    MessageBox.Show("Please accept the order first.");
+                }
             }
         }
     }
