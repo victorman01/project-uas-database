@@ -29,6 +29,7 @@ namespace OnlineMart_SubrataSquad
                 DialogResult dR = MessageBox.Show("Are You Sure?", "Confirmation", MessageBoxButtons.YesNo);
                 if (dR == DialogResult.Yes)
                 {
+                    FormUtama frm = (FormUtama)this.MdiParent;
                     float topUpAmount = float.Parse(textBoxJumlahPengisianSaldo.Text);
                     MetodePembayaran metodePembayaranDipilih = (MetodePembayaran)comboBoxAlatIsiSaldo.SelectedItem;
                     Pelanggan.UpdateSaldo(topUpAmount, pelanggan.Id);
@@ -41,6 +42,7 @@ namespace OnlineMart_SubrataSquad
                     listBoxSaldo.Items.Add("Saldo: " + pelanggan.Saldo.ToString("C0",new CultureInfo("id")));
                     RiwayatIsiSaldo ris = new RiwayatIsiSaldo(DateTime.Now, (int)topUpAmount, pelanggan);
                     RiwayatIsiSaldo.TambahData(ris);
+                    frm.FormUtamaKonsumen_Load(sender, e);
                     MessageBox.Show("Top up success.", "Information");
                 }
                 else

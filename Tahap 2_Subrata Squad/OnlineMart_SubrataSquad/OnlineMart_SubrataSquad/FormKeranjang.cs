@@ -50,6 +50,8 @@ namespace OnlineMart_SubrataSquad
 
         public void FormKeranjang_Load(object sender, EventArgs e)
         {
+            FormUtama frm = (FormUtama)this.MdiParent;
+            frm.FormUtamaKonsumen_Load(sender, e);
             FormatDataGrid();
             listKeranjang = Keranjang.BacaData(pelanggan.Id);
 

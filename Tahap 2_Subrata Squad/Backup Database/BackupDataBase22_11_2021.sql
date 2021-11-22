@@ -2,7 +2,7 @@
 --
 -- Host: 127.0.0.1    Database: online_mart
 -- ------------------------------------------------------
--- Server version	5.5.5-10.4.21-MariaDB
+-- Server version	5.5.5-10.4.20-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -69,7 +69,7 @@ CREATE TABLE `barangs_orders` (
 
 LOCK TABLES `barangs_orders` WRITE;
 /*!40000 ALTER TABLE `barangs_orders` DISABLE KEYS */;
-INSERT INTO `barangs_orders` VALUES (1,4,2,2000),(1,5,2,2000),(3,7,5,10000),(4,4,2,20000),(11,6,1,1000000),(11,8,9,1000000),(11,9,2,10000000),(11,10,8,10000000),(11,11,10,10000000),(11,12,4,10000000),(11,14,4,10000000),(11,15,3,10000000),(11,16,1,10000000);
+INSERT INTO `barangs_orders` VALUES (1,17,3,2000),(1,19,3,2000),(1,20,4,2000),(1,23,2,2000),(1,24,2,2000),(1,26,2,2000),(3,18,2,10000),(3,21,1,10000),(3,28,5,10000),(4,17,2,20000),(4,21,5,20000),(4,26,2,20000),(8,19,5,50000),(8,26,3,50000),(9,22,3,5000),(11,23,1,10000000),(11,25,1,10000000),(11,26,1,10000000),(11,27,1,10000000);
 /*!40000 ALTER TABLE `barangs_orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -125,7 +125,7 @@ CREATE TABLE `cabangs_barangs` (
 
 LOCK TABLES `cabangs_barangs` WRITE;
 /*!40000 ALTER TABLE `cabangs_barangs` DISABLE KEYS */;
-INSERT INTO `cabangs_barangs` VALUES (1,1,11),(1,3,10),(1,5,20),(3,1,15),(4,1,10),(8,3,10),(9,2,10),(11,1,970);
+INSERT INTO `cabangs_barangs` VALUES (1,1,2),(1,3,7),(1,5,14),(3,1,7),(4,1,-1),(8,3,-1),(9,2,7),(11,1,45);
 /*!40000 ALTER TABLE `cabangs_barangs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -149,7 +149,7 @@ CREATE TABLE `chats` (
   KEY `fk_chats_drivers_idx` (`driver`),
   CONSTRAINT `fk_chats_drivers` FOREIGN KEY (`driver`) REFERENCES `drivers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_chats_pelanggans` FOREIGN KEY (`pelanggan`) REFERENCES `pelanggans` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -158,7 +158,7 @@ CREATE TABLE `chats` (
 
 LOCK TABLES `chats` WRITE;
 /*!40000 ALTER TABLE `chats` DISABLE KEYS */;
-INSERT INTO `chats` VALUES (14,'2021-11-22 21:39:02',5,11,'Halo','Sent','Pelanggan'),(15,'2021-11-22 21:39:03',5,11,'Halo','Sent','Pelanggan'),(16,'2021-11-22 21:39:03',5,11,'Halo','Sent','Pelanggan'),(17,'2021-11-22 21:39:04',5,11,'Halo','Sent','Pelanggan'),(18,'2021-11-22 21:39:04',5,11,'Halo','Sent','Pelanggan'),(19,'2021-11-22 21:39:04',5,11,'Halo','Sent','Pelanggan'),(20,'2021-11-22 21:39:04',5,11,'Halo','Sent','Pelanggan'),(21,'2021-11-22 21:45:46',5,11,'Halo ada apa?','Seen','Driver');
+INSERT INTO `chats` VALUES (22,'2021-11-22 23:37:50',5,2,'Halo Pak','Sent','Pelanggan'),(23,'2021-11-22 23:37:58',5,2,'Kapan ya pesanan saya dikirim?','Sent','Pelanggan'),(24,'2021-11-22 23:40:44',5,11,'Halo Pak','Seen','Pelanggan'),(25,'2021-11-22 23:40:52',5,11,'Pesanan saya apakah sudah dikirim ya?','Seen','Pelanggan'),(26,'2021-11-22 23:40:56',5,11,'Terima kasih..','Seen','Pelanggan'),(27,'2021-11-22 23:41:29',5,11,'Besok Rabu ya','Seen','Driver'),(28,'2021-11-22 23:41:37',5,11,'Akan dikabari jika sudah sampai','Seen','Driver'),(29,'2021-11-22 23:41:40',5,11,'Terima kasih','Seen','Driver');
 /*!40000 ALTER TABLE `chats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -207,7 +207,7 @@ CREATE TABLE `gift_redeems` (
   KEY `fk_gift_redeems_orders_idx` (`orders_id`),
   CONSTRAINT `fk_gift_redeems_gifts` FOREIGN KEY (`gifts_id`) REFERENCES `gifts` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_gift_redeems_orders` FOREIGN KEY (`orders_id`) REFERENCES `orders` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -216,6 +216,7 @@ CREATE TABLE `gift_redeems` (
 
 LOCK TABLES `gift_redeems` WRITE;
 /*!40000 ALTER TABLE `gift_redeems` DISABLE KEYS */;
+INSERT INTO `gift_redeems` VALUES (1,'2021-11-22 23:28:01',10,2,17),(2,'2021-11-22 23:28:59',10,2,18),(3,'2021-11-23 00:02:53',10,4,24),(4,'2021-11-23 00:03:42',50,3,25),(5,'2021-11-23 00:06:28',10,2,26),(6,'2021-11-23 00:13:00',10,2,27),(7,'2021-11-23 00:15:39',50,3,28);
 /*!40000 ALTER TABLE `gift_redeems` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -231,7 +232,7 @@ CREATE TABLE `gifts` (
   `nama` varchar(45) DEFAULT NULL,
   `jumlah_poin` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -240,7 +241,7 @@ CREATE TABLE `gifts` (
 
 LOCK TABLES `gifts` WRITE;
 /*!40000 ALTER TABLE `gifts` DISABLE KEYS */;
-INSERT INTO `gifts` VALUES (2,'Boneka','10');
+INSERT INTO `gifts` VALUES (2,'Boneka','10'),(3,'Panci','50'),(4,'Piring Cantik','10'),(5,'Wajan','60'),(6,'Iphone 12 Pro Max','10000');
 /*!40000 ALTER TABLE `gifts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -310,7 +311,7 @@ CREATE TABLE `metode_pembayarans` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nama` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -319,7 +320,7 @@ CREATE TABLE `metode_pembayarans` (
 
 LOCK TABLES `metode_pembayarans` WRITE;
 /*!40000 ALTER TABLE `metode_pembayarans` DISABLE KEYS */;
-INSERT INTO `metode_pembayarans` VALUES (1,'Ovo'),(2,'Cash'),(3,'OMA Saldo'),(4,'Shopee Pay');
+INSERT INTO `metode_pembayarans` VALUES (1,'Ovo'),(2,'Cash'),(3,'OMA Saldo'),(4,'Shopee Pay'),(5,'DANA'),(6,'GoPay'),(7,'AkuLaku');
 /*!40000 ALTER TABLE `metode_pembayarans` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -355,7 +356,7 @@ CREATE TABLE `orders` (
   CONSTRAINT `fk_orders_metode_pembayarans` FOREIGN KEY (`metode_pembayaran_id`) REFERENCES `metode_pembayarans` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_orders_pelanggans` FOREIGN KEY (`pelanggans_id`) REFERENCES `pelanggans` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_orders_promos` FOREIGN KEY (`promo_id`) REFERENCES `promos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -364,7 +365,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (4,'2021-11-19 20:33:52','Sidoadi',15000,59000,'Cash On Delivery (COD)',1,11,5,1,'',2,'Waiting'),(5,'2021-11-19 22:05:55','asdw',15000,19000,'OMA Saldo',1,5,5,1,'Pesanan Diproses',3,'Waiting'),(6,'2021-11-19 22:11:04','hjg',15000,1005000,'Cash On Delivery (COD)',1,2,5,1,'Pesanan Diproses',2,'Waiting'),(7,'2021-11-20 18:59:58','asda',15000,65000,'Other...',1,1,5,2,'Pesanan Diproses',2,'Waiting'),(8,'2021-11-20 19:00:31','sad',15000,9005000,'Other...',1,3,5,1,'Pesanan Diproses',2,'Waiting'),(9,'2021-11-20 19:02:19','asda',15000,20015000,'OMA Saldo',1,3,5,2,'Pesanan Diproses',3,'Waiting'),(10,'2021-11-20 19:03:30','asdas',15000,80005000,'OMA Saldo',1,2,5,1,'Pesanan Diproses',3,'Waiting'),(11,'2021-11-20 19:20:50','asdsa',15000,100015000,'OMA Saldo',1,3,5,2,'Pesanan Diproses',3,'Waiting'),(12,'2021-11-20 19:32:54','asdas',15000,400000000,'Other...',1,2,5,1,'Pesanan Diproses',2,'Waiting'),(13,'2021-11-20 13:03:54','asdasdasd',15000,4000000000,'cash',1,2,3,4,'',2,'Waiting'),(14,'2021-11-20 20:06:55','hhgfh',15000,4,'Other...',1,3,5,1,'Pesanan Diproses',2,'Waiting'),(15,'2021-11-20 20:51:38','asdasd',15000,3,'Other...',1,1,5,1,'Pesanan Diproses',1,'Waiting'),(16,'2021-11-22 12:37:28','Jl. Coba Coba',15000,1,'Other...',1,4,5,1,'Pesanan Diproses',4,'Waiting');
+INSERT INTO `orders` VALUES (17,'2021-11-22 23:28:01','Jalan Sidodo VI/19',15000,61000,'OMA Saldo',1,2,5,1,'Pesanan Diproses',3,'Waiting'),(18,'2021-11-22 23:28:59','Jalan Merr Pojokan 19',15000,35000,'Other...',1,4,5,1,'Pesanan Diproses',5,'Waiting'),(19,'2021-11-22 23:30:07','Jalan SIdodo VI/19',15000,271000,'OMA Saldo',3,3,5,3,'Pesanan Diproses',3,'Waiting'),(20,'2021-11-22 23:32:44','Jalan Simolawan Baru 21',15000,23000,'OMA Saldo',5,2,5,1,'Pesanan Diproses',3,'Waiting'),(21,'2021-11-22 23:35:07','Jalan Semampir Utara Gg. VI/10',15000,125000,'OMA Saldo',1,3,1,6,'Pesanan Diproses',3,'Waiting'),(22,'2021-11-22 23:35:44','Jalan Selamat Pagi Indonesia 10',15000,30000,'Other...',2,2,1,2,'Pesanan Diproses',2,'Waiting'),(23,'2021-11-22 23:40:27','Jalan Kaliwaron XX/20',15000,10009000,'Other...',1,11,5,1,'Pesanan Diproses',1,'Waiting'),(24,'2021-11-23 00:02:53','Jalan Sidodo VI/19',15000,19000,'Other...',5,11,5,2,'Pesanan Diproses',2,'Waiting'),(25,'2021-11-23 00:03:42','Jalan Sidodo VI/19',15000,9615000,'OMA Saldo',1,3,5,3,'Pesanan Diproses',3,'Waiting'),(26,'2021-11-23 00:06:28','Jalan Kampung Seng 102',15000,9809000,'OMA Saldo',3,3,1,3,'Pesanan Diproses',3,'Waiting'),(27,'2021-11-23 00:13:00','Jalan Sidokamu VI/200',15000,9615000,'OMA Saldo',1,4,1,3,'Pesanan Diproses',3,'Waiting'),(28,'2021-11-23 00:15:39','Jalan kalimantan 20',15000,60000,'OMA Saldo',1,5,1,1,'Pesanan Diproses',3,'Waiting');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -420,7 +421,7 @@ CREATE TABLE `pelanggans` (
 
 LOCK TABLES `pelanggans` WRITE;
 /*!40000 ALTER TABLE `pelanggans` DISABLE KEYS */;
-INSERT INTO `pelanggans` VALUES (1,'Cella','cel@gmail.com','52b8532a44b6e26049e12fa7ca6ab5fcfc36715d6d53f6cf8333858c41727496df3563488dbcc88353348f269aa918aa0b5fefc07b13ab25b318d46910ce54dd','081289098765',0,0),(2,'Velicia','vels@gmail.com','62f4fc2f98ef358e7515dad7c0557ab10311ab608739f11d42363ba40c54b0e5e6a3f63bf8fc3e6c807737132b7973d595bf4e1239ae930cd7543ccd0ed22411','081234567890',0,0),(3,'Junita','jun@gmail.com','f2b823e4a0ad2b06ba841de2dd27a5fd4fd226dd07cf9cf6189071c3c45af9ddf013523f9e79f6d21c5ce0cde3010dc4603c22c44d2d4aef451583360f7bc5be','089180676564',0,0),(4,'Kevin','kev@gmail.com','73cba74c46bfb8e5bfb6b4b53e1ebbadcccba18e3ece04af8f80bfccb94e42666bd1217a3ec4955d3c78c24dfb7dbea3d2933f3dacaccfd2cb892c1f10bad3d6','081235276565',0,0),(5,'Alicia','alc@gmail.com','7a178967cad357711590fff07c308799e2ed57df7d5eb79b37624f9b0d82bafa16f883384d06b126980609d9960c49c91cf41e5260224ff7e0014e6d789f9bd5','08573345456768',0,33019),(6,'albertus f','albertusf@gmail.com','d08928f1b08cc10152363550de3472690dcf47815c84422e719a762e6466bdb91f244aaa30006c6b16abddb43280874b9f345f45d559cb1601bcd51abdbc0352','098765432112',0,0),(7,'jericho j','jerichoj@gmail.com','04821f35016cc36e4c94fdc257c04d4e98f7a1694148869b46577de26c6c55eb7ddf49d0918b789ab56c11bc8f601612b9f497f7394e638a4583d22b8e9166c2','09876556789',0,0),(8,'kelvin f','kelvinf@gmail.com','78eb8e0a991a98eeae12dd96d5c674769045794e5347e06c05a94f603786914f64a9d29e430c1118ccf1b6a998e5c67237b6fc101ff23f1c8b829b8ad3d810e3','0989890976',0,0),(9,'cella j','cellaj@gmail.com','270df2dc1df40bc22786ef9898dad1270a07314e9c5ef91a630536fe8a5632daa875d3b178b4a43aac84926ef542232c38fa8b65e1636805cf588ed3027eb114','099090889',0,0);
+INSERT INTO `pelanggans` VALUES (1,'Cella','cel@gmail.com','52b8532a44b6e26049e12fa7ca6ab5fcfc36715d6d53f6cf8333858c41727496df3563488dbcc88353348f269aa918aa0b5fefc07b13ab25b318d46910ce54dd','081289098765',5073000,4844),(2,'Velicia','vels@gmail.com','62f4fc2f98ef358e7515dad7c0557ab10311ab608739f11d42363ba40c54b0e5e6a3f63bf8fc3e6c807737132b7973d595bf4e1239ae930cd7543ccd0ed22411','081234567890',0,0),(3,'Junita','jun@gmail.com','f2b823e4a0ad2b06ba841de2dd27a5fd4fd226dd07cf9cf6189071c3c45af9ddf013523f9e79f6d21c5ce0cde3010dc4603c22c44d2d4aef451583360f7bc5be','089180676564',0,0),(4,'Kevin','kev@gmail.com','73cba74c46bfb8e5bfb6b4b53e1ebbadcccba18e3ece04af8f80bfccb94e42666bd1217a3ec4955d3c78c24dfb7dbea3d2933f3dacaccfd2cb892c1f10bad3d6','081235276565',0,0),(5,'Alicia','alc@gmail.com','7a178967cad357711590fff07c308799e2ed57df7d5eb79b37624f9b0d82bafa16f883384d06b126980609d9960c49c91cf41e5260224ff7e0014e6d789f9bd5','08573345456768',11241000,35992),(6,'albertus f','albertusf@gmail.com','d08928f1b08cc10152363550de3472690dcf47815c84422e719a762e6466bdb91f244aaa30006c6b16abddb43280874b9f345f45d559cb1601bcd51abdbc0352','098765432112',0,0),(7,'jericho j','jerichoj@gmail.com','04821f35016cc36e4c94fdc257c04d4e98f7a1694148869b46577de26c6c55eb7ddf49d0918b789ab56c11bc8f601612b9f497f7394e638a4583d22b8e9166c2','09876556789',0,0),(8,'kelvin f','kelvinf@gmail.com','78eb8e0a991a98eeae12dd96d5c674769045794e5347e06c05a94f603786914f64a9d29e430c1118ccf1b6a998e5c67237b6fc101ff23f1c8b829b8ad3d810e3','0989890976',0,0),(9,'cella j','cellaj@gmail.com','270df2dc1df40bc22786ef9898dad1270a07314e9c5ef91a630536fe8a5632daa875d3b178b4a43aac84926ef542232c38fa8b65e1636805cf588ed3027eb114','099090889',0,0);
 /*!40000 ALTER TABLE `pelanggans` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -439,7 +440,7 @@ CREATE TABLE `promos` (
   `diskon_max` int(11) DEFAULT NULL,
   `minimal_belanja` float DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -448,7 +449,7 @@ CREATE TABLE `promos` (
 
 LOCK TABLES `promos` WRITE;
 /*!40000 ALTER TABLE `promos` DISABLE KEYS */;
-INSERT INTO `promos` VALUES (1,'Ongkir','Over Diskon',10,10000,50000),(2,'Makanan','Big Deal',50,25000,80000);
+INSERT INTO `promos` VALUES (1,'Ongkir','Over Diskon',10,10000,50000),(2,'Makanan','Big Deal',50,25000,80000),(3,'Elektronik','E-Deal',30,400000,1000000),(4,'Minuman','Drink-Deal',20,20000,40000),(5,'Pakaian','Dress-Deal',10,100000,500000),(6,'Alat Tulis','Back to Campus',50,50000,600000);
 /*!40000 ALTER TABLE `promos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -467,7 +468,7 @@ CREATE TABLE `riwayat_isi_saldos` (
   PRIMARY KEY (`id`),
   KEY `fk_riwayat_isi_saldo_pelanggans_idx` (`pelanggans_id`),
   CONSTRAINT `fk_riwayat_isi_saldo_pelanggans` FOREIGN KEY (`pelanggans_id`) REFERENCES `pelanggans` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -476,6 +477,7 @@ CREATE TABLE `riwayat_isi_saldos` (
 
 LOCK TABLES `riwayat_isi_saldos` WRITE;
 /*!40000 ALTER TABLE `riwayat_isi_saldos` DISABLE KEYS */;
+INSERT INTO `riwayat_isi_saldos` VALUES (1,'2021-11-22 23:23:24',10000,5),(2,'2021-11-22 23:23:32',100000,5),(3,'2021-11-22 23:23:49',1000000,5),(4,'2021-11-22 23:24:21',45000,1),(5,'2021-11-22 23:24:30',450000,1),(6,'2021-11-22 23:24:34',4500000,1),(7,'2021-11-22 23:39:46',20000000,5),(8,'2021-11-22 23:55:40',100000,5),(9,'2021-11-22 23:58:51',1000,5),(10,'2021-11-23 00:05:29',10000000,1),(11,'2021-11-23 00:11:31',10000000,1);
 /*!40000 ALTER TABLE `riwayat_isi_saldos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -488,4 +490,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-22 22:50:34
+-- Dump completed on 2021-11-23  0:18:24
