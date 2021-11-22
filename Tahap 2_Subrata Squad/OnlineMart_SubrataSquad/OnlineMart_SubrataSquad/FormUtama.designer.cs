@@ -39,7 +39,6 @@ namespace OnlineMart_SubrataSquad
             this.pesananToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.promoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.daftarPengirimanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kontakToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cabangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kategoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,7 +105,6 @@ namespace OnlineMart_SubrataSquad
             this.pesananToolStripMenuItem,
             this.promoToolStripMenuItem,
             this.daftarPengirimanToolStripMenuItem,
-            this.kontakToolStripMenuItem,
             this.cabangToolStripMenuItem,
             this.kategoriToolStripMenuItem,
             this.barangToolStripMenuItem,
@@ -157,14 +155,6 @@ namespace OnlineMart_SubrataSquad
             this.daftarPengirimanToolStripMenuItem.Text = "Daftar Pengiriman";
             this.daftarPengirimanToolStripMenuItem.Visible = false;
             this.daftarPengirimanToolStripMenuItem.Click += new System.EventHandler(this.daftarPengirimanToolStripMenuItem_Click);
-            // 
-            // kontakToolStripMenuItem
-            // 
-            this.kontakToolStripMenuItem.Name = "kontakToolStripMenuItem";
-            this.kontakToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
-            this.kontakToolStripMenuItem.Text = "Kontak";
-            this.kontakToolStripMenuItem.Visible = false;
-            this.kontakToolStripMenuItem.Click += new System.EventHandler(this.kontakToolStripMenuItem_Click);
             // 
             // cabangToolStripMenuItem
             // 
@@ -338,7 +328,6 @@ namespace OnlineMart_SubrataSquad
         public System.Windows.Forms.ToolStripMenuItem pesananToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem promoToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem daftarPengirimanToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem kontakToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem rekapPendapatanToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem cabangToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem kategoriToolStripMenuItem;

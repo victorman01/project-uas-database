@@ -235,10 +235,6 @@ namespace OnlineMart_SubrataSquad
             }
         }
 
-        private void kontakToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void cabangToolStripMenuItem_Click(object sender, EventArgs e)
         {

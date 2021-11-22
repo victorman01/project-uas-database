@@ -1154,10 +1154,8 @@ D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_datab
 D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormPengaturanBarang.resources
 D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormPengaturanPegawai.resources
 D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormRegistrasiDriver.resources
-D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormKontak.resources
 D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormPromo.resources
 D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormHistory.resources
-D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormHubungi.resources
 D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormIsiSaldo.resources
 D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormKeranjang.resources
 D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormListPengiriman.resources
@@ -1432,3 +1430,5 @@ D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_Subra
 D:\SEMESTER 3\Database\a\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormRekapPenjualanOMASaldoDetail.resources
 D:\GitHub\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormChat.resources
 D:\GitHub\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.csproj.CopyComplete
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormChat.resources
+D:\PERKULIAHAN\KULIAH SEMESTER 3\DATABASE KP C\PROJECT\PROJECT UAS\project_database\Tahap 2_Subrata Squad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormRekapPenjualanOMASaldoDetail.resources

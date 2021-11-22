@@ -98,7 +98,6 @@ namespace OnlineMart_SubrataSquad
 
                         this.Hide();
                         frm.daftarPengirimanToolStripMenuItem.Visible = true;
-                        frm.kontakToolStripMenuItem.Visible = true;
                         frm.rekapPendapatanToolStripMenuItem.Visible = true;
                         frm.ShowDialog();
                         this.Close();

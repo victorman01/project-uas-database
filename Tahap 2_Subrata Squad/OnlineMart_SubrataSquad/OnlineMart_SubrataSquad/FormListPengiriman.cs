@@ -15,6 +15,8 @@ namespace OnlineMart_SubrataSquad
     {
         public Driver driver;
         public List<Order> listOrder = new List<Order>();
+        FormUtama frm;
+        Driver kurir;
         public FormListPengiriman()
         {
             InitializeComponent();
@@ -119,8 +121,11 @@ namespace OnlineMart_SubrataSquad
 
         public void FormListPengiriman_Load(object sender, EventArgs e)
         {
+            frm = (FormUtama)this.MdiParent;
+            kurir = frm.driver;
+
             FormatDataGrid();
-            listOrder = Order.BacaData("", "");
+            listOrder = Order.TampilOrder(kurir.Id.ToString());
             TampilDataGrid();
         }
 
