@@ -34,13 +34,13 @@ namespace OnlineMart_LIB
         public void BacaPesan()
         {
             string sql = "";
-            sql = "select c.tanggal, concat(date_format( c.tanggal, '[%d/%m, %H:%i] '),c.status " + " " + ", p.nama,' : ', c.pesan) as pesan" +
+            sql = "select c.tanggal, concat(date_format( c.tanggal, '[%d/%m, %H:%i] ')" + " " + ", p.nama,' : ', c.pesan) as pesan" +
                        " from chats c " +
                        " inner join pelanggans p on c.pelanggan = p.id " +
                        " inner join drivers d on d.id = c.driver " +
                        " where c.pelanggan = " + Pelanggan.Id + " and c.driver = " + Driver.Id + " and c.pengirim = "+"'Pelanggan'"+
                        " union" +
-                       " select c.tanggal, concat(date_format(c.tanggal, '[%d/%m, %H:%i] '),c.status " + " " +", d.nama,' : ', c.pesan) as pesan" +
+                       " select c.tanggal, concat(date_format(c.tanggal, '[%d/%m, %H:%i] ')" + " " +", d.nama,' : ', c.pesan) as pesan" +
                        " from chats c " +
                        " inner join pelanggans p on c.pelanggan = p.id " +
                        " inner join drivers d on d.id = c.driver " +

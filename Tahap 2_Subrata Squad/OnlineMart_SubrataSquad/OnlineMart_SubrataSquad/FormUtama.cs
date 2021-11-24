@@ -144,7 +144,7 @@ namespace OnlineMart_SubrataSquad
                     break;
                 case "Pelanggan":
                     pelanggan = Pelanggan.AmbilPelangganById(pelanggan.Id);
-                    labelNama.Text = "Pelanggan - " + pelanggan.Nama + "- Saldo : " + pelanggan.Saldo.ToString("C0", new CultureInfo("id"));
+                    labelNama.Text = "Pelanggan - " + pelanggan.Nama + " - Saldo : " + pelanggan.Saldo.ToString("C0", new CultureInfo("id"));
                     break;
                 case "Driver":
                     labelNama.Text = "Driver - " + driver.Nama;

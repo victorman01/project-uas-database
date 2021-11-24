@@ -31,12 +31,12 @@ namespace OnlineMart_SubrataSquad
         {
             this.dataGridViewRekapPendapatan = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttonKeluar = new System.Windows.Forms.Button();
             this.numericUpDownTahun = new System.Windows.Forms.NumericUpDown();
             this.comboBoxBulan = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonKeluar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRekapPendapatan)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTahun)).BeginInit();
@@ -46,12 +46,12 @@ namespace OnlineMart_SubrataSquad
             // 
             this.dataGridViewRekapPendapatan.BackgroundColor = System.Drawing.Color.Tan;
             this.dataGridViewRekapPendapatan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRekapPendapatan.Location = new System.Drawing.Point(8, 133);
-            this.dataGridViewRekapPendapatan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewRekapPendapatan.Location = new System.Drawing.Point(11, 164);
+            this.dataGridViewRekapPendapatan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewRekapPendapatan.Name = "dataGridViewRekapPendapatan";
             this.dataGridViewRekapPendapatan.RowHeadersWidth = 51;
             this.dataGridViewRekapPendapatan.RowTemplate.Height = 24;
-            this.dataGridViewRekapPendapatan.Size = new System.Drawing.Size(420, 260);
+            this.dataGridViewRekapPendapatan.Size = new System.Drawing.Size(560, 320);
             this.dataGridViewRekapPendapatan.TabIndex = 12;
             // 
             // panel1
@@ -61,42 +61,16 @@ namespace OnlineMart_SubrataSquad
             this.panel1.Controls.Add(this.comboBoxBulan);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(8, 70);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(11, 86);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(420, 59);
+            this.panel1.Size = new System.Drawing.Size(560, 73);
             this.panel1.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Orange;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(8, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(420, 49);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "REKAP PENDAPATAN";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonKeluar
-            // 
-            this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
-            this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(338, 398);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(90, 41);
-            this.buttonKeluar.TabIndex = 11;
-            this.buttonKeluar.Text = "&KELUAR";
-            this.buttonKeluar.UseVisualStyleBackColor = false;
-            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // numericUpDownTahun
             // 
-            this.numericUpDownTahun.Location = new System.Drawing.Point(114, 11);
+            this.numericUpDownTahun.Location = new System.Drawing.Point(152, 14);
+            this.numericUpDownTahun.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericUpDownTahun.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -108,10 +82,10 @@ namespace OnlineMart_SubrataSquad
             0,
             0});
             this.numericUpDownTahun.Name = "numericUpDownTahun";
-            this.numericUpDownTahun.Size = new System.Drawing.Size(244, 20);
+            this.numericUpDownTahun.Size = new System.Drawing.Size(325, 22);
             this.numericUpDownTahun.TabIndex = 14;
             this.numericUpDownTahun.Value = new decimal(new int[] {
-            2020,
+            2021,
             0,
             0,
             0});
@@ -135,10 +109,10 @@ namespace OnlineMart_SubrataSquad
             "Oktober",
             "November",
             "Desember"});
-            this.comboBoxBulan.Location = new System.Drawing.Point(114, 36);
-            this.comboBoxBulan.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxBulan.Location = new System.Drawing.Point(152, 44);
+            this.comboBoxBulan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxBulan.Name = "comboBoxBulan";
-            this.comboBoxBulan.Size = new System.Drawing.Size(244, 21);
+            this.comboBoxBulan.Size = new System.Drawing.Size(324, 24);
             this.comboBoxBulan.TabIndex = 12;
             this.comboBoxBulan.SelectedIndexChanged += new System.EventHandler(this.comboBoxBulan_SelectedIndexChanged);
             // 
@@ -146,10 +120,9 @@ namespace OnlineMart_SubrataSquad
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(58, 36);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(77, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 17);
+            this.label3.Size = new System.Drawing.Size(62, 21);
             this.label3.TabIndex = 9;
             this.label3.Text = "Bulan :";
             // 
@@ -157,24 +130,49 @@ namespace OnlineMart_SubrataSquad
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(69, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 17);
+            this.label2.Size = new System.Drawing.Size(67, 21);
             this.label2.TabIndex = 10;
             this.label2.Text = "Tahun :";
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Orange;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(11, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(560, 60);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "REKAP PENDAPATAN";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonKeluar
+            // 
+            this.buttonKeluar.BackColor = System.Drawing.Color.Orange;
+            this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonKeluar.ForeColor = System.Drawing.Color.White;
+            this.buttonKeluar.Location = new System.Drawing.Point(451, 490);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonKeluar.Name = "buttonKeluar";
+            this.buttonKeluar.Size = new System.Drawing.Size(120, 50);
+            this.buttonKeluar.TabIndex = 11;
+            this.buttonKeluar.Text = "&KELUAR";
+            this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
+            // 
             // FormRekapPendapatan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 445);
+            this.ClientSize = new System.Drawing.Size(581, 548);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridViewRekapPendapatan);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonKeluar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormRekapPendapatan";
             this.Load += new System.EventHandler(this.FormRekapPendapatan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRekapPendapatan)).EndInit();

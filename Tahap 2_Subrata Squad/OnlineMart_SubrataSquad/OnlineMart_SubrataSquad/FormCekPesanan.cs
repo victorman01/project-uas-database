@@ -95,36 +95,47 @@ namespace OnlineMart_SubrataSquad
 
             if (e.ColumnIndex == dataGridViewCekPesanan.Columns["btnTerimaBarang"].Index && e.RowIndex >= 0)
             {
-                DialogResult hasil = MessageBox.Show(this, "Are you sure? ", "TERIMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if(hasil == DialogResult.Yes)
+                if(statusKirim != "Diterima")
                 {
-                    if (statusKirim != "Diterima")
+                    DialogResult hasil = MessageBox.Show(this, "Are you sure? ", "TERIMA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (hasil == DialogResult.Yes)
                     {
-                        statusUbah = Order.UbahStatus("Diterima", int.Parse(idOrder));
-                        if (statusUbah)
+                        if (statusKirim != "Diterima")
                         {
-                            FormCekPesanan_Load(sender, e);
+                            statusUbah = Order.UbahStatus("Diterima", int.Parse(idOrder));
+                            if (statusUbah)
+                            {
+                                FormCekPesanan_Load(sender, e);
+                            }
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("Your Order(s) has been arrived. Thankyou!");
-                    }
+                }
+                else
+                {
+                    MessageBox.Show("Your Order(s) has been arrived. Thankyou!");
                 }
             }
             else if (e.ColumnIndex == dataGridViewCekPesanan.Columns["btnChat"].Index && e.RowIndex >= 0)
             {
                 FormChat frm = new FormChat();
-                foreach (Order o in listOrder)
+                if (statusKirim != "Diterima")
                 {
-                    if (o.Driver.Nama == drivers)
+                    foreach (Order o in listOrder)
                     {
-                        frm.driver = o.Driver;
+                        if (o.Driver.Nama == drivers)
+                        {
+                            frm.driver = o.Driver;
+                        }
                     }
+
+                    frm.Owner = this;
+                    frm.ShowDialog();
                 }
-                frm.Owner = this;
-                frm.ShowDialog();
+                else
+                {
+                    MessageBox.Show("Your Order(s) has been arrived. Thankyou!");
+                }
             }
         }
 
