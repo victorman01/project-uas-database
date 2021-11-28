@@ -79,7 +79,7 @@ namespace OnlineMart_SubrataSquad
             //Agar rata kanan
             dataGridViewListPengiriman.Columns["ongkos_kirim"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
-            //Agar komisi ditampilkan dengan format pemisah ribuan (1000 delimiter)
+            //Agar komisi ditampilkan dengan format pemisah ribuan
             dataGridViewListPengiriman.Columns["ongkos_kirim"].DefaultCellStyle.Format = "#,###";
 
             //Buat Button Aksi
