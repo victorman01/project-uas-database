@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OnlineMart_LIB;
+using System.Globalization;
 
 namespace OnlineMart_SubrataSquad
 {
     public partial class FormRekapPendapatan : Form
     {
         public List<Order> listOrder = new List<Order>();
+        Driver kurir;
         public FormRekapPendapatan()
         {
             InitializeComponent();
@@ -26,8 +28,12 @@ namespace OnlineMart_SubrataSquad
 
         private void FormRekapPendapatan_Load(object sender, EventArgs e)
         {
+            FormUtama frm = (FormUtama)this.MdiParent;
+            kurir = frm.driver;
+
             FormatDataGrid();
-            listOrder = Order.BacaData("", "");
+            listOrder = Order.TampilOrder(kurir.Id.ToString());
+            labelTotalKomisi.Text = "Total pendapatan " + kurir.Nama + ": " + Driver.TotalKomisi(listOrder).ToString("C0", new CultureInfo("id"));
             TampilDataGrid();
         }
 

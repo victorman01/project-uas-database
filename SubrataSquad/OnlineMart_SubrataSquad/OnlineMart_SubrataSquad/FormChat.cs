@@ -94,6 +94,7 @@ namespace OnlineMart_SubrataSquad
             {
                 MessageBox.Show("Chat is missing");
             }
+            FormChat_Load(sender, e);
             TampilChat();
             textBoxChat.Clear();
             textBoxChat.Focus();

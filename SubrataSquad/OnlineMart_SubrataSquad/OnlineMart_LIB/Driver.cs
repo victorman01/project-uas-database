@@ -126,7 +126,7 @@ namespace OnlineMart_LIB
         }
         public static void UbahData(Driver d)
         {
-            string sql = "update drivers set nama = '" + d.Nama + "', email = '" + d.Email + ", telepon = '" + d.Telepon + "' where id = '" + d.Id + "'";
+            string sql = "update drivers set password = SHA2('" + d.Password + "', 512) where email = '" + d.Email +"'";
             Connection.JalankanPerintahDML(sql);
         }
         public static Boolean HapusData(string code)
@@ -154,6 +154,26 @@ namespace OnlineMart_LIB
                 return d;
             }
             return null;
+        }
+        public static Driver AmbilDriverByUsername(string username)
+        {
+            string sql = "select * from drivers where email = '" + username + "'";
+            MySqlDataReader hasil = Connection.JalankanPerintahQuery(sql);
+            if (hasil.Read() == true)
+            {
+                Driver driver = new Driver(hasil.GetInt32(0), hasil.GetValue(1).ToString(), hasil.GetValue(2).ToString(), hasil.GetValue(3).ToString(), hasil.GetValue(4).ToString());
+                return driver;
+            }
+            return null;
+        }
+        public static double TotalKomisi(List<Order> listOrder)
+        {
+            double total = 0;
+            foreach (Order o in listOrder)
+            {
+                total += (o.OngkosKirim * 0.8);
+            }
+            return total;
         }
         #endregion
     }

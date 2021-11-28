@@ -46,6 +46,8 @@ namespace OnlineMart_SubrataSquad
             form.labelNamaLogin.Text = "LOGIN PEGAWAI";
             form.labelSignUp.Enabled = false;
             form.labelPertanyaanLogin.Visible = false;
+            form.labelForgetPassword.Enabled = false;
+            form.labelForgetPassword.Visible = false;
             form.labelSignUp.Visible = false;
             form.ShowDialog();
         }

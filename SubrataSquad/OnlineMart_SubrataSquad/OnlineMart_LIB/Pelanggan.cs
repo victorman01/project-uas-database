@@ -128,7 +128,7 @@ namespace OnlineMart_LIB
         }
         public static void UbahData(Pelanggan p)
         {
-            string sql = "update pelanggans set nama = '" + p.Nama + "', email = '" + p.Email + "', Password = SHA2('" + p.password + "', 512) , telepon = '" + p.Telepon + "', saldo = '" + p.Saldo + "', poin = '" + p.Poin + "' where id = '" + p.Id + "'";
+            string sql = "update pelanggans set nama = '" + p.Nama + "', email = '" + p.Email + "', password = SHA2('" + p.password + "', 512), telepon = '" + p.Telepon + "', saldo = '" + p.Saldo + "', poin = '" + p.Poin + "' where id = '" + p.Id + "'";
             Connection.JalankanPerintahDML(sql);
         }
         public static Boolean HapusData(string id)
@@ -164,6 +164,17 @@ namespace OnlineMart_LIB
         public static Pelanggan AmbilPelangganById(int id)
         {
             string sql = "select * from pelanggans where id  like " + id;
+            MySqlDataReader hasil = Connection.JalankanPerintahQuery(sql);
+            if (hasil.Read() == true)
+            {
+                Pelanggan pelanggan = new Pelanggan(hasil.GetInt32(0), hasil.GetValue(1).ToString(), hasil.GetValue(2).ToString(), hasil.GetValue(3).ToString(), hasil.GetValue(4).ToString(), hasil.GetFloat(5), hasil.GetInt32(6));
+                return pelanggan;
+            }
+            return null;
+        }
+        public static Pelanggan AmbilPelangganByUsername(string username)
+        {
+            string sql = "select * from pelanggans where email = '" + username + "'";
             MySqlDataReader hasil = Connection.JalankanPerintahQuery(sql);
             if (hasil.Read() == true)
             {

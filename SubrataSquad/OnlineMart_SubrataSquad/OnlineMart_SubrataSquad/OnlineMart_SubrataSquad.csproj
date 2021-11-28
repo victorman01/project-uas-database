@@ -87,6 +87,12 @@
     <Compile Include="FormHistoryGiftRedeem.Designer.cs">
       <DependentUpon>FormHistoryGiftRedeem.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLupaPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLupaPassword.Designer.cs">
+      <DependentUpon>FormLupaPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPengaturanBarang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -364,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHistoryGiftRedeem.resx">
       <DependentUpon>FormHistoryGiftRedeem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLupaPassword.resx">
+      <DependentUpon>FormLupaPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPengaturanBarang.resx">
       <DependentUpon>FormPengaturanBarang.cs</DependentUpon>

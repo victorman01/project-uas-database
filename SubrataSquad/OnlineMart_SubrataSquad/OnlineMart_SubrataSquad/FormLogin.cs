@@ -146,5 +146,13 @@ namespace OnlineMart_SubrataSquad
                 textBoxPassword.PasswordChar = '*';
             }
         }
+
+        private void labelForgetPassword_Click(object sender, EventArgs e)
+        {
+            FormLupaPassword frm = new FormLupaPassword();
+            frm.userCek = labelNamaLogin.Text;
+            frm.Owner = this;
+            frm.ShowDialog();
+        }
     }
 }

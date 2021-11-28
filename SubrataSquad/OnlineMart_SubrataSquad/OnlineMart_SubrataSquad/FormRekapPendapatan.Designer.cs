@@ -37,6 +37,7 @@ namespace OnlineMart_SubrataSquad
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
+            this.labelTotalKomisi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRekapPendapatan)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTahun)).BeginInit();
@@ -70,7 +71,7 @@ namespace OnlineMart_SubrataSquad
             // numericUpDownTahun
             // 
             this.numericUpDownTahun.Location = new System.Drawing.Point(152, 14);
-            this.numericUpDownTahun.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDownTahun.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDownTahun.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -162,12 +163,23 @@ namespace OnlineMart_SubrataSquad
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
+            // labelTotalKomisi
+            // 
+            this.labelTotalKomisi.AutoSize = true;
+            this.labelTotalKomisi.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalKomisi.Location = new System.Drawing.Point(12, 500);
+            this.labelTotalKomisi.Name = "labelTotalKomisi";
+            this.labelTotalKomisi.Size = new System.Drawing.Size(55, 18);
+            this.labelTotalKomisi.TabIndex = 13;
+            this.labelTotalKomisi.Text = "label4";
+            // 
             // FormRekapPendapatan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 548);
             this.ControlBox = false;
+            this.Controls.Add(this.labelTotalKomisi);
             this.Controls.Add(this.dataGridViewRekapPendapatan);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -180,6 +192,7 @@ namespace OnlineMart_SubrataSquad
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTahun)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -193,5 +206,6 @@ namespace OnlineMart_SubrataSquad
         private System.Windows.Forms.ComboBox comboBoxBulan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelTotalKomisi;
     }
 }

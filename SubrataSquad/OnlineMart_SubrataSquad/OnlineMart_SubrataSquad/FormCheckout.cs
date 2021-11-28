@@ -106,6 +106,16 @@ namespace OnlineMart_SubrataSquad
                 Barang b = new Barang();
                 Order ord = new Order();
 
+                if (textBoxAlamat.Text == null || textBoxAlamat.Text == "")
+                {
+                    MessageBox.Show("Please input the address.");
+                    return;
+                }
+                if (comboBoxCaraPembayaran.Text == "Other..." && comboBoxPembayaran.SelectedItem == null)
+                {
+                    MessageBox.Show("Please input your payment method.");
+                    return;
+                }
                 if (comboBoxCaraPembayaran.Text == "OMA Saldo")
                 {
                     if (pelanggan.Saldo > totalHarga)
@@ -117,15 +127,6 @@ namespace OnlineMart_SubrataSquad
                         MessageBox.Show("Your balance is not enough");
                         return;
                     }
-                }
-
-                if (textBoxAlamat.Text == null || textBoxAlamat.Text == "") 
-                {
-                    throw new Exception("Please input the address.");
-                }
-                if (comboBoxCaraPembayaran.Text == "Other..." && comboBoxPembayaran.Text == null)
-                {
-                    throw new Exception("Please input your payment method.");
                 }
                 foreach (Keranjang keranjang in listKeranjang)
                 {
@@ -231,9 +232,10 @@ namespace OnlineMart_SubrataSquad
 
         private void CheckBayar()
         {
-            if(comboBoxKurir.SelectedValue != null && comboBoxCaraPembayaran.Text != null)
+            if (comboBoxKurir.SelectedValue != null && comboBoxCaraPembayaran.Text != null)
             {
                 buttonBayar.Enabled = true;
+
             }
             else
             {
@@ -266,10 +268,10 @@ namespace OnlineMart_SubrataSquad
 
         private void comboBoxCaraPembayaran_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             if (comboBoxCaraPembayaran.Text == "Other...")
             {
-                comboBoxPembayaran.Enabled = true;  
+                //buttonBayar.Enabled = false;
+                comboBoxPembayaran.Enabled = true;
             }
             else
             {

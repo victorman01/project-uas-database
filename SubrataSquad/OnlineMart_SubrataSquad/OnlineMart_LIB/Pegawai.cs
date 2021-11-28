@@ -95,12 +95,12 @@ namespace OnlineMart_LIB
         public static void TambahData(Pegawai p)
         {
             string sql = "insert into pegawais (Nama, Email, Password, Telepon) " +
-                "values ('" + p.Nama + "', '" + p.Email + "', SHA2('" + p.password + "', 512), '" + p.Telepon + "')";
+                "values ('" + p.Nama + "', '" + p.Email + "', SHA2('" + p.Password + "', 512), '" + p.Telepon + "')";
             Connection.JalankanPerintahDML(sql);
         }
         public static void UbahData(Pegawai p)
         {
-            string sql = "update pegawais set nama = '" + p.Nama + "', email = '" + p.Email + "', password = '" + p.Password + "', telepon = '" + p.Telepon + "' where id = '" + p.Id + "'";
+            string sql = "update pegawais set nama = '" + p.Nama + "', email = '" + p.Email + "', password = SHA2('" + p.Password + "', 512), telepon = '" + p.Telepon + "' where id = '" + p.Id + "'";
             Connection.JalankanPerintahDML(sql);
         }
         public static Boolean HapusData(string id)

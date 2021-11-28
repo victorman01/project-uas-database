@@ -1579,3 +1579,4 @@ D:\Kuliah\Semester 3\Database\Clone\project_database\SubrataSquad\OnlineMart_Sub
 D:\Kuliah\Semester 3\Database\Clone\project_database\SubrataSquad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.csproj.CopyComplete
 D:\Kuliah\Semester 3\Database\Clone\project_database\SubrataSquad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.exe
 D:\Kuliah\Semester 3\Database\Clone\project_database\SubrataSquad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.pdb
+D:\Kuliah\Semester 3\Database\Clone\project_database\SubrataSquad\OnlineMart_SubrataSquad\OnlineMart_SubrataSquad\obj\Debug\OnlineMart_SubrataSquad.FormLupaPassword.resources
