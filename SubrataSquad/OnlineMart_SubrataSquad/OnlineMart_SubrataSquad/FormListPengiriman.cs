@@ -134,7 +134,7 @@ namespace OnlineMart_SubrataSquad
             FormatDataGrid();
             if (comboBoxCBListPengiriman.Text == "ID Order")
             {
-                listOrder = Order.BacaData("o.Id", textBoxCBListPengiriman.Text);
+                listOrder = Order.BacaData("o.drivers_Id = " + kurir.Id.ToString() + " AND o.Id", textBoxCBListPengiriman.Text);
             }
             TampilDataGrid();
         }
@@ -186,6 +186,11 @@ namespace OnlineMart_SubrataSquad
                     MessageBox.Show("Please accept the order first.");
                 }
             }
+        }
+
+        private void comboBoxCBListPengiriman_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

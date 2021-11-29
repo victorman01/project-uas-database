@@ -131,7 +131,7 @@ namespace OnlineMart_SubrataSquad
                     bulan = 12;
                     break;
             }
-            listOrder = Order.BacaData("", bulan, numericUpDownTahun.Value.ToString());
+            listOrder = Order.BacaData("", kurir.Id.ToString(), bulan, numericUpDownTahun.Value.ToString());
             TampilDataGrid();
         }
 

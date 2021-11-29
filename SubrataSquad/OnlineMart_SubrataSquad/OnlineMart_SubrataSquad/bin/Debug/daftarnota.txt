@@ -9,13 +9,15 @@ coki-coki                   3   Rp2.000       Rp6.000
 coki-coki                   4   Rp2.000       Rp8.000            
 coki-coki                   2   Rp2.000       Rp4.000            
 coki-coki                   9   Rp2.000       Rp18.000           
+coki-coki                   2   Rp2.000       Rp4.000            
+coki-coki                   5   Rp2.000       Rp10.000           
 samyang                     2   Rp10.000      Rp20.000           
 Soju                        5   Rp50.000      Rp250.000          
 ------------------------------------------------------------
-TOTAL = Rp352.000 
+TOTAL = Rp366.000 
 DISKON = Rp0       
-ONGKOS KIRIM = Rp90.000  
-TOTAL BAYAR = Rp442.000 
+ONGKOS KIRIM = Rp120.000 
+TOTAL BAYAR = Rp486.000 
 ------------------------------------------------------------
 Terima Kasih!
 ------------------------------------------------------------

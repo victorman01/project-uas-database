@@ -38,6 +38,7 @@ namespace OnlineMart_SubrataSquad
 
                     FormPengaturanBarang frm = (FormPengaturanBarang)this.Owner;
                     frm.FormPengaturanBarang_Load(sender, e);
+                    this.Close();
                 }
                 else
                 {

@@ -89,7 +89,14 @@ namespace OnlineMart_SubrataSquad
             listBoxSaldo.Items.Add("Saldo: " + pelanggan.Saldo.ToString("C0", new CultureInfo("id")));
 
             listMetodePembayaran = MetodePembayaran.BacaData("", "");
-            comboBoxAlatIsiSaldo.DataSource = listMetodePembayaran;
+
+            foreach(MetodePembayaran mp in listMetodePembayaran)
+            {
+                if(mp.Nama != "OMA Saldo" && mp.Nama != "Cash")
+                {
+                    comboBoxAlatIsiSaldo.Items.Add(mp);
+                }
+            }
             comboBoxAlatIsiSaldo.DisplayMember = "Nama";
         }
     }
